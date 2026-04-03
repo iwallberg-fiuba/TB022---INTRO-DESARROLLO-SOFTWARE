@@ -1,0 +1,2 @@
+Lo escrito dentro de esta carpeta es sólo para explorar el Ejercicio No Obligatorio, con el fin de revisarlo en el futuro.  
+Me pareció una forma de documentación adecuada en esta caso ya que no era obligatorio por su dificultad.  
