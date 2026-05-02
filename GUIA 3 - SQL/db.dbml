@@ -1,0 +1,50 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table bandas [headercolor: #95a5a6] {
+  id integer [primary key]
+  nombre text [not null]
+  pais_origen text [not null]
+  fecha_creacion integer [not null]
+  genero text [not null]
+  cant_integrantes integer [not null]
+}
+
+Table albumes {
+  id integer [primary key]
+  banda_id integer [not null]
+  nombre text [not null]
+  lanzamiento integer [not null]
+  duracion integer [not null, note: 'duración en minutos']
+  ranking integer [not null, unique, note: 'ranking global entre todos los álbumes']
+}
+
+Table canciones {
+  id integer [primary key]
+  banda_id integer [not null]
+  album_id integer [not null]
+  nombre text [not null]
+  duracion integer [not null, note: 'duración en minutos']
+  ranking integer [not null, unique, note: 'ranking global entre todas las canciones']
+}
+
+Table conciertos {
+  id integer [primary key]
+  nombre text [not null]
+  pais text [not null]
+  fecha integer [not null, note: 'año']
+}
+
+Table conciertos_musicos {
+  concierto_id integer [not null]
+  banda_id integer [not null]
+}
+
+// Relaciones
+
+Ref: albumes.banda_id > bandas.id
+Ref: canciones.banda_id > bandas.id
+Ref: canciones.album_id > albumes.id
+Ref: conciertos_musicos.concierto_id > conciertos.id
+Ref: conciertos_musicos.banda_id > bandas.id
+

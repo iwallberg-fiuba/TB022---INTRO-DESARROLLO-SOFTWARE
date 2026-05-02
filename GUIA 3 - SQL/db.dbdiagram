@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "darkMode": true,
+  "gridEnabling": false,
+  "detailLevel": "All",
+  "tablePositions": [
+    {
+      "name": "bandas",
+      "schemaName": "public",
+      "x": 208.34242100387058,
+      "y": 197.73990902973156
+    },
+    {
+      "name": "albumes",
+      "schemaName": "public",
+      "x": 563.5877728484086,
+      "y": 236.0400377940615
+    },
+    {
+      "name": "canciones",
+      "schemaName": "public",
+      "x": 868.8489142420717,
+      "y": 205.66539506363387
+    },
+    {
+      "name": "conciertos",
+      "schemaName": "public",
+      "x": 282.1733433373038,
+      "y": 480.461391284228
+    },
+    {
+      "name": "conciertos_musicos",
+      "schemaName": "public",
+      "x": 563.5877728484086,
+      "y": 507.0400377940618
+    }
+  ],
+  "tableGroupCollapseStates": [],
+  "stickyNoteLayouts": [
+    {
+      "name": "note_1777583983190",
+      "x": 1012.7604315334441,
+      "y": 486.80362583879133,
+      "width": 192,
+      "height": 192
+    }
+  ],
+  "referencePaths": []
+}
