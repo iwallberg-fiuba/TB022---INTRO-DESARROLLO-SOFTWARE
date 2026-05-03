@@ -400,3 +400,80 @@ Si tuvieras que quedarte con una idea por bloque:
 - `.gitignore` evita versionar basura o secretos.
 
 
+---
+Apunte de @milagrosarganin
+
+# 👾 GitHub
+
+## 🌿 Ramas
+- Desde una rama se puede intercambiar cosas sin necesidad de pasar por el `main`.
+
+### 💻 Comandos
+- `git branch`: Veo la rama en la que estoy (con un `*`) y las que tengo.
+- `git checkout <nombre_rama>`: Me muevo a la rama que quiero.
+- `git checkout -b <nombre_rama>`: Me crea la rama si no está y me mueve a esa.
+- `git merge <nombre_rama>`: Me traigo los cambios de la rama que pongo a la que estoy trabajando.
+- `git pull`: Me traigo los cambios de la rama donde estoy trabajando.
+
+#### 💡 Aclaración: 
+> Si pongo `git pull` me traigo los cambios que hay en GitHub a mi local de la rama en la que estoy trabajando, pero si pongo `git merge <nombre_rama>` me traigo los cambios que hay en GitHub de esa rama que puse después de `merge`, a la rama que estoy trabajando en mi local.
+
+### 🚀 Subir una rama
+> Si no hice un `push` de la rama que creé, cuando la voy a pushear (después de agregar cambios) me va a saltar error, y me dice cómo la tengo que pushear. Lo hago y después subo los cambios.
+
+---
+
+## 🔄 Pull request (PR)
+
+### ❓ ¿Qué son?
+> Es una solicitud para integrar con un **MERGE** todos los cambios en una rama. El equipo puede ver los cambios que voy a mergear antes de hacerlo, funciona como un feedback del equipo.
+
+### 🛠️ ¿Cómo se hacen?
+> Debemos entrar al repositorio y donde nos aparecen los cambios recientes nos dice *"Compare & pull request"*. Entramos allí, comparamos las ramas y nos aparece la comparación. Ponemos un título y escribimos lo que creemos necesario. En la parte de *reviewers* selecciono quién/es quiero que vea/n lo que quiero mergear y ellos deciden si lo aprueban o no.
+
+### ⚠️ ¿Qué pasa si no todos aprueban el PR?
+> En ese caso, se activa la funcionalidad de pedir cambios y queda en rojo porque alguien lo rechazó. Entonces quien hizo el PR debe corregir el error. Siempre que un PR cumpla con la cantidad necesaria de *approves* (aprobaciones) para mergear, se podrá hacerlo.
+
+#### 📝 Nota:
+> Todos debemos trabajar de esta forma, con PR para evitar errores :)
+
+---
+
+## 🔀 Formas de usar ramas
+
+### 1️⃣ Rama única:
+- El método **menos recomendado**.
+
+### 2️⃣ main, feature:
+- **feature:** Cada vez que hacés una funcionalidad, hacés una rama nueva.
+
+### 3️⃣ main, develop, feature *(más utilizada por desarrolladores)*:
+- **main:** Cosas finalizadas.
+- **develop:** Se ponen todos los próximos cambios que irán al `main`.
+- **feature:** Lo ideal es que cada uno se haga su feature y luego eso se envíe a `develop`. Si está bien, se envía a `main` (que es donde se está desarrollando el juego o lo que fuese).
+
+### 4️⃣ Gitflow *(main, develop, release, hotfix, feature)*:
+- **release:** Se freeza (congela), no como `develop` que está en continuo cambio.
+- **hotfix:** Una rama para cambios rápidos. Luego del cambio se vuelve a mergear con `main`.
+- *(`main`, `develop` y `feature` son iguales que en el ítem anterior).*
+
+#### 📝 Nota:
+> Se hace mucho **hincapié** en esto en el TP final.
+
+---
+
+## 🍴 Fork 
+> Es hacer una copia exacta de un repositorio en nuestra cuenta o computadora.
+
+---
+
+## 🔀 Merge
+> Cuando una persona toca un archivo y no hacemos un `pull`, pero querés hacer un `merge` a tu rama, Git te dice que hay un **conflicto** y te hace elegir entre lo que estaba cambiado en GitHub y lo que vos querés poner. Podés elegir entre esas opciones u otra cosa distinta, pero tenés que decidir algo para resolver ese conflicto. Lo corregís, volvés a añadir los cambios y pusheás a GitHub. **Siempre se hace en equipo.**
+
+---
+
+## 💻 Más comandos
+
+- `git restore <archivo.txt>`: Restaura el archivo a la versión del último commit.
+- `git restore --staged <archivo.txt>`: Remueve el archivo del área de staging, pero mantiene los cambios locales.
+- `git restore --source=<commit-id> <archivo.txt>`: Restaura el archivo a la versión del commit especificado sin modificar a los demás.
