@@ -1,0 +1,1 @@
+Temas que no entran en el 1er Parcial: Parte de GROUP BY, HAVING  y funciones de agregación de SQL.
