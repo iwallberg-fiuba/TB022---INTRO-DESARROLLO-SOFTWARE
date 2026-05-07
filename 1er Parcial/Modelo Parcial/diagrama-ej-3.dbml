@@ -1,0 +1,48 @@
+Table jugadores {
+  id int [pk, increment]
+  nombre_completo varchar(100) [not null]
+  posicion_preferida varchar(50)
+  fecha_nacimiento date
+  nacionalidad varchar(50) [default: "Argentina"]
+  dni int [unique]
+  email varchar(255) [not null, unique]
+  contrasenia varchar(255) [not null]
+}
+
+Table partidos {
+  id int [pk, increment]
+  fecha_hora timestamp [not null]
+  lugar text [not null]
+  goles_local smallint
+  goles_visitante smallint
+  inscripcion_desde timestamp [not null]
+  inscripcion_hasta timestamp [not null]
+}
+
+Table jugadores_partidos {
+  id_jugador int [not null]
+  id_partido int [not null]
+  es_local boolean [not null]
+  goles_anotados smallint [not null, default: 0]
+  asistencias_hechas smallint [not null, default: 0]
+
+  indexes {
+    (id_jugador, id_partido) [pk]
+  }
+}
+
+Table inscripciones {
+  id_jugador int [not null]
+  id_partido int [not null]
+  fecha_inscripcion timestamp [not null]
+
+  indexes {
+    (id_jugador, id_partido) [pk]
+  }
+}
+
+Ref: jugadores_partidos.id_jugador > jugadores.id
+Ref: jugadores_partidos.id_partido > partidos.id
+
+Ref: inscripciones.id_jugador > jugadores.id
+Ref: inscripciones.id_partido > partidos.id
