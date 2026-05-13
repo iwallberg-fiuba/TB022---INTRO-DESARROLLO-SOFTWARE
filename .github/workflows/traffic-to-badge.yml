@@ -1,0 +1,21 @@
+name: Traffic to Badge
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  traffic:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate traffic badges
+        uses: yi-Xu-0100/traffic-to-badge@v1.4.0
+        with:
+          my_token: ${{ secrets.TRAFFIC_TOKEN }}
+          static_list: iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE
+          traffic_branch: traffic
