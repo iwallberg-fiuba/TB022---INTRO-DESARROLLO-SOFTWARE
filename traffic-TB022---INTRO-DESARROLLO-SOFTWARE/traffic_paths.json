@@ -2,32 +2,32 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 113,
-    "uniques": 75
+    "count": 120,
+    "uniques": 80
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/1er Parcial",
     "title": "/tree/main/1er Parcial",
-    "count": 91,
-    "uniques": 44
+    "count": 97,
+    "uniques": 48
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/1er Parcial/Parcial T1 2C25",
     "title": "/tree/main/1er Parcial/Parcial T1 2C25",
-    "count": 46,
-    "uniques": 25
+    "count": 49,
+    "uniques": 28
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/1er Parcial/Parcial T1 2C25/Solucion T1 2C25.ipynb",
     "title": "/blob/main/1er Parcial/Parcial T1 2C25/Solucion T1 2C25.ipynb",
-    "count": 30,
-    "uniques": 11
+    "count": 32,
+    "uniques": 13
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/1er Parcial/Modelo Parcial",
     "title": "/tree/main/1er Parcial/Modelo Parcial",
-    "count": 28,
-    "uniques": 18
+    "count": 30,
+    "uniques": 20
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/1er Parcial/Modelo Parcial/Solucion-Modelo.ipynb",
@@ -38,8 +38,14 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/1er Parcial/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
     "title": "/blob/main/1er Parcial/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "count": 22,
+    "uniques": 16
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Apuntes Clases (incompleto)/24-3.ipynb",
+    "title": "/blob/main/Apuntes Clases (incompleto)/24-3.ipynb",
     "count": 21,
-    "uniques": 15
+    "uniques": 5
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/1er Parcial/Ejercicio Integrador BASH",
@@ -48,15 +54,9 @@
     "uniques": 16
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Apuntes Clases (incompleto)/24-3.ipynb",
-    "title": "/blob/main/Apuntes Clases (incompleto)/24-3.ipynb",
-    "count": 18,
-    "uniques": 5
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/1er Parcial/Parcial T3 2C25/Solucion T3 2C25.ipynb",
-    "title": "/blob/main/1er Parcial/Parcial T3 2C25/Solucion T3 2C25.ipynb",
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Apuntes Clases (incompleto)",
+    "title": "/tree/main/Apuntes Clases (incompleto)",
     "count": 14,
-    "uniques": 5
+    "uniques": 13
   }
 ]
