@@ -33,21 +33,22 @@
 
 <br>
 
-
 | Tema | Información |
-| --- | --- |
-| Qué es SQL | Lenguaje para definir, consultar y modificar datos en bases relacionales. |
-| Alias | Se usan para escribir menos y entender mejor la consulta: `usuarios u`, `cursos c`, `usuarios_cursos uc`. Después usás `u.nombre`, `c.nombre`, etc. |
-| Tipos de datos | `SERIAL`, `INT`, `SMALLINT`, `TEXT`, `VARCHAR(50)`. |
-| Restricciones | `UNIQUE`, `NOT NULL`, `DEFAULT 0`. |
-| JOINs | `JOIN` cruza coincidencias; `LEFT JOIN` conserva todas las filas de la izquierda, incluyendo repeticiones. |
-| Filtros `WHERE` | `WHERE` + comparadores (`=`, `<>`, `!=`, `<`, `>`, `>=`, `<=`) + lógica (`AND`, `OR`, `NOT`). |
-| Esqueletos útiles CRUD (Create, Read, Update, Delete) | `CREATE TABLE ...`, `SELECT ... FROM ...`, `INSERT INTO ... VALUES ...`, `UPDATE ... SET ... WHERE ...`. |
+|---|---|
+| Qué es SQL | Lenguaje para definir, consultar y modificar datos en bases de datos relacionales. |
+| Alias | Permiten escribir consultas más cortas y legibles: `usuarios u`, `cursos c`, `usuarios_cursos uc`. Después se usan como `u.nombre`, `c.nombre`, etc. |
+| Tipos de datos comunes | `SERIAL`, `INT`, `SMALLINT`, `TEXT`, `VARCHAR(50)`, `DATE`, `TIMESTAMP`, `BOOLEAN`. |
+| Restricciones comunes | `UNIQUE`, `NOT NULL`, `DEFAULT 0`. |
+| JOINs | `JOIN` trae coincidencias entre tablas. `LEFT JOIN` conserva todas las filas de la tabla izquierda aunque no haya coincidencia. |
+| Filtros (`WHERE`) | Permiten filtrar filas usando comparadores (`=`, `!=`, `<`, `>`, `>=`, `<=`) + lógica (`AND`, `OR`, `NOT`). |
+| CRUD + comandos útiles | `CREATE TABLE ...` crea tablas, `INSERT INTO ... VALUES ...` agrega datos, `SELECT ... FROM ...` consulta datos, `UPDATE ... SET ... WHERE ...` modifica datos, `DELETE FROM ... WHERE ...` elimina filas específicas, `TRUNCATE TABLE ...` elimina todas las filas de una tabla manteniendo su estructura, `DROP TABLE ...` elimina completamente la tabla (estructura + datos). |
 | `Primary Key (PK)` | Columna (o conjunto de columnas) con valores únicos que identifica cada fila de una tabla. Generalmente es una columna id. En tablas auxiliares N:N, la PK suele ser una tupla formada por las 2 FKs. |
 | `Foreign Key (FK)` | Columna que guarda la PK de otra tabla para crear una relación entre ambas. |
+| Relaciones | `1:1`, `1:N`, `N:N`. Las relaciones `N:N` requieren tabla auxiliar. |
+| Regla mental rápida | `1:1` → FK única. `1:N` → FK repetible. `N:N` → tabla auxiliar. |
+| Atributos propios en auxiliares | A veces la relación necesita guardar información adicional. Ej: en `jugadores_partidos`, además de conectar jugador ↔ partido, también se guardan `goles`, `asistencias`, `es_local`, etc. |
 
-
-
+[TEMA RELACIONES, PKs y FKs](./Extra/PKs-y-FKs.md)
 
 
 <br><br>
@@ -56,18 +57,19 @@
 
 <br>
 
-| Tema | Pista para orientarte |
+| Tema | Información |
 | --- | --- |
-| Imagen | Plantilla inmutable con app + dependencias + configuración base. |
-| Contenedor | Instancia en ejecución de una imagen. No decir "ejecutar una imagen". |
-| Dockerfile | Receta para construir una imagen: base, copia de archivos, dependencias, comandos. |
-| Servicios/dependencias | La imagen define el entorno; los servicios múltiples suelen coordinarse aparte. |
-| Puerto | Relación host:contenedor para exponer la app. |
-| Persistencia | Volumen: administrado por Docker. Bind mount: carpeta real de tu máquina. |
-| Flujo básico | `docker build` -> `docker run` -> `docker ps` -> `docker logs` -> `docker stop` / `docker rm`. |
-| Qué mirar en una Dockerfile | `FROM`, `WORKDIR`, `COPY`, `RUN`, `EXPOSE`, `CMD`. |
-| Ventaja para usuario | Instalación/uso más consistente. |
-| Ventaja para dev | Mismo entorno en distintas máquinas. |
+| Imagen | Plantilla inmutable que contiene la app, dependencias, configuraciones y comandos necesarios para crear contenedores. Nota: no se dice "ejecutar una imagen", se dice “levantar/iniciar/crear un contenedor desde una imagen”.|
+| Contenedor | Instancia en ejecución de una imagen. Tiene procesos, red, puertos y sistema de archivos aislado. |
+| Dockerfile | Archivo con instrucciones para construir una imagen (contiene `FROM`, `COPY`, `RUN`, `CMD`, etc.). |
+| Servicios / dependencias | Cada servicio (frontend, backend, base de datos, etc.) suele ejecutarse en un contenedor distinto. Algunos servicios dependen de otros para funcionar. Se comunican mediante una red virtual creada por Docker. |
+| Puerto | Permite acceder desde tu máquina al programa que corre dentro del contenedor. Relación `host:contenedor`. Ejemplo: `3000:3000` → puerto `3000` de tu PC conectado al `3000` del contenedor. |
+| Persistencia | **Volumen:** administrado por Docker, ideal para datos persistentes.<br>**Bind mount:** carpeta real del host, útil para desarrollo y sincronización inmediata de archivos. |
+| Flujo básico Docker | `docker build` → construye una imagen desde una Dockerfile.<br>`docker run` → crea e inicia un contenedor a partir de una imagen.<br>`docker ps` → muestra contenedores en ejecución.<br>`docker logs` → muestra logs/salida del contenedor.<br>`docker stop` → detiene un contenedor.<br>`docker rm` → elimina un contenedor detenido. |
+| Ventajas para el usuario (SUECA) | **S**imple instalación.<br>**U**X más estable.<br>**E**ntorno consistente.<br>**C**ompatibilidad entre máquinas/sistemas.<br>**A**ctualizaciones y migraciones más fáciles. |
+| Ventajas para el desarrollador (MAPTEC) | **M**ismo entorno en distintas máquinas.<br>**A**islamiento de dependencias.<br>**P**ortabilidad y reproducibilidad.<br>**T**esting y deployment más simples.<br>**E**scalabilidad y mantenimiento más simples.<br>**C**I/CD y colaboración/trabajo en equipo. |
+| Componentes de Docker | Sistema Host → Docker Engine (gestiona imágenes, redes y contenedores) → Contenedores (instancias aisladas donde corren las aplicaciones). |
+| Componentes de una VM | Sistema Host → Hypervisor (software que administra VMs) → Máquinas Virtuales → Sistema Operativo Invitado completo → Aplicaciones. |
 
 <br><br>
 
@@ -129,20 +131,31 @@
 | Cambio de rama | Primero mirar si hay cambios sin guardar/commitear; después `checkout` o `switch`. |
 | Tags vs releases | Tag: marca en Git. Release: publicación/versionado en GitHub. |
 
+| Concepto                              | Información                                                                                                                                                                                                   |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CI (Continuous Integration)           | Integración continua. Consiste en integrar cambios de código frecuentemente al proyecto principal de forma automatizada. Suele incluir tests automáticos, validaciones y builds para detectar errores rápido. |
+| CD (Continuous Delivery / Deployment) | Entrega o despliegue continuo. Automatiza la preparación y/o publicación de la aplicación luego de pasar los tests.                                                                                           |
+| Objetivo                              | Reducir errores manuales, acelerar desarrollo y hacer despliegues más seguros y frecuentes.                                                                                                                   |
+| Ejemplo típico                        | Un desarrollador hace `git push` → se ejecutan tests automáticos → se construye la app → si todo funciona, se despliega automáticamente.                                                                      |
+| Herramientas comunes                  | GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, Travis CI.                                                                                                                                                   |
+
+
 <br><br>
 
 ### Ingeniería de Software y SDLC
 
 <br>
 
-| Tema | Info |
-| --- | --- |
-| Ingeniería de software | No es solo programar: incluye todo el SDLC. |
-| Etapas del SDLC | Requerimientos (Func. y No Func.) -> diseño -> desarrollo -> testing -> despliegue -> mantenimiento. |
-| Funcionales (verbos) | Qué hace. En general: Buscar `_`, Registrar `_`, Enviar `_`, Generar `_` , Actualizar `_`, Mostrar `_` (BREGAM) |
-| No Funcionales (adjetivos) | Cómo lo hace. Que sea: Seguro, Escalable, Mantenible, Eficiente, Confiable, Accesible (SEMECA) |
-| Roles | Analista, Arquitecto, Desarrollador, QA/ Tester, DevOps |
-| Cuándo es malo retroceder | Cuando pasa por mala planificación, deuda técnica (hacer algo rápido pero sin planificar correctamente) y/o errores evitables (no cumplir los requerimientos funcionales y/o no funcionales, por ejemplo). |
+| Tema                                   | Información                                                                                                                                                                                        |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ingeniería de Software                 | No es solo programar: incluye todo el ciclo de vida del software (SDLC), desde la idea inicial hasta el mantenimiento.                                                                             |
+| SDLC (Software Development Life Cycle) | Requerimientos → Diseño → Desarrollo → Testing → Despliegue → Mantenimiento                                                                                                                        |
+| Requerimientos Funcionales             | Definen **qué hace** el sistema. Suelen expresarse con verbos: Buscar, Registrar, Enviar, Generar, Actualizar, Mostrar (`BREGAM`).                                                                 |
+| Requerimientos No Funcionales          | Definen **cómo debe funcionar** el sistema. Ejemplos: Seguro, Escalable, Mantenible, Eficiente, Confiable, Accesible (`SEMECA`).                                                                   |
+| Roles                                  | Analista (define necesidades), Arquitecto (diseña estructura), Desarrollador (implementa), QA/Tester (verifica calidad), DevOps (despliegue e infraestructura).                                    |
+| Deuda técnica                          | Decisiones rápidas o mal planificadas que “ahorran tiempo” a corto plazo pero generan problemas futuros: código difícil de mantener, errores, retrabajo o necesidad de rehacer partes del sistema. |
+| Cuándo es malo retroceder en el SDLC?  | Cuando hay que rehacer etapas por errores evitables, mala planificación o deuda técnica.                                                                                                           |
+
 
 <br><br>
 
