@@ -47,15 +47,6 @@
 | `Foreign Key (FK)` | Columna que guarda la PK de otra tabla para crear una relación entre ambas. |
 
 
-| Relación | Tablas | FK | Ejemplo | Código |
-|---|---|---|---|---|
-| `1:1` | [Ver](./Assets/1a1.png) | FK `UNIQUE`. | Cada Persona tiene 1 Pasaporte `1:1` |  |
-| `1:N` | [Ver](./Assets/1aN.png) | FK en lado `N` y se repite. | Cada Usuario tiene 1 o más Compras `1:N` |   |
-| `N:N` | [Ver](./Assets/NaN.png) | Las 2 FKs forman una tupla en la tabla auxiliar | Cada Alumno tiene 1 o más Materias `1:N` PERO cada Materia también tiene 1 o más Alumnos `N:1` } `N:N` |  |
-| Múltiples `N:N` | [Ver](./Assets/MuchosNaN.png) | Cada auxiliar tiene 2 FKs. Cada relación `N:N` usa su propia tabla intermedia | Alumno ↔ Materia + Profesor ↔ Materia |  |
-
-
-
 
 
 
