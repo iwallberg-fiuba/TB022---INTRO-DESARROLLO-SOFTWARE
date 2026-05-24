@@ -33,14 +33,10 @@
 
 <br>
 
+
 | Tema | Pista para orientarte |
 | --- | --- |
 | Qué es SQL | Lenguaje para definir, consultar y modificar datos en bases relacionales. |
-| Qué se representa como tabla | Relaciones (cualquier tipo) con atributos que necesitan guardarse de forma persistente. |
-| PK y FK | PK identifica una fila; FK referencia la PK de otra tabla. |
-| `1:1`, `1:N`, `N:N` | Pensar cuántas filas de una tabla pueden asociarse con cuántas de la otra. |
-| Resolver `N:N` | Con una tabla auxiliar/intermedia. Esa tabla suele tener las FK de las otras dos tablas. |
-| Tabla auxiliar en consulta | La tabla auxiliar normalmente guarda IDs, no nombres. Entonces, si querés mostrar `usuarios.nombre`, `cursos.nombre` u otro dato real de esas tablas, no alcanza con consultar la auxiliar sola: tenés que hacer `JOIN` con las tablas originales. |
 | Alias | Se usan para escribir menos y entender mejor la consulta: `usuarios u`, `cursos c`, `usuarios_cursos uc`. Después usás `u.nombre`, `c.nombre`, etc. |
 | Tipos de datos | `SERIAL`, `INT`, `SMALLINT`, `TEXT`, `VARCHAR(50)`. |
 | Restricciones | `UNIQUE`, `NOT NULL`, `DEFAULT 0`. |
@@ -49,8 +45,18 @@
 | Filtros `WHERE` | `WHERE` + comparadores (`=`, `<>`, `!=`, `<`, `>`, `>=`, `<=`) + lógica (`AND`, `OR`, `NOT`). |
 | Esqueletos útiles | `CREATE TABLE ...`, `SELECT ... FROM ...`, `INSERT INTO ... VALUES ...`, `UPDATE ... SET ... WHERE ...`. |
 | Patrón típico con `N:N` | `SELECT ... FROM tabla_auxiliar ta JOIN tabla1 t1 ON ta.fk1 = t1.id JOIN tabla2 t2 ON ta.fk2 = t2.id`: la auxiliar te dice qué filas se relacionan; los `JOIN` te dejan traer los nombres/campos de esas filas. |
-| Cómo saber si necesito + de 1 tabla aux (caso 1) | Pensar cuántas `N:N` hay (c/u requiere tabla aux). |
-| Cómo saber si necesito + de 1 tabla aux (caso 2) | Pensar si la tabla aux responde al menos 3: Cuándo, cuánto, estado, método, unidades, asistentes, etc (acronimo). |
+
+| Relación        | Estructura                         | FK                                                               | Ejemplo                               | Qué pasa con la FK                                 | Cómo detectar la relación                   |
+| --------------- | ---------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------- | ------------------------------------------- |
+| `1:1`           | [Ver]()                | FK `UNIQUE`, no puede repetirse                             | Persona ↔ Pasaporte                   | Una FK apunta a un único registro                  | “¿Solo puede existir uno?”                  |
+| `1:N`           | [Ver]()                 | FK en lado `N` y puede repetirse                                | Usuario ↔ Compras                     | La FK se repite en el lado `N`                     | “¿Muchos pueden apuntar al mismo?”          |
+| `N:N`           | [Ver]() | 2 FKs en tabla auxiliar como tupla                                 | Alumnos ↔ Materias                      | Las 2 FKs forman una PK compuesta tupla           | “¿Ambos lados pueden tener muchos?”         |
+| Múltiples `N:N` | [Ver]()           | Cada auxiliar tiene 2 FKs | Cada `N:N` importante suele tener su propia auxiliar | Alumno ↔ Materia + Profesor ↔ Materia | Cada relación `N:N` usa su propia tabla intermedia | “¿Hay más de una relación muchos ↔ muchos?” |
+
+
+
+
+
 
 
 <br><br>
