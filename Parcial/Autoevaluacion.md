@@ -48,10 +48,10 @@
 
 | Relación        | Estructura                         | FK                                                               | Ejemplo                               | Qué pasa con la FK                                 | Cómo detectar la relación                   |
 | --------------- | ---------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------- | ------------------------------------------- |
-| `1:1`           | [Ver]()                | FK `UNIQUE`, no puede repetirse                             | Persona ↔ Pasaporte                   | Una FK apunta a un único registro                  | “¿Solo puede existir uno?”                  |
-| `1:N`           | [Ver]()                 | FK en lado `N` y puede repetirse                                | Usuario ↔ Compras                     | La FK se repite en el lado `N`                     | “¿Muchos pueden apuntar al mismo?”          |
-| `N:N`           | [Ver]() | 2 FKs en tabla auxiliar como tupla                                 | Alumnos ↔ Materias                      | Las 2 FKs forman una PK compuesta tupla           | “¿Ambos lados pueden tener muchos?”         |
-| Múltiples `N:N` | [Ver]()           | Cada auxiliar tiene 2 FKs | Cada `N:N` importante suele tener su propia auxiliar | Alumno ↔ Materia + Profesor ↔ Materia | Cada relación `N:N` usa su propia tabla intermedia | “¿Hay más de una relación muchos ↔ muchos?” |
+| `1:1`           | [Ver](./Assets/1a1.png)                | FK `UNIQUE`, no puede repetirse                             | Persona ↔ Pasaporte                   | Una FK apunta a un único registro                  | “¿Solo puede existir uno?”                  |
+| `1:N`           | [Ver](./Assets/1aN.png)                 | FK en lado `N` y puede repetirse                                | Usuario ↔ Compras                     | La FK se repite en el lado `N`                     | “¿Muchos pueden apuntar al mismo?”          |
+| `N:N`           | [Ver](./Assets/NaN.png) | 2 FKs en tabla auxiliar como tupla                                 | Alumnos ↔ Materias                      | Las 2 FKs forman una PK compuesta tupla           | “¿Ambos lados pueden tener muchos?”         |
+| Múltiples `N:N` | [Ver](./Assets/MuchosNaN.png)           | Cada auxiliar tiene 2 FKs | Cada `N:N` importante suele tener su propia auxiliar | Alumno ↔ Materia + Profesor ↔ Materia | Cada relación `N:N` usa su propia tabla intermedia | “¿Hay más de una relación muchos ↔ muchos?” |
 
 
 
