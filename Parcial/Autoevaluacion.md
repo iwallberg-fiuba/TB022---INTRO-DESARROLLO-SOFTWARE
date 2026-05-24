@@ -131,13 +131,7 @@
 | Cambio de rama | Primero mirar si hay cambios sin guardar/commitear; después `checkout` o `switch`. |
 | Tags vs releases | Tag: marca en Git. Release: publicación/versionado en GitHub. |
 
-| Concepto                              | Información                                                                                                                                                                                                   |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CI (Continuous Integration)           | Integración continua. Consiste en integrar cambios de código frecuentemente al proyecto principal de forma automatizada. Suele incluir tests automáticos, validaciones y builds para detectar errores rápido. |
-| CD (Continuous Delivery / Deployment) | Entrega o despliegue continuo. Automatiza la preparación y/o publicación de la aplicación luego de pasar los tests.                                                                                           |
-| Objetivo                              | Reducir errores manuales, acelerar desarrollo y hacer despliegues más seguros y frecuentes.                                                                                                                   |
-| Ejemplo típico                        | Un desarrollador hace `git push` → se ejecutan tests automáticos → se construye la app → si todo funciona, se despliega automáticamente.                                                                      |
-| Herramientas comunes                  | GitHub Actions, GitLab CI/CD, Jenkins, CircleCI, Travis CI.                                                                                                                                                   |
+
 
 
 <br><br>
@@ -146,15 +140,18 @@
 
 <br>
 
-| Tema                                   | Información                                                                                                                                                                                        |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ingeniería de Software                 | No es solo programar: incluye todo el ciclo de vida del software (SDLC), desde la idea inicial hasta el mantenimiento.                                                                             |
-| SDLC (Software Development Life Cycle) | Requerimientos → Diseño → Desarrollo → Testing → Despliegue → Mantenimiento                                                                                                                        |
-| Requerimientos Funcionales             | Definen **qué hace** el sistema. Suelen expresarse con verbos: Buscar, Registrar, Enviar, Generar, Actualizar, Mostrar (`BREGAM`).                                                                 |
-| Requerimientos No Funcionales          | Definen **cómo debe funcionar** el sistema. Ejemplos: Seguro, Escalable, Mantenible, Eficiente, Confiable, Accesible (`SEMECA`).                                                                   |
-| Roles                                  | Analista (define necesidades), Arquitecto (diseña estructura), Desarrollador (implementa), QA/Tester (verifica calidad), DevOps (despliegue e infraestructura).                                    |
-| Deuda técnica                          | Decisiones rápidas o mal planificadas que “ahorran tiempo” a corto plazo pero generan problemas futuros: código difícil de mantener, errores, retrabajo o necesidad de rehacer partes del sistema. |
-| Cuándo es malo retroceder en el SDLC?  | Cuando hay que rehacer etapas por errores evitables, mala planificación o deuda técnica.                                                                                                           |
+| Tema | Información |
+| --- | --- |
+| Ingeniería de Software | Disciplina que abarca todo el proceso de creación y mantenimiento de software, no solo programar. Incluye planificación, diseño, desarrollo, testing, despliegue y mantenimiento. |
+| SDLC (Software Development Life Cycle) | Ciclo de vida del software: Requerimientos → Diseño → Desarrollo → Testing → Despliegue → Mantenimiento |
+| Requerimientos Funcionales (`BREGAM`) | Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar. |
+| Requerimientos No Funcionales (`SEMECA`) | Definen **cómo debe funcionar** el sistema. Ejemplos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible. |
+| Roles comunes | **Analista:** define necesidades y requerimientos.<br>**Arquitecto:** diseña estructura y tecnologías.<br>**Desarrollador:** implementa funcionalidades.<br>**QA/Tester:** verifica calidad y detecta errores.<br>**DevOps:** automatiza infraestructura, testing y despliegues. |
+| CI/CD (DevOps) | **CI (Continuous Integration):** integra cambios de código automáticamente, ejecutando tests, validaciones y builds.<br><br>**CD (Continuous Delivery / Deployment):** automatiza preparación y/o despliegue de la aplicación luego de pasar tests. |
+| Objetivo de CI/CD | Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes. |
+| Flujo típico CI/CD | `git push` → tests automáticos → build → deployment automático |
+| Deuda técnica | Soluciones rápidas o mal planificadas que funcionan a corto plazo pero generan problemas futuros: código difícil de mantener, errores, retrabajo o necesidad de rehacer partes del sistema. |
+| Cuándo es malo retroceder en el SDLC | Cuando hay que volver etapas atrás por errores evitables, mala planificación o deuda técnica. |                                                         
 
 
 <br><br>
@@ -163,18 +160,18 @@
 
 <br>
 
-| Término | Pista para orientarte |
-| --- | --- |
-| LLM | Modelo de lenguaje que predice texto y puede seguir instrucciones. |
-| Coding Agent | Agente que usa un modelo para razonar y además operar sobre herramientas/código. |
-| Agent Harness | Capa que coordina modelo, herramientas, contexto y ejecución del agente. |
-| Coding Harness | Entorno/controlador específico para tareas de programación. |
-| Reasoning Model | Modelo orientado a resolver tareas paso a paso con más capacidad de razonamiento. |
-| Live Repo Context | Acceso al estado real y actual del repositorio mientras trabaja. |
-| Context Reduction | Resumir/filtrar contexto para no saturar la ventana del modelo. |
-| Cache Reuse | Reutilizar resultados o contexto previo para evitar repetir trabajo. |
-| Tool Access | Posibilidad de usar shell, editor, buscador, navegador, etc. |
-| Subagents | Agentes auxiliares para dividir trabajo o especializar subtareas. |
+| Término | Qué es | Ejemplo |
+| --- | --- | --- |
+| LLM (Large Language Model) | Modelo de IA entrenado con grandes cantidades de texto. Predice texto y sigue instrucciones. | ChatGPT, GPT-5, Claude, Gemini, Llama. |
+| Coding Agent | Agente basado en un LLM que además puede usar herramientas y actuar sobre un entorno. | Codex, Claude Code, Cursor Agent, Devin. |
+| Agent Harness | Sistema/capa que coordina herramientas, memoria, contexto e instrucciones del agente. | OpenAI Codex Harness, LangChain Agents, AutoGen. |
+| Coding Harness | Entorno específico para programación y automatización de tareas de desarrollo. | Cursor Agent Environment, OpenHands, Devin runtime. |
+| Reasoning Model | Modelo optimizado para razonar paso a paso antes de responder. | o3, GPT-5 Reasoning, Claude Opus. |
+| Live Repo Context | Acceso al estado actual y real de un repositorio mientras el agente trabaja. | Cursor, Codex y Devin leyendo archivos y commits en tiempo real. |
+| Context Reduction | Técnicas para resumir o filtrar información y evitar saturar el contexto del modelo. | Cursor o Claude resumiendo automáticamente archivos largos antes de enviarlos al modelo. |
+| Cache Reuse | Reutilización de resultados o contexto previo para ahorrar tiempo y recursos. | Reusar embeddings, análisis previos o respuestas ya calculadas en agentes como Cursor o Devin. |
+| Tool Access | Capacidad del agente para usar herramientas externas. | Claude Code usando terminal, Codex editando archivos o Cursor ejecutando tests. |
+| Subagents | Agentes auxiliares especializados en subtareas específicas. | Devin o AutoGen usando múltiples agentes para frontend, backend y testing al mismo tiempo. |
 
 <br><br>
 
