@@ -36,7 +36,7 @@
 | Tema | Pista para orientarte |
 | --- | --- |
 | Qué es SQL | Lenguaje para definir, consultar y modificar datos en bases relacionales. |
-| Qué va en una tabla | Entidades del problema y relaciones que necesiten persistirse. |
+| Qué se representa como tabla | Relaciones (cualquier tipo) con atributos que necesitan guardarse de forma persistente. |
 | PK y FK | PK identifica una fila; FK referencia la PK de otra tabla. |
 | `1:1`, `1:N`, `N:N` | Pensar cuántas filas de una tabla pueden asociarse con cuántas de la otra. |
 | Resolver `N:N` | Con una tabla auxiliar/intermedia. Esa tabla suele tener las FK de las otras dos tablas. |
@@ -45,10 +45,13 @@
 | Tipos de datos | `SERIAL`, `INT`, `SMALLINT`, `TEXT`, `VARCHAR(50)`. |
 | Restricciones | `UNIQUE`, `NOT NULL`, `DEFAULT 0`. |
 | CRUD (Create, Read, Update, Delete) | `SELECT`, `INSERT`, `UPDATE`, `DELETE`. |
-| JOINs | `JOIN` cruza coincidencias; `LEFT JOIN` conserva todas las filas de la izquierda. |
+| JOINs | `JOIN` cruza coincidencias; `LEFT JOIN` conserva todas las filas de la izquierda, incluyendo repeticiones. |
 | Filtros `WHERE` | `WHERE` + comparadores (`=`, `<>`, `!=`, `<`, `>`, `>=`, `<=`) + lógica (`AND`, `OR`, `NOT`). |
 | Esqueletos útiles | `CREATE TABLE ...`, `SELECT ... FROM ...`, `INSERT INTO ... VALUES ...`, `UPDATE ... SET ... WHERE ...`. |
 | Patrón típico con `N:N` | `SELECT ... FROM tabla_auxiliar ta JOIN tabla1 t1 ON ta.fk1 = t1.id JOIN tabla2 t2 ON ta.fk2 = t2.id`: la auxiliar te dice qué filas se relacionan; los `JOIN` te dejan traer los nombres/campos de esas filas. |
+| Cómo saber si necesito + de 1 tabla aux (caso 1) | Pensar cuántas `N:N` hay (c/u requiere tabla aux). |
+| Cómo saber si necesito + de 1 tabla aux (caso 2) | Pensar si la tabla aux responde al menos 3: Cuándo, cuánto, estado, método, unidades, asistentes, etc (acronimo). |
+
 
 <br><br>
 
