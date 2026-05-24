@@ -11,9 +11,9 @@ Este archivo contiene enlaces a todo el material necesario para cursar y aprobar
 
 - [Bases](#bases) - el contenido original a estudiar.
 - [Interpretado](#interpretados) - resúmenes, diagramas, prezis, etc. hechos a partir del contenido original.
+- [Autoevaluación](#autoevaluación) - preguntas, ayudas, plataformas online gratis para practicar cómodamente, etc. para autoevaluarse.
 - [Guías](#guías) - consignas y soluciones.
 - [Parciales](#parciales) - parciales anteriores y soluciones.
-- [Autoevaluación](#autoevaluación) - preguntas, ayudas, plataformas online gratis para practicar cómodamente, etc. para autoevaluarse.
 - [Extra Docs](#extra-docs) - documentación extra sobre el tema en internet.
 - [Siempre útiles](#siempre-útiles) - plataformas que **siempre** van a ser útiles.
 
@@ -43,16 +43,16 @@ Este archivo contiene enlaces a todo el material necesario para cursar y aprobar
 
 <br>
 
-| Tema | Link 1 | Link 2 | Link 3 | Link 4 | Link 5 |
-| --- | --- | --- | --- | --- | --- |
-| Bases de Datos y SQL | [Pag][sql-pag] | [Slides][sql-slides] |  |  |  |
-| Docker | [Pag][docker-pag] | [Slide 1][docker-slide1] | [Slide 2][docker-slide2] |  |  |
-| Linux y Bash| [Pag Linux][linux-pag] | [Linux 1][linux1] | [Linux 2][linux2] | [Linux 3][linux3] | [Linux 4][linux4] |
-| Linux y Bash | [Pag Bash][bash-pag] | [Bash 2][bash2] | [Bash 3][bash3] |  |  |
-| Regex y Sed | [Slide][regex-slide] |  |  |  |  |
-| Git y GitHub | [Pag][git-pag] | [Slide 1][git-slide1] | [Slide 2][git-slide2] |  |  |
-| Ing. de Software y SDLC | [Pag][sdlc-pag] | [Slide 1][sdlc-slide1] | [Slide 2][sdlc-slide2] |  |  |
-| IA | [Artículo][ia-articulo] |  |  |  |  |
+| Tema | Links |
+| --- | --- |
+| Bases de Datos y SQL | [Pag][sql-pag] - [Slides][sql-slides] |
+| Docker | [Pag][docker-pag] - [Slide 1][docker-slide1] - [Slide 2][docker-slide2] |
+| Linux y Bash | [Pag Linux][linux-pag] - [Linux 1][linux1] - [Linux 2][linux2] - [Linux 3][linux3] - [Linux 4][linux4] |
+| Linux y Bash | [Pag Bash][bash-pag] - [Bash 2][bash2] |
+| Regex y Sed | [Slide][regex-slide] |
+| Git y GitHub | [Pag][git-pag] - [Slide 1][git-slide1] - [Slide 2][git-slide2] |
+| Ing. de Software y SDLC | [Pag][sdlc-pag] - [Slide 1][sdlc-slide1] - [Slide 2][sdlc-slide2] |
+| IA | [Artículo][ia-articulo] |
 
 <br><br>
 
@@ -75,13 +75,13 @@ Este archivo contiene enlaces a todo el material necesario para cursar y aprobar
 
 | Tema | Práctica simple | Recordar | Random Picker | Respuestas | 
 | --- | --- | --- | --- | --- | 
-| Bases de Datos y SQL | [Run SQL][run-sql] [dbdiagram][dbdiagram] |  | [rueda][rueda-sql] |  |
-| Docker |  |  |  |  |
-| Linux y Bash |  |  |  |  |
-| Regex y Sed | [regex tester][regex-tester] |  |  |  |
-| Git y GitHub |  |  |  |  |
-| Ing. de Software y SDLC |  |  |  |  |
-| IA |  |  |  |  |
+| Bases de Datos y SQL | [W3 SQL](https://www.w3schools.com/sql/sql_exercises.asp) - [Run SQL][run-sql] - [dbdiagram][dbdiagram] | [Ver](./Autoevaluacion.md#bases-de-datos-y-sql) | [rueda][rueda-sql] | `Pendiente` |
+| Docker | `No encontrado` | [Ver](./Autoevaluacion.md#docker) | [Ver](./Autoevaluacion.md#docker) | `Pendiente` |
+| Linux y Bash | [Terminal Coddy.tech](https://coddy.tech/playground/terminal) | [Ver](./Autoevaluacion.md#linux-y-bash) | `Pendiente` | `Pendiente` |
+| Regex y Sed | [regex tester][regex-tester] | [Ver](./Autoevaluacion.md#regex-y-sed) | `Pendiente` | `Pendiente` |
+| Git y GitHub | [W3 Git](https://www.w3schools.com/git/git_exercises.asp) | [Ver](./Autoevaluacion.md#git-y-github) | `Pendiente` | `Pendiente` |
+| Ing. de Software y SDLC | `N/A` | [Ver](./Autoevaluacion.md#ingeniería-de-software-y-sdlc) | `Pendiente` | `Pendiente` |
+| IA | `N/A` | [Ver](./Autoevaluacion.md#Inteligencia-Artificial) | `Pendiente` | `Pendiente` |
 
 <br><br>
 
@@ -91,9 +91,9 @@ Este archivo contiene enlaces a todo el material necesario para cursar y aprobar
 
 |  | Recordar | Consigna | Solución |
 | --- | --- | --- | --- |
-| Guía 1: Bash |  | [Ver consigna][bash-guia] | [Ver solución](./GUIAS/GUIA1%20-%20Bash.ipynb) |
-| Guía 2: Regex |  | [Ver consigna][regex-guia] | [Ver solución](./GUIAS/GUIA2%20-%20Regex.ipynb) |
-| Guía 3: SQL |  | [Ver consigna][sql-guia] | [Ver solución][sql-solucion] |
+| Guía 1: Bash | [Ver](./Autoevaluacion.md#linux-y-bash) | [Ver consigna][bash-guia] | [Ver solución](./GUIAS/GUIA1%20-%20Bash.ipynb) |
+| Guía 2: Regex | [Ver](./Autoevaluacion.md#regex-y-sed) | [Ver consigna][regex-guia] | [Ver solución](./GUIAS/GUIA2%20-%20Regex.ipynb) |
+| Guía 3: SQL | [Ver](./Autoevaluacion.md#bases-de-datos-y-sql) | [Ver consigna][sql-guia] | [Ver solución][sql-solucion] |
 
 <br><br>
 
@@ -101,14 +101,14 @@ Este archivo contiene enlaces a todo el material necesario para cursar y aprobar
 
 <br>
 
-| Tema y Fecha | Recordar | Consigna | Solución |
-| --- | --- | --- | --- |
-| Modelo Parcial |  | [Ver consigna](./Parciales%20Anteriores/Modelo%20Parcial/Modelo-Parcial.pdf) | [Ver solución](./Parciales%20Anteriores/Modelo%20Parcial/Solucion-Modelo.ipynb) |
-| Ej. Integrador BASH |  | [Ver consigna] | [Ver solución] |
-| T1 2C25 |  | [Ver consigna](./Parciales%20Anteriores/Parcial%20T1%202C25/T1%202C25%20Parte%201.jpeg) | [Ver solución](./Parciales%20Anteriores/Parcial%20T2%202C25/Solucion%20T2%202C25.ipynb) |
-| T2 2C25 |  | [Ver consigna](./Parciales%20Anteriores/Parcial%20T2%202C25/T2%202C25%20Parte%201.jpeg) | [Ver solución](./Parciales%20Anteriores/Parcial%20T2%202C25/Solucion%20T2%202C25.ipynb) |
-| T3 2C25 |  | [Ver consigna](./Parciales%20Anteriores/Parcial%20T3%202C25/T3%202C25%20Parte%201.jpeg) | [Ver solución](./Parciales%20Anteriores/Parcial%20T3%202C25/Solucion%20T3%202C25.ipynb) |
-| Recup. T2 2C25 |  | [Ver consigna](./Parciales%20Anteriores/Recup.%20T2%202C25/T2%20Recup%202C25%20Parte%201.jpeg) | [Ver solución](./Parciales%20Anteriores/Recup.%20T2%202C25/Solucion%20Recup%20T2%202C25.ipynb) |
+| Tema y Fecha | Consigna | Solución |
+| --- | --- | --- |
+| Modelo Parcial | [Ver consigna](./Parciales%20Anteriores/Modelo%20Parcial/Modelo-Parcial.pdf) | [Ver solución](./Parciales%20Anteriores/Modelo%20Parcial/Solucion-Modelo.ipynb) |
+| Ej. Integrador BASH | [Ver consigna](https://www.intro-camejo.com.ar/docs/Material/Clases/bash-complementario) | [Ver solución](./Ejercicio-Integrador-BASH/Solucion_profesor.ipynb) |
+| T1 2C25 | [Ver consigna](./Parciales%20Anteriores/Parcial%20T1%202C25/T1%202C25%20Parte%201.jpeg) | [Ver solución](./Parciales%20Anteriores/Parcial%20T2%202C25/Solucion%20T2%202C25.ipynb) |
+| T2 2C25 | [Ver consigna](./Parciales%20Anteriores/Parcial%20T2%202C25/T2%202C25%20Parte%201.jpeg) | [Ver solución](./Parciales%20Anteriores/Parcial%20T2%202C25/Solucion%20T2%202C25.ipynb) |
+| T3 2C25 | [Ver consigna](./Parciales%20Anteriores/Parcial%20T3%202C25/T3%202C25%20Parte%201.jpeg) | [Ver solución](./Parciales%20Anteriores/Parcial%20T3%202C25/Solucion%20T3%202C25.ipynb) |
+| Recup. T2 2C25 | [Ver consigna](./Parciales%20Anteriores/Recup.%20T2%202C25/T2%20Recup%202C25%20Parte%201.jpeg) | [Ver solución](./Parciales%20Anteriores/Recup.%20T2%202C25/Solucion%20Recup%20T2%202C25.ipynb) |
 
 <br><br>
 
@@ -118,13 +118,13 @@ Este archivo contiene enlaces a todo el material necesario para cursar y aprobar
 
 | Tema | Link 1 | Link 2 | Link 3 |
 | --- | --- | --- | --- |
-| BdDs y SQL |  |  |  |
+| Bases de Datos y SQL |  |  |  |
 | Docker |  |  |  |
 | Linux y Bash |  |  |  |
 | Regex y Sed |  |  |  |
 | Git y GitHub |  |  |  |
-| Ing. de Software y SDLC |  |  |  |
-| IA |  |  |  |
+
+
 
 <br><br>
 
@@ -134,7 +134,7 @@ Este archivo contiene enlaces a todo el material necesario para cursar y aprobar
 
 | Tema | Link 1 | Link 2 | Link 3 | Link 4 |
 | --- | --- | --- | --- | --- |
-| Bases de Datos y SQL | [dbdiagram][dbdiagram] | [W3Schools PostgreSQL][w3-postgresql] | [Run SQL][run-sql] | [DBeaver][dbeaver] |
+| Bases de Datos y SQL | [dbdiagram][dbdiagram] | [Run SQL][run-sql] | [W3Schools PostgreSQL][w3-postgresql] | [DBeaver][dbeaver] |
 | Docker | [Docker][docker-web] |  |  |  |
 | Linux y Bash | [W3Schools Bash][w3-bash] | [Learn Bash][learn-bash] |  |  |
 | Regex y Sed | [Regex Tester][regex-tester] |  |  |  |
@@ -167,7 +167,6 @@ Este archivo contiene enlaces a todo el material necesario para cursar y aprobar
 
 [bash-pag]: https://www.intro-camejo.com.ar/docs/Material/Apuntes/bash
 [bash2]: https://www.intro-camejo.com.ar/docs/Material/Clases/clase-bash
-[bash3]: https://www.intro-camejo.com.ar/docs/Material/Clases/bash-complementario
 
 [regex-slide]: https://drive.google.com/file/d/1X2K3l9ZL2OGgRJyZE9mKKE-t41t-3vyl/view
 
