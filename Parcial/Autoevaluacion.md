@@ -135,14 +135,14 @@
 
 <br>
 
-| Tema | Pista para orientarte |
+| Tema | Info |
 | --- | --- |
-| Ingeniería de software | No es solo programar: incluye análisis, diseño, implementación, testing, despliegue y mantenimiento. |
-| Etapas del SDLC | Requerimientos -> diseño -> desarrollo -> testing -> despliegue -> mantenimiento. |
-| Roles típicos | PM/PO, arquitecto, devs, QA, DevOps, UX/UI, DBA según etapa. |
-| Calidad | Pensar en mantenibilidad, escalabilidad, seguridad, eficiencia y usabilidad. |
-| SDLC lineal o no | No es estrictamente lineal; puede haber iteración y retrocesos. |
-| Cuándo es malo retroceder | Cuando pasa por mala planificación, deuda técnica o errores evitables. |
+| Ingeniería de software | No es solo programar: incluye todo el SDLC. |
+| Etapas del SDLC | Requerimientos (Func. y No Func.) -> diseño -> desarrollo -> testing -> despliegue -> mantenimiento. |
+| Funcionales (verbos) | Qué hace. En general: Buscar `_`, Registrar `_`, Enviar `_`, Generar `_` , Actualizar `_`, Mostrar `_` (BREGAM) |
+| No Funcionales (adjetivos) | Cómo lo hace. Que sea: Seguro, Escalable, Mantenible, Eficiente, Confiable, Accesible (SEMECA) |
+| Roles | Analista, Arquitecto, Desarrollador, QA/ Tester, DevOps |
+| Cuándo es malo retroceder | Cuando pasa por mala planificación, deuda técnica (hacer algo rápido pero sin planificar correctamente) y/o errores evitables (no cumplir los requerimientos funcionales y/o no funcionales, por ejemplo). |
 
 <br><br>
 
