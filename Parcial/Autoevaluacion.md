@@ -34,25 +34,25 @@
 <br>
 
 
-| Tema | Pista para orientarte |
+| Tema | Información |
 | --- | --- |
 | Qué es SQL | Lenguaje para definir, consultar y modificar datos en bases relacionales. |
 | Alias | Se usan para escribir menos y entender mejor la consulta: `usuarios u`, `cursos c`, `usuarios_cursos uc`. Después usás `u.nombre`, `c.nombre`, etc. |
 | Tipos de datos | `SERIAL`, `INT`, `SMALLINT`, `TEXT`, `VARCHAR(50)`. |
 | Restricciones | `UNIQUE`, `NOT NULL`, `DEFAULT 0`. |
-| CRUD (Create, Read, Update, Delete) | `SELECT`, `INSERT`, `UPDATE`, `DELETE`. |
 | JOINs | `JOIN` cruza coincidencias; `LEFT JOIN` conserva todas las filas de la izquierda, incluyendo repeticiones. |
 | Filtros `WHERE` | `WHERE` + comparadores (`=`, `<>`, `!=`, `<`, `>`, `>=`, `<=`) + lógica (`AND`, `OR`, `NOT`). |
-| Esqueletos útiles | `CREATE TABLE ...`, `SELECT ... FROM ...`, `INSERT INTO ... VALUES ...`, `UPDATE ... SET ... WHERE ...`. |
-| Patrón típico con `N:N` | `SELECT ... FROM tabla_auxiliar ta JOIN tabla1 t1 ON ta.fk1 = t1.id JOIN tabla2 t2 ON ta.fk2 = t2.id`: la auxiliar te dice qué filas se relacionan; los `JOIN` te dejan traer los nombres/campos de esas filas. |
+| Esqueletos útiles CRUD (Create, Read, Update, Delete) | `CREATE TABLE ...`, `SELECT ... FROM ...`, `INSERT INTO ... VALUES ...`, `UPDATE ... SET ... WHERE ...`. |
+| `Primary Key (PK)` | Columna (o conjunto de columnas) con valores únicos que identifica cada fila de una tabla. Generalmente es una columna id. En tablas auxiliares N:N, la PK suele ser una tupla formada por las 2 FKs. |
+| `Foreign Key (FK)` | Columna que guarda la PK de otra tabla para crear una relación entre ambas. |
 
-| Relación        | Estructura                         | FK                                                               | Ejemplo                               | Qué pasa con la FK                                 | Cómo detectar la relación                   |
-| --------------- | ---------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------- | ------------------------------------------- |
-| `1:1`           | [Ver](./Assets/1a1.png)                | FK `UNIQUE`, no puede repetirse                             | Persona ↔ Pasaporte                   | Una FK apunta a un único registro                  | “¿Solo puede existir uno?”                  |
-| `1:N`           | [Ver](./Assets/1aN.png)                 | FK en lado `N` y puede repetirse                                | Usuario ↔ Compras                     | La FK se repite en el lado `N`                     | “¿Muchos pueden apuntar al mismo?”          |
-| `N:N`           | [Ver](./Assets/NaN.png) | 2 FKs en tabla auxiliar como tupla                                 | Alumnos ↔ Materias                      | Las 2 FKs forman una PK compuesta tupla           | “¿Ambos lados pueden tener muchos?”         |
-| Múltiples `N:N` | [Ver](./Assets/MuchosNaN.png)           | Cada auxiliar tiene 2 FKs | Cada `N:N` importante suele tener su propia auxiliar | Alumno ↔ Materia + Profesor ↔ Materia | Cada relación `N:N` usa su propia tabla intermedia | “¿Hay más de una relación muchos ↔ muchos?” |
 
+| Relación | Tablas | FK | Ejemplo | Código |
+|---|---|---|---|---|
+| `1:1` | [Ver](./Assets/1a1.png) | FK `UNIQUE`. | Cada Persona tiene 1 Pasaporte `1:1` |  |
+| `1:N` | [Ver](./Assets/1aN.png) | FK en lado `N` y se repite. | Cada Usuario tiene 1 o más Compras `1:N` |   |
+| `N:N` | [Ver](./Assets/NaN.png) | Las 2 FKs forman una tupla en la tabla auxiliar | Cada Alumno tiene 1 o más Materias `1:N` PERO cada Materia también tiene 1 o más Alumnos `N:1` } `N:N` |  |
+| Múltiples `N:N` | [Ver](./Assets/MuchosNaN.png) | Cada auxiliar tiene 2 FKs. Cada relación `N:N` usa su propia tabla intermedia | Alumno ↔ Materia + Profesor ↔ Materia |  |
 
 
 
