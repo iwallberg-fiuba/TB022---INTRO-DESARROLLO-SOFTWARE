@@ -155,6 +155,8 @@ CREATE TABLE profesor_materia (
     PRIMARY KEY (profesor_id, materia_id)
 );
 ```
+<br>
+<img width="1559" height="1031" alt="imagen" src="https://github.com/user-attachments/assets/f4e2ca9c-7fe0-4488-88af-02e349b2dfa3" />
 
 <br><br>
 <br>
