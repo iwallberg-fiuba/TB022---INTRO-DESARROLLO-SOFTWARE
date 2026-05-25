@@ -48,7 +48,7 @@
 | Regla mental rápida | `1:1` → FK única. `1:N` → FK repetible. `N:N` → tabla auxiliar. |
 | Atributos propios en auxiliares | A veces la relación necesita guardar información adicional. Ej: en `jugadores_partidos`, además de conectar jugador ↔ partido, también se guardan `goles`, `asistencias`, `es_local`, etc. |
 
-[TEMA RELACIONES, PKs y FKs](./Extra/PKs-y-FKs-SQL.md)
+[TEMA RELACIONES, PKs y FKs](./Extra/PKs-y-FKs-SQL.md) <br>
 [TEMA QUERIES (Pending)](./Extra/Queries.md)
 
 <br><br>
