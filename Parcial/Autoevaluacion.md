@@ -33,23 +33,7 @@
 
 <br>
 
-| Tema | Información |
-|---|---|
-| Qué es SQL | Lenguaje para definir, consultar y modificar datos en bases de datos relacionales. |
-| Alias | Permiten escribir consultas más cortas y legibles: `usuarios u`, `cursos c`, `usuarios_cursos uc`. Después se usan como `u.nombre`, `c.nombre`, etc. |
-| Tipos de datos comunes | `SERIAL`, `INT`, `SMALLINT`, `TEXT`, `VARCHAR(50)`, `DATE`, `TIMESTAMP`, `BOOLEAN`. |
-| Restricciones comunes | `UNIQUE`, `NOT NULL`, `DEFAULT 0`. |
-| JOINs | `JOIN` trae coincidencias entre tablas. `LEFT JOIN` conserva todas las filas de la tabla izquierda aunque no haya coincidencia. |
-| Filtros (`WHERE`) | Permiten filtrar filas usando comparadores (`=`, `!=`, `<`, `>`, `>=`, `<=`) + lógica (`AND`, `OR`, `NOT`). |
-| CRUD + comandos útiles | `CREATE TABLE ...` crea tablas, `INSERT INTO ... VALUES ...` agrega datos, `SELECT ... FROM ...` consulta datos, `UPDATE ... SET ... WHERE ...` modifica datos, `DELETE FROM ... WHERE ...` elimina filas específicas, `TRUNCATE TABLE ...` elimina todas las filas de una tabla manteniendo su estructura, `DROP TABLE ...` elimina completamente la tabla (estructura + datos). |
-| `Primary Key (PK)` | Columna (o conjunto de columnas) con valores únicos que identifica cada fila de una tabla. Generalmente es una columna id. En tablas auxiliares N:N, la PK suele ser una tupla formada por las 2 FKs. |
-| `Foreign Key (FK)` | Columna que guarda la PK de otra tabla para crear una relación entre ambas. |
-| Relaciones | `1:1`, `1:N`, `N:N`. Las relaciones `N:N` requieren tabla auxiliar. |
-| Regla mental rápida | `1:1` → FK única. `1:N` → FK repetible. `N:N` → tabla auxiliar. |
-| Atributos propios en auxiliares | A veces la relación necesita guardar información adicional. Ej: en `jugadores_partidos`, además de conectar jugador ↔ partido, también se guardan `goles`, `asistencias`, `es_local`, etc. |
-
-[TEMA RELACIONES, PKs y FKs](./Extra/PKs-y-FKs-SQL.md) <br>
-[TEMA QUERIES (Pending)](./Extra/Queries.md)
+[SQL](./Extra/SQL.md)
 
 <br><br>
 
