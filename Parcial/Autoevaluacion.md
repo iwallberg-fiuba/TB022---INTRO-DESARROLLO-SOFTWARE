@@ -49,7 +49,7 @@
 | Atributos propios en auxiliares | A veces la relación necesita guardar información adicional. Ej: en `jugadores_partidos`, además de conectar jugador ↔ partido, también se guardan `goles`, `asistencias`, `es_local`, etc. |
 
 [TEMA RELACIONES, PKs y FKs](./Extra/PKs-y-FKs-SQL.md)
-
+[TEMA QUERIES (Pending)](./Extra/Queries.md)
 
 <br><br>
 
@@ -68,8 +68,9 @@
 | Flujo básico Docker | `docker build` → construye una imagen desde una Dockerfile.<br>`docker run` → crea e inicia un contenedor a partir de una imagen.<br>`docker ps` → muestra contenedores en ejecución.<br>`docker logs` → muestra logs/salida del contenedor.<br>`docker stop` → detiene un contenedor.<br>`docker rm` → elimina un contenedor detenido. |
 | Ventajas para el usuario (SUECA) | **S**imple instalación.<br>**U**X más estable.<br>**E**ntorno consistente.<br>**C**ompatibilidad entre máquinas/sistemas.<br>**A**ctualizaciones y migraciones más fáciles. |
 | Ventajas para el desarrollador (MAPTEC) | **M**ismo entorno en distintas máquinas.<br>**A**islamiento de dependencias.<br>**P**ortabilidad y reproducibilidad.<br>**T**esting y deployment más simples.<br>**E**scalabilidad y mantenimiento más simples.<br>**C**I/CD y colaboración/trabajo en equipo. |
-| Componentes de Docker | Sistema Host → Docker Engine (gestiona imágenes, redes y contenedores) → Contenedores (instancias aisladas donde corren las aplicaciones). |
-| Componentes de una VM | Sistema Host → Hypervisor (software que administra VMs) → Máquinas Virtuales → Sistema Operativo Invitado completo → Aplicaciones. |
+| Componentes de Docker | Sistema Host → Kernel del host (o kernel Linux dentro de WSL2/VM si el host es Windows/macOS) → Docker Engine (gestiona imágenes, redes y contenedores) → Contenedores (procesos aislados que comparten el kernel). |
+| Componentes de una VM | Hardware → Hypervisor (software de virtualización) → Máquinas Virtuales → Sistema Operativo invitado completo con su propio kernel → Aplicaciones.                                                                  |
+
 
 <br><br>
 
@@ -77,15 +78,7 @@
 
 <br>
 
-| Área | Pistas |
-| --- | --- |
-| Navegación | `pwd`, `ls`, `cd`, rutas absolutas vs relativas. |
-| Archivos | `touch`, `mkdir`, `cp`, `mv`, `rm`, `cat`, `less`. |
-| Características | `ls -l`, permisos, tamaño, tipo de archivo. |
-| Pipes y redirecciones | `|`, `>`, `>>`, `<` para conectar comandos o redirigir entrada/salida. |
-| Argumentos | Pensar qué recibe el script/comando y en qué orden. |
-| Bash | Sirve para automatizar tareas del sistema, manipular archivos y encadenar comandos. |
-| Límite de Bash | Bueno para scripting; mala elección para apps web complejas. |
+`Pending`  
 
 <br><br>
 
@@ -112,27 +105,7 @@
 
 <br>
 
-| Tema | Pista para orientarte |
-| --- | --- |
-| Repositorio | Carpeta gestionada por Git; el historial vive en `.git`. |
-| Stage | Área intermedia entre cambios hechos y commit. |
-| `add` | Manda cambios al stage. Pensarlo como "preparar" archivos para el próximo commit. |
-| Commit | Snapshot con mensaje claro. Atómico = un commit que agrupa un único cambio lógico, no varias cosas mezcladas. |
-| Branch | Línea de trabajo independiente, por ejemplo `feature/...`, `main`, `development`. |
-| Git vs GitHub | Git versiona cambios localmente; GitHub hospeda y comparte repositorios remotos. |
-| `push` | Envía commits locales al remoto. |
-| `pull` | Trae cambios del remoto al repositorio local. |
-| `fetch` | Trae referencias/cambios remotos sin integrarlos todavía. |
-| `merge` | Se hace parado en la rama que recibe los cambios. Pensarlo como "traer otra rama adentro de la actual". |
-| Conflicts | Flujo mental: `status` -> editar archivo conflictivo -> `add` -> `commit` -> `push`. |
-| `stash` | Guarda cambios sin commitearlos para limpiar temporalmente el working tree. |
-| `rebase` | Reaplica commits sobre otra base; cambia el historial. |
-| `diff`, `log`, `status` | Ver cambios, historial y estado del repo. |
-| Cambio de rama | Primero mirar si hay cambios sin guardar/commitear; después `checkout` o `switch`. |
-| Tags vs releases | Tag: marca en Git. Release: publicación/versionado en GitHub. |
-
-
-
+`Pending`  
 
 <br><br>
 
@@ -142,12 +115,12 @@
 
 | Tema | Información |
 | --- | --- |
-| Ingeniería de Software | Disciplina que abarca todo el proceso de creación y mantenimiento de software, no solo programar. Incluye planificación, diseño, desarrollo, testing, despliegue y mantenimiento. |
-| SDLC (Software Development Life Cycle) | Ciclo de vida del software: Requerimientos → Diseño → Desarrollo → Testing → Despliegue → Mantenimiento |
+| Ingeniería de Software | Incluye todo el SDLC (Software Development Life Cycle), no es solo programar. |
+| SDLC | Requerimientos → Diseño → Desarrollo → Testing → Despliegue → Mantenimiento |
 | Requerimientos Funcionales (`BREGAM`) | Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar. |
 | Requerimientos No Funcionales (`SEMECA`) | Definen **cómo debe funcionar** el sistema. Ejemplos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible. |
 | Roles comunes | **Analista:** define necesidades y requerimientos.<br>**Arquitecto:** diseña estructura y tecnologías.<br>**Desarrollador:** implementa funcionalidades.<br>**QA/Tester:** verifica calidad y detecta errores.<br>**DevOps:** CI/CD. |
-| DevOps y CI/CD | **CI (Continuous Integration):** integra cambios de código automáticamente, ejecutando tests, validaciones y builds.<br><br>**CD (Continuous Delivery / Deployment):** automatiza preparación y/o despliegue de la aplicación luego de pasar tests. Objetivo de CI/CD: Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes. Flujo típico CI/CD: `git push` → tests automáticos → build → deployment automático |
+| DevOps: CI/CD | **CI (Continuous Integration):** integra cambios de código automáticamente, ejecutando tests, validaciones y builds.<br><br>**CD (Continuous Delivery / Deployment):** automatiza preparación y/o despliegue de la aplicación luego de pasar tests. Objetivo de CI/CD: Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes. Flujo típico CI/CD: `git push` → tests automáticos → build → deployment automático |
 | Cuándo es malo retroceder en el SDLC | Cuando ocurre por errores evitables, mala planificación o deuda técnica (problemas generados por elegir soluciones rápidas pero ineficientes cuando se desarrolló el código). |                                                         
 
 
