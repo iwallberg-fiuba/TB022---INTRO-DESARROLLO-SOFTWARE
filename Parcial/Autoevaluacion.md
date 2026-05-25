@@ -59,11 +59,10 @@ Disminuir zoom para ver mejor el contenido.
 | Usuario (SUECA) | **S**imple instalación.<br>**U**X más estable.<br>**E**ntorno consistente.<br>**C**ompatibilidad entre máquinas/sistemas.<br>**A**ctualizaciones y migraciones más fáciles. |
 | Desarrollador (MAPTEC) | **M**ismo entorno en distintas máquinas.<br>**A**islamiento de dependencias.<br>**P**ortabilidad y reproducibilidad.<br>**T**esting y deployment más simples.<br>**E**scalabilidad y mantenimiento más simples.<br>**C**I/CD y colaboración/trabajo en equipo. |
 
-| de qué | Componentes |
-| --- | --- |
-| Docker | Sistema Host → Kernel del host (o kernel Linux dentro de WSL2/VM si el host es Windows/macOS) → Docker Engine (gestiona imágenes, redes y contenedores) → Contenedores (procesos aislados que comparten el kernel). |
-| Virtual Machine (VM) | Hardware → Hypervisor (software de virtualización) → Máquinas Virtuales → Sistema Operativo invitado completo con su propio kernel → Aplicaciones.                                   |
-
+| Tecnología | Flujo                                                                                                                      |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Docker** | Sistema Host  <br>↓<br> Kernel del host *(o kernel Linux en WSL2/VM)*  <br>↓<br> Docker Engine  <br>↓<br> Contenedores     |
+| **VM**     | Hardware  <br>↓<br> Hypervisor  <br>↓<br> Máquinas Virtuales  <br>↓<br> Sistema Operativo invitado  <br>↓<br> Aplicaciones |
 
 
 <br><br>
