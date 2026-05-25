@@ -48,7 +48,7 @@
 | Regla mental rápida | `1:1` → FK única. `1:N` → FK repetible. `N:N` → tabla auxiliar. |
 | Atributos propios en auxiliares | A veces la relación necesita guardar información adicional. Ej: en `jugadores_partidos`, además de conectar jugador ↔ partido, también se guardan `goles`, `asistencias`, `es_local`, etc. |
 
-[TEMA RELACIONES, PKs y FKs](./Extra/PKs-y-FKs.md)
+[TEMA RELACIONES, PKs y FKs](./Extra/PKs-y-FKs-SQL.md)
 
 
 <br><br>
@@ -146,12 +146,9 @@
 | SDLC (Software Development Life Cycle) | Ciclo de vida del software: Requerimientos → Diseño → Desarrollo → Testing → Despliegue → Mantenimiento |
 | Requerimientos Funcionales (`BREGAM`) | Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar. |
 | Requerimientos No Funcionales (`SEMECA`) | Definen **cómo debe funcionar** el sistema. Ejemplos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible. |
-| Roles comunes | **Analista:** define necesidades y requerimientos.<br>**Arquitecto:** diseña estructura y tecnologías.<br>**Desarrollador:** implementa funcionalidades.<br>**QA/Tester:** verifica calidad y detecta errores.<br>**DevOps:** automatiza infraestructura, testing y despliegues. |
-| CI/CD (DevOps) | **CI (Continuous Integration):** integra cambios de código automáticamente, ejecutando tests, validaciones y builds.<br><br>**CD (Continuous Delivery / Deployment):** automatiza preparación y/o despliegue de la aplicación luego de pasar tests. |
-| Objetivo de CI/CD | Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes. |
-| Flujo típico CI/CD | `git push` → tests automáticos → build → deployment automático |
-| Deuda técnica | Soluciones rápidas o mal planificadas que funcionan a corto plazo pero generan problemas futuros: código difícil de mantener, errores, retrabajo o necesidad de rehacer partes del sistema. |
-| Cuándo es malo retroceder en el SDLC | Cuando hay que volver etapas atrás por errores evitables, mala planificación o deuda técnica. |                                                         
+| Roles comunes | **Analista:** define necesidades y requerimientos.<br>**Arquitecto:** diseña estructura y tecnologías.<br>**Desarrollador:** implementa funcionalidades.<br>**QA/Tester:** verifica calidad y detecta errores.<br>**DevOps:** CI/CD. |
+| DevOps y CI/CD | **CI (Continuous Integration):** integra cambios de código automáticamente, ejecutando tests, validaciones y builds.<br><br>**CD (Continuous Delivery / Deployment):** automatiza preparación y/o despliegue de la aplicación luego de pasar tests. Objetivo de CI/CD: Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes. Flujo típico CI/CD: `git push` → tests automáticos → build → deployment automático |
+| Cuándo es malo retroceder en el SDLC | Cuando ocurre por errores evitables, mala planificación o deuda técnica (problemas generados por elegir soluciones rápidas pero ineficientes cuando se desarrolló el código). |                                                         
 
 
 <br><br>
