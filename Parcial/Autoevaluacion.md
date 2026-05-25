@@ -1,4 +1,7 @@
 
+
+Disminuir zoom para ver mejor el contenido.
+
 ### Table of Contents
 
 * [Recordatorios](#recordatorios)
@@ -47,7 +50,7 @@
 | Contenedor | Instancia en ejecución de una imagen. Tiene procesos, red, puertos y sistema de archivos aislado. |
 | Dockerfile | Archivo con instrucciones para construir una imagen (contiene `FROM`, `COPY`, `RUN`, `CMD`, etc.). |
 | Servicios / dependencias | Cada servicio (frontend, backend, base de datos, etc.) suele ejecutarse en un contenedor distinto. Algunos servicios dependen de otros para funcionar. Se comunican mediante una red virtual creada por Docker. |
-| Puerto | Permite acceder desde tu máquina al programa que corre dentro del contenedor. Relación `host:contenedor`. Ejemplo: `3000:3000` → puerto `3000` de tu PC conectado al `3000` del contenedor. |
+| Puerto | Permite acceder desde tu máquina al programa que corre dentro del contenedor. <br>Relación `host:contenedor`. <br>Ejemplo: `3000:3000` → puerto `3000` de tu PC conectado al `3000` del contenedor. |
 | Persistencia | **Volumen:** administrado por Docker, ideal para datos persistentes.<br>**Bind mount:** carpeta real del host, útil para desarrollo y sincronización inmediata de archivos. |
 | Flujo Comandos Docker | `docker build` → construye una imagen desde una Dockerfile.<br>`docker run` → crea e inicia un contenedor a partir de una imagen.<br>`docker ps` → muestra contenedores en ejecución.<br>`docker logs` → muestra logs/salida del contenedor.<br>`docker stop` → detiene un contenedor.<br>`docker rm` → elimina un contenedor detenido. |
 
@@ -59,7 +62,7 @@
 | de qué | Componentes |
 | --- | --- |
 | Docker | Sistema Host → Kernel del host (o kernel Linux dentro de WSL2/VM si el host es Windows/macOS) → Docker Engine (gestiona imágenes, redes y contenedores) → Contenedores (procesos aislados que comparten el kernel). |
-| VM | Hardware → Hypervisor (software de virtualización) → Máquinas Virtuales → Sistema Operativo invitado completo con su propio kernel → Aplicaciones.                                   |
+| Virtual Machine (VM) | Hardware → Hypervisor (software de virtualización) → Máquinas Virtuales → Sistema Operativo invitado completo con su propio kernel → Aplicaciones.                                   |
 
 
 
@@ -114,8 +117,11 @@
 | Cuándo es malo retroceder en el SDLC | Cuando ocurre por errores evitables, mala planificación o deuda técnica (problemas generados por elegir soluciones rápidas pero ineficientes cuando se desarrolló el código). | 
 
 <br>
-Sobre DevOps y CI/CD:<br>
-**CI (Continuous Integration):** integra cambios de código automáticamente, ejecutando tests, validaciones y builds.<br>**CD (Continuous Delivery / Deployment):** automatiza preparación y/o despliegue de la aplicación luego de pasar tests.<br>Objetivo de CI/CD: Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes.<br>Flujo típico CI/CD: `git push` → tests automáticos → build → deployment automático 
+Sobre DevOps y CI/CD:
+- CI (Continuous Integration): integra cambios de código automáticamente, ejecutando tests, validaciones y builds.
+- CD (Continuous Delivery / Deployment): automatiza preparación y/o despliegue de la aplicación luego de pasar tests.
+- Objetivo de CI/CD: Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes.
+- Flujo típico CI/CD: `git push` → tests automáticos → build → deployment automático 
 
 
 <br><br>
