@@ -49,11 +49,18 @@
 | Servicios / dependencias | Cada servicio (frontend, backend, base de datos, etc.) suele ejecutarse en un contenedor distinto. Algunos servicios dependen de otros para funcionar. Se comunican mediante una red virtual creada por Docker. |
 | Puerto | Permite acceder desde tu máquina al programa que corre dentro del contenedor. Relación `host:contenedor`. Ejemplo: `3000:3000` → puerto `3000` de tu PC conectado al `3000` del contenedor. |
 | Persistencia | **Volumen:** administrado por Docker, ideal para datos persistentes.<br>**Bind mount:** carpeta real del host, útil para desarrollo y sincronización inmediata de archivos. |
-| Flujo básico Docker | `docker build` → construye una imagen desde una Dockerfile.<br>`docker run` → crea e inicia un contenedor a partir de una imagen.<br>`docker ps` → muestra contenedores en ejecución.<br>`docker logs` → muestra logs/salida del contenedor.<br>`docker stop` → detiene un contenedor.<br>`docker rm` → elimina un contenedor detenido. |
-| Ventajas para el usuario (SUECA) | **S**imple instalación.<br>**U**X más estable.<br>**E**ntorno consistente.<br>**C**ompatibilidad entre máquinas/sistemas.<br>**A**ctualizaciones y migraciones más fáciles. |
-| Ventajas para el desarrollador (MAPTEC) | **M**ismo entorno en distintas máquinas.<br>**A**islamiento de dependencias.<br>**P**ortabilidad y reproducibilidad.<br>**T**esting y deployment más simples.<br>**E**scalabilidad y mantenimiento más simples.<br>**C**I/CD y colaboración/trabajo en equipo. |
-| Componentes de Docker | Sistema Host → Kernel del host (o kernel Linux dentro de WSL2/VM si el host es Windows/macOS) → Docker Engine (gestiona imágenes, redes y contenedores) → Contenedores (procesos aislados que comparten el kernel). |
-| Componentes de una VM | Hardware → Hypervisor (software de virtualización) → Máquinas Virtuales → Sistema Operativo invitado completo con su propio kernel → Aplicaciones.                                                                  |
+| Flujo Comandos Docker | `docker build` → construye una imagen desde una Dockerfile.<br>`docker run` → crea e inicia un contenedor a partir de una imagen.<br>`docker ps` → muestra contenedores en ejecución.<br>`docker logs` → muestra logs/salida del contenedor.<br>`docker stop` → detiene un contenedor.<br>`docker rm` → elimina un contenedor detenido. |
+
+| Beneficiado | Ventajas |
+| --- | --- |
+| Usuario (SUECA) | **S**imple instalación.<br>**U**X más estable.<br>**E**ntorno consistente.<br>**C**ompatibilidad entre máquinas/sistemas.<br>**A**ctualizaciones y migraciones más fáciles. |
+| Desarrollador (MAPTEC) | **M**ismo entorno en distintas máquinas.<br>**A**islamiento de dependencias.<br>**P**ortabilidad y reproducibilidad.<br>**T**esting y deployment más simples.<br>**E**scalabilidad y mantenimiento más simples.<br>**C**I/CD y colaboración/trabajo en equipo. |
+
+| de qué | Componentes |
+| --- | --- |
+| Docker | Sistema Host → Kernel del host (o kernel Linux dentro de WSL2/VM si el host es Windows/macOS) → Docker Engine (gestiona imágenes, redes y contenedores) → Contenedores (procesos aislados que comparten el kernel). |
+| VM | Hardware → Hypervisor (software de virtualización) → Máquinas Virtuales → Sistema Operativo invitado completo con su propio kernel → Aplicaciones.                                   |
+
 
 
 <br><br>
@@ -72,16 +79,16 @@
 
 | Tema | Ejemplo | Qué devuelve |
 | --- | --- | --- |
-| Qué es regex | `^[A-Z]$` | Regex busca patrones de texto. En este caso, devuelve una letra mayúscula. |
-| Qué es Character Class | `[0-9]` | Esta es la forma tradicional de usar regex. En este caso, devuelve un dígito. |
-| Qué es Shorthand Character Class | `\d` | Otra forma de usar regex. No es necesario saber usarlo. En este caso, devuelve un dígito. |
-| Buscar coincidencias en una línea | `hola como estas` | Ese texto, aunque puede estar entre otras cosas en esa misma línea. |
-| Buscar coincidencias donde no haya nada más en esa línea | `^Hola$` | Línea entera que solo contenga `Hola`. |
-| Consultar carácter desconocido con `.` | `hola.mundo` | Carácter desconocido entre `hola` y `mundo`. `.` representa cualquier carácter. |
+| Regex | `^[A-Z]$` | busca patrones de texto. En este caso, devuelve una letra mayúscula. |
+| Character Class | `[0-9]` | Esta es la forma tradicional de usar regex. En este caso, devuelve un dígito. |
+| Shorthand Character Class | `\d` | Otra forma de usar regex. No es necesario saber usarlo. En este caso, devuelve un dígito. |
+| Buscar matches en una línea | `hola como estas` | Ese texto, aunque puede estar entre otras cosas en esa misma línea. |
+| Buscar matches donde no haya nada más en esa línea | `^Hola$` | Línea entera que solo contenga `Hola`. |
+| Carácter desconocido `.` | `hola.mundo` | Carácter desconocido entre `hola` y `mundo`. `.` representa cualquier carácter. |
 | Usar `.` como literal con `\.` | `google\.com` | `google.com` |
 | Cuantificadores | `[0-9]+`, `[0-9]*`, `[0-9]{5}` | Uno o más / cero o más / exactamente 5. |
 | Negación de clase | `[^0-9]` | Cualquier carácter que no sea un número. |
-| Qué es `sed` | `sed 's/patrón/reemplazo/g'` | Reemplaza el patrón por el reemplazo en todas sus ocurrencias. |
+| Qué es `sed` | `sed 's/patrón/reemplazo/g'` | Reemplaza el patrón por el reemplazo en todas sus ocurrencias. Si sacas la `g`, lo hace solo en la primera. |
 
 <br><br>
 
@@ -100,12 +107,15 @@
 | Tema | Información |
 | --- | --- |
 | Ingeniería de Software | Incluye todo el SDLC (Software Development Life Cycle), no es solo programar. |
-| SDLC | Requerimientos → Diseño → Desarrollo → Testing → Despliegue → Mantenimiento |
-| Requerimientos Funcionales (`BREGAM`) | Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar. |
-| Requerimientos No Funcionales (`SEMECA`) | Definen **cómo debe funcionar** el sistema. Ejemplos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible. |
+| SDLC | Requerimientos (Func. y No Func.) → Diseño → Desarrollo → Testing → Despliegue → Mantenimiento |
+| Req. Funcionales (`BREGAM`) | Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar. |
+| Req. No Funcionales (`SEMECA`) | Definen **cómo debe funcionar** el sistema. Ejemplos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible. |
 | Roles comunes | **Analista:** define necesidades y requerimientos.<br>**Arquitecto:** diseña estructura y tecnologías.<br>**Desarrollador:** implementa funcionalidades.<br>**QA/Tester:** verifica calidad y detecta errores.<br>**DevOps:** CI/CD. |
-| DevOps: CI/CD | **CI (Continuous Integration):** integra cambios de código automáticamente, ejecutando tests, validaciones y builds.<br><br>**CD (Continuous Delivery / Deployment):** automatiza preparación y/o despliegue de la aplicación luego de pasar tests. Objetivo de CI/CD: Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes. Flujo típico CI/CD: `git push` → tests automáticos → build → deployment automático |
-| Cuándo es malo retroceder en el SDLC | Cuando ocurre por errores evitables, mala planificación o deuda técnica (problemas generados por elegir soluciones rápidas pero ineficientes cuando se desarrolló el código). |                                                         
+| Cuándo es malo retroceder en el SDLC | Cuando ocurre por errores evitables, mala planificación o deuda técnica (problemas generados por elegir soluciones rápidas pero ineficientes cuando se desarrolló el código). | 
+
+<br>
+Sobre DevOps y CI/CD:<br>
+**CI (Continuous Integration):** integra cambios de código automáticamente, ejecutando tests, validaciones y builds.<br>**CD (Continuous Delivery / Deployment):** automatiza preparación y/o despliegue de la aplicación luego de pasar tests.<br>Objetivo de CI/CD: Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes.<br>Flujo típico CI/CD: `git push` → tests automáticos → build → deployment automático 
 
 
 <br><br>
@@ -116,16 +126,16 @@
 
 | Término | Qué es | Ejemplo |
 | --- | --- | --- |
-| LLM (Large Language Model) | Modelo de IA entrenado con grandes cantidades de texto. Predice texto y sigue instrucciones. | ChatGPT, GPT-5, Claude, Gemini, Llama. |
-| Coding Agent | Agente basado en un LLM que además puede usar herramientas y actuar sobre un entorno. | Codex, Claude Code, Cursor Agent, Devin. |
-| Agent Harness | Sistema/capa que coordina herramientas, memoria, contexto e instrucciones del agente. | OpenAI Codex Harness, LangChain Agents, AutoGen. |
-| Coding Harness | Entorno específico para programación y automatización de tareas de desarrollo. | Cursor Agent Environment, OpenHands, Devin runtime. |
-| Reasoning Model | Modelo optimizado para razonar paso a paso antes de responder. | o3, GPT-5 Reasoning, Claude Opus. |
-| Live Repo Context | Acceso al estado actual y real de un repositorio mientras el agente trabaja. | Cursor, Codex y Devin leyendo archivos y commits en tiempo real. |
-| Context Reduction | Técnicas para resumir o filtrar información y evitar saturar el contexto del modelo. | Cursor o Claude resumiendo automáticamente archivos largos antes de enviarlos al modelo. |
-| Cache Reuse | Reutilización de resultados o contexto previo para ahorrar tiempo y recursos. | Reusar embeddings, análisis previos o respuestas ya calculadas en agentes como Cursor o Devin. |
-| Tool Access | Capacidad del agente para usar herramientas externas. | Claude Code usando terminal, Codex editando archivos o Cursor ejecutando tests. |
-| Subagents | Agentes auxiliares especializados en subtareas específicas. | Devin o AutoGen usando múltiples agentes para frontend, backend y testing al mismo tiempo. |
+| LLM (Large Language Model) | Modelo de IA entrenado con grandes cantidades de texto. Predice texto y sigue instrucciones. | ChatGPT, Claude |
+| Coding Agent | Agente basado en un LLM que además puede usar herramientas y actuar sobre un entorno. | Codex, Claude Code |
+| Agent Harness | Sistema/capa que coordina herramientas, memoria, contexto e instrucciones del agente. | OpenAI Codex Harness |
+| Coding Harness | Entorno específico para programación y automatización de tareas de desarrollo. | OpenAI Codex Harness |
+| Reasoning Model | Modelo optimizado para razonar paso a paso antes de responder. | o3, GPT-5 Reasoning |
+| Live Repo Context | Acceso al estado actual y real de un repositorio mientras el agente trabaja. | Codex y Cursor leyendo archivos y commits en tiempo real. |
+| Context Reduction | Técnicas para resumir o filtrar información y evitar saturar el contexto del modelo. | Claude resumiendo automáticamente archivos largos antes de enviarlos al modelo. |
+| Cache Reuse | Reutilización de resultados o contexto previo para ahorrar tiempo y recursos. | Reusar respuestas con otros agentes. |
+| Tool Access | Capacidad del agente para usar herramientas externas. | Claude Code usando terminal, Codex editando archivos. |
+| Subagents | Agentes auxiliares especializados en subtareas específicas. | AutoGen usando múltiples agentes para frontend, backend y testing al mismo tiempo. |
 
 <br><br>
 
