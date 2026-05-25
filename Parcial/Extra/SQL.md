@@ -38,6 +38,8 @@ DEFINICIONES BASES
 | Ventajas de usar SQL | Permite consultar grandes cantidades de datos, relacionar tablas, filtrar información y mantener datos organizados y consistentes. |
 | Alias | Permiten escribir consultas más cortas y legibles: `usuarios u`, `cursos c`, `usuarios_cursos uc`. Después se usan como `u.nombre`, `c.nombre`, etc. |
 | CRUD (Create, Read, Update, Delete) | `CREATE TABLE ...` crea tablas, `INSERT INTO ... VALUES ...` agrega datos, `SELECT ... FROM ...` consulta datos, `UPDATE ... SET ... WHERE ...` modifica datos, `DELETE FROM ... WHERE ...` elimina filas específicas, `TRUNCATE TABLE ...` elimina todas las filas manteniendo la estructura, `DROP TABLE ...` elimina completamente la tabla (estructura + datos). |
+| Motor de base de datos relacional (DBMS) (ej: PostgreSQL) | Guarda, organiza y consulta datos usando SQL. Corre como un servidor. |
+| Cliente para administar BdDs (ej: DBeaver) | Permite conectarse a PostgreSQL, SQLite, MySQL, etc., y ejecutar queries, dependiendo del cliente, gráficamente o no. |
 
 ---
 
