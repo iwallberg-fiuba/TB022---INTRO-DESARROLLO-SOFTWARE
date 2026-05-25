@@ -1,6 +1,7 @@
 
 
-Disminuir zoom para ver mejor el contenido.
+Disminuir zoom para ver mejor el contenido. <br>
+Temas más dificiles (por longitud y/o dificultad): Bash, SQL, git al principio, docker al principio
 
 ### Table of Contents
 
@@ -87,7 +88,7 @@ Disminuir zoom para ver mejor el contenido.
 | Buscar matches en una línea | `hola como estas` | Ese texto, aunque puede estar entre otras cosas en esa misma línea. |
 | Buscar matches donde no haya nada más en esa línea | `^Hola$` | Línea entera que solo contenga `Hola`. |
 | Carácter desconocido `.` | `hola.mundo` | Carácter desconocido entre `hola` y `mundo`. `.` representa cualquier carácter. |
-| Usar `.` como literal con `\.` | `google\.com` | `google.com` |
+| Usar `.` como literal `\.` | `google\.com` | `google.com` |
 | Cuantificadores | `[0-9]+`, `[0-9]*`, `[0-9]{5}` | Uno o más / cero o más / exactamente 5. |
 | Negación de clase | `[^0-9]` | Cualquier carácter que no sea un número. |
 | Qué es `sed` | `sed 's/patrón/reemplazo/g'` | Reemplaza el patrón por el reemplazo en todas sus ocurrencias. Si sacas la `g`, lo hace solo en la primera. |
@@ -110,12 +111,18 @@ Disminuir zoom para ver mejor el contenido.
 | --- | --- |
 | Ingeniería de Software | Incluye todo el SDLC (Software Development Life Cycle), no es solo programar. |
 | SDLC | Requerimientos (Func. y No Func.) → Diseño → Desarrollo → Testing → Despliegue → Mantenimiento |
-| Req. Funcionales (`BREGAM`) | Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar. |
-| Req. No Funcionales (`SEMECA`) | Definen **cómo debe funcionar** el sistema. Ejemplos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible. |
-| Roles comunes | **Analista:** define necesidades y requerimientos.<br>**Arquitecto:** diseña estructura y tecnologías.<br>**Desarrollador:** implementa funcionalidades.<br>**QA/Tester:** verifica calidad y detecta errores.<br>**DevOps:** CI/CD. |
+| Roles | **Analista:** define necesidades y requerimientos.<br>**Arquitecto:** diseña estructura y tecnologías.<br>**Desarrollador:** implementa funcionalidades.<br>**QA/Tester:** verifica calidad y detecta errores.<br>**DevOps:** CI/CD. |
 | Cuándo es malo retroceder en el SDLC | Cuando ocurre por errores evitables, mala planificación o deuda técnica (problemas generados por elegir soluciones rápidas pero ineficientes cuando se desarrolló el código). | 
 
+
+| Requerimientos | Información |
+| --- | --- |
+| Funcionales (`BREGAM`) | Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar. |
+| No Funcionales (`SEMECA`) | Definen **cómo debe funcionar** el sistema. Ejemplos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible. |
+
+
 <br>
+
 Sobre DevOps y CI/CD:
 - CI (Continuous Integration): integra cambios de código automáticamente, ejecutando tests, validaciones y builds.
 - CD (Continuous Delivery / Deployment): automatiza preparación y/o despliegue de la aplicación luego de pasar tests.
@@ -129,18 +136,32 @@ Sobre DevOps y CI/CD:
 
 <br>
 
-| Término | Qué es | Ejemplo |
-| --- | --- | --- |
-| LLM (Large Language Model) | Modelo de IA entrenado con grandes cantidades de texto. Predice texto y sigue instrucciones. | ChatGPT, Claude |
-| Coding Agent | Agente basado en un LLM que además puede usar herramientas y actuar sobre un entorno. | Codex, Claude Code |
-| Agent Harness | Sistema/capa que coordina herramientas, memoria, contexto e instrucciones del agente. | OpenAI Codex Harness |
-| Coding Harness | Entorno específico para programación y automatización de tareas de desarrollo. | OpenAI Codex Harness |
-| Reasoning Model | Modelo optimizado para razonar paso a paso antes de responder. | o3, GPT-5 Reasoning |
-| Live Repo Context | Acceso al estado actual y real de un repositorio mientras el agente trabaja. | Codex y Cursor leyendo archivos y commits en tiempo real. |
-| Context Reduction | Técnicas para resumir o filtrar información y evitar saturar el contexto del modelo. | Claude resumiendo automáticamente archivos largos antes de enviarlos al modelo. |
-| Cache Reuse | Reutilización de resultados o contexto previo para ahorrar tiempo y recursos. | Reusar respuestas con otros agentes. |
-| Tool Access | Capacidad del agente para usar herramientas externas. | Claude Code usando terminal, Codex editando archivos. |
-| Subagents | Agentes auxiliares especializados en subtareas específicas. | AutoGen usando múltiples agentes para frontend, backend y testing al mismo tiempo. |
+Modelos y Agentes
+| Término                        | Qué es                                                                                       | Ejemplo                                                           |
+| ------------------------------ | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **LLM (Large Language Model)** | Modelo de IA entrenado con enormes cantidades de texto. Predice texto y sigue instrucciones. | ChatGPT, Claude                                                   |
+| **Reasoning Model**            | Modelo optimizado para razonar paso a paso antes de responder.                               | o3, GPT-5 Reasoning                                               |
+| **Coding Agent**               | Agente basado en un LLM que además puede usar herramientas y actuar sobre un entorno.        | Codex, Claude Code                                                |
+| **Subagents**                  | Agentes auxiliares especializados en subtareas concretas.                                    | AutoGen usando agentes separados para frontend, backend y testing |
+
+
+Arquitectura
+| Término               | Qué es                                                                                | Ejemplo                                              |
+| --------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| **Agent Harness**     | Sistema/capa que coordina herramientas, memoria, contexto e instrucciones del agente. | OpenAI Codex Harness                                 |
+| **Coding Harness**    | Entorno específico para programación y automatización de tareas de desarrollo.        | OpenAI Codex Harness                                 |
+| **Tool Access**       | Capacidad del agente para usar herramientas externas.                                 | Claude Code usando terminal, Codex editando archivos |
+| **Live Repo Context** | Acceso al estado actual y real de un repositorio mientras el agente trabaja.          | Cursor leyendo archivos y commits en tiempo real     |
+
+
+Optimización y Manejo de Contexto
+| Término               | Qué es                                                                               | Ejemplo                                                        |
+| --------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
+| **Context Reduction** | Técnicas para resumir o filtrar información y evitar saturar el contexto del modelo. | Claude resumiendo archivos largos antes de enviarlos al modelo |
+| **Cache Reuse**       | Reutilización de resultados o contexto previo para ahorrar tiempo y recursos.        | Reusar respuestas o análisis ya generados                      |
+
+
+
 
 <br><br>
 
