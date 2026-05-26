@@ -1,5 +1,6 @@
 
-## Table of contents
+### Table of contents
+
 - Bases
      - [Conceptos Claves](#conceptos-claves)
      - [Git vs Github](#git-vs-github)
@@ -11,24 +12,26 @@
 - Comandos
      - [Lista](#lista)
      - [Relación con Estados y Áreas](#relación-con-estados-y-areas)
-     - [Cómo Deshacer](#cómo-deshacer)
+     - [Cómo Deshacer Cambios](#cómo-deshacer-cambios)
 - Flujos de trabajo
      - [Branches](#branches)
      - [Merge Conflicts](#merge-conflicts)
  - [Extras](#extras)
-     - [Rebase vs Merge]
-     - [Tags y Releases]
+     - [Rebase vs Merge](#rebase-vs-merge)
+     - [Tags y Releases](#tags-y-releases)
 
 
 Ejemplo de linea temporal de git
 <img width="800" height="400" alt="git-version-control" src="https://github.com/user-attachments/assets/aa6b93ca-356a-4b5d-8fa4-a2effc1d0ba0" />
 
+<br>
 
 ---
 
-# Bases
+## Bases
 
-## Conceptos Claves
+### Conceptos Claves
+
 - Git guarda versiones(snapshots) del proyecto.
 - GitHub almacena una copia remota.
 - Repositorio: carpeta/proyecto gestionado por Git. Contiene archivos, historial de cambios, ramas y configuración de versionado. El historial y metadatos de Git se guardan dentro de la carpeta oculta .git.
@@ -49,7 +52,7 @@ A---B---C main
 ```
 
 
-## Git vs Github
+### Git vs Github
 
 | Git | GitHub |
 | --- | --- |
@@ -62,8 +65,8 @@ A---B---C main
 
 
 
-## Ventajas de uso
-De git y github.
+### Ventajas de uso
+* de git y github.
 
 | Acrónimo               | Qué representa                                                                 |
 | ---------------------- | ------------------------------------------------------------------------------ |
@@ -78,11 +81,11 @@ De git y github.
 
 ---
 
-# Convenciones
+## Convenciones
 - Todas estas se vuelven realmente fundamentales en el trabajo en grupo.
 - Algunas son por las buenas prácticas y otras por convenciones de la clase.
 
-## Sobre Commits
+### Sobre Commits
 - Deben ser atómicos, es decir, un commit = un único cambio lógico.
 - El mensaje del commit debe ser descriptivo y representar claramente qué se modificó. Evitar mensajes genéricos como `update` o `mejora`.
 - Es común usar prefijos para categorizar commits:
@@ -94,7 +97,7 @@ De git y github.
   - `test`: cambios relacionados con tests
 
 
-## Sobre Branches
+### Sobre Branches
 - Usar Merge en vez de Rebase.
 - Usar checkout en vez de switch (por costumbre no porque sea mejor).
 - No se trabaja directamente en main, cada uno trabaja en su propia rama y al final del desarrollo de cierta rama se hace merge con main.
@@ -114,7 +117,7 @@ De git y github.
 | `docs/`    | Cambios de documentación      | `docs/readme-update` |
 
 
-## Errores Comunes
+### Errores Comunes
 
 | Error | Problema |
 | --- | --- |
@@ -127,11 +130,11 @@ De git y github.
 
 ---
 
-# Comandos
+## Comandos
 
-## Lista
+### Lista
 
-- Existen muchísimos más pero estos son los más usados y que hay que recordar.
+- Existen muchísimos más pero estos son los más utilizados y que hay que recordar.
 - Dato: `git pull = git fetch + git merge`
 
 <img width="1929" height="1151" alt="git" src="https://github.com/user-attachments/assets/f28c9da0-315c-4bc0-b641-bb7735fbcfec" />
@@ -139,7 +142,7 @@ De git y github.
 
 
 
-## Relación con Estados y Áreas
+### Relación con Estados y Áreas
 
 | Estado del archivo                | Área: dónde está            | Cómo llega                                             |
 | --------------------------------- | --------------------------- | ------------------------------------------------------ |
@@ -150,7 +153,7 @@ De git y github.
 | `pushed` *(no es estado oficial)* | Repositorio remoto (GitHub) | `git push` sube commits al remoto.                     |
 
 
-## Deshacer cambios
+### Cómo Deshacer Cambios
 
 | Riesgo | Comando | Uso |
 | --- | --- | --- |
@@ -161,9 +164,9 @@ De git y github.
 
 ---
 
-# Flujos de trabajo 
+## Flujos de trabajo 
 
-## Branches
+### Branches
 
 ```text
 checkout main
@@ -185,7 +188,7 @@ Pull Request
 merge
 ```
 
-## Merge Conflicts
+### Merge Conflicts
 
 | Paso | Acción |
 | --- | --- |
@@ -196,13 +199,16 @@ merge
 | 5 | `git add archivo` |
 | 6 | `git commit` |
 
+
+
+
 ---
 
-# Extras
+## Extras
 - No es necesario saberlo de memoria, con tener una noción en suficiente.
 
 
-## Rebase vs Merge
+### Rebase vs Merge
 
 | Tema | Merge | Rebase |
 | --- | --- | --- |
@@ -220,8 +226,6 @@ A---B---C main
             M
 ```
 
-
-
 Cómo se ve Rebase
 
 ```text
@@ -229,7 +233,7 @@ A---B---C---D'---E'
 ```
 
 
-## Tags y Releases
+### Tags y Releases
 
 | Concepto | Qué es |
 | --- | --- |
