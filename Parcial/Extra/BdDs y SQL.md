@@ -1,12 +1,57 @@
 
+<br><br>
 
-INICIO
+### Table of Contents
 
-Acuerdos:
-- Definir aliases en `FROM` (omite el paso de usar `AS`).
-- Poner `DISTINCT`
-- Nunca usar `WHERE` como reemplazo de `JOIN` porque puede generar un `CROSS JOIN` accidental (se generan todas las combinaciones posibles entre dos tablas sin considerar relaciones).
+<br>
 
+Bases
+- [Conceptos Claves](#conceptos-claves)
+    - Tema filas, columnas, entidades, relaciones, atributos y en q tablas pone, cliente, motor, uso de docker
+- [Ventajas de uso](#ventajas-de-uso)
+- [Cómo diseñar la BdDs](#Diseño-de-la-BdDs)
+    - tipos de datos y restricciones
+    - CRUD BdDs y tablas
+
+<br>
+
+Convenciones
+- [Sobre Queries](#sobre-queries)
+- [Sobre Configs](#sobre-configs) cliente, motor, docker
+
+<br>
+
+Relaciones
+- [1:1](#algo)
+    - [Crear sus tablas](#algo)
+    - [Diagrama](#algo) 
+- [1:N](#algo)
+    - [Crear sus tablas](#algo)
+    - [Diagrama](#algo) 
+- [N:N](#algo)
+    - [Crear sus tablas](#algo)
+    - [Diagrama](#algo)
+- [Múltiples N:N](#algo)
+    - [Crear sus tablas](#algo)
+    - [Diagrama](#algo)
+
+<br>
+
+Queries
+- [en SELECT](#lista)
+- [Después de FROM](#lista)
+- [en WHERE](#lista)
+    - [Subqueries](#lista) 
+- [Después de WHERE](#lista)
+- [Flujo Múltiples JOINs](#lista)
+
+<br>
+
+Extras
+- [Flujo de Conexión con Docker](#placeholder)
+- [Ejecucución de Queries: Terminal Interactiva vs file `.sql`](#placeholder)
+
+<br>
 
 No entran:
 - Unión/ consultas concatenadas
@@ -17,10 +62,20 @@ Lo más difícil (opinión):
 - Diseñar las bases de datos para relaciones `N:N` con atributos propios.
 - Hacer queries dirigidas a esos atributos propios de `N:N`.
 
-Table of Contents:
+<br><br>
 
 
 ---
+
+
+
+
+Acuerdos:
+- Definir aliases en `FROM` (omite el paso de usar `AS`).
+- Poner `DISTINCT`
+- Nunca usar `WHERE` como reemplazo de `JOIN` porque puede generar un `CROSS JOIN` accidental (se generan todas las combinaciones posibles entre dos tablas sin considerar relaciones).
+
+
 
 DEFINICIONES BASES
 
@@ -200,7 +255,7 @@ Se usan para filtrar, comparar valores, verificar existencia, reutilizar resulta
 
 Ejemplo subquery:
 ```sql
-`SELECT nombre
+SELECT nombre
 FROM usuarios u
 WHERE EXISTS (
     SELECT 1
