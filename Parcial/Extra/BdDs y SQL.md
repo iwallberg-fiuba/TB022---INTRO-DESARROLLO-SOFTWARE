@@ -36,8 +36,8 @@ Queries - Flujos
 <br>
 
 Extras - `Pending`
-- [Flujo de Conexión con Docker](#placeholder)
-- [Ejecucución de Queries](#placeholder)
+- [Flujo de Conexión con Docker](#flujo-de-conexión-con-docker)
+- [Ejecución de Queries](#ejecución-de-queries)
 
 <br><br>
 
