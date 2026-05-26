@@ -1,23 +1,23 @@
 
-Table of contents
+## Table of contents
 - Bases
-     - Conceptos claves
-     - Git vs github
-     - 5 ventajas de uso
+     - [Conceptos Claves](#conceptos-claves)
+     - [Git vs Github](#git-vs-github)
+     - [Ventajas de uso](#ventajas-de-uso)
 - Convenciones
-     - Sobre Commits
-     - Sobre Branches
-     - Errores comunes
+     - [Sobre Commits](#sobre-commits)
+     - [Sobre Branches](#sobre-branches)
+     - [Errores Comunes](#errores-comunes)
 - Comandos
-     - Comandos
-     - Relación con Estados y Áreas
-     - Cómo volver atrás
-- Flujo de trabajo
-     - Branches
-     - Merge Conflicts
- - Extras
-     - Rebase vs Merge
-     - Tags y Releases
+     - [Lista](#lista)
+     - [Relación con Estados y Áreas](#relación-con-estados-y-areas)
+     - [Cómo Deshacer](#cómo-deshacer)
+- Flujos de trabajo
+     - [Branches](#branches)
+     - [Merge Conflicts](#merge-conflicts)
+ - [Extras](#extras)
+     - [Rebase vs Merge]
+     - [Tags y Releases]
 
 
 Ejemplo de linea temporal de git
@@ -28,7 +28,7 @@ Ejemplo de linea temporal de git
 
 # Bases
 
-## Conceptos claves
+## Conceptos Claves
 - Git guarda versiones(snapshots) del proyecto.
 - GitHub almacena una copia remota.
 - Repositorio: carpeta/proyecto gestionado por Git. Contiene archivos, historial de cambios, ramas y configuración de versionado. El historial y metadatos de Git se guardan dentro de la carpeta oculta .git.
@@ -37,7 +37,6 @@ origin es simplemente el alias/nombre que Git pone por defecto al repositorio re
 - Branches/ ramas: Las ramas permiten trabajar en paralelo.
 - Linea temporal 
 - Merge conflicts ocurren cuando Git no puede combinar automáticamente dos cambios incompatibles sobre la misma parte de un archivo.
-- Dato: `git pull = git fetch + git merge`
 - Merge: poner q es
 
 Merge ejemplo:
@@ -63,7 +62,7 @@ A---B---C main
 
 
 
-## 5 ventajas de uso
+## Ventajas de uso
 De git y github.
 
 | Acrónimo               | Qué representa                                                                 |
@@ -81,6 +80,7 @@ De git y github.
 
 # Convenciones
 - Todas estas se vuelven realmente fundamentales en el trabajo en grupo.
+- Algunas son por las buenas prácticas y otras por convenciones de la clase.
 
 ## Sobre Commits
 - Deben ser atómicos, es decir, un commit = un único cambio lógico.
@@ -94,7 +94,7 @@ De git y github.
   - `test`: cambios relacionados con tests
 
 
-## Sobre ramas
+## Sobre Branches
 - Usar Merge en vez de Rebase.
 - Usar checkout en vez de switch (por costumbre no porque sea mejor).
 - No se trabaja directamente en main, cada uno trabaja en su propia rama y al final del desarrollo de cierta rama se hace merge con main.
@@ -114,7 +114,7 @@ De git y github.
 | `docs/`    | Cambios de documentación      | `docs/readme-update` |
 
 
-## Errores comunes
+## Errores Comunes
 
 | Error | Problema |
 | --- | --- |
@@ -131,7 +131,10 @@ De git y github.
 
 ## Lista
 
-`Pending.`
+- Existen muchísimos más pero estos son los más usados y que hay que recordar.
+- Dato: `git pull = git fetch + git merge`
+
+<img width="1929" height="1151" alt="git" src="https://github.com/user-attachments/assets/f28c9da0-315c-4bc0-b641-bb7735fbcfec" />
 
 
 
