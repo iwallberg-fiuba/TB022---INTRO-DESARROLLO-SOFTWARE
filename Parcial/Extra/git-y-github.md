@@ -100,7 +100,9 @@ de git y github.
 | **S** = Sincronización | Compartir y respaldar cambios entre dispositivos/personas mediante GitHub.     |
 
 <br>
+
 [Volver a Table of Contents](#table-of-contents)
+
 <br><br>
 
 
@@ -170,7 +172,9 @@ de git y github.
 | Commits ambiguos | Historial confuso |
 
 <br>
+
 [Volver a Table of Contents](#table-of-contents)
+
 <br><br>
 
 ---
@@ -213,7 +217,9 @@ de git y github.
 | Alto | `git reset --hard HEAD~1` | Volver commit atrás |
 
 <br>
+
 [Volver a Table of Contents](#table-of-contents)
+
 <br><br>
 
 ---
@@ -261,7 +267,9 @@ merge
 | 7 | `git commit` |
 
 <br>
+
 [Volver a Table of Contents](#table-of-contents)
+
 <br><br>
 
 ---
@@ -316,7 +324,9 @@ A---B---C---D'---E'
 
 
 <br>
+
 [Volver a Table of Contents](#table-of-contents)
+
 <br><br>
 
 
