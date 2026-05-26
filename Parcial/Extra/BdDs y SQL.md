@@ -127,17 +127,21 @@ Extras - `Pending`
 
 ## Convenciones
 
+<br>
 
 ### Sobre Queries
 
+<br>
+
 `Pending`
 
+<br><br>
 
 ### Sobre Configs
 
+<br>
+
 `Pending`
-
-
 
 <br><br>
 
@@ -172,7 +176,7 @@ END
 
 <br><br>
 
-### Dspués de FROM
+### Después de FROM
 Los JOIN permiten combinar tablas **horizontalmente** entre columnas.
 
 | Elemento              | Qué hace                                                                          | Resultado                                |
@@ -247,8 +251,9 @@ Operadores lógicos
 
 ## Queries - Flujos
 
-`Pending`
+<br>
 
+`Pending`
 
 <br><br>
 
