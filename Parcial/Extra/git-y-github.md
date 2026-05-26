@@ -99,11 +99,11 @@ de git y github.
 | **O** = Organización   | Los commits, Issues y Projects ayudan a mantener el proyecto ordenado.         |
 | **S** = Sincronización | Compartir y respaldar cambios entre dispositivos/personas mediante GitHub.     |
 
-<br>
+<br><br>
 
 [Volver a Table of Contents](#table-of-contents)
 
-<br><br>
+<br>
 
 
 ---
@@ -154,7 +154,7 @@ de git y github.
 
 ### 2° Revisión de Línea Temporal
 
-* donde se siguieron las Convenciones sobre Branches (ahora debería entenderse bastante más)
+donde se siguieron las Convenciones sobre Branches (ahora debería entenderse bastante más)
 
 <img width="800" height="400" alt="git-version-control" src="https://github.com/user-attachments/assets/aa6b93ca-356a-4b5d-8fa4-a2effc1d0ba0" />
 
@@ -216,11 +216,11 @@ de git y github.
 | Medio | `git checkout -- archivo.txt` | Descartar cambios locales |
 | Alto | `git reset --hard HEAD~1` | Volver commit atrás |
 
-<br>
+<br><br>
 
 [Volver a Table of Contents](#table-of-contents)
 
-<br><br>
+<br>
 
 ---
 
@@ -266,11 +266,11 @@ merge
 | 6 | `git add archivo` |
 | 7 | `git commit` |
 
-<br>
+<br><br>
 
 [Volver a Table of Contents](#table-of-contents)
 
-<br><br>
+<br>
 
 ---
 
@@ -323,11 +323,11 @@ A---B---C---D'---E'
 | Subir tags | `git push origin --tags` |
 
 
-<br>
+<br><br>
 
 [Volver a Table of Contents](#table-of-contents)
 
-<br><br>
+<br>
 
 
 
