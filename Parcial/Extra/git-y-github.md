@@ -99,7 +99,9 @@ de git y github.
 | **O** = Organización   | Los commits, Issues y Projects ayudan a mantener el proyecto ordenado.         |
 | **S** = Sincronización | Compartir y respaldar cambios entre dispositivos/personas mediante GitHub.     |
 
-<br><br><br>
+<br>
+[Volver a Table of Contents](#table-of-contents)
+<br><br>
 
 
 ---
@@ -167,7 +169,9 @@ de git y github.
 | `git reset --hard` | Mueve el repositorio a otro commit y descarta cambios locales. Puede borrar cambios |
 | Commits ambiguos | Historial confuso |
 
-<br><br><br>
+<br>
+[Volver a Table of Contents](#table-of-contents)
+<br><br>
 
 ---
 
@@ -208,7 +212,9 @@ de git y github.
 | Medio | `git checkout -- archivo.txt` | Descartar cambios locales |
 | Alto | `git reset --hard HEAD~1` | Volver commit atrás |
 
-<br><br><br>
+<br>
+[Volver a Table of Contents](#table-of-contents)
+<br><br>
 
 ---
 
@@ -254,7 +260,9 @@ merge
 | 6 | `git add archivo` |
 | 7 | `git commit` |
 
-<br><br><br>
+<br>
+[Volver a Table of Contents](#table-of-contents)
+<br><br>
 
 ---
 
@@ -276,7 +284,7 @@ merge
 
 <br>
 
-Cómo se ve Merge
+Cómo se ve Merge:
 ```text
 A---B---C main
      \
@@ -287,7 +295,7 @@ A---B---C main
 
 <br>
 
-Cómo se ve Rebase
+Cómo se ve Rebase:
 ```text
 A---B---C---D'---E'
 ```
@@ -307,8 +315,9 @@ A---B---C---D'---E'
 | Subir tags | `git push origin --tags` |
 
 
-
-<br><br><br>
+<br>
+[Volver a Table of Contents](#table-of-contents)
+<br><br>
 
 
 
