@@ -1,116 +1,56 @@
 
+Table of contents
+- Bases
+     - Conceptos claves
+     - Git vs github
+     - 5 ventajas de uso
+- Convenciones
+     - Sobre Commits
+     - Sobre Branches
+     - Errores comunes
+- Comandos
+     - Comandos
+     - Relación con Estados y Áreas
+     - Cómo volver atrás
+- Flujo de trabajo
+     - Branches
+     - Merge Conflicts
+ - Extras
+     - Rebase vs Merge
+     - Tags y Releases
 
 
-Definiciones bases
-
+Ejemplo de linea temporal de git
 <img width="800" height="400" alt="git-version-control" src="https://github.com/user-attachments/assets/aa6b93ca-356a-4b5d-8fa4-a2effc1d0ba0" />
 
 
-## Conceptos
-
-- [ ] Git vs GitHub
-- [ ] Repositorio local vs remoto
-- [ ] Branches
-- [ ] Commit atómico
-- [ ] HEAD
-- [ ] Merge vs Rebase
-- [ ] Pull Request
-- [ ] Tags y releases
-
-## Comandos
-
-- [ ] `git init`
-- [ ] `git clone`
-- [ ] `git status`
-- [ ] `git add`
-- [ ] `git commit`
-- [ ] `git push`
-- [ ] `git fetch`
-- [ ] `git pull`
-- [ ] `git merge`
-- [ ] `git checkout`
-- [ ] `git log`
-- [ ] `git diff`
-- [ ] `git reset`
-
-## Flujos
-
-- [ ] Crear rama
-- [ ] Resolver merge conflict
-- [ ] Hacer hotfix
-- [ ] Crear tag/release
-- [ ] Flujo grupal con ramas
-
-
 ---
 
+# Bases
 
-# Git
+## Conceptos claves
+- Git guarda versiones(snapshots) del proyecto.
+- GitHub almacena una copia remota.
+- Repositorio: carpeta/proyecto gestionado por Git. Contiene archivos, historial de cambios, ramas y configuración de versionado. El historial y metadatos de Git se guardan dentro de la carpeta oculta .git.
+- Repositorio remoto (origin): copia del repositorio alojada en otro lugar (GitHub, GitLab, servidor, etc.) usada para compartir y sincronizar cambios entre personas o dispositivos.
+origin es simplemente el alias/nombre que Git pone por defecto al repositorio remoto principal al hacer git clone.
+- Branches/ ramas: Las ramas permiten trabajar en paralelo.
+- Linea temporal 
+- Merge conflicts ocurren cuando Git no puede combinar automáticamente dos cambios incompatibles sobre la misma parte de un archivo.
+- Dato: `git pull = git fetch + git merge`
+- Merge: poner q es
 
-## Orden recomendado para estudiar
-
+Merge ejemplo:
 ```text
-modelo mental
-↓
-estados de Git
-↓
-comandos esenciales
-↓
-ramas y remoto
-↓
-merge conflicts
-↓
-rebase vs merge
+A---B---C main
+     \
+      D---E feature
+           \
+            M
 ```
 
----
 
-# 1. Modelo mental
-
-```text
-Git guarda snapshots del proyecto.
-GitHub almacena una copia remota.
-Las ramas permiten trabajar en paralelo.
-```
-
----
-
-# 2. Estados y áreas de Git
-
-```text
-untracked
-↓ git add
-staged
-↓ git commit
-tracked
-↓ modificar
-modified
-```
-
-```text
-Working Directory
-↓ add
-Staging Area
-↓ commit
-Repositorio local (Git)
-↓ push
-Repositorio remoto (GitHub)
-```
-
-| Estado / área | Qué significa |
-| --- | --- |
-| `untracked` | Git todavía no sigue el archivo |
-| `staged` | Archivo preparado para commit |
-| `tracked` | Archivo ya versionado |
-| `modified` | Archivo modificado después de un commit |
-| Working Directory | Archivos modificados |
-| Staging Area | Cambios preparados |
-| Repo local | Historial local |
-| Repo remoto | Copia subida a GitHub |
-
----
-
-# 3. Git vs GitHub
+## Git vs Github
 
 | Git | GitHub |
 | --- | --- |
@@ -120,68 +60,94 @@ Repositorio remoto (GitHub)
 | Usa `.git` | Usa remotos (`origin`) |
 | No requiere internet | Generalmente sí |
 
+
+
+
+## 5 ventajas de uso
+De git y github.
+
+| Acrónimo               | Qué representa                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------ |
+| **H** = Historial      | Ver cambios pasados y recuperar versiones anteriores. “Historia” del proyecto. |
+| **E** = Equipo         | Varias personas pueden trabajar juntas sobre el mismo proyecto.                |
+| **R** = Ramas          | Permite probar cambios sin afectar `main`. Cada rama es un camino separado.    |
+| **O** = Organización   | Los commits, Issues y Projects ayudan a mantener el proyecto ordenado.         |
+| **S** = Sincronización | Compartir y respaldar cambios entre dispositivos/personas mediante GitHub.     |
+
+
+
+
 ---
 
-# 4. Conceptos importantes
+# Convenciones
+- Todas estas se vuelven realmente fundamentales en el trabajo en grupo.
 
-| Concepto | Idea rápida |
+## Sobre Commits
+- Deben ser atómicos, es decir, un commit = un único cambio lógico.
+- El mensaje del commit debe ser descriptivo y representar claramente qué se modificó. Evitar mensajes genéricos como `update` o `mejora`.
+- Es común usar prefijos para categorizar commits:
+  - `feat`: agrega una funcionalidad. ej: `feat: login agregado`
+  - `fix`: corrige errores/bugs. ej: `fix: validación corregida`
+  - `docs`: cambios en documentación. ej: `docs: README actualizado`
+  - `refactor`: reorganiza código sin cambiar comportamiento. ej: `refactor: lógica de autenticación simplificada`
+  - `style`: cambios de formato/estilo
+  - `test`: cambios relacionados con tests
+
+
+## Sobre ramas
+- Usar Merge en vez de Rebase.
+- Usar checkout en vez de switch (por costumbre no porque sea mejor).
+- No se trabaja directamente en main, cada uno trabaja en su propia rama y al final del desarrollo de cierta rama se hace merge con main.
+- Hacer `pull` antes de empezar a trabajar.
+- Hacer `pull` frecuentemente.
+- Mantener ramas cortas.
+- Evitar que muchas personas trabajen sobre el mismo archivo.
+- Mergear cambios frecuentemente.
+- usar los siguientes nombres:
+  
+
+| Tipos       | Qué significa                | Ejemplos del nombre completo de la rama |
+| ---------- | ----------------------------- | -------------------- |
+| `feature/` | Nueva funcionalidad           | `feature/login`      |
+| `fix/`     | Corrección de errores         | `fix/navbar`         |
+| `hotfix/`  | Arreglo urgente en producción | `hotfix/crash`       |
+| `docs/`    | Cambios de documentación      | `docs/readme-update` |
+
+
+## Errores comunes
+
+| Error | Problema |
 | --- | --- |
-| Repositorio | Carpeta gestionada por Git |
-| Branch / rama | Línea paralela de trabajo |
-| Commit | Snapshot/checkpoint |
-| Stage | Zona de preparación |
-| HEAD | Dónde estás parado |
-| Merge | Unión de ramas |
-| Rebase | Reordenar historial |
-| Pull Request | Pedido para integrar cambios |
-| `.gitignore` | Archivos que Git ignora |
+| Trabajar en `main` | Riesgo de romper producción |
+| Commits gigantes | Difícil debuggear |
+| No hacer pull seguido | Más merge conflicts |
+| `git push --force` | Fuerza al remoto (origin) a aceptar tu historial local. Puede sobrescribir historial |
+| `git reset --hard` | Mueve el repositorio a otro commit y descarta cambios locales. Puede borrar cambios |
+| Commits ambiguos | Historial confuso |
 
 ---
 
-# 5. Ventajas de usar Git/GitHub
+# Comandos
 
-- Historial completo de cambios.
-- Posibilidad de volver atrás.
-- Trabajo colaborativo.
-- Desarrollo paralelo con ramas.
-- Backup remoto.
-- Releases/versionado.
-- Integración con CI/CD.
+## Lista
 
----
+`Pending.`
 
-# 6. Comandos esenciales
 
-| Acción | Comando |
-| --- | --- |
-| Inicializar repo | `git init` |
-| Clonar repo | `git clone URL` |
-| Ver estado | `git status` |
-| Ver diferencias | `git diff` |
-| Agregar cambios | `git add .` |
-| Commit | `git commit -m "msg"` |
-| Ver historial | `git log --oneline` |
-| Ver ramas | `git branch` |
-| Cambiar rama | `git checkout main` |
-| Crear rama | `git checkout -b feature/x` |
-| Ver remotos | `git remote -v` |
-| Traer cambios | `git fetch origin` |
-| Traer e integrar | `git pull origin main` |
-| Subir cambios | `git push origin main` |
-| Integrar ramas | `git merge rama` |
-| Eliminar archivo | `git rm archivo.txt` |
-| Renombrar archivo | `git mv viejo nuevo` |
-| Guardar temporalmente | `git stash` |
-| Recuperar stash | `git stash pop` |
 
-Dato:
-```text
-git pull = git fetch + git merge
-```
 
----
+## Relación con Estados y Áreas
 
-# 7. Volver atrás
+| Estado del archivo                | Área: dónde está            | Cómo llega                                             |
+| --------------------------------- | --------------------------- | ------------------------------------------------------ |
+| `untracked`                       | Working Directory           | Archivo creado pero Git todavía no lo conoce.          |
+| `staged`                          | Staging Area                | `git add` prepara cambios para el próximo commit.      |
+| `tracked`                         | Repositorio local (Git)     | `git commit` guarda la snapshot en tu PC.              |
+| `modified`                        | Working Directory           | Archivo tracked que fue modificado después del commit. |
+| `pushed` *(no es estado oficial)* | Repositorio remoto (GitHub) | `git push` sube commits al remoto.                     |
+
+
+## Deshacer cambios
 
 | Riesgo | Comando | Uso |
 | --- | --- | --- |
@@ -189,44 +155,12 @@ git pull = git fetch + git merge
 | Medio | `git checkout -- archivo.txt` | Descartar cambios locales |
 | Alto | `git reset --hard HEAD~1` | Volver commit atrás |
 
----
-
-# 8. Commits atómicos
-
-```text
-Un commit = un cambio lógico.
-```
-
-## Buenos ejemplos
-
-```text
-feat: agregar login
-fix: corregir validación
-docs: actualizar README
-```
-
-## Malos ejemplos
-
-```text
-cambios varios
-update
-arreglos
-```
 
 ---
 
-# 9. Ramas y workflow grupal
+# Flujos de trabajo 
 
-## Regla general
-
-```text
-Cada desarrollador trabaja en SU rama.
-No trabajar directamente sobre main.
-```
-
----
-
-## Flujo típico
+## Branches
 
 ```text
 checkout main
@@ -248,79 +182,33 @@ Pull Request
 merge
 ```
 
----
-
-## Convenciones comunes
-
-| Tipo | Ejemplo |
-| --- | --- |
-| Feature | `feature/login` |
-| Fix | `fix/navbar` |
-| Hotfix | `hotfix/crash` |
-| Docs | `docs/readme-update` |
-
----
-
-# 10. Merge conflicts
-
-```text
-Dos cambios incompatibles sobre la misma parte de un archivo.
-```
+## Merge Conflicts
 
 | Paso | Acción |
 | --- | --- |
 | 1 | `git merge rama` |
-| 2 | Git detecta conflicto |
-| 3 | Editar archivo manualmente |
-| 4 | `git add archivo` |
-| 5 | `git commit` |
-
-## Cómo evitarlos
-
-- Pull frecuente.
-- Ramas cortas.
-- Commits pequeños.
-- No trabajar todos sobre el mismo archivo.
-- Mergear seguido.
+| 2 | Git detecta conflictos |
+| 3 | `git status` para ver los archivos afectados |
+| 4 | Editar los archivos manualmente |
+| 5 | `git add archivo` |
+| 6 | `git commit` |
 
 ---
 
-# 11. Releases y Tags
+# Extras
+- No es necesario saberlo de memoria, con tener una noción en suficiente.
 
-| Concepto | Qué es |
-| --- | --- |
-| Release | Versión publicada oficialmente |
-| Tag | Etiqueta fija sobre un commit |
-| Hotfix | Arreglo urgente en producción |
 
-| Acción | Comando |
-| --- | --- |
-| Crear tag | `git tag v1.0.0` |
-| Ver tags | `git tag` |
-| Subir tags | `git push origin --tags` |
-
-Ejemplos:
-```text
-v1.0.0
-v1.1.0
-v2.0.0
-```
-
----
-
-# 12. Rebase vs Merge
+## Rebase vs Merge
 
 | Tema | Merge | Rebase |
 | --- | --- | --- |
 | Qué hace | Une historiales | Reescribe historial |
 | Historial | Mantiene bifurcaciones | Más lineal |
-| Seguridad | Más seguro | Más delicado |
+| Seguridad | Más seguro | Mucho más peligroso |
 | Uso típico | Trabajo grupal | Limpiar historial |
 
----
-
-## Merge
-
+Cómo se ve Merge
 ```text
 A---B---C main
      \
@@ -329,31 +217,30 @@ A---B---C main
             M
 ```
 
----
 
-## Rebase
+
+Cómo se ve Rebase
 
 ```text
 A---B---C---D'---E'
 ```
 
-Advertencia:
-```text
-No hacer rebase sobre ramas compartidas si no sabés bien qué estás haciendo.
-```
 
----
+## Tags y Releases
 
-# 13. Errores comunes
-
-| Error | Problema |
+| Concepto | Qué es |
 | --- | --- |
-| Trabajar en `main` | Riesgo de romper producción |
-| Commits gigantes | Difícil debuggear |
-| No hacer pull seguido | Más conflictos |
-| `git push --force` | Puede sobrescribir historial |
-| `git reset --hard` | Puede borrar cambios |
-| Commits ambiguos | Historial confuso |
+| Release | Versión publicada oficialmente. Nota: es de Github y se hace desde Github. |
+| Tag | Etiqueta fija sobre un commit |
+
+| Acción | Comando |
+| --- | --- |
+| Crear tag | `git tag v1.0.0` |
+| Ver tags | `git tag` |
+| Subir tags | `git push origin --tags` |
+
+
+
 
 
 
