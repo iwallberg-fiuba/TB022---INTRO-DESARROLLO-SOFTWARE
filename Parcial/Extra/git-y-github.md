@@ -1,35 +1,53 @@
 
+<br><br>
+
 ### Table of Contents
 
-- Bases
-     - [Conceptos Claves](#conceptos-claves)
-     - [Ejemplo Línea Temporal](#1-revisión-de-línea-temporal)
-     - [Git vs Github](#git-vs-github)
-     - [Ventajas de uso](#ventajas-de-uso)
-- Convenciones
-     - [Sobre Commits](#sobre-commits)
-     - [Sobre Branches](#sobre-branches)
-     - [Revisión Línea Temporal](#2-revisión-de-línea-temporal)
-     - [Errores Comunes](#errores-comunes)
-- Comandos
-     - [Lista](#lista)
-     - [Relación con Estados y Áreas](#relación-con-estados-y-areas)
-     - [Cómo Deshacer Cambios](#cómo-deshacer-cambios)
-- Flujos de trabajo
-     - [Branches](#branches)
-     - [Merge Conflicts](#merge-conflicts)
- - [Extras](#extras)
-     - [Rebase vs Merge](#rebase-vs-merge)
-     - [Tags y Releases](#tags-y-releases)
+<br>
 
+Bases
+- [Conceptos Claves](#conceptos-claves)
+- [Ejemplo Línea Temporal](#1-revisión-de-línea-temporal)
+- [Git vs Github](#git-vs-github)
+- [Ventajas de uso](#ventajas-de-uso)
 
+<br>
+
+Convenciones
+- [Sobre Commits](#sobre-commits)
+- [Sobre Branches](#sobre-branches)
+- [Revisión Línea Temporal](#2-revisión-de-línea-temporal)
+- [Errores Comunes](#errores-comunes)
+
+<br>
+
+Comandos
+- [Lista](#lista)
+- [Relación con Estados y Áreas](#relación-con-estados-y-áreas)
+- [Cómo Deshacer Cambios](#cómo-deshacer-cambios)
+
+<br>
+
+Flujos de trabajo
+- [Branches](#branches)
+- [Merge Conflicts](#merge-conflicts)
+
+<br>
+
+[Extras](#extras)
+- [Rebase vs Merge](#rebase-vs-merge)
+- [Tags y Releases](#tags-y-releases)
 
 
 <br>
 
 ---
 
+<br>
+
 ## Bases
+
+<br>
 
 ### Conceptos Claves
 
@@ -44,12 +62,18 @@
 - Merge conflicts: ocurren cuando Git no puede decidir automáticamente cómo combinar cambios incompatibles realizados sobre la misma parte de uno o más archivos. Ejemplo: dos personas modifican la misma línea de código de formas distintas.
 
 
+<br><br>
+
 ### 1° Revisión de Línea Temporal
 
-* donde se siguieron las Convenciones sobre Branches (después de leer las Convenciones se entiende mejor)
+donde se siguieron las Convenciones sobre Branches (después de leer las Convenciones se entiende mejor)
+
+<br>
 
 <img width="800" height="400" alt="git-version-control" src="https://github.com/user-attachments/assets/aa6b93ca-356a-4b5d-8fa4-a2effc1d0ba0" />
 
+
+<br><br><br>
 
 ### Git vs Github
 
@@ -61,11 +85,11 @@
 | Usa `.git` | Usa remotos (`origin`) |
 | No requiere internet | Generalmente sí |
 
-
+<br><br><br>
 
 
 ### Ventajas de uso
-* de git y github.
+de git y github.
 
 | Acrónimo               | Qué representa                                                                 |
 | ---------------------- | ------------------------------------------------------------------------------ |
@@ -75,14 +99,18 @@
 | **O** = Organización   | Los commits, Issues y Projects ayudan a mantener el proyecto ordenado.         |
 | **S** = Sincronización | Compartir y respaldar cambios entre dispositivos/personas mediante GitHub.     |
 
-
+<br><br><br>
 
 
 ---
 
+<br>
+
 ## Convenciones
 - Todas estas se vuelven realmente fundamentales en el trabajo en grupo.
 - Algunas son por las buenas prácticas y otras por convenciones de la clase.
+
+<br><br><br>
 
 ### Sobre Commits
 - Deben ser atómicos, es decir, un commit = un único cambio lógico.
@@ -95,6 +123,7 @@
   - `style`: cambios de formato/estilo
   - `test`: cambios relacionados con tests
 
+<br><br><br>
 
 ### Sobre Branches
 - Usar Merge en vez de Rebase.
@@ -106,7 +135,8 @@
 - Evitar que muchas personas trabajen sobre el mismo archivo.
 - Mergear cambios frecuentemente.
 - usar los siguientes nombres:
-  
+
+<br><br>
 
 | Tipos       | Qué significa                | Ejemplos del nombre completo de la rama |
 | ---------- | ----------------------------- | -------------------- |
@@ -116,14 +146,15 @@
 | `docs/`    | Cambios de documentación      | `docs/readme-update` |
 
 
+<br><br><br>
+
 ### 2° Revisión de Línea Temporal
 
 * donde se siguieron las Convenciones sobre Branches (ahora debería entenderse bastante más)
 
 <img width="800" height="400" alt="git-version-control" src="https://github.com/user-attachments/assets/aa6b93ca-356a-4b5d-8fa4-a2effc1d0ba0" />
 
-
-
+<br><br><br>
 
 ### Errores Comunes
 
@@ -136,18 +167,25 @@
 | `git reset --hard` | Mueve el repositorio a otro commit y descarta cambios locales. Puede borrar cambios |
 | Commits ambiguos | Historial confuso |
 
+<br><br><br>
+
 ---
+
+<br>
 
 ## Comandos
 
-### Lista
+<br>
 
+### Lista
 - Existen muchísimos más pero estos son los más utilizados y que hay que recordar.
 - Dato: `git pull = git fetch + git merge`
 
+<br>
+
 <img width="1929" height="1151" alt="git" src="https://github.com/user-attachments/assets/f28c9da0-315c-4bc0-b641-bb7735fbcfec" />
 
-
+<br><br><br>
 
 
 ### Relación con Estados y Áreas
@@ -160,6 +198,7 @@
 | `modified`                        | Working Directory           | Archivo tracked que fue modificado después del commit. |
 | `pushed` *(no es estado oficial)* | Repositorio remoto (GitHub) | `git push` sube commits al remoto.                     |
 
+<br><br><br>
 
 ### Cómo Deshacer Cambios
 
@@ -169,10 +208,15 @@
 | Medio | `git checkout -- archivo.txt` | Descartar cambios locales |
 | Alto | `git reset --hard HEAD~1` | Volver commit atrás |
 
+<br><br><br>
 
 ---
 
+<br>
+
 ## Flujos de trabajo 
+
+<br>
 
 ### Branches
 
@@ -196,25 +240,30 @@ Pull Request
 merge
 ```
 
+<br><br><br>
+
 ### Merge Conflicts
 
 | Paso | Acción |
 | --- | --- |
-| 1 | `git merge rama` |
-| 2 | Git detecta conflictos |
-| 3 | `git status` para ver los archivos afectados |
-| 4 | Editar los archivos manualmente |
-| 5 | `git add archivo` |
-| 6 | `git commit` |
+| 1 | Ir a la rama que recibirá los cambios: `git checkout main` |
+| 2 | Combinar otra rama dentro de la actual: `git merge feature/login` |
+| 3 | Git detecta conflictos |
+| 4 | `git status` para ver los archivos afectados |
+| 5 | Editar los archivos manualmente |
+| 6 | `git add archivo` |
+| 7 | `git commit` |
 
-
-
+<br><br><br>
 
 ---
+
+<br>
 
 ## Extras
 - No es necesario saberlo de memoria, con tener una noción en suficiente.
 
+<br><br><br>
 
 ### Rebase vs Merge
 
@@ -225,6 +274,8 @@ merge
 | Seguridad | Más seguro | Mucho más peligroso |
 | Uso típico | Trabajo grupal | Limpiar historial |
 
+<br>
+
 Cómo se ve Merge
 ```text
 A---B---C main
@@ -234,19 +285,20 @@ A---B---C main
             M
 ```
 
-Cómo se ve Rebase
+<br>
 
+Cómo se ve Rebase
 ```text
 A---B---C---D'---E'
 ```
 
+<br><br><br>
 
 ### Tags y Releases
+- Release: Versión publicada oficialmente. Nota: es de Github y se hace desde Github.
+- Tag: Etiqueta fija sobre un commit 
 
-| Concepto | Qué es |
-| --- | --- |
-| Release | Versión publicada oficialmente. Nota: es de Github y se hace desde Github. |
-| Tag | Etiqueta fija sobre un commit |
+<br>
 
 | Acción | Comando |
 | --- | --- |
@@ -255,6 +307,8 @@ A---B---C---D'---E'
 | Subir tags | `git push origin --tags` |
 
 
+
+<br><br><br>
 
 
 
