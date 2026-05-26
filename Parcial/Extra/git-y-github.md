@@ -1,13 +1,15 @@
 
-### Table of contents
+### Table of Contents
 
 - Bases
      - [Conceptos Claves](#conceptos-claves)
+     - [Ejemplo Línea Temporal](#1°-revisión-de-línea-temporal)
      - [Git vs Github](#git-vs-github)
      - [Ventajas de uso](#ventajas-de-uso)
 - Convenciones
      - [Sobre Commits](#sobre-commits)
      - [Sobre Branches](#sobre-branches)
+     - [Revisión Línea Temporal](#2°-revisión-de-línea-temporal)
      - [Errores Comunes](#errores-comunes)
 - Comandos
      - [Lista](#lista)
@@ -21,8 +23,7 @@
      - [Tags y Releases](#tags-y-releases)
 
 
-Ejemplo de linea temporal de git
-<img width="800" height="400" alt="git-version-control" src="https://github.com/user-attachments/assets/aa6b93ca-356a-4b5d-8fa4-a2effc1d0ba0" />
+
 
 <br>
 
@@ -32,24 +33,22 @@ Ejemplo de linea temporal de git
 
 ### Conceptos Claves
 
-- Git guarda versiones(snapshots) del proyecto.
-- GitHub almacena una copia remota.
-- Repositorio: carpeta/proyecto gestionado por Git. Contiene archivos, historial de cambios, ramas y configuración de versionado. El historial y metadatos de Git se guardan dentro de la carpeta oculta .git.
-- Repositorio remoto (origin): copia del repositorio alojada en otro lugar (GitHub, GitLab, servidor, etc.) usada para compartir y sincronizar cambios entre personas o dispositivos.
-origin es simplemente el alias/nombre que Git pone por defecto al repositorio remoto principal al hacer git clone.
-- Branches/ ramas: Las ramas permiten trabajar en paralelo.
-- Linea temporal 
-- Merge conflicts ocurren cuando Git no puede combinar automáticamente dos cambios incompatibles sobre la misma parte de un archivo.
-- Merge: poner q es
+- Git: sistema de control de versiones que guarda snapshots/versiones del proyecto y permite rastrear, recuperar y organizar cambios a lo largo del tiempo.
+- GitHub: plataforma que almacena repositorios remotos y facilita compartir código, colaborar, revisar cambios y sincronizar proyectos mediante Git.
+- Repositorio: carpeta/proyecto gestionado por Git. Contiene archivos, historial de cambios, ramas y configuración de versionado. El historial y metadatos de Git se guardan dentro de la carpeta oculta `.git`.
+- Repositorio remoto (`origin`): copia del repositorio alojada en otro lugar (GitHub, GitLab, servidor, etc.) usada para compartir y sincronizar cambios entre personas o dispositivos.
+- `origin`: alias/nombre que Git asigna por defecto al repositorio remoto principal al hacer `git clone`. Permite referenciarlo más fácilmente en comandos como `git push origin main`.
+- Branches/ramas: líneas de trabajo independientes que permiten desarrollar funcionalidades, corregir errores o experimentar en paralelo sin afectar directamente otras ramas.
+- Línea temporal/historial: secuencia cronológica de commits y cambios realizados en el proyecto. Permite ver evolución, recuperar versiones anteriores y rastrear quién hizo cada cambio.
+- Merge: proceso de combinar los cambios e historial de una rama dentro de otra para unificar líneas de trabajo.
+- Merge conflicts: ocurren cuando Git no puede decidir automáticamente cómo combinar cambios incompatibles realizados sobre la misma parte de uno o más archivos. Ejemplo: dos personas modifican la misma línea de código de formas distintas.
 
-Merge ejemplo:
-```text
-A---B---C main
-     \
-      D---E feature
-           \
-            M
-```
+
+### 1° Revisión de Línea Temporal
+
+* donde se siguieron las Convenciones sobre Branches (después de leer las Convenciones se entiende mejor)
+
+<img width="800" height="400" alt="git-version-control" src="https://github.com/user-attachments/assets/aa6b93ca-356a-4b5d-8fa4-a2effc1d0ba0" />
 
 
 ### Git vs Github
@@ -115,6 +114,15 @@ A---B---C main
 | `fix/`     | Corrección de errores         | `fix/navbar`         |
 | `hotfix/`  | Arreglo urgente en producción | `hotfix/crash`       |
 | `docs/`    | Cambios de documentación      | `docs/readme-update` |
+
+
+### 2° Revisión de Línea Temporal
+
+* donde se siguieron las Convenciones sobre Branches (ahora debería entenderse bastante más)
+
+<img width="800" height="400" alt="git-version-control" src="https://github.com/user-attachments/assets/aa6b93ca-356a-4b5d-8fa4-a2effc1d0ba0" />
+
+
 
 
 ### Errores Comunes
