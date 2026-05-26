@@ -27,7 +27,7 @@ Queries
 
 <br>
 
-Queries - Flujo
+Queries - Flujos
 - para cada tipo de relacion
 
 <br>
@@ -197,6 +197,21 @@ Operadores lógicos
 | `ORDER BY` | Ordena resultados. Por defecto es ascendente.                | `ORDER BY edad`      |
 | `ORDER BY` + `DESC` | Cambia el orden a descendente.                      | `ORDER BY nota DESC` |
 | `LIMIT`    | Limita la cantidad de filas devueltas.                       | `LIMIT 5`            |
+
+
+<br><br>
+
+[Volver a Table of Contents](#table-of-contents)
+
+<br>
+
+---
+
+<br>
+
+## Queries - Flujos
+
+`Pending`
 
 
 <br><br>
