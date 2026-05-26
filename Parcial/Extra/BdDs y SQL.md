@@ -8,7 +8,10 @@
 Bases
 - [Conceptos Claves](#conceptos-claves) Tema filas, columnas, entidades, relaciones, atributos y en q tablas pone, cliente, motor, uso de docker
 - [Ventajas de uso](#ventajas-de-uso)
-- [CRUD y Datos](#crud-y-datos) tipos de datos y restricciones y CRUD BdDs y tablas
+- [CRUD](#crud) CRUD BdDs y tablas
+- [Tipos de datos](#tipos-de-datos)
+- [Restricciones de datos](#restricciones-de-datos)
+
 
 <br>
 
@@ -48,6 +51,8 @@ Extras - `Pending`
 
 ### Conceptos Claves
 
+<br>
+
 | Concepto | Definición |
 |---|---|
 | SQL | Lenguaje utilizado para definir, consultar y modificar datos en bases de datos relacionales. |
@@ -65,19 +70,50 @@ Extras - `Pending`
 | Motor de base de datos relacional (DBMS) (ej: PostgreSQL) | Guarda, organiza y consulta datos usando SQL. Corre como un servidor. |
 | Cliente para administar BdDs (ej: DBeaver) | Permite conectarse a PostgreSQL, SQLite, MySQL, etc., y ejecutar queries, dependiendo del cliente, gráficamente o no. |
 
+<br><br>
 
 ### Ventajas de uso
 
-`Pending`
-
-
-### CRUD y Datos
+<br>
 
 `Pending`
 
+<br><br>
+
+### CRUD
+
+<br>
+
+`Pending`
+
+<br><br>
+
+### Tipos de datos
+
+<br>
+
+| Tipo          | Uso común                  |
+| ------------- | -------------------------- |
+| `SERIAL`      | IDs autoincrementales.     |
+| `INT`         | Números enteros.           |
+| `SMALLINT`    | Enteros pequeños.          |
+| `VARCHAR(50)` | Texto con longitud máxima. |
+| `DATE`        | Fechas.                    |
+| `TIMESTAMP`   | Fecha y hora.              |
+| `BOOLEAN`     | `TRUE` o `FALSE`.          |
 
 
+<br><br>
 
+### Restricciones de datos
+
+<br>
+
+| Restricción   | Qué hace                  |
+| ------------- | ------------------------- |
+| `UNIQUE`      | Evita valores repetidos.  |
+| `NOT NULL`    | Obliga a tener valor.     |
+| `DEFAULT` + valor | Asigna valor por defecto. |
 
 <br><br>
 
@@ -225,16 +261,26 @@ Operadores lógicos
 <br>
 
 ## Extras
-- No necesario memorizar para parcial pero útil para TP.
+No necesario memorizar para parcial pero útil para TP.
+
+<br>
 
 ### Flujo de Conexión con Docker
 
+<br>
+
 `Pending`
+
+<br><br>
 
 ### Ejecución de Queries
 Terminal Interactiva vs Archivo `.sql`
 
+<br>
+
 `Pending`
+
+<br>
 
 <br><br>
 
