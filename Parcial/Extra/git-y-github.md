@@ -3,13 +3,13 @@
 
 - Bases
      - [Conceptos Claves](#conceptos-claves)
-     - [Ejemplo Línea Temporal](#1°-revisión-de-línea-temporal)
+     - [Ejemplo Línea Temporal](#1-revisión-de-línea-temporal)
      - [Git vs Github](#git-vs-github)
      - [Ventajas de uso](#ventajas-de-uso)
 - Convenciones
      - [Sobre Commits](#sobre-commits)
      - [Sobre Branches](#sobre-branches)
-     - [Revisión Línea Temporal](#2°-revisión-de-línea-temporal)
+     - [Revisión Línea Temporal](#2-revisión-de-línea-temporal)
      - [Errores Comunes](#errores-comunes)
 - Comandos
      - [Lista](#lista)
