@@ -18,28 +18,17 @@ Convenciones
 
 <br>
 
-Relaciones -> pasarlo a un doc a parte?
-- [1:1](#algo)
-    - [Crear sus tablas](#algo)
-    - [Diagrama](#algo) 
-- [1:N](#algo)
-    - [Crear sus tablas](#algo)
-    - [Diagrama](#algo) 
-- [N:N](#algo)
-    - [Crear sus tablas](#algo)
-    - [Diagrama](#algo)
-- [N:N Avanzado](#algo)
-    - [Crear sus tablas](#algo)
-    - [Diagrama](#algo)
-
-<br>
-
 Queries
 - [en SELECT](#en-select)
 - [Después de FROM](#después-de-from)
 - [en WHERE](#en-where)
     - [Subqueries](#subqueries) 
 - [Después de WHERE](#después-de-where)
+
+<br>
+
+Queries - Flujo
+- para cada tipo de relacion
 
 <br>
 
@@ -217,41 +206,6 @@ Operadores lógicos
 <br>
 
 ---
-
-
-<br>
-
-## Relaciones
-
-
-### 1:1
-
-`Pending`
-
-
-### 1:N
-
-`Pending`
-
-
-### N:N
-
-`Pending`
-
-
-### N:N Avanzado
-
-`Pending`
-
-
-<br><br>
-
-[Volver a Table of Contents](#table-of-contents)
-
-<br>
-
----
-
 
 <br>
 
