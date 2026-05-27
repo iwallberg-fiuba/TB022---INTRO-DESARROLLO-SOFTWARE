@@ -16,6 +16,12 @@ Bases
 
 <br>
 
+Convenciones
+- [Sobre Queries](#sobre-queries)
+- [Sobre Configs](#sobre-configs)
+
+<br>
+
 Diseño 
 - [CRUD](#crud)
 - [Tipos de datos](#tipos-de-datos)
@@ -27,12 +33,6 @@ Diseño
 
 <br>
 
-Convenciones
-- [Sobre Queries](#sobre-queries)
-- [Sobre Configs](#sobre-configs)
-
-<br>
-
 Queries
 - [en SELECT](#en-select)
 - [Después de FROM](#después-de-from)
@@ -41,14 +41,17 @@ Queries
 
 <br>
 
-Queries - Flujos - `Pending`
-- para cada tipo de relacion
+Queries - Flujos
+- [Para 1:1](#para-11) - `Pending.`
+- [Para 1:N](#para-1n) - `Pending.`
+- [Para N:N](#para-nn) - `Pending.`
+- [Para N:N Avanzado](#para-nn-avanzado)
 
 <br>
 
 Extras 
-- [Flujo de Conexión con Docker](#flujo-de-conexión-con-docker) - `Pending`
-- [Ejecución de Queries](#ejecución-de-queries) - `Pending`
+- [Flujo de Conexión con Docker](#flujo-de-conexión-con-docker) - `Pending.`
+- [Ejecución de Queries](#ejecución-de-queries) - `Pending.`
 - [Parcial](#parcial)
 
 <br><br>
@@ -96,6 +99,37 @@ Extras
 | **S** | Selects rápidos | Facilita consultas y búsquedas eficientes.               |
 | **M** | Multiusuario    | Varias personas/apps pueden usar la BDD al mismo tiempo. |
 
+
+<br><br>
+
+[Volver a Table of Contents](#table-of-contents)
+
+<br>
+
+---
+
+<br>
+
+## Convenciones
+
+<br>
+
+### Sobre Queries
+
+<br>
+
+- Definir aliases en `FROM` sin usar `AS`. Ejemplo: `FROM usuarios u`
+- Usar `DISTINCT` cuando sea necesario evitar filas repetidas. No usarlo siempre por defecto, porque puede ocultar errores en la consulta.
+- No usar `WHERE` como reemplazo de `JOIN`. Si se usa mal, puede generar un `CROSS JOIN` no deseado: todas las combinaciones posibles entre dos tablas, sin respetar relaciones.
+
+<br><br>
+
+### Sobre Configs
+
+<br>
+
+- Usar PostgreSQL como motor / Data Base Management System (DBMS). Para el TP, PostgreSQL debe levantarse como un contenedor a partir de una imagen Docker.
+- Usar DBeaver como cliente gráfico para conectarse a PostgreSQL, ver tablas y ejecutar consultas.
 
 <br><br>
 
@@ -330,37 +364,6 @@ CREATE TABLE inscripciones (
 
 <br>
 
-## Convenciones
-
-<br>
-
-### Sobre Queries
-
-<br>
-
-- Definir aliases en `FROM` sin usar `AS`. Ejemplo: `FROM usuarios u`
-- Usar `DISTINCT` cuando sea necesario evitar filas repetidas. No usarlo siempre por defecto, porque puede ocultar errores en la consulta.
-- No usar `WHERE` como reemplazo de `JOIN`. Si se usa mal, puede generar un `CROSS JOIN` no deseado: todas las combinaciones posibles entre dos tablas, sin respetar relaciones.
-
-<br><br>
-
-### Sobre Configs
-
-<br>
-
-- Usar PostgreSQL como motor / Data Base Management System (DBMS). Para el TP, PostgreSQL debe levantarse como un contenedor a partir de una imagen Docker.
-- Usar DBeaver como cliente gráfico para conectarse a PostgreSQL, ver tablas y ejecutar consultas.
-
-<br><br>
-
-[Volver a Table of Contents](#table-of-contents)
-
-<br>
-
----
-
-<br>
-
 ## Queries
 
 <br>
@@ -446,7 +449,56 @@ Se utilizan para filtrar resultados.
 
 <br>
 
-`Pending`
+### Para 1:1 
+
+<br>
+
+`Pending.`
+
+<br><br>
+
+### Para 1:N
+
+<br>
+
+`Pending.`
+
+<br><br>
+
+### Para N:N
+
+<br>
+
+`Pending.`
+
+<br><br>
+
+### Para N:N Avanzado
+
+<br>
+
+```txt
+Goles hechos por partido (fecha) por cada jugador (nombre completo).
+```
+
+<br>
+
+```sql
+SELECT partidos.fecha_hora, jugadores.nombre_completo, jp.goles_anotados
+FROM jugadores_partidos jp
+JOIN jugadores ON jp.id_jugador = jugadores.id
+JOIN partidos ON jp.id_partido = partidos.id
+WHERE jp.goles_anotados != 0
+-- `<>` es lo mismo que `!=`
+-- En ese where se sacan los jugadores que no anotaron goles
+ORDER BY 
+    partidos.fecha_hora, 
+    jp.goles_anotados DESC, 
+    jp.asistencias_hechas DESC, 
+    jugadores.nombre_completo;
+```
+
+<br>
 
 <br><br>
 
