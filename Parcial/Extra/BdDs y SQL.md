@@ -39,6 +39,12 @@ Extras - `Pending`
 - [Flujo de Conexión con Docker](#flujo-de-conexión-con-docker)
 - [Ejecución de Queries](#ejecución-de-queries)
 
+<br>
+
+No entran en el Parcial
+- Unión/ consultas concatenadas
+- Funciones de agregación: `SUM()`, `AVG()`, `COUNT()`, `MIN()`, `MAX()`.
+
 <br><br>
 
 ---
@@ -133,7 +139,12 @@ Extras - `Pending`
 
 <br>
 
-`Pending`
+- Definir aliases en `FROM` sin usar `AS`.
+  - Ejemplo: `FROM usuarios u`
+- Usar `DISTINCT` cuando sea necesario evitar filas repetidas.
+  - No usarlo siempre por defecto, porque puede ocultar errores en la consulta.
+- No usar `WHERE` como reemplazo de `JOIN`.
+  - Si se usa mal, puede generar un `CROSS JOIN` no deseado: todas las combinaciones posibles entre dos tablas, sin respetar relaciones.
 
 <br><br>
 
@@ -141,7 +152,9 @@ Extras - `Pending`
 
 <br>
 
-`Pending`
+- Usar PostgreSQL como motor / Data Base Management System (DBMS).
+  - Para el TP, PostgreSQL debe levantarse como un contenedor a partir de una imagen Docker.
+- Usar DBeaver como cliente gráfico para conectarse a PostgreSQL, ver tablas y ejecutar consultas.
 
 <br><br>
 
