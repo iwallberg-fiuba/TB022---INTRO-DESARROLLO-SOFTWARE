@@ -62,6 +62,8 @@
 - Repositorio remoto (`origin`): copia del repositorio alojada en otro lugar (GitHub, GitLab, servidor, etc.) usada para compartir y sincronizar cambios entre personas o dispositivos.
 - `origin`: alias/nombre que Git asigna por defecto al repositorio remoto principal al hacer `git clone`. Permite referenciarlo más fácilmente en comandos como `git push origin main`.
 - Branches/ramas: líneas de trabajo independientes que permiten desarrollar funcionalidades, corregir errores o experimentar en paralelo sin afectar directamente otras ramas.
+- Pull request: solicitud para incorporar cambios de una rama a otra en un repositorio remoto (generalmente en GitHub). Permite revisar código, comentar, discutir cambios y aprobarlos antes de hacer el merge.
+- Issues: herramienta para registrar tareas, bugs, mejoras, dudas o ideas dentro de un repositorio. Sirve para organizar y seguir el trabajo del proyecto.
 - Línea temporal/historial: secuencia cronológica de commits y cambios realizados en el proyecto. Permite ver evolución, recuperar versiones anteriores y rastrear quién hizo cada cambio.
 - Merge: proceso de combinar los cambios e historial de una rama dentro de otra para unificar líneas de trabajo.
 - Merge conflicts: ocurren cuando Git no puede decidir automáticamente cómo combinar cambios incompatibles realizados sobre la misma parte de uno o más archivos. Ejemplo: dos personas modifican la misma línea de código de formas distintas.
