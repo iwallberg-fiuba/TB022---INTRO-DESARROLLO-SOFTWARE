@@ -4,5 +4,4 @@ FIUBA - Cátedra Camejo - 1C26
 
 <br>
 
-Abrir la carpeta `Parcial` y leer su README. <br>
-Quedan cambios pendientes.
+Abrir la carpeta `Parcial`. <br>
