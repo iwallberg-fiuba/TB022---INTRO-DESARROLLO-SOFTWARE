@@ -3,6 +3,8 @@
 
 ### Table of Contents
 
+Disminuir zoom para mejor lectura.
+
 <br>
 
 Bases
@@ -40,15 +42,10 @@ Queries - Flujos - `Pending`
 
 <br>
 
-Extras - `Pending`
-- [Flujo de Conexión con Docker](#flujo-de-conexión-con-docker)
-- [Ejecución de Queries](#ejecución-de-queries)
-
-<br>
-
-No entran en el Parcial:
-- Unión/ consultas concatenadas
-- Funciones de agregación: `SUM()`, `AVG()`, `COUNT()`, `MIN()`, `MAX()`.
+Extras 
+- [Flujo de Conexión con Docker](#flujo-de-conexión-con-docker) - `Pending`
+- [Ejecución de Queries](#ejecución-de-queries) - `Pending`
+- [Parcial](#parcial)
 
 <br><br>
 
@@ -399,15 +396,19 @@ Terminal Interactiva vs Archivo `.sql`
 
 `Pending`
 
-<br>
+<br><br>
+
+### Parcial
+
+No entran en el Parcial:
+- Unión/ consultas concatenadas
+- Funciones de agregación: `SUM()`, `AVG()`, `COUNT()`, `MIN()`, `MAX()`.
 
 <br><br>
 
 [Volver a Table of Contents](#table-of-contents)
 
-<br>
-
-<br><br>
+<br><br><br>
 
 
 
