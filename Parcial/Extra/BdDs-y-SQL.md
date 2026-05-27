@@ -237,8 +237,7 @@ CREATE TABLE alumno_materia (
 <br>
 <img width="800" alt="imagen" src="https://github.com/user-attachments/assets/d10e6bc2-920f-4661-96f9-f4ef4bb0081d" />
 
-<br>
-
+<br><br><br>
 
 ### N:N Avanzado
 
@@ -414,7 +413,7 @@ Se utilizan para filtrar resultados.
 | Tipo | Elementos | Qué hacen | Ejemplos |
 | --- | --- | --- | --- |
 | Comparaciones | `=` `!=` `<>` `<` `>` `<=` `>=` | Comparan valores. | `edad >= 18` |
-| Comparaciones especiales | `BETWEEN ... AND ...` `LIKE 'A%'` `LIKE '%txt'` `IN` `IS NULL` | Simplifican filtros frecuentes. | `edad BETWEEN 18 AND 30`<br>`nombre LIKE 'A%'`<br>`archivo LIKE '%.txt'`<br>`pais IN ('Argentina', 'Chile')`<br>`telefono IS NULL` |
+| Comparaciones especiales | `BETWEEN ... AND ...` `LIKE 'A%'` `IN` `IS NULL` | Simplifican filtros frecuentes. | `edad BETWEEN 18 AND 30`<br>`nombre LIKE 'A%'`<br>`archivo LIKE '%.txt'`<br>`pais IN ('Argentina', 'Chile')`<br>`telefono IS NULL` |
 | Operadores lógicos | `AND` `OR` `NOT` | Combinan o niegan condiciones. | `edad > 18 AND pais = 'Argentina'` |
 | Subqueries | `EXISTS` `SELECT 1` | Consultas dentro de otras consultas para filtrar, comparar o verificar existencia. | `SELECT u.nombre FROM usuarios u WHERE EXISTS ( SELECT 1 FROM pedidos p WHERE p.usuario_id = u.id )` |
 
