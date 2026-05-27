@@ -8,10 +8,16 @@
 Bases
 - [Conceptos Claves](#conceptos-claves) 
 - [Ventajas de uso](#ventajas-de-uso)
+
+<br>
+
+Diseño 
 - [CRUD](#crud)
 - [Tipos de datos](#tipos-de-datos)
 - [Restricciones de datos](#restricciones-de-datos)
-
+- [Tablas para 1:1](#tablas-para-11) - `Pending`
+- [Tablas para 1:N](#tablas-para-1n) - `Pending`
+- [Tablas para N:N](#tablas-para-nn) - `Pending`
 
 <br>
 
@@ -30,7 +36,7 @@ Queries - `Pending`
 
 <br>
 
-Queries - Flujos `Pending`
+Queries - Flujos - `Pending`
 - para cada tipo de relacion
 
 <br>
@@ -41,7 +47,7 @@ Extras - `Pending`
 
 <br>
 
-No entran en el Parcial
+No entran en el Parcial:
 - Unión/ consultas concatenadas
 - Funciones de agregación: `SUM()`, `AVG()`, `COUNT()`, `MIN()`, `MAX()`.
 
@@ -59,9 +65,22 @@ No entran en el Parcial
 
 <br>
 
-`Pending`
-Tema filas, columnas, entidades, relaciones, atributos y en q tablas pone, cliente, motor, uso de docker
-
+| Concepto | Definición |
+|---|---|
+| SQL | Lenguaje utilizado para definir, consultar y modificar datos en bases de datos relacionales. |
+| Base de datos | Conjunto organizado de información almacenada. Puede ser virtual o no. Puede ser un Excel, cualquier cosa. Dentro de las virtuales están las Relacionales (organizan información en tablas relacionadas entre sí mediante claves `PK` y `FK`) y las No Relacionales. |
+| Entidades | Objeto o concepto que se quiere representar en la base de datos. Si una relación `N:N` se desea representar en una tabla auxiliar con atributos propios, se vuelve una entidad. |
+| Relaciones | `1:1`, `1:N` y `N:N` (requiere tabla auxiliar). |
+| Tablas | Estructuras que almacenan datos organizados en filas y columnas. Representan entidades y/o relaciones entre ellas. |
+| Atributo | Característica de una entidad. Aquello que se establecerá como columna. |
+| Columnas (describen) | Definen qué información guarda cierta tabla. Ejemplo: `id`, `nombre`, `precio`. |
+| Filas (representan) | Cada registro concreto de la tabla; representan entidades reales. Ejemplo: `(Mouse, 100)`, `(Teclado, 200)`. |
+| Primary Key (`PK`) | Columna que identifica de forma única cada fila de una tabla. No se repite ni puede ser `NULL`. |
+| Foreign Key (`FK`) | Columna que referencia la `PK` de otra tabla para relacionarlas. |
+| Query | Consulta SQL utilizada para pedir, modificar o eliminar información. |
+| Alias | Permiten escribir consultas más cortas y legibles: `usuarios u` se va a poder usar como `u.nombre`. |
+| Motor de BdDs Relacional (DBMS) (ej: PostgreSQL) | Guarda, organiza y consulta datos usando SQL. Corre como un servidor. |
+| Cliente (ej: DBeaver) | Programa que permite conectarse a diferentes motores y ejecutar queries (gráficamente o no, dependiendo del cliente). |
 
 <br><br>
 
@@ -77,7 +96,20 @@ Tema filas, columnas, entidades, relaciones, atributos y en q tablas pone, clien
 | **S** | Selects rápidos | Facilita consultas y búsquedas eficientes.               |
 | **M** | Multiusuario    | Varias personas/apps pueden usar la BDD al mismo tiempo. |
 
+
 <br><br>
+
+[Volver a Table of Contents](#table-of-contents)
+
+<br>
+
+---
+
+<br>
+
+## Diseño
+
+<br>
 
 ### CRUD
 
@@ -118,6 +150,34 @@ Tema filas, columnas, entidades, relaciones, atributos y en q tablas pone, clien
 | `UNIQUE`      | Evita valores repetidos.  |
 | `NOT NULL`    | Obliga a tener valor.     |
 | `DEFAULT` + valor | Asigna valor por defecto. |
+
+<br><br>
+
+### Tablas para 1:1 
+
+<br>
+
+`Pending.`
+
+<br><br>
+
+### Tablas para 1:N 
+
+<br>
+
+`Pending.`
+
+<br><br>
+
+### Tablas para N:N 
+
+<br>
+
+`Pending.`
+
+
+
+
 
 <br><br>
 
