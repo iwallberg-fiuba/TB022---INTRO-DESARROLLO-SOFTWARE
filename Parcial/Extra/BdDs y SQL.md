@@ -17,7 +17,7 @@ Bases
 
 Convenciones
 - [Sobre Queries](#sobre-queries)
-- [Sobre Configs](#sobre-configs) cliente, motor, docker
+- [Sobre Configs](#sobre-configs)
 
 <br>
 
@@ -90,7 +90,12 @@ No entran en el Parcial
 
 <br>
 
-`Pending`
+| CRUD | Formas | Qué hace | Base de Datos | Tablas / Datos |
+|---|---|---|---|---|
+| **CREATE** | CREATE (estructura) e INSERT (datos) | CREATE: Crear estructura.<br>INSERT: Insertar valores a una tabla. | `CREATE DATABASE tienda;` | `CREATE TABLE usuarios ( ... );`<br>`INSERT INTO usuarios (nombre) VALUES ('Ana');` |
+| **READ** | SELECT | Leer / consultar información | N/A | `SELECT ... FROM ...` |
+| **UPDATE** | ALTER (estructuras) y UPDATE (datos) | ALTER: Modifica una estructura existente.<br>UPDATE: Modifica datos existentes. | `ALTER DATABASE mi_bdd ...` | `ALTER TABLE usuarios ...`<br>`UPDATE usuarios SET nombre = 'Juan' WHERE id = 1;` |
+| **DELETE** | DROP (estructura), TRUNCATE (limpiar tabla) y DELETE (datos) | DROP: Elimina completamente una estructura.<br>TRUNCATE: Vacía todos los datos de una tabla.<br>DELETE: Elimina datos específicos. | `DROP DATABASE mi_bdd;` | `DROP TABLE usuarios;`<br>`TRUNCATE TABLE usuarios;`<br>`DELETE FROM usuarios WHERE id = 1;` |
 
 <br><br>
 
