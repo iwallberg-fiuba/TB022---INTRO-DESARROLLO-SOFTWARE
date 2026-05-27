@@ -32,7 +32,7 @@
 - [Arquitectura](#arquitectura)
 - [Optimización](#optimización)
 
-<br><br>
+<br>
 
 ---
 
@@ -57,7 +57,7 @@
 | Flujo Comandos Docker | `docker build` → construye una imagen desde una Dockerfile.<br>`docker run` → crea e inicia un contenedor a partir de una imagen.<br>`docker ps` → muestra contenedores en ejecución.<br>`docker logs` → muestra logs/salida del contenedor.<br>`docker stop` → detiene un contenedor.<br>`docker rm` → elimina un contenedor detenido. |
 
 
-<br>
+<br><br><br>
 
 ### Ventajas
 
@@ -69,9 +69,9 @@
 | Desarrollador (MAPTEC) | **M**ismo entorno en distintas máquinas.<br>**A**islamiento de dependencias.<br>**P**ortabilidad y reproducibilidad.<br>**T**esting y deployment más simples.<br>**E**scalabilidad y mantenimiento más simples.<br>**C**I/CD y colaboración/trabajo en equipo. |
 
 
-<br>
+<br><br><br>
 
-### Docker VS VMs
+### Docker vs VMs
 
 <br>
 
@@ -81,9 +81,7 @@
 | **VM**     | Hardware  <br>↓<br> Hypervisor  <br>↓<br> Máquinas Virtuales  <br>↓<br> Sistema Operativo invitado  <br>↓<br> Aplicaciones |
 
 
-
-
-<br><br>
+<br><br><br>
 
 [Volver a Table of Contents](#table-of-contents)
 
@@ -91,9 +89,11 @@
 
 ---
 
+<br>
+
 ## Regex y sed
 
-<br>
+<br><br>
 
 | Tema | Ejemplo | Qué devuelve |
 | --- | --- | --- |
@@ -110,7 +110,7 @@
 
 
 
-<br><br>
+<br><br><br>
 
 [Volver a Table of Contents](#table-of-contents)
 
@@ -118,14 +118,13 @@
 
 ---
 
+<br>
 
 ## Ingeniería de Software y SDLC
 
-<br>
+<br><br>
 
 ### Conceptos
-
-<br>
 
 | Tema | Información |
 | --- | --- |
@@ -135,11 +134,9 @@
 | Cuándo es malo retroceder en el SDLC | Cuando ocurre por errores evitables, mala planificación o deuda técnica (problemas generados por elegir soluciones rápidas pero ineficientes cuando se desarrolló el código). | 
 
 
-<br>
+<br><br><br>
 
 ### Requerimientos
-
-<br>
 
 | Requerimientos | Información |
 | --- | --- |
@@ -147,7 +144,7 @@
 | No Funcionales (`SEMECA`) | Definen **cómo debe funcionar** el sistema. Ejemplos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible. |
 
 
-<br>
+<br><br><br>
 
 ### Sobre DevOps y CI/CD
 - CI (Continuous Integration): integra cambios de código automáticamente, ejecutando tests, validaciones y builds.
@@ -155,7 +152,7 @@
 - Objetivo de CI/CD: Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes.
 - Flujo típico CI/CD: `git push` → tests automáticos → build → deployment automático 
 
-
+<br>
 <br><br>
 
 [Volver a Table of Contents](#table-of-contents)
@@ -168,7 +165,7 @@
 
 ## Inteligencia Artificial
 
-<br>
+<br><br>
 
 ### Agentes
 
@@ -181,7 +178,7 @@
 | **Coding Agent**               | Agente basado en un LLM que además puede usar herramientas y actuar sobre un entorno.        | Codex, Claude Code                                                |
 | **Subagents**                  | Agentes auxiliares especializados en subtareas concretas.                                    | AutoGen usando agentes separados para frontend, backend y testing |
 
-<br>
+<br><br><br>
 
 ### Arquitectura
 
@@ -195,7 +192,7 @@
 | **Live Repo Context** | Acceso al estado actual y real de un repositorio mientras el agente trabaja.          | Cursor leyendo archivos y commits en tiempo real     |
 
 
-<br>
+<br><br><br>
 
 ### Optimización
 
@@ -207,11 +204,10 @@
 | **Cache Reuse**       | Reutilización de resultados o contexto previo para ahorrar tiempo y recursos.        | Reusar respuestas o análisis ya generados                      |
 
 
-
 <br><br><br>
 
 [Volver a Table of Contents](#table-of-contents)
 
-<br>
+<br><br><br>
 
 
