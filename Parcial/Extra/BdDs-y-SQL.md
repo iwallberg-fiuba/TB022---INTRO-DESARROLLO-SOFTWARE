@@ -15,9 +15,9 @@ Diseño
 - [CRUD](#crud)
 - [Tipos de datos](#tipos-de-datos)
 - [Restricciones de datos](#restricciones-de-datos)
-- [Tablas para 1:1](#tablas-para-11) - `Pending`
-- [Tablas para 1:N](#tablas-para-1n) - `Pending`
-- [Tablas para N:N](#tablas-para-nn) - `Pending`
+- [Tablas para 1:1](#tablas-para-11)
+- [Tablas para 1:N](#tablas-para-1n)
+- [Tablas para N:N](#tablas-para-nn)
 
 <br>
 
@@ -157,7 +157,22 @@ No entran en el Parcial:
 
 <br>
 
-`Pending.`
+```sql
+-- Para cada Persona, hay un único pasaporte.
+
+CREATE TABLE personas (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100)
+);
+
+CREATE TABLE pasaportes (
+    id SERIAL PRIMARY KEY,
+    persona_id INT UNIQUE REFERENCES personas(id),
+    numero VARCHAR(50)
+);
+```
+<br>
+<img width="700" alt="imagen" src="https://github.com/user-attachments/assets/afa29f14-e090-49ef-b00e-3d20dc3b6366" />
 
 <br><br>
 
@@ -165,7 +180,22 @@ No entran en el Parcial:
 
 <br>
 
-`Pending.`
+```sql
+-- Para cada Usuario, hay 1 o más Compras.
+
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100)
+);
+
+CREATE TABLE compras (
+    id SERIAL PRIMARY KEY,
+    usuario_id INT REFERENCES usuarios(id),
+    fecha DATE
+);
+```
+<br>
+<img width="600" alt="imagen" src="https://github.com/user-attachments/assets/50b1fd73-5ee7-4a03-8e8a-ff5415f3aef5" />
 
 <br><br>
 
@@ -173,11 +203,32 @@ No entran en el Parcial:
 
 <br>
 
-`Pending.`
+```sql
+-- Para cada Alumno, hay 1 o más Materias `1:N`.
+-- Para cada Materia, hay 1 o más Alumnos `N:1`.
+
+-- Entonces: Alumno <--> Materia es una relación `N:N`-> necesito tabla auxiliar.
 
 
 
+CREATE TABLE alumnos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100)
+);
 
+CREATE TABLE materias (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100)
+);
+
+CREATE TABLE alumno_materia (
+    alumno_id INT REFERENCES alumnos(id),
+    materia_id INT REFERENCES materias(id),
+    PRIMARY KEY (alumno_id, materia_id)
+);
+```
+<br>
+<img width="800" alt="imagen" src="https://github.com/user-attachments/assets/d10e6bc2-920f-4661-96f9-f4ef4bb0081d" />
 
 <br><br>
 
