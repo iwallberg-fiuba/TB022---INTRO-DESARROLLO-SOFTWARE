@@ -10,19 +10,19 @@
 
 <br>
 
-Bases
+[Bases](#bases)
 - [Conceptos Claves](#conceptos-claves) 
 - [Ventajas de uso](#ventajas-de-uso)
 
 <br>
 
-Convenciones
+[Convenciones](#convenciones)
 - [Sobre Queries](#sobre-queries)
 - [Sobre Configs](#sobre-configs)
 
 <br>
 
-Diseño 
+[Diseño](#diseño)
 - [CRUD](#crud)
 - [Tipos de datos](#tipos-de-datos)
 - [Restricciones de datos](#restricciones-de-datos)
@@ -33,7 +33,7 @@ Diseño
 
 <br>
 
-Queries
+[Queries](#queries)
 - [en SELECT](#en-select)
 - [Después de FROM](#después-de-from)
 - [en WHERE](#en-where)
@@ -41,7 +41,7 @@ Queries
 
 <br>
 
-Queries - Flujos
+[Queries - Flujos](#queries---flujos)
 - [Para 1:1](#para-11) - `Pending.`
 - [Para 1:N](#para-1n) - `Pending.`
 - [Para N:N](#para-nn) - `Pending.`
@@ -49,7 +49,7 @@ Queries - Flujos
 
 <br>
 
-Extras 
+[Extras](#extras)
 - [Flujo de Conexión con Docker](#flujo-de-conexión-con-docker) - `Pending.`
 - [Ejecución de Queries](#ejecución-de-queries) - `Pending.`
 - [Parcial](#parcial)
