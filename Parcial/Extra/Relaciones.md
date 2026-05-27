@@ -141,7 +141,7 @@ CREATE TABLE alumno_materia (
 );
 ```
 <br>
-<img width="2006" height="384" alt="imagen" src="https://github.com/user-attachments/assets/d10e6bc2-920f-4661-96f9-f4ef4bb0081d" />
+<img width="2006" alt="imagen" src="https://github.com/user-attachments/assets/d10e6bc2-920f-4661-96f9-f4ef4bb0081d" />
 
 <br><br>
 <br>
@@ -210,37 +210,42 @@ CREATE TABLE profesor_materia (
 
 ### Ej 2 - Múltiples `N:N`
 
+
+### N:N Avanzado
+
 <br>
 
+```txt
 Primera relación `N:N`:
 - Para cada Jugador, hay 1 o más Partidos `1:N`.
 - Para cada Partido, hay 1 o más Jugadores `N:1`.
 
-Entonces:  
-Jugador ↔ Partido es `N:N` → necesito una tabla auxiliar: `jugadores_partidos`.
+Entonces: Jugador ↔ Partido es `N:N` → necesito una tabla auxiliar: `jugadores_partidos`.
 
 Además, esta relación tiene atributos propios:
 - es_local
 - goles_anotados
 - asistencias_hechas
 
-Entonces: <br>
-la tabla auxiliar no solo conecta entidades, también guarda información específica de la participación del jugador en el partido.
+Entonces: la tabla auxiliar no solo conecta entidades, también guarda información específica de la participación del jugador en el partido.
+```
 
+<br>
+
+```txt
 Segunda relación `N:N`:
 - Para cada Jugador, hay 1 o más Inscripciones `1:N`.
 - Para cada Partido, hay 1 o más Inscripciones `N:1`.
 
-Entonces:  <br>
-Jugador ↔ Partido también tiene otra relación `N:N` distinta → necesito otra tabla auxiliar: `inscripciones`.
+Entonces: Jugador ↔ Partido también tiene otra relación `N:N` distinta → necesito otra tabla auxiliar: `inscripciones`.
 
 Además, esta relación tiene un atributo propio:
 - fecha_inscripcion
 
-Entonces: <br>
-la inscripción también se modela como entidad/tabla auxiliar separada.
+Entonces: la inscripción también se modela como entidad/tabla auxiliar separada.
+```
 
-<br><br>
+<br>
 
 ```sql
 CREATE TABLE jugadores (
@@ -281,7 +286,7 @@ CREATE TABLE inscripciones (
 );
 ```
 <br>
-<img width="1409" height="1021" alt="imagen" src="https://github.com/user-attachments/assets/fc0df7d2-53de-4264-a943-09c67f936555" />
+<img width="700" alt="imagen" src="https://github.com/user-attachments/assets/fc0df7d2-53de-4264-a943-09c67f936555" />
 
 <br>
 <br><br>
