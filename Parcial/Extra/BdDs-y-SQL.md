@@ -6,9 +6,9 @@
 <br>
 
 Bases
-- [Conceptos Claves](#conceptos-claves) Tema filas, columnas, entidades, relaciones, atributos y en q tablas pone, cliente, motor, uso de docker
+- [Conceptos Claves](#conceptos-claves) 
 - [Ventajas de uso](#ventajas-de-uso)
-- [CRUD](#crud) CRUD BdDs y tablas
+- [CRUD](#crud)
 - [Tipos de datos](#tipos-de-datos)
 - [Restricciones de datos](#restricciones-de-datos)
 
@@ -21,7 +21,7 @@ Convenciones
 
 <br>
 
-Queries
+Queries - `Pending`
 - [en SELECT](#en-select)
 - [Después de FROM](#después-de-from)
 - [en WHERE](#en-where)
@@ -30,7 +30,7 @@ Queries
 
 <br>
 
-Queries - Flujos
+Queries - Flujos `Pending`
 - para cada tipo de relacion
 
 <br>
@@ -59,22 +59,9 @@ No entran en el Parcial
 
 <br>
 
-| Concepto | Definición |
-|---|---|
-| SQL | Lenguaje utilizado para definir, consultar y modificar datos en bases de datos relacionales. |
-| Base de datos | Conjunto organizado de información almacenada. |
-| Base de datos relacional | Base de datos que organiza información en tablas relacionadas entre sí mediante claves (`PK` y `FK`). |
-| Tablas | Estructuras que almacenan datos organizados en filas y columnas. Representan entidades como usuarios, productos o pedidos. |
-| Columnas (describen) | Definen qué información guarda cierta tabla. Ejemplo: `id`, `nombre`, `precio`. |
-| Filas (representan) | Cada registro concreto de la tabla; representan entidades reales. Ejemplo: `(Mouse, 100)`, `(Teclado, 200)`. |
-| Primary Key (`PK`) | Columna que identifica de forma única cada fila de una tabla. No se repite ni puede ser `NULL`. |
-| Foreign Key (`FK`) | Columna que referencia la `PK` de otra tabla para relacionarlas. |
-| Query | Consulta SQL utilizada para pedir, modificar o eliminar información. |
-| Ventajas de usar SQL | Permite consultar grandes cantidades de datos, relacionar tablas, filtrar información y mantener datos organizados y consistentes. |
-| Alias | Permiten escribir consultas más cortas y legibles: `usuarios u`, `cursos c`, `usuarios_cursos uc`. Después se usan como `u.nombre`, `c.nombre`, etc. |
-| CRUD (Create, Read, Update, Delete) | `CREATE TABLE ...` crea tablas, `INSERT INTO ... VALUES ...` agrega datos, `SELECT ... FROM ...` consulta datos, `UPDATE ... SET ... WHERE ...` modifica datos, `DELETE FROM ... WHERE ...` elimina filas específicas, `TRUNCATE TABLE ...` elimina todas las filas manteniendo la estructura, `DROP TABLE ...` elimina completamente la tabla (estructura + datos). |
-| Motor de base de datos relacional (DBMS) (ej: PostgreSQL) | Guarda, organiza y consulta datos usando SQL. Corre como un servidor. |
-| Cliente para administar BdDs (ej: DBeaver) | Permite conectarse a PostgreSQL, SQLite, MySQL, etc., y ejecutar queries, dependiendo del cliente, gráficamente o no. |
+`Pending`
+Tema filas, columnas, entidades, relaciones, atributos y en q tablas pone, cliente, motor, uso de docker
+
 
 <br><br>
 
@@ -82,7 +69,13 @@ No entran en el Parcial
 
 <br>
 
-`Pending`
+| Letra | Ventaja         | Idea clave                                               |
+| ----- | --------------- | -------------------------------------------------------- |
+| **P** | Persistencia    | Los datos quedan guardados permanentemente.              |
+| **R** | Relaciones      | Permite conectar tablas y datos relacionados.            |
+| **I** | Integridad      | Evita errores e inconsistencias con restricciones.       |
+| **S** | Selects rápidos | Facilita consultas y búsquedas eficientes.               |
+| **M** | Multiusuario    | Varias personas/apps pueden usar la BDD al mismo tiempo. |
 
 <br><br>
 
@@ -92,10 +85,10 @@ No entran en el Parcial
 
 | CRUD | Formas | Qué hace | Base de Datos | Tablas / Datos |
 |---|---|---|---|---|
-| **CREATE** | CREATE (estructura) e INSERT (datos) | CREATE: Crear estructura.<br>INSERT: Insertar valores a una tabla. | `CREATE DATABASE tienda;` | `CREATE TABLE usuarios ( ... );`<br>`INSERT INTO usuarios (nombre) VALUES ('Ana');` |
+| **CREATE** | CREATE (estructura), <br>INSERT (datos) | CREATE: Crear estructura.<br><br>INSERT: Insertar valores a una tabla. | `CREATE DATABASE tienda;` | `CREATE TABLE usuarios ( ... );`<br><br>`INSERT INTO usuarios (nombre) VALUES ('Ana');` |
 | **READ** | SELECT | Leer / consultar información | N/A | `SELECT ... FROM ...` |
-| **UPDATE** | ALTER (estructuras) y UPDATE (datos) | ALTER: Modifica una estructura existente.<br>UPDATE: Modifica datos existentes. | `ALTER DATABASE mi_bdd ...` | `ALTER TABLE usuarios ...`<br>`UPDATE usuarios SET nombre = 'Juan' WHERE id = 1;` |
-| **DELETE** | DROP (estructura), TRUNCATE (limpiar tabla) y DELETE (datos) | DROP: Elimina completamente una estructura.<br>TRUNCATE: Vacía todos los datos de una tabla.<br>DELETE: Elimina datos específicos. | `DROP DATABASE mi_bdd;` | `DROP TABLE usuarios;`<br>`TRUNCATE TABLE usuarios;`<br>`DELETE FROM usuarios WHERE id = 1;` |
+| **UPDATE** | ALTER (estructuras), <br>UPDATE (datos) | ALTER: Modifica una estructura existente.<br><br>UPDATE: Modifica datos existentes. | `ALTER DATABASE mi_bdd ...` | `ALTER TABLE usuarios ...`<br><br>`UPDATE usuarios SET nombre = 'Juan' WHERE id = 1;` |
+| **DELETE** | DROP (estructura), <br>TRUNCATE (limpiar tabla), <br>DELETE (datos) | DROP: Elimina completamente una estructura.<br><br>TRUNCATE: Vacía todos los datos de una tabla.<br><br>DELETE: Elimina datos específicos. | `DROP DATABASE mi_bdd;` | `DROP TABLE usuarios;`<br><br>`TRUNCATE TABLE usuarios;`<br><br>`DELETE FROM usuarios WHERE id = 1;` |
 
 <br><br>
 
