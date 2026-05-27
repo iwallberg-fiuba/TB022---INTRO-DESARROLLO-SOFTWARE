@@ -27,11 +27,10 @@ Convenciones
 
 <br>
 
-Queries - `Pending`
+Queries
 - [en SELECT](#en-select)
 - [Después de FROM](#después-de-from)
 - [en WHERE](#en-where)
-    - [Subqueries](#subqueries) 
 - [Después de WHERE](#después-de-where)
 
 <br>
@@ -151,15 +150,19 @@ No entran en el Parcial:
 | `NOT NULL`    | Obliga a tener valor.     |
 | `DEFAULT` + valor | Asigna valor por defecto. |
 
-<br><br>
+<br><br><br>
 
 ### Tablas para 1:1 
 
 <br>
 
-```sql
--- Para cada Persona, hay un único pasaporte.
+```txt
+Para cada Persona, hay un único pasaporte.
+```
 
+<br>
+
+```sql
 CREATE TABLE personas (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(100)
@@ -174,15 +177,19 @@ CREATE TABLE pasaportes (
 <br>
 <img width="700" alt="imagen" src="https://github.com/user-attachments/assets/afa29f14-e090-49ef-b00e-3d20dc3b6366" />
 
-<br><br>
+<br><br><br>
 
 ### Tablas para 1:N 
 
 <br>
 
-```sql
--- Para cada Usuario, hay 1 o más Compras.
+```txt
+Para cada Usuario, hay 1 o más Compras.
+```
 
+<br>
+
+```sql
 CREATE TABLE usuarios (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(100)
@@ -197,20 +204,22 @@ CREATE TABLE compras (
 <br>
 <img width="600" alt="imagen" src="https://github.com/user-attachments/assets/50b1fd73-5ee7-4a03-8e8a-ff5415f3aef5" />
 
-<br><br>
+<br><br><br>
 
 ### Tablas para N:N 
 
 <br>
 
+```txt
+Para cada Alumno, hay 1 o más Materias `1:N`.
+Para cada Materia, hay 1 o más Alumnos `N:1`.
+
+Entonces: Alumno <--> Materia es una relación `N:N`-> necesito tabla auxiliar.
+```
+
+<br>
+
 ```sql
--- Para cada Alumno, hay 1 o más Materias `1:N`.
--- Para cada Materia, hay 1 o más Alumnos `N:1`.
-
--- Entonces: Alumno <--> Materia es una relación `N:N`-> necesito tabla auxiliar.
-
-
-
 CREATE TABLE alumnos (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(100)
@@ -230,6 +239,8 @@ CREATE TABLE alumno_materia (
 <br>
 <img width="800" alt="imagen" src="https://github.com/user-attachments/assets/d10e6bc2-920f-4661-96f9-f4ef4bb0081d" />
 
+<br>
+
 <br><br>
 
 [Volver a Table of Contents](#table-of-contents)
@@ -248,12 +259,9 @@ CREATE TABLE alumno_materia (
 
 <br>
 
-- Definir aliases en `FROM` sin usar `AS`.
-  - Ejemplo: `FROM usuarios u`
-- Usar `DISTINCT` cuando sea necesario evitar filas repetidas.
-  - No usarlo siempre por defecto, porque puede ocultar errores en la consulta.
-- No usar `WHERE` como reemplazo de `JOIN`.
-  - Si se usa mal, puede generar un `CROSS JOIN` no deseado: todas las combinaciones posibles entre dos tablas, sin respetar relaciones.
+- Definir aliases en `FROM` sin usar `AS`. Ejemplo: `FROM usuarios u`
+- Usar `DISTINCT` cuando sea necesario evitar filas repetidas. No usarlo siempre por defecto, porque puede ocultar errores en la consulta.
+- No usar `WHERE` como reemplazo de `JOIN`. Si se usa mal, puede generar un `CROSS JOIN` no deseado: todas las combinaciones posibles entre dos tablas, sin respetar relaciones.
 
 <br><br>
 
@@ -261,8 +269,7 @@ CREATE TABLE alumno_materia (
 
 <br>
 
-- Usar PostgreSQL como motor / Data Base Management System (DBMS).
-  - Para el TP, PostgreSQL debe levantarse como un contenedor a partir de una imagen Docker.
+- Usar PostgreSQL como motor / Data Base Management System (DBMS). Para el TP, PostgreSQL debe levantarse como un contenedor a partir de una imagen Docker.
 - Usar DBeaver como cliente gráfico para conectarse a PostgreSQL, ver tablas y ejecutar consultas.
 
 <br><br>
@@ -280,13 +287,25 @@ CREATE TABLE alumno_materia (
 <br>
 
 ### en SELECT
-- Estas son las únicas que trabajan con COLUMNAS además de `CREATE TABLE` y las funciones de agregación.
+* Estas son las únicas estructuras que trabajan directamente con columnas además de `CREATE TABLE` y las funciones de agregación.
 
-| Elemento                         | Qué hace                                                                      | Ejemplo / pista                                                                      |
-| -------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `SELECT *`                       | Selecciona todas las columnas de una tabla.                                   | `SELECT * FROM usuarios`                                                             |
-| `SELECT 1` (SUBQUERIES)          | Devuelve el valor constante 1 por cada fila encontrada. Se usa cuando solo importa saber si existen filas, no sus datos. | `SELECT 1 FROM usuarios`                  |
-| `CASE ... WHEN ... THEN ... END` | Permite hacer condiciones dentro de una consulta SQL, similar a un `if/else`. | Útil para crear columnas calculadas o mostrar distintos valores según una condición. |
+<br>
+
+```sql
+SELECT * FROM usuarios;
+```
+* Selecciona todas las columnas de una tabla.
+
+<br>
+
+```sql
+SELECT 1 FROM usuarios;
+```
+* Se usa para subqueries con `EXISTS`.
+* Devuelve el valor constante `1` por cada fila encontrada.
+* Se usa cuando solo importa verificar si existen filas, no obtener sus datos.
+
+<br>
 
 ```sql
 CASE
@@ -295,59 +314,32 @@ CASE
     ELSE resultado
 END
 ```
+* Permite hacer condiciones dentro de una consulta SQL, similar a un `if/else`.
+* Sirve para crear columnas calculadas o mostrar distintos valores según una condición.
+
 
 <br><br>
 
 ### Después de FROM
 Los JOIN permiten combinar tablas **horizontalmente** entre columnas.
 
-| Elemento              | Qué hace                                                                          | Resultado                                |
-| --------------------- | --------------------------------------------------------------------------------- | ---------------------------------------- |
-| `INNER JOIN` o `JOIN` | Devuelve solo las filas que tienen coincidencia en ambas tablas.                  | Solo aparecen matches.                   |
-| `LEFT JOIN`           | Devuelve todas las filas de la tabla izquierda y las coincidencias de la derecha. | Si no hay coincidencia, aparecen `NULL`. |
+| Elemento              | Qué hace                                                                          | Resultado                                                         |
+| --------------------- | --------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `INNER JOIN` o `JOIN` | Devuelve solo las filas que tienen coincidencia en ambas tablas.                  | Solo aparecen los registros con match entre ambas tablas.         |
+| `LEFT JOIN`           | Devuelve todas las filas de la tabla izquierda y las coincidencias de la derecha. | Si no hay match en la derecha, sus columnas aparecen como `NULL`. |
 
-Entonces: 
-- `JOIN` cuando se quieren obtener los matches
-- `LEFT JOIN` cuando queres incluir valores nulos/ sin matches.
 
 <br><br>
 
- ### en WHERE
-
+### en WHERE
 Se utilizan para filtrar resultados.
-* Comparaciones: Operadores como `<`, `>`, `<=`, `>=`, `=`, `!=` o `<>` comparan valores.
-* Comparaciones especiales: Expresiones como `BETWEEN`, `LIKE`, `IN` o `IS NULL` simplifican filtros frecuentes.
-* Operadores lógicos: Operadores como `AND`, `OR` y `NOT` permiten combinar o negar condiciones.
-* Subqueries: Consultas dentro de otras consultas. Pueden usarse para filtrar, comparar valores o verificar existencia de filas (`EXISTS`).
 
-
-Comparaciones
-| Elemento          | Qué hace                                 | Ejemplo              |
-| ----------------- | ---------------------------------------- | -------------------- |
-| `=`               | Verifica igualdad.                       | `pais = 'Argentina'` |
-| `!=` o `<>`       | Verifica desigualdad.                    | `edad != 18`         |
-| `>` `<` `>=` `<=` | Comparan valores numéricos, fechas, etc. | `edad >= 18`         |
-
-Comparaciones especiales
-| Elemento  | Qué hace                                                | Ejemplo                          |
-| --------- | ------------------------------------------------------- | -------------------------------- |
-| `BETWEEN` | Verifica si un valor está dentro de un rango inclusive. | `edad BETWEEN 18 AND 30`         |
-| `LIKE`    | Busca patrones en texto.                                | `nombre LIKE 'A%'`               |
-| `IN`      | Verifica si un valor pertenece a una lista.             | `pais IN ('Argentina', 'Chile')` |
-| `IS NULL` | Verifica si un valor es `NULL`.                         | `telefono IS NULL`               |
-
-Operadores lógicos
-| Elemento | Qué hace                               | Ejemplo                                |
-| -------- | -------------------------------------- | -------------------------------------- |
-| `AND`    | Todas las condiciones deben cumplirse. | `edad > 18 AND pais = 'Argentina'`     |
-| `OR`     | Al menos una condición debe cumplirse. | `pais = 'Argentina' OR pais = 'Chile'` |
-| `NOT`    | Niega una condición.                   | `NOT edad > 18`                        |
-
-#### Subqueries
-
-| Elemento              | Qué hace                                             | Ejemplo                          |
-| --------------------- | ---------------------------------------------------- | -------------------------------- |
-| `EXISTS` + `SELECT 1` | Verifica si una subquery devuelve al menos una fila. | `EXISTS ( SELECT 1 FROM pedidos p WHERE p.usuario_id = u.id )` |
+| Tipo | Elementos | Qué hacen | Ejemplos |
+| --- | --- | --- | --- |
+| Comparaciones | `=` `!=` `<>` `<` `>` `<=` `>=` | Comparan valores. | `edad >= 18` |
+| Comparaciones especiales | `BETWEEN ... AND ...` `LIKE 'A%'` `LIKE '%txt'` `IN` `IS NULL` | Simplifican filtros frecuentes. | `edad BETWEEN 18 AND 30`<br>`nombre LIKE 'A%'`<br>`archivo LIKE '%.txt'`<br>`pais IN ('Argentina', 'Chile')`<br>`telefono IS NULL` |
+| Operadores lógicos | `AND` `OR` `NOT` | Combinan o niegan condiciones. | `edad > 18 AND pais = 'Argentina'` |
+| Subqueries | `EXISTS` `SELECT 1` | Consultas dentro de otras consultas para filtrar, comparar o verificar existencia. | `SELECT u.nombre FROM usuarios u WHERE EXISTS ( SELECT 1 FROM pedidos p WHERE p.usuario_id = u.id )` |
 
 
 <br><br>
