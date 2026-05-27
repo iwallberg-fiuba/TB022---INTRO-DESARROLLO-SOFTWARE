@@ -20,6 +20,7 @@ Diseño
 - [Tablas para 1:1](#tablas-para-11)
 - [Tablas para 1:N](#tablas-para-1n)
 - [Tablas para N:N](#tablas-para-nn)
+- [N:N Avanzado](#nn-avanzado)
 
 <br>
 
@@ -237,6 +238,85 @@ CREATE TABLE alumno_materia (
 <img width="800" alt="imagen" src="https://github.com/user-attachments/assets/d10e6bc2-920f-4661-96f9-f4ef4bb0081d" />
 
 <br>
+
+
+### N:N Avanzado
+
+<br>
+
+```txt
+Primera relación `N:N`:
+- Para cada Jugador, hay 1 o más Partidos `1:N`.
+- Para cada Partido, hay 1 o más Jugadores `N:1`.
+
+Entonces: Jugador ↔ Partido es `N:N` → necesito una tabla auxiliar: `jugadores_partidos`.
+
+Además, esta relación tiene atributos propios:
+- es_local
+- goles_anotados
+- asistencias_hechas
+
+Entonces: la tabla auxiliar no solo conecta entidades, también guarda información específica de la participación del jugador en el partido.
+```
+
+<br>
+
+```txt
+Segunda relación `N:N`:
+- Para cada Jugador, hay 1 o más Inscripciones `1:N`.
+- Para cada Partido, hay 1 o más Inscripciones `N:1`.
+
+Entonces: Jugador ↔ Partido también tiene otra relación `N:N` distinta → necesito otra tabla auxiliar: `inscripciones`.
+
+Además, esta relación tiene un atributo propio:
+- fecha_inscripcion
+
+Entonces: la inscripción también se modela como entidad/tabla auxiliar separada.
+```
+
+<br>
+
+```sql
+CREATE TABLE jugadores (
+    id SERIAL PRIMARY KEY,
+    nombre_completo VARCHAR(100) NOT NULL,
+    posicion_preferida VARCHAR(50),
+    fecha_nacimiento DATE,
+    nacionalidad VARCHAR(50),
+    dni INT UNIQUE,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    contrasenia VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE partidos (
+    id SERIAL PRIMARY KEY,
+    fecha_hora TIMESTAMP NOT NULL,
+    lugar TEXT NOT NULL,
+    goles_local SMALLINT,
+    goles_visitante SMALLINT,
+    inscripcion_desde TIMESTAMP NOT NULL,
+    inscripcion_hasta TIMESTAMP NOT NULL
+);
+
+CREATE TABLE jugadores_partidos (
+    id_jugador INT NOT NULL REFERENCES jugadores(id),
+    id_partido INT NOT NULL REFERENCES partidos(id),
+    es_local BOOLEAN NOT NULL,
+    goles_anotados SMALLINT NOT NULL,
+    asistencias_hechas SMALLINT NOT NULL,
+    PRIMARY KEY (id_jugador, id_partido)
+);
+
+CREATE TABLE inscripciones (
+    id_jugador INT NOT NULL REFERENCES jugadores(id),
+    id_partido INT NOT NULL REFERENCES partidos(id),
+    fecha_inscripcion TIMESTAMP NOT NULL,
+    PRIMARY KEY (id_jugador, id_partido)
+);
+```
+<br>
+<img width="700" alt="imagen" src="https://github.com/user-attachments/assets/fc0df7d2-53de-4264-a943-09c67f936555" />
+
 
 <br><br>
 
