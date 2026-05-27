@@ -2,13 +2,35 @@
 
 ### Table of Contents
 
+<br>
+
+> [!NOTE]
+> Usar modo `Full Screen`, disminuir / aumentar el `zoom` y abrir el `Outline` para una mejor lectura.
+
+<br>
+
 [Docker](#docker)
+- [Conceptos clave](#conceptos-clave)
+- [Ventajas](#ventajas)
+- [Docker VS VMs](#docker-vs-vms)
+
+<br>
 
 [Regex y sed](#regex-y-sed)
 
+<br>
+
 [Ingeniería de Software y SDLC](#ingeniería-de-software-y-sdlc)
+- [Conceptos clave](#conceptos)
+- [Requerimientos](#requerimientos)
+- [Sobre DevOps y CI/CD](#sobre-devops-y-cicd)
+
+<br>
 
 [Inteligencia Artificial](#inteligencia-artificial)
+- [Agentes](#agentes)
+- [Arquitectura](#arquitectura)
+- [Optimización](#optimización)
 
 <br><br>
 
@@ -17,6 +39,10 @@
 <br>
 
 ## Docker
+
+<br>
+
+### Conceptos clave
 
 <br>
 
@@ -30,10 +56,24 @@
 | Persistencia | **Volumen:** administrado por Docker, ideal para datos persistentes.<br>**Bind mount:** carpeta real del host, útil para desarrollo y sincronización inmediata de archivos. |
 | Flujo Comandos Docker | `docker build` → construye una imagen desde una Dockerfile.<br>`docker run` → crea e inicia un contenedor a partir de una imagen.<br>`docker ps` → muestra contenedores en ejecución.<br>`docker logs` → muestra logs/salida del contenedor.<br>`docker stop` → detiene un contenedor.<br>`docker rm` → elimina un contenedor detenido. |
 
+
+<br>
+
+### Ventajas
+
+<br>
+
 | Beneficiado | Ventajas |
 | --- | --- |
 | Usuario (SUECA) | **S**imple instalación.<br>**U**X más estable.<br>**E**ntorno consistente.<br>**C**ompatibilidad entre máquinas/sistemas.<br>**A**ctualizaciones y migraciones más fáciles. |
 | Desarrollador (MAPTEC) | **M**ismo entorno en distintas máquinas.<br>**A**islamiento de dependencias.<br>**P**ortabilidad y reproducibilidad.<br>**T**esting y deployment más simples.<br>**E**scalabilidad y mantenimiento más simples.<br>**C**I/CD y colaboración/trabajo en equipo. |
+
+
+<br>
+
+### Docker VS VMs
+
+<br>
 
 | Tecnología | Flujo                                                                                                                      |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------- |
@@ -49,7 +89,7 @@
 
 <br>
 
-
+---
 
 ## Regex y sed
 
@@ -76,8 +116,14 @@
 
 <br>
 
+---
+
 
 ## Ingeniería de Software y SDLC
+
+<br>
+
+### Conceptos
 
 <br>
 
@@ -89,6 +135,12 @@
 | Cuándo es malo retroceder en el SDLC | Cuando ocurre por errores evitables, mala planificación o deuda técnica (problemas generados por elegir soluciones rápidas pero ineficientes cuando se desarrolló el código). | 
 
 
+<br>
+
+### Requerimientos
+
+<br>
+
 | Requerimientos | Información |
 | --- | --- |
 | Funcionales (`BREGAM`) | Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar. |
@@ -97,7 +149,7 @@
 
 <br>
 
-Sobre DevOps y CI/CD:
+### Sobre DevOps y CI/CD
 - CI (Continuous Integration): integra cambios de código automáticamente, ejecutando tests, validaciones y builds.
 - CD (Continuous Delivery / Deployment): automatiza preparación y/o despliegue de la aplicación luego de pasar tests.
 - Objetivo de CI/CD: Reducir errores manuales, acelerar desarrollo y hacer deployments más seguros, rápidos y frecuentes.
@@ -110,13 +162,18 @@ Sobre DevOps y CI/CD:
 
 <br>
 
+---
 
+<br>
 
 ## Inteligencia Artificial
 
 <br>
 
-Modelos y Agentes
+### Agentes
+
+<br>
+
 | Término                        | Qué es                                                                                       | Ejemplo                                                           |
 | ------------------------------ | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | **LLM (Large Language Model)** | Modelo de IA entrenado con enormes cantidades de texto. Predice texto y sigue instrucciones. | ChatGPT, Claude                                                   |
@@ -124,8 +181,12 @@ Modelos y Agentes
 | **Coding Agent**               | Agente basado en un LLM que además puede usar herramientas y actuar sobre un entorno.        | Codex, Claude Code                                                |
 | **Subagents**                  | Agentes auxiliares especializados en subtareas concretas.                                    | AutoGen usando agentes separados para frontend, backend y testing |
 
+<br>
 
-Arquitectura
+### Arquitectura
+
+<br>
+
 | Término               | Qué es                                                                                | Ejemplo                                              |
 | --------------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | **Agent Harness**     | Sistema/capa que coordina herramientas, memoria, contexto e instrucciones del agente. | OpenAI Codex Harness                                 |
@@ -134,12 +195,16 @@ Arquitectura
 | **Live Repo Context** | Acceso al estado actual y real de un repositorio mientras el agente trabaja.          | Cursor leyendo archivos y commits en tiempo real     |
 
 
-Optimización y Manejo de Contexto
+<br>
+
+### Optimización
+
+<br>
+
 | Término               | Qué es                                                                               | Ejemplo                                                        |
 | --------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
 | **Context Reduction** | Técnicas para resumir o filtrar información y evitar saturar el contexto del modelo. | Claude resumiendo archivos largos antes de enviarlos al modelo |
 | **Cache Reuse**       | Reutilización de resultados o contexto previo para ahorrar tiempo y recursos.        | Reusar respuestas o análisis ya generados                      |
-
 
 
 
