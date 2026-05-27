@@ -3,7 +3,10 @@
 
 ### Table of Contents
 
-Disminuir zoom para mejor lectura.
+<br>
+
+> [!NOTE]
+> Usar modo `Full Screen`, disminuir / aumentar el `zoom` y abrir el `Outline` para una mejor lectura.
 
 <br>
 
