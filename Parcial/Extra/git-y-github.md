@@ -5,7 +5,12 @@
 
 <br>
 
-Bases
+> [!NOTE]
+> Usar modo `Full Screen`, disminuir / aumentar el `zoom` y abrir el `Outline` para una mejor lectura.
+
+<br>
+
+[Bases](#bases)
 - [Conceptos Claves](#conceptos-claves)
 - [Ejemplo Línea Temporal](#1-revisión-de-línea-temporal)
 - [Git vs Github](#git-vs-github)
@@ -13,7 +18,7 @@ Bases
 
 <br>
 
-Convenciones
+[Convenciones](#convenciones)
 - [Sobre Commits](#sobre-commits)
 - [Sobre Branches](#sobre-branches)
 - [Revisión Línea Temporal](#2-revisión-de-línea-temporal)
@@ -21,14 +26,14 @@ Convenciones
 
 <br>
 
-Comandos
+[Comandos](#comandos)
 - [Lista](#lista)
 - [Relación con Estados y Áreas](#relación-con-estados-y-áreas)
 - [Cómo Deshacer Cambios](#cómo-deshacer-cambios)
 
 <br>
 
-Flujos de trabajo
+[Flujos de trabajo](#flujos-de-trabajo)
 - [Branches](#branches)
 - [Merge Conflicts](#merge-conflicts)
 
