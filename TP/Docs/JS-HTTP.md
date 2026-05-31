@@ -1,6 +1,7 @@
 
 Table of Contents
 
+- REST API
 - Promises
 - HTTP
 - Node.js
