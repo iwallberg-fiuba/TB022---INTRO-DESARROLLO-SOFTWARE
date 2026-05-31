@@ -21,6 +21,10 @@
 
 <br>
 
+Agregar una sección sobre REST APIs?
+
+<br>
+
 --- 
 
 <br><br>
@@ -101,16 +105,17 @@ Node.js: Entorno de ejecución para JavaScript fuera del navegador. Se utiliza p
 
 Instalar con... <br>
 npm
-- Express.js: Framework para crear servidores web y APIs HTTP.
+- Express.js: Framework para crear servidores web y REST APIs HTTP.
 - nodemon: Herramienta de desarrollo que reinicia automáticamente la aplicación al detectar cambios.
 - dotenv: Librería para cargar variables de entorno desde un archivo .env.
 
-<br><br>
+<br>
 
 npx
 - Linters
 
-<br>
+
+<br><br>
 
 [Volver a Table of Contents](#table-of-contents)
 
@@ -171,7 +176,7 @@ proyecto/
 └── LICENSE                        # Licencia del proyecto. No aplica en este caso.
 ```
 
-<br>
+<br><br>
 
 [Volver a Table of Contents](#table-of-contents)
 
@@ -179,11 +184,11 @@ proyecto/
 
 ---
 
-<br><br>
+<br>
 
 ## Plantillas
 
-<br><br>
+<br>
 
 ### env
 
@@ -208,7 +213,7 @@ BACKEND_PORT=3000
 FRONTEND_PORT=8080
 ```
 
-<br><br>
+<br><br><br>
 
 ### docker-compose
 
@@ -277,7 +282,7 @@ volumes:
   postgres_data:
 ```
 
-<br><br>
+<br><br><br>
 
 ### Dockerfile - Frontend
 
@@ -294,7 +299,7 @@ COPY . /usr/share/nginx/html
 EXPOSE 80
 ```
 
-<br><br>
+<br><br><br>
 
 ### Dockerfile - Backend
 
@@ -328,7 +333,7 @@ CMD ["npm", "run", "dev"]
 # CMD ["npm", "start"]
 ```
 
-<br><br>
+<br><br><br>
 
 ### gitignore
 Aquellos archivos, carpetas, configuraciones, etc. que git no debe subir al repositorio. <br>
@@ -343,7 +348,7 @@ build/             # Archivos compilados
 .idea/             # Configuración de IntelliJ/WebStorm
 ```
 
-<br><br>
+<br><br><br>
 
 ### dockerignore
 Aquellos archivos y carpetas que Docker no debe copiar al construir una imagen. <br>
