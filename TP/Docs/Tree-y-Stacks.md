@@ -1,6 +1,36 @@
 
-### Stacks
-Las tecnologías, lenguajes, etc. que se utilizan. <br>
+<br><br>
+
+### Table of Contents
+
+<br>
+
+[Stacks](#stacks)
+- [Sobre Docker](#sobre-docker)
+- [Sobre Node.js](#sobre-nodejs)
+
+[TREE](#tree)
+
+[Plantillas](#plantillas)
+- [env](#env)
+- [docker-compose](#docker-compose)
+- [Dockerfile - Frontend](#dockerfile---frontend)
+- [Dockerfile - Backend](#dockerfile---backend)
+- [gitignore](#gitignore)
+- [dockerignore](#dockerignore)
+
+<br>
+
+--- 
+
+<br><br>
+
+## Stacks
+Las tecnologías, lenguajes, etc. que se utilizan en el proyecto. <br>
+
+Nota: pueden usarse otros siempre que se sepa defender y explicar su uso, tanto en el código como en el oral.
+
+<br>
 
 ```txt
 Frontend
@@ -25,8 +55,12 @@ Infraestructura
 └── GitHub (con Github Actions tal vez?)
 ```
 
+<br><br>
 
-#### Sobre Docker y los Stacks
+### Sobre Docker
+
+<br>
+
 ```txt
 Imágenes Oficiales
 ├── node
@@ -38,11 +72,7 @@ Imágenes Customs
 └── backend-image (FROM node)
 ```
 
-<br>
-
-Eso resulta en los siguientes contenedores:
-
-<br>
+Que resulta en los siguientes contenedores:
 
 ```txt
 Contenedores
@@ -57,31 +87,40 @@ Contenedores
     └── postgres:<version elegida>
 ```
 
-
-<br><br><br>
-
+<br><br>
 
 ### Sobre Node.js
+
+<br>
 
 Node.js: Entorno de ejecución para JavaScript fuera del navegador. Se utiliza principalmente para desarrollar aplicaciones backend y APIs. Node.js incluye a npm.
 - npm: Gestor de paquetes de Node.js. Permite instalar, actualizar y eliminar dependencias, así como ejecutar scripts definidos en package.json. npm incluye a npx.
   - npx: Ejecuta paquetes y herramientas de Node.js sin necesidad de instalarlos globalmente. Si el paquete ya existe en el proyecto, lo utiliza; si no, puede descargarlo temporalmente para ejecutarlo.
 
-  
-En este caso, instalar con... <br>
+<br>
+
+Instalar con... <br>
 npm
 - Express.js: Framework para crear servidores web y APIs HTTP.
 - nodemon: Herramienta de desarrollo que reinicia automáticamente la aplicación al detectar cambios.
 - dotenv: Librería para cargar variables de entorno desde un archivo .env.
 
-<br>
+<br><br>
 
 npx
 - Linters
 
-<br><br><br>
+<br>
 
-### Tree
+[Volver a Table of Contents](#table-of-contents)
+
+<br>
+
+---
+
+<br><br>
+
+## TREE
 
 <br>
 
@@ -90,7 +129,7 @@ proyecto/
 ├── .git/                         # Carpeta interna de Git
 ├── .github/
 │   └── workflows/
-│       └── ejemplo.yml                 # Automatizaciones de GitHub Actions
+│       └── ejemplo.yml            # Automatizaciones de GitHub Actions (opcional)
 │
 ├── frontend/
 │   ├── Dockerfile                 # Imagen del frontend
@@ -101,41 +140,54 @@ proyecto/
 │   ├── css/
 │   │   └── styles.css             
 │   └── js/
-│       └── main.js                # JavaScript del Frontend
+│       └── main.js                # JavaScript del Frontend.
 │
 ├── backend/
-│   ├── Dockerfile                 # Imagen del backend Node.js
-│   ├── package.json               # Dependencias y scripts npm
-│   ├── package-lock.json          # Versiones exactas de dependencias
+│   ├── Dockerfile                 # Imagen del backend Node.js.
+│   ├── package.json               # Dependencias y scripts npm.
+│   ├── package-lock.json          # Versiones exactas de dependencias.
 │   └── src/
-│       ├── app.js                 # Configuración de Express
-│       ├── server.js              # Punto de entrada
+│       ├── app.js                 # Configuración de Express.
+│       ├── server.js              # Entrypoint
 │       ├── routes/
-│       │   └── users.routes.js    # Endpoints relacionados a usuarios
+│       │   └── users.routes.js    # Endpoints relacionados a usuarios.
 │       ├── controllers/
-│       │   └── users.controller.js # Lógica de negocio
+│       │   └── users.controller.js   # "Lógica de negocio".
 │       ├── models/
-│       │   └── users.model.js     # Consultas a la base de datos
+│       │   └── users.model.js     # Consultas a la base de datos.
 │       └── db/
-│           └── connection.js      # Conexión a PostgreSQL
+│           └── connection.js      # Conexión a PostgreSQL.
 │   
 │
 ├── database/
-│   ├── init.sql                   # Script inicial de PostgreSQL
-│   └── seeds.sql                  # Datos de prueba
+│   ├── init.sql                   # Script inicial de PostgreSQL.
+│   └── seeds.sql                  # Datos de prueba.
 │
-├── docker-compose.yml             # Levanta frontend + backend + postgres
+├── docker-compose.yml             # Levanta frontend + backend + postgres.
 ├── .env                           # Variables de conexión, puertos, secretos, etc.
-├── .dockerignore                  # Archivos ignorados al crear imágenes Docker
-├── .gitignore                     # Archivos ignorados por Git
-├── README.md                      # Explicación del proyecto
-└── LICENSE                        # Licencia del proyecto
+├── .dockerignore                  # Archivos ignorados al crear imágenes Docker.
+├── .gitignore                     
+├── README.md                      # Explicación del proyecto.
+└── LICENSE                        # Licencia del proyecto. No aplica en este caso.
 ```
 
-<br><br><br>
+<br>
 
+[Volver a Table of Contents](#table-of-contents)
 
-#### Sobre `.env`
+<br>
+
+---
+
+<br><br>
+
+## Plantillas
+
+<br><br>
+
+### env
+
+<br>
 
 ```txt
 # PostgreSQL
@@ -156,12 +208,11 @@ BACKEND_PORT=3000
 FRONTEND_PORT=8080
 ```
 
-<br><br><br>
+<br><br>
 
+### docker-compose
 
-### Docker Estructuras de Archivos
-
-#### Docker-compose.yml
+<br>
 
 ```yml
 services:
@@ -226,9 +277,11 @@ volumes:
   postgres_data:
 ```
 
+<br><br>
 
+### Dockerfile - Frontend
 
-#### Dockerfile (Frontend)
+<br>
 
 ```txt
 # Imagen oficial de Nginx
@@ -241,9 +294,11 @@ COPY . /usr/share/nginx/html
 EXPOSE 80
 ```
 
+<br><br>
 
+### Dockerfile - Backend
 
-#### Dockerfile (Backend)
+<br>
 
 ```txt
 # Imagen oficial de Node.js
@@ -273,15 +328,10 @@ CMD ["npm", "run", "dev"]
 # CMD ["npm", "start"]
 ```
 
-<br><br><br>
+<br><br>
 
-
-### Sobre los ignored
-
-#### Plantilla `.gitignore`
+### gitignore
 Aquellos archivos, carpetas, configuraciones, etc. que git no debe subir al repositorio. <br>
-
-Cómo se ve: <br>
 
 ```txt
 node_modules/      # Dependencias instaladas por npm
@@ -293,13 +343,11 @@ build/             # Archivos compilados
 .idea/             # Configuración de IntelliJ/WebStorm
 ```
 
+<br><br>
 
-
-#### Plantilla `.dockerignore`
+### dockerignore
 Aquellos archivos y carpetas que Docker no debe copiar al construir una imagen. <br>
 Es muy común que repita algunas de las cosas mencionadas en el `.gitignore`. <br>
-
-Cómo se ve: <br>
 
 ```txt
 node_modules/      # Se reinstalan dentro del contenedor
@@ -310,5 +358,11 @@ README.md
 .env
 ```
 
-<br>
+<br><br>
+
+[Volver a Table of Contents](#table-of-contents)
+
+<br><br>
+
+
 
