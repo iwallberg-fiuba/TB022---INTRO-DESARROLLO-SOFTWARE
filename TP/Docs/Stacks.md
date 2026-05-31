@@ -8,6 +8,7 @@
 [Stacks](#stacks)
 - [Sobre Docker](#sobre-docker)
 - [Sobre Node.js](#sobre-nodejs)
+- [Sobre Frontend](#sobre-frontend) - `Pending.`
 
 <br>
 
@@ -103,6 +104,16 @@ npm
 
 npx
 - Linters
+
+
+<br><br>
+
+### Sobre Frontend
+
+<br>
+
+HTML, CSS, JS: Solo para entender cómo cambia la página según lo que vas haciendo -> codepen IMPORTANTISIMO
+
 
 
 <br><br>
