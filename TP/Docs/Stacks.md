@@ -8,6 +8,8 @@
 [Stacks](#stacks)
 - [Sobre Docker](#sobre-docker)
 
+[TREE](#tree)
+
 <br>
 
 Agregar una sección sobre REST APIs?
@@ -80,6 +82,68 @@ Contenedores
     └── postgres:<version elegida>
 ```
 
+
+<br>
+
+[Volver a Table of Contents](#table-of-contents)
+
+<br>
+
+
+--- 
+
+<br><br>
+
+## TREE
+
+<br>
+
+```txt
+proyecto/
+├── .git/                         # Carpeta interna de Git
+├── .github/
+│   └── workflows/
+│       └── ejemplo.yml            # Automatizaciones de GitHub Actions (opcional)
+│
+├── frontend/
+│   ├── Dockerfile                 # Imagen del frontend
+│   ├── nginx.conf                 # Configuración para servir HTML/CSS/JS
+│   ├── index.html                 
+│   ├── pagina2.html               
+│   ├── pagina3.html               
+│   ├── css/
+│   │   └── styles.css             
+│   └── js/
+│       └── main.js                # JavaScript del Frontend.
+│
+├── backend/
+│   ├── Dockerfile                 # Imagen del backend Node.js.
+│   ├── package.json               # Dependencias y scripts npm.
+│   ├── package-lock.json          # Versiones exactas de dependencias.
+│   └── src/
+│       ├── app.js                 # Configuración de Express.
+│       ├── server.js              # Entrypoint
+│       ├── routes/
+│       │   └── users.routes.js    # Endpoints relacionados a usuarios.
+│       ├── controllers/
+│       │   └── users.controller.js   # "Lógica de negocio".
+│       ├── models/
+│       │   └── users.model.js     # Consultas a la base de datos.
+│       └── db/
+│           └── connection.js      # Conexión a PostgreSQL.
+│   
+│
+├── database/
+│   ├── init.sql                   # Script inicial de PostgreSQL.
+│   └── seeds.sql                  # Datos de prueba.
+│
+├── docker-compose.yml             # Levanta frontend + backend + postgres.
+├── .env                           # Variables de conexión, puertos, secretos, etc.
+├── .dockerignore                  # Archivos ignorados al crear imágenes Docker.
+├── .gitignore                     
+├── README.md                      # Explicación del proyecto.
+└── LICENSE                        # Licencia del proyecto. No aplica en este caso.
+```
 
 <br><br>
 
