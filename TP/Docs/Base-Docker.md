@@ -15,62 +15,61 @@
 - [gitignore](#gitignore)
 - [dockerignore](#dockerignore)
 
+<br><br>
+
+### Requerimientos Previos
+
+1. Tener todo lo de git y github ya hecho y configurado
+2. Descargar e instalar Docker
+
 <br>
 
---- 
+Extra: [Imagenes Oficiales Disponibles para Docker](https://hub.docker.com/search?badges=official)
 
-<br><br>
+<br>
+
+---
+
+<br>
 
 ## TREE
 
 <br>
 
+Esta es la estructura que debe tener el repo. <br>
+Crear las carpetas y archivos vacíos por ahora. <br>
+Más adelante detallo qué contendrán los archivos docker y de entorno. <br>
+
 ```txt
 proyecto/
-├── .git/                         # Carpeta interna de Git
-├── .github/
-│   └── workflows/
-│       └── ejemplo.yml            # Automatizaciones de GitHub Actions (opcional)
+├── .git/                         
 │
 ├── frontend/
-│   ├── Dockerfile                 # Imagen del frontend
-│   ├── nginx.conf                 # Configuración para servir HTML/CSS/JS
-│   ├── index.html                 
-│   ├── pagina2.html               
-│   ├── pagina3.html               
+│   ├── Dockerfile                 # Imagen del frontend (explicada más adelante)
+│   ├── index.html                 # (Puede estar vacío)
+│   ├── pagina2.html               # (Puede estar vacío)
+│   ├── pagina3.html               # (Puede estar vacío)
 │   ├── css/
-│   │   └── styles.css             
+│   │   └── styles.css             # (Puede estar vacío)
 │   └── js/
-│       └── main.js                # JavaScript del Frontend.
+│       └── main.js                # (Puede estar vacío)
 │
 ├── backend/
-│   ├── Dockerfile                 # Imagen del backend Node.js.
-│   ├── package.json               # Dependencias y scripts npm.
-│   ├── package-lock.json          # Versiones exactas de dependencias.
-│   └── src/
-│       ├── app.js                 # Configuración de Express.
-│       ├── server.js              # Entrypoint
-│       ├── routes/
-│       │   └── users.routes.js    # Endpoints relacionados a usuarios.
-│       ├── controllers/
-│       │   └── users.controller.js   # "Lógica de negocio".
-│       ├── models/
-│       │   └── users.model.js     # Consultas a la base de datos.
-│       └── db/
-│           └── connection.js      # Conexión a PostgreSQL.
+│   ├── Dockerfile                 # Imagen del backend Node.js. (explicada más adelante)
+│   └── src/                       # (Puede estar vacío)
 │   
 │
-├── database/
-│   ├── init.sql                   # Script inicial de PostgreSQL.
-│   └── seeds.sql                  # Datos de prueba.
+├── database/                      # (Puede estar vacío)
 │
-├── docker-compose.yml             # Levanta frontend + backend + postgres.
-├── .env                           # Variables de conexión, puertos, secretos, etc.
-├── .dockerignore                  # Archivos ignorados al crear imágenes Docker.
-├── .gitignore                     
+├── docker-compose.yml             # Levanta frontend + backend + postgres. (explicada más adelante)
+├── .env                           # Variables de conexión, puertos, secretos, etc. (explicada más adelante)
+├── .dockerignore                  # Archivos ignorados al crear imágenes Docker. (explicada más adelante)
+├── .gitignore                     # Archivos ignorados por git. (explicada más adelante)
 ├── README.md                      # Explicación del proyecto.
 └── LICENSE                        # Licencia del proyecto. No aplica en este caso.
 ```
+
+<br>
 
 <br><br>
 
@@ -109,7 +108,12 @@ BACKEND_PORT=3000
 FRONTEND_PORT=8080
 ```
 
-<br><br><br>
+
+<br><br>
+
+[Volver a Table of Contents](#table-of-contents)
+
+<br>
 
 ### docker-compose
 
@@ -178,7 +182,12 @@ volumes:
   postgres_data:
 ```
 
-<br><br><br>
+<br><br>
+
+[Volver a Table of Contents](#table-of-contents)
+
+<br>
+
 
 ### Dockerfile - Frontend
 
@@ -195,7 +204,12 @@ COPY . /usr/share/nginx/html
 EXPOSE 80
 ```
 
-<br><br><br>
+<br><br>
+
+[Volver a Table of Contents](#table-of-contents)
+
+<br>
+
 
 ### Dockerfile - Backend
 
@@ -229,7 +243,12 @@ CMD ["npm", "run", "dev"]
 # CMD ["npm", "start"]
 ```
 
-<br><br><br>
+<br><br>
+
+[Volver a Table of Contents](#table-of-contents)
+
+<br>
+
 
 ### gitignore
 Aquellos archivos, carpetas, configuraciones, etc. que git no debe subir al repositorio. <br>
@@ -244,7 +263,13 @@ build/             # Archivos compilados
 .idea/             # Configuración de IntelliJ/WebStorm
 ```
 
-<br><br><br>
+
+<br><br>
+
+[Volver a Table of Contents](#table-of-contents)
+
+<br>
+
 
 ### dockerignore
 Aquellos archivos y carpetas que Docker no debe copiar al construir una imagen. <br>
