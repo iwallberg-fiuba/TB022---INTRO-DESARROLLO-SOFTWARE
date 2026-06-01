@@ -20,7 +20,6 @@
 ### Requerimientos Previos
 
 1. Tener todo lo de git y github ya hecho y configurado
-2. Descargar e instalar Docker
 
 <br>
 
