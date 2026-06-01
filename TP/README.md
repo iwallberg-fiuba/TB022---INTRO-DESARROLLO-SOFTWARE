@@ -1,5 +1,8 @@
+<br>
 
 ### Orden de lectura
+
+<br>
 
 1. Leer Docs/Frontend.md
 2. Leer Docs/Backend.md
@@ -9,48 +12,18 @@
 6. Leer y seguir Flujos/Starting-Dev.md (Pendiente, contendría starting-files)
 7. Leer y seguir Flujos/Desarrollo.md
 
+<br>
+<br>
 
-Temas según archivo:
+### Temas según archivo
 
-Docs/Frontend.md
-- HTML
-- CSS
-- JavaScript
-- La conexión entre estas herramientas
+<br>
 
-Docs/Backend.md
-- Promises
-- Métodos HTTP
-- JavaScript para Backend
-- Node.js
-- Express.js
-- REST APIs
-
-Stack.md
-- Árbol de herramientas que se usan en el proyecto
-
-Flujos/Starting-Git-Github.md
-- Crear repositorio git.
-- Cómo conectar repositorio git con github usando SSH.
-- Cómo compartir un repositorio privado y que cada colaborador lo tenga y use SSH.
-- Cómo crear y cambiar de ramas.
-
-Starting-Files.md
-- Cómo podría estructurarse un proyecto
-- Cómo se crean las imagenes Docker
-- Cómo se crea el docker-compose
-- Cómo se crean los archivos tipo env, gitignore, dockerignore
-
-Flujos/Desarrollo.md
-- Cómo levantar Docker
-- Cómo apagar Docker
-- Cómo se trabaja con Docker, Git y Github al mismo tiempo.
-- Cómo conectarse a la Base de Datos desde DBeaver
-- Cómo ver el Frontend
-- Cómo ver el Backend
-
-  
-
-
-
-
+| Archivo | Temas |
+|----------|----------|
+| `Docs/Frontend.md` | HTML, CSS, JavaScript, conexión entre estas herramientas |
+| `Docs/Backend.md` | Promises, Métodos HTTP, JavaScript para Backend, Node.js, Express.js, REST APIs |
+| `Stack.md` | Árbol de herramientas utilizadas en el proyecto |
+| `Flujos/Starting-Git-Github.md` | Crear repositorio Git, conectar Git con GitHub mediante SSH, compartir repositorios privados usando SSH, crear y cambiar de ramas |
+| `Flujos/Starting-Files.md` | Estructura inicial de un proyecto, creación de imágenes Docker, creación de `docker-compose`, archivos `.env`, `.gitignore` y `.dockerignore` |
+| `Flujos/Desarrollo.md` | Levantar y apagar Docker, flujo de trabajo con Docker + Git + GitHub, conexión a la base de datos desde DBeaver, acceso al Frontend y Backend |
