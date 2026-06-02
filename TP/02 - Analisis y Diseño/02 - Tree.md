@@ -1,50 +1,14 @@
 
-<br><br>
 
-### Table of Contents
 
-<br>
-
-[TREE](#tree)
-
-[Plantillas](#plantillas)
-- [env](#env)
-- [docker-compose](#docker-compose)
-- [Dockerfile - Frontend](#dockerfile---frontend)
-- [Dockerfile - Backend](#dockerfile---backend)
-- [gitignore](#gitignore)
-- [dockerignore](#dockerignore)
-
-<br><br>
-
-### Requerimientos Previos
-
-1. Tener todo lo de git y github ya hecho y configurado
-
-<br>
-
-Extra: [Imagenes Oficiales Disponibles para Docker](https://hub.docker.com/search?badges=official)
-
-<br>
-
----
-
-<br>
-
-## TREE
-
-<br>
-
-Esta es la estructura que debe tener el repo. <br>
-Crear las carpetas y archivos vacíos por ahora. <br>
-Más adelante detallo qué contendrán los archivos docker y de entorno. <br>
+4. Pensar cómo se traduce esto en la estructura de los archivos. Sigue sin ser necesario saber exactamente qué va a hacer el sitio web.
 
 ```txt
 proyecto/
 ├── .git/                         
 │
 ├── frontend/
-│   ├── Dockerfile                 # Imagen del frontend (explicada más adelante)
+│   ├── Dockerfile                 # Imagen del Frontend
 │   ├── index.html                 # (Puede estar vacío)
 │   ├── pagina2.html               # (Puede estar vacío)
 │   ├── pagina3.html               # (Puede estar vacío)
@@ -54,71 +18,25 @@ proyecto/
 │       └── main.js                # (Puede estar vacío)
 │
 ├── backend/
-│   ├── Dockerfile                 # Imagen del backend Node.js. (explicada más adelante)
+│   ├── Dockerfile                 # Imagen del Backend
 │   └── src/                       # (Puede estar vacío)
 │   
 ├── database/                      # (Puede estar vacío)
 │   ├── init.sql                   # (Puede estar vacío)
 │   └── seeds.sql                  # (Puede estar vacío)
 │
-├── docker-compose.yml             # Levanta frontend + backend + postgres. (explicada más adelante)
-├── .env                           # Variables de conexión, puertos, secretos, etc. (explicada más adelante)
-├── .dockerignore                  # Archivos ignorados al crear imágenes Docker. (explicada más adelante)
-├── .gitignore                     # Archivos ignorados por git. (explicada más adelante)
-├── README.md                      # Explicación del proyecto.
+├── docker-compose.yml             # Levanta todo
+├── .env                           # (Puede estar vacío)
+├── .dockerignore                  # (Puede estar vacío)
+├── .gitignore                     # (Puede estar vacío)
+├── README.md                      # (Puede estar vacío)
 └── LICENSE                        # Licencia del proyecto. No aplica en este caso.
 ```
 
-<br>
+5. Pensar y revisar que la estructura cumpla los requerimientos.
+6. Pensar qué podrían contener los `archivos de docker` (dockerfiles, docker-compose) para lograr que el proyecto cumpla los requerimientos.
 
-<br><br>
-
-[Volver a Table of Contents](#table-of-contents)
-
-<br>
-
----
-
-<br>
-
-## Plantillas
-
-<br>
-
-### env
-
-<br>
-
-```txt
-# PostgreSQL
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postgres
-POSTGRES_DB= # nombre deseado de la base de datos
-
-# Datos de la Base a la que intenta conectarse el Backend
-DB_HOST=db
-DB_PORT=5432
-DB_USER=postgres
-DB_PASSWORD=postgres
-DB_NAME= # debe tener el mismo valor que POSTGRES_DB
-
-# Puertos
-POSTGRES_PORT=5432
-BACKEND_PORT=3000
-FRONTEND_PORT=8080
-```
-
-
-<br><br>
-
-[Volver a Table of Contents](#table-of-contents)
-
-<br>
-
-### docker-compose
-
-<br>
-
+- docker-compose
 ```yml
 services:
 
@@ -182,16 +100,8 @@ volumes:
   postgres_data:
 ```
 
-<br><br>
 
-[Volver a Table of Contents](#table-of-contents)
-
-<br>
-
-
-### Dockerfile - Frontend
-
-<br>
+- Dockerfile (Frontend)
 
 ```txt
 # Imagen oficial de Nginx
@@ -204,16 +114,7 @@ COPY . /usr/share/nginx/html
 EXPOSE 80
 ```
 
-<br><br>
-
-[Volver a Table of Contents](#table-of-contents)
-
-<br>
-
-
-### Dockerfile - Backend
-
-<br>
+- Dockerfile (Backend)
 
 ```txt
 # Imagen oficial de Node.js
@@ -243,16 +144,31 @@ CMD ["npm", "run", "dev"]
 # CMD ["npm", "start"]
 ```
 
-<br><br>
-
-[Volver a Table of Contents](#table-of-contents)
-
-<br>
 
 
-### gitignore
-Aquellos archivos, carpetas, configuraciones, etc. que git no debe subir al repositorio. <br>
+7. Pensar qué podrían contener los `archivos de configuración` (env, dockerignore, gitignore)
 
+- env
+```txt
+# PostgreSQL
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB= # nombre deseado de la base de datos
+
+# Datos de la Base a la que intenta conectarse el Backend
+DB_HOST=db
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_NAME= # debe tener el mismo valor que POSTGRES_DB
+
+# Puertos
+POSTGRES_PORT=5432
+BACKEND_PORT=3000
+FRONTEND_PORT=8080
+```
+
+- gitignore
 ```txt
 node_modules/      # Dependencias instaladas por npm
 .env               # Contraseñas, API keys, etc.
@@ -263,18 +179,7 @@ build/             # Archivos compilados
 .idea/             # Configuración de IntelliJ/WebStorm
 ```
 
-
-<br><br>
-
-[Volver a Table of Contents](#table-of-contents)
-
-<br>
-
-
-### dockerignore
-Aquellos archivos y carpetas que Docker no debe copiar al construir una imagen. <br>
-Es muy común que repita algunas de las cosas mencionadas en el `.gitignore`. <br>
-
+- dockerignore
 ```txt
 node_modules/      # Se reinstalan dentro del contenedor
 .git/              # Historial de Git innecesario
@@ -283,12 +188,4 @@ README.md
 *.log
 .env
 ```
-
-<br><br>
-
-[Volver a Table of Contents](#table-of-contents)
-
-<br><br>
-
-
 

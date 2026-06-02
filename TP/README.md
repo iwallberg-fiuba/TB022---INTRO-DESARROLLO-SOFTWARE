@@ -1,16 +1,35 @@
 <br>
 
-### Orden de lectura
+### Orden de lectura y seguimiento
 
 <br>
 
-1. Leer Docs/Frontend.md
-2. Leer Docs/Backend.md
-3. Leer Consigna.md
-4. Leer Stack.md
-5. Leer y seguir Flujos/Starting-Git-Github.md
-6. Leer y seguir Flujos/Starting-Dev.md (Pendiente, contendría starting-files)
-7. Leer y seguir Flujos/Desarrollo.md
+Todo está ordenado numéricamente para facilitar el seguimiento y el orden de lectura, con excepción de la consigna del TP. <br>
+De todas formas, no dudes en volver a secciones anteriores cuando necesites repasar conceptos o despejar dudas.
+
+<br>
+<br>
+
+### Etapas del SDLC
+
+1. Análisis de requerimientos
+    - Funcionales: Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar.
+    - No funcionales: Definen **cómo debe funcionar** el sistema. Suelen expresarse con adjetivos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible.
+2. Diseño de Arquitectura
+    - Recordar los requerimientos
+    - Recordar la Consigna del TP
+    - Verificar que todo esté bien pensado
+3. Desarrollo
+    - Tener un backup del backup...
+4. Testing
+    - Cumple requerimientos?
+    - Cross-checking trabajo del resto
+    - Github actions?
+    - Que alguien que no sabe de tecnología lo pruebe
+5. Despliegue a Producción
+    - VPS (IaaS o Self-hosting?) o Vercel + Render + Neon (PaaS)?
+    - Verificar si hay que cambiar configs. de Docker por el despliegue a prod.
+6. Mantenimiento
 
 <br>
 <br>
@@ -21,9 +40,7 @@
 
 | Archivo | Temas |
 |----------|----------|
-| `Docs/Frontend.md` | HTML, CSS, JavaScript, conexión entre estas herramientas |
-| `Docs/Backend.md` | Promises, Métodos HTTP, JavaScript para Backend, Node.js, Express.js, REST APIs |
-| `Stack.md` | Árbol de herramientas utilizadas en el proyecto |
-| `Flujos/Starting-Git-Github.md` | Crear repositorio Git, conectar Git con GitHub mediante SSH, compartir repositorios privados usando SSH, crear y cambiar de ramas |
-| `Flujos/Starting-Files.md` | Estructura inicial de un proyecto, creación de imágenes Docker, creación de `docker-compose`, archivos `.env`, `.gitignore` y `.dockerignore` |
-| `Flujos/Desarrollo.md` | Levantar y apagar Docker, flujo de trabajo con Docker + Git + GitHub, conexión a la base de datos desde DBeaver, acceso al Frontend y Backend |
+| `00 - Docs/Frontend.md` | HTML, CSS, JavaScript, conexión entre estas herramientas |
+| `00 - Docs/Backend.md` | Promises, Métodos HTTP, JavaScript para Backend, Node.js, Express.js, REST APIs |
+
+Pendiente completar esta tabla.

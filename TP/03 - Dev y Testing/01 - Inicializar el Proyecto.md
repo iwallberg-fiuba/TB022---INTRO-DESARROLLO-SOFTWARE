@@ -62,8 +62,6 @@ Revisar Doc sobre Flujo de Git y Github.
 11. Apagar Docker y contenedores (no borra nada) `docker compose down`
 
 
-
-
-
+12. Recordar seguir updateando el README del proyecto.
 
 
