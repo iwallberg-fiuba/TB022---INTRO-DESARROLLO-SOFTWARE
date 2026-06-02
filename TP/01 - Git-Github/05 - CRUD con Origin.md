@@ -1,6 +1,8 @@
 
 
-## Trabajar con ramas y colaboradores
+El cómo hacer las cosas sigue siendo igual, pero, al final, se debe hacer git push. Además, aparece el git pull y git status previos a modificar cualquier archivo, y funciones como el Pull Request (PR). Además, trabajar correctamente con ramas y hacer commits con mensajes atómicos pasa a ser muchísimo más importante. 
+
+---
 
 Estás en VS Code con el proyecto abierto.
 
