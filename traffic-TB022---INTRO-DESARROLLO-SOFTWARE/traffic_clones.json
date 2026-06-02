@@ -93,14 +93,14 @@
       "uniques": 5
     },
     {
-      "timestamp": "2026-05-18T00:00:00Z",
-      "count": 18,
-      "uniques": 9
-    },
-    {
       "timestamp": "2026-05-19T00:00:00Z",
       "count": 4,
       "uniques": 3
+    },
+    {
+      "timestamp": "2026-05-18T00:00:00Z",
+      "count": 18,
+      "uniques": 9
     },
     {
       "timestamp": "2026-05-20T00:00:00Z",
