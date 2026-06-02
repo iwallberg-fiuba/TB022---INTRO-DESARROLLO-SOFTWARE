@@ -1,0 +1,2 @@
+Desde IDE
+Desde terminal
