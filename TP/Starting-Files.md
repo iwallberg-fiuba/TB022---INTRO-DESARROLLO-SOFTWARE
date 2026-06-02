@@ -57,8 +57,9 @@ proyecto/
 │   ├── Dockerfile                 # Imagen del backend Node.js. (explicada más adelante)
 │   └── src/                       # (Puede estar vacío)
 │   
-│
 ├── database/                      # (Puede estar vacío)
+│   ├── init.sql                   # (Puede estar vacío)
+│   └── seeds.sql                  # (Puede estar vacío)
 │
 ├── docker-compose.yml             # Levanta frontend + backend + postgres. (explicada más adelante)
 ├── .env                           # Variables de conexión, puertos, secretos, etc. (explicada más adelante)
