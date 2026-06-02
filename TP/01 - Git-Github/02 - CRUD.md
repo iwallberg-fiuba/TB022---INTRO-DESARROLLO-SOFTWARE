@@ -1,72 +1,103 @@
-- Desde IDE
-- Desde terminal
 
+<br>
 
+### Flujo completo
 
+<br>
 
-### Crear Repositorio
-
-1. Estar en la carpeta donde se desea crear el repositorio.
-2. Click derecho en la carpeta y seleccionar **"Abrir en Terminal"** o abrir en Git Bash (el nombre puede variar según el sistema operativo).
-3. Ejecutar:
-
-```shell
+```text
+Crear repositorio:
 git init
-```
-
-Esto crea un repositorio Git local (aparece una carpeta oculta `.git`).
-
-4. Verificar el estado del repositorio:
-
-```shell
+↓
+git status
+↓
+Crear rama y cambiarse a ella:
+git switch -c feature/login
+↓
+Modificar archivos
+↓
+git status
+↓
+git add .
+↓
+git commit -m "mensaje"
+↓
+Si la branch está lista para mergear:
+git switch main
+↓
+git merge feature/login
+↓
+git branch -d feature/login
+↓
 git status
 ```
 
-5. Agregar los archivos al área de staging:
+<br>
 
-```shell
-git add .
+- Ver cambios sin commitear: `git diff`
+- Ver qué cambios que trajo el último commit + autor, fecha, mensaje: `git show HEAD`
+- Ver autor, fecha, mensaje del último commit: `git log -1`
+- Ver autor, fecha, mensaje de todos los commits: `git log`
+- Ver diferencias entre ramas: `git diff rama1 rama2`
+
+<br><br>
+
+---
+
+<br>
+
+### Commits y mensajes atomicos
+
+<br>
+
+Que haya un commit por cambio específico. <br>
+Tener en cuenta los prefijos y después poner el mensaje. <br>
+
+Ejemplo: `git commit -m "fix: validación de contraseña corregida"`
+
+<br>
+
+| Prefijo     | Uso                        |
+| ----------- | -------------------------- |
+| `feat:`     | Nueva funcionalidad        |
+| `fix:`      | Corrección de errores      |
+| `docs:`     | Documentación              |
+| `refactor:` | Reorganización de código   |
+| `test:`     | Pruebas                    |
+| `style:`    | Formato, espacios, linting |
+| `chore:`    | Tareas de mantenimiento    |
+| `perf:`     | Mejoras de rendimiento     |
+
+<br><br>
+
+---
+
+<br>
+
+### Nombres de ramas
+
+<br>
+
+Se recomienda usar nombres descriptivos. <br>
+Ejemplos:
+
+```text
+feature/login
+feature/navbar
+fix/error-validacion
+docs/readme
+refactor/estructura
+test/usuarios
 ```
 
-6. Crear el primer commit:
+<br>
 
-```shell
-git commit -m "Primer commit"
-```
+| Prefijo   | Uso                      |
+| --------- | ------------------------ |
+| feature/  | Nueva funcionalidad      |
+| fix/      | Corrección de errores    |
+| docs/     | Documentación            |
+| refactor/ | Reorganización de código |
+| test/     | Pruebas                  |
 
-## Crear ramas
-Nota: Uso switch porque me resulta más práctico.
-
-- La rama principal suele llamarse `main`.
-- No se debe trabajar directamente sobre ella.
-
-1. Ver las ramas existentes:
-
-```shell
-git branch
-```
-
-2. Cada integrante debería tener su propia rama. Para crearla:
-Nota: al crearla ya quedas parado en esa nueva rama.
-
-```shell
-git switch -c nombre-de-la-rama
-```
-
-
-Nota: ejemplos de nombres de ramas
-
-```shell
-git switch -c feature/login
-git switch -c feature/navbar
-git switch -c fix/dockerfile
-git switch -c docs/readme
-```
-
-- Si se desea cambiar de rama:
-
-```shell
-git switch nombre-rama-destino
-```
-
-
+<br><br><br>
