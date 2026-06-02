@@ -1,6 +1,6 @@
 
 
-## Trabajar con ramas y con colaboradores
+## Trabajar con ramas y colaboradores
 
 Estás en VS Code con el proyecto abierto.
 
