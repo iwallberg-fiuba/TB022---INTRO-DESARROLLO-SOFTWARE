@@ -8,17 +8,18 @@
 
 <br>
 
+- [Flujo Crear Rama](#Flujo-Crear-Rama)
+- [Flujo General](#Flujo-general)
+- [Flujo para Pull Request](#Flujo-para-Pull-Request)
+- [Flujo post Pull Request](#Flujo-post-Pull-Request)
+
+<br>
+
+- [Explicado](#Explicado)
 - [Pull Request (PR)](#Pull-Request-PR)
  - [Revisión](#Revisión)
  - [Merge de PR](#Merge-de-PR)
  - [Limpieza Posterior](#Limpieza-Posterior)
-
-<br>
-
-- [Flujo general](#Flujo-general)
-- [Flujo para Pull Request](#Flujo-para-Pull-Request)
-- [Flujo post Pull Request](#Flujo-post-Pull-Request)
-
 
 <br><br>
 
@@ -65,6 +66,141 @@ Sin embargo, aparecen nuevos conceptos y ciertas prácticas se vuelven más impo
 ---
 
 <br>
+
+### Flujo Crear Rama
+
+<br>
+
+Cuando la rama en la que tenes que trabajar no existe todavía:
+
+<br>
+
+```text
+Abrir la IDE con el repositorio
+↓
+git status
+↓
+git switch main
+↓
+git pull
+↓
+git switch -c feature/login
+↓
+Modificar archivos
+↓
+git status
+↓
+git add .
+↓
+git commit -m "mensaje"
+↓
+git push -u origin feature/login
+↓
+Crear Pull Request
+```
+
+<br><br>
+
+### Flujo General
+
+<br>
+
+Cuando la rama en la que tenes que trabajar ya existe:
+
+<br>
+
+```text
+Abrir la IDE con el repositorio
+↓
+git status
+↓
+git switch feature/login
+↓
+git pull
+↓
+Modificar archivos
+↓
+git status
+↓
+git add .
+↓
+git commit -m "mensaje"
+↓
+git push
+```
+
+<br><br>
+
+### Flujo para Pull Request
+
+<br>
+
+Cuando consideras lista la rama:
+
+<br>
+
+```text
+Venís de un push
+↓
+Si la branch está lista para mergear:
+git switch main
+↓
+Github Repositorio
+↓
+Seleccionar "Pull Requests"
+↓
+Seleccionar "New Pull Request"
+↓
+Elegir base y compare branch
+↓
+Completar datos
+↓
+Seleccionar "Create Pull Request"
+↓
+Esperar la revisión de los demás junto con la Merge del PR
+```
+
+<br><br>
+
+### Flujo post Pull Request
+
+<br>
+
+Siempre hacerlo después de un Pull Request que termina siendo aprobado (y por ende se transforma en Merge del PR).
+
+<br>
+
+```text
+Estás esperando que termine la revisión del Merge del PR
+↓
+Si aprobada, Github hace el Merge del PR y avisa "Pull Request merged successfully"
+↓
+Seleccionar "Delete branch"
+↓
+Volver al repo local
+↓
+git switch main
+↓
+git pull
+↓
+git branch -d feature/login
+↓
+git status
+```
+
+<br><br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br><br>
+
+---
+
+<br>
+
+## Explicado
+
+<br><br>
 
 ### Pull Request (PR)
 
@@ -227,44 +363,6 @@ git pull
 
 ```shell
 git branch -d feature/login
-```
-
-<br><br>
-
-[Volver a Table of Contents](#Table-of-Contents)
-
-<br>
-
----
-
-<br>
-
-### Flujo general
-
-<br>
-
-```text
-
-```
-
-<br><br>
-
-### Flujo para Pull Request
-
-<br>
-
-```text
-
-```
-
-<br><br>
-
-### Flujo post Pull Request
-
-<br>
-
-```text
-
 ```
 
 <br><br>
