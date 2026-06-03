@@ -1,12 +1,34 @@
+<br><br>
 
 ### Table of Contents
 
+<br>
+
+[Trabajo en equipo con Git y Github](#Trabajo-en-equipo-con-Git-y-Github)
+
+<br>
+
+- [Pull Request (PR)](#Pull-Request-PR)
+ - [Revisión](#Revisión)
+ - [Merge de PR](#Merge-de-PR)
+ - [Limpieza Posterior](#Limpieza-Posterior)
+
+<br>
+
+- [Flujo general](#Flujo-general)
+- [Flujo para Pull Request](#Flujo-para-Pull-Request)
+- [Flujo post Pull Request](#Flujo-post-Pull-Request)
 
 
+<br><br>
 
 ---
 
+<br><br>
+
 ## Trabajo en equipo con Git y GitHub
+
+<br>
 
 Cuando se trabaja en equipo, el flujo de Git sigue siendo prácticamente el mismo:
 
@@ -18,7 +40,11 @@ add
 commit
 ```
 
+<br>
+
 Sin embargo, aparecen nuevos conceptos y ciertas prácticas se vuelven más importantes:
+
+<br>
 
 * Origin: nombre del repositorio remoto que apunta al local
 * git status
@@ -30,16 +56,30 @@ Sin embargo, aparecen nuevos conceptos y ciertas prácticas se vuelven más impo
 * Después de cada commit, hay que subir los cambios a GitHub mediante `git push`.
 * Las ramas se mergean mediante Pull Requests (PR).
 
+<br><br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br>
+
 ---
 
-## Pull Request (PR)
+<br>
 
-Qué es?
+### Pull Request (PR)
+
+<br>
+
+Qué es? <br>
 Es una solicitud para incorporar los cambios de una rama dentro de otra.
 
-Cuándo se hace?
+<br>
+
+Cuándo se hace? <br>
 Cuando se cree que una rama está lista para unirse a (generalmente) main, se crea una Pull Request (PR).
 
+<br>
+<br>
 
 Cómo se hace?
 
@@ -47,13 +87,19 @@ Cómo se hace?
 
 2. Seleccionar
 
+<br>
+
 ```text
 Pull Requests
 ↓
 New Pull Request
 ```
 
+<br><br>
+
 3. Elegir cuál va a ser la base branch (rama destino, generalmente main) y la compare branch (rama a unir).
+
+<br>
 
 Ejemplo:
 ```text
@@ -61,24 +107,38 @@ Base: main
 Compare: feature/login
 ```
 
-4. Revisar los cambios
+<br><br>
 
-GitHub mostrará:
+4. Revisar los cambios. GitHub mostrará:
+
+<br>
 
 * Archivos modificados.
 * Líneas agregadas.
 * Líneas eliminadas.
 * Commits incluidos.
 
+<br><br>
+
 5. Agregar datos pedidos como título, descripción, comentarios y confirmar con:
+
+<br>
 
 ```text
 Create Pull Request
 ```
 
-## Revisión
+<br><br>
+
+<br>
+
+### Revisión
+
+<br>
 
 6. Antes de mezclar las ramas, otros integrantes pueden revisar el código.
+
+<br>
 
 Pueden:
 
@@ -88,17 +148,27 @@ Pueden:
 * Aprobar el Pull Request.
 * Solicitar modificaciones.
 
----
+<br><br>
 
-## Merge de PR
+<br>
+
+### Merge de PR
+
+<br>
 
 7. Una vez revisado el Pull Request por los demás integrantes, se selecciona:
+
+<br>
 
 ```text
 Merge Pull Request
 ```
 
+<br>
+
 GitHub combinará ambas ramas.
+
+<br>
 
 ```text
 main
@@ -112,13 +182,21 @@ main
  └──── Merge
 ```
 
+<br>
+
 Ahora los cambios ya forman parte de `main` en GitHub.
 
----
+<br>
+<br>
+<br>
 
-## Limpieza posterior
+### Limpieza posterior
+
+<br>
 
 8. Después del merge GitHub suele mostrar:
+
+<br>
 
 ```text
 Pull Request merged successfully
@@ -126,37 +204,71 @@ Pull Request merged successfully
 Delete branch
 ```
 
+<br>
+
 Esto elimina la rama en GitHub y hay que hacerlo.
 
+<br><br>
+
 9. Actualizar la copia local de main
+
+<br>
 
 ```shell
 git switch main
 git pull
 ```
 
+<br><br>
+
 10. Eliminar la rama local porque ya no es necesaria (su contenido ya fue incorporado a `main`).
+
+<br>
 
 ```shell
 git branch -d feature/login
 ```
 
+<br><br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br>
+
 ---
 
-## Flujo normal
+<br>
+
+### Flujo general
+
+<br>
 
 ```text
 
 ```
 
-## Flujo cuando se desea crear Pull Request
+<br><br>
+
+### Flujo para Pull Request
+
+<br>
 
 ```text
 
 ```
 
-## Flujo post Pull Request
+<br><br>
+
+### Flujo post Pull Request
+
+<br>
 
 ```text
 
 ```
+
+<br><br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br><br>
