@@ -1,5 +1,18 @@
 <br>
 
+`Pending`:
+- Emprolijar y corregir cosas de /02
+- Emprolijar /03
+- Completar los /03 pendientes y emprolijarlos cuando estén hechos
+- Hacer lo de /00 (cuando suban el material)
+- Completar este readme
+
+<br>
+
+---
+
+<br>
+
 ### Orden de lectura y seguimiento
 
 <br>
