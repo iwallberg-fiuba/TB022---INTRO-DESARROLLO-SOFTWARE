@@ -1,13 +1,22 @@
 
+<br>
 
-El README del Proyecto
+## El README del Proyecto
 
-Contestar hasta donde se pueda con el conocimiento que se tiene hasta ahora.
+<br>
 
+> [!NOTE]
+> Contestar hasta donde se pueda con el conocimiento que se tiene hasta ahora.
 
-Depende del repo, pero un README bueno suele responder estas preguntas:
+<br><br>
 
-### 1. ¿Qué es?
+#### La Table of Contents del Readme
+
+<br><br>
+
+#### 1. ¿Qué es?
+
+<br>
 
 ```md
 # Nombre del Proyecto
@@ -15,9 +24,11 @@ Depende del repo, pero un README bueno suele responder estas preguntas:
 Breve descripción de qué hace el proyecto y cuál es su objetivo.
 ```
 
----
+<br><br>
 
-### 2. ¿Por qué existe?
+#### 2. ¿Por qué existe?
+
+<br>
 
 ```md
 ## Objetivo
@@ -26,9 +37,11 @@ Qué problema resuelve.
 Para quién está pensado.
 ```
 
----
+<br><br>
 
-### 3. ¿Qué tecnologías usa?
+#### 3. ¿Qué tecnologías usa? ¿Por qué?
+
+<br>
 
 ```md
 ## Stack
@@ -42,9 +55,11 @@ Para quién está pensado.
 - Docker
 ```
 
----
+<br><br>
 
-### 4. ¿Cómo está organizado?
+#### 4. ¿Cómo está organizado?
+
+<br>
 
 ```md
 ## Estructura
@@ -56,9 +71,11 @@ proyecto/
 └── docker-compose.yml
 ```
 
----
+<br><br>
 
-### 5. ¿Cómo se instala?
+#### 5. ¿Cómo se instala?
+
+<br>
 
 ```md
 ## Instalación
@@ -67,9 +84,11 @@ git clone ...
 cd proyecto
 ```
 
----
+<br><br>
 
-### 6. ¿Cómo se ejecuta?
+#### 6. ¿Cómo se ejecuta?
+
+<br>
 
 ```md
 ## Uso
@@ -84,9 +103,11 @@ npm install
 npm start
 ```
 
----
+<br><br>
 
-### 7. Variables de entorno
+#### 7. Variables de entorno
+
+<br>
 
 ```md
 ## Configuración
@@ -97,14 +118,16 @@ DB_HOST=db
 DB_USER=postgres
 DB_PASSWORD=postgres
 ```
+<br>
 
 Nunca poner contraseñas reales.
 
----
+<br><br>
 
-### 8. Capturas o demo
 
-Muy útil.
+#### 8. Capturas o demo
+
+<br>
 
 ```md
 ## Capturas
@@ -112,9 +135,11 @@ Muy útil.
 [imagen]
 ```
 
----
+<br><br>
 
-### 9. API 
+#### 9. APIs
+
+<br>
 
 ```md
 ## Endpoints
@@ -124,9 +149,11 @@ POST /usuarios
 DELETE /usuarios/:id
 ```
 
----
+<br><br>
 
-### 10. Autores
+#### 10. Autores
+
+<br>
 
 ```md
 ## Integrantes
@@ -136,21 +163,9 @@ DELETE /usuarios/:id
 - Nombre 3
 ```
 
----
+<br><br>
 
-### 11. Licencia (opcional)
+#### 11. Licencia (opcional)
 
----
+<br><br>
 
-Entonces:
-
-```text
-Descripción
-Stack
-Estructura
-Instalación
-Configuración (.env)
-Cómo levantar el proyecto
-Capturas
-Integrantes
-```
