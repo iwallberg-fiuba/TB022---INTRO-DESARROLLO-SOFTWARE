@@ -1,172 +1,238 @@
-
-
-
-### Análisis de requerimientos
-Tener esto presente durante la lectura y seguimiento.
-
-<br>
-
-| Requerimientos | Información |
-| --- | --- |
-| Funcionales (`BREGAM`) | Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar. |
-| No Funcionales (`SEMECA`) | Definen **cómo debe funcionar** el sistema. Ejemplos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible. |
+### Diseño y Arquitectura
 
 <br><br>
 
-1. Leer la Consigna del TP.
+### Lo visto en clase
 
-### Diseño
+<br>
 
-2. Pensar el posible Stack. No es necesario tener una idea clara sobre qué va a hacer el sitio web todavía, pero ya se puede pensar el Stack según la consigna y las herramientas vistas en clase. Lo único a tener en cuenta es que si se utilizan herramientas no vistas en clase, deben poder ser defendidas y justificadas en el oral.
+No es necesario tener una idea demasiado concreta del proyecto todavía, ya que la consigna pide un sitio web y las herramientas vistas en clase condicionan bastante el stack.
 
-```txt
-Frontend?
+<br>
+
+Lo importante es identificar qué herramientas se van a usar y recordar que, si se agregan tecnologías no vistas en clase, deben poder ser defendidas y justificadas en el oral.
+
+<br>
+
+#### 1. Stack y Arquitectura
+
+```text
+Frontend
 ├── HTML
 ├── CSS
 └── JavaScript
-```
-
-```txt
-Backend?
-└──  JavaScript: Node.js
-```
-Node.js incluye npm, que incluye npx.
-
-npm:
-
-npx:
-
-```txt
-Base de datos
-└── PostgreSQL + DBeaver
-```
-
-```txt
-Herramientas Adicionales
-├── Docker (con Docker compose, imagenes custom e imagenes oficiales)
-├── Git
-└── GitHub (con Github Actions tal vez?)
-```
-
-
-3. Revisar el Stack y perfeccionarlo.
-
-
-Entonces, ahora el Stack del Frontend sería así:
-```txt
-Frontend
-├── HTML
-├── CSS
-├── JavaScript
-└── Nginx
-```
-
-
-
-Entonces, con npm o npx se pueden usar paquetes como:
-- Express.js:
-- nodemon:
-- dotenv: archivo para poner variables de conexión, puertos, secretos, etc.
-- linters.
-
-En mi caso, usaría todos con npm a excepción de linters (si es que los termino utilizando).
-
-Entonces, ahora el Stack del Backend sería algo así:
-
-```txt
-Backend
-└── Node.js
-    └── Packages
-        ├── Express.js
-        ├── nodemon
-        └── dotenv
-```
-
-La base de datos queda igual.
-
-```txt
-Herramientas Adicionales
-├── Docker
-|   ├── imagenes
-|   |     ├── Frontend (imagen custom -> Dockerfile)
-|   |     ├── Backend (imagen custom -> otro Dockerfile más)
-|   |     └── Base de datos (imagen oficial de PostgreSQL -> se declara en el docker-compose)     
-|   |
-|   └── docker-compose (para facilitar el build)
-|       └── volumenes
-|           ├── Para PostgreSQL
-|           ├── Para inicializar la base de datos
-|           └── Para los datos
-|        
-├── Git
-└── GitHub (con Github Actions tal vez?)
-```
-
-
-Stack
-
-```txt
-Frontend
-├── HTML
-├── CSS
-├── JavaScript
-└── Nginx
 
 Backend
-└── Node.js
-    └── Packages
-        ├── Express.js
-        ├── nodemon
-        └── dotenv
+├── Node.js
+└── Express.js
 
 Base de datos
-└── PostgreSQL + DBeaver
+└── PostgreSQL
 
-Herramientas Adicionales
+Infraestructura
 ├── Docker
-|   ├── .dockerignore (archivos y variables ignorados al crear imagenes)
-|   ├── imagenes
-|   |     ├── Frontend (imagen custom con Nginx -> Dockerfile)
-|   |     ├── Backend (imagen custom con Node -> otro Dockerfile más)
-|   |     └── Base de datos (imagen oficial de PostgreSQL -> se declara en el docker-compose)     
-|   |
-|   └── docker-compose (para facilitar el build)
-|       └── volumenes
-|           ├── Para PostgreSQL
-|           ├── Para inicializar la base de datos
-|           └── Para los datos
-|        
+└── Bash
+
+Control de versiones
 ├── Git
-|   └── .gitignore (archivos y variables ignorados al subir el repo para proteger datos sensibles)
-└── GitHub (con Github Actions tal vez?)
+└── GitHub
+
+Package management
+├── npm
+└── npx
+
+Packages
+├── Express.js
+└── nodemon
+
+Herramientas extra
+├── DBeaver
+└── Postman / Thunder Client
 ```
 
-Con respecto a docker, esto:
-```txt
-Imágenes Oficiales
+<br>
+
+```text
+Frontend
+    ↓ HTTP
+Backend/API
+    ↓ SQL
+Base de datos
+```
+
+<br><br>
+
+#### 2. Infraestructura con Docker
+
+<br>
+
+```text
+Imágenes oficiales
 ├── node
-├── nginx
 └── postgres
 
-Imágenes Customs
-├── frontend-image (FROM nginx)
-└── backend-image (FROM node)
-```
+Imágenes personalizadas
+├── frontend-image
+└── backend-image
+    └── FROM node
 
-Resulta en los siguientes contenedores:
+Servicios en docker-compose.yml
+├── frontend
+├── backend
+└── database
 
-```txt
 Contenedores
-│
 ├── frontend-container
 │   └── frontend-image
-│
 ├── backend-container
 │   └── backend-image
-│
 └── database-container
-    └── postgres:<version elegida>
+    └── postgres:<version-elegida>
+
+Volúmenes
+└── postgres_data
+    └── Persistencia de datos de PostgreSQL
+
+.dockerignore
+└── Archivos ignorados al construir imágenes
 ```
 
+<br><br>
 
-4. Pensar cómo se traduce esto en la estructura de los archivos. Sigue sin ser necesario saber exactamente qué va a hacer el sitio web.
+### Lo elegido
+
+<br><br>
+
+#### 1. Visualizar todo lo elegido
+
+<br>
+
+```text
+Frontend
+├── HTML
+├── CSS
+└── JavaScript
+│
+│ HTTP
+▼
+Backend
+├── Node.js
+├── Express.js
+├── nodemon
+└── dotenv
+│
+│ SQL
+▼
+PostgreSQL
+
+Infraestructura
+└── Docker
+    ├── .dockerignore
+    ├── Dockerfile frontend
+    │   └── Imagen personalizada
+    ├── Dockerfile backend
+    │   └── Imagen personalizada
+    ├── docker-compose.yml
+    │   └── Orquesta los servicios
+    │       ├── frontend
+    │       ├── backend
+    │       └── database
+    └── Volúmenes
+        └── postgres_data
+            └── Persistencia de PostgreSQL
+
+
+Control de versiones
+├── Git
+│   └── .gitignore
+└── GitHub
+
+Package management
+├── npm
+└── npx
+
+Herramientas extra
+├── DBeaver
+└── Postman / Thunder Client
+```
+
+<br><br>
+
+#### 2. Escribir el Stack oficial para el README
+
+<br>
+
+```text
+Frontend
+├── HTML
+├── CSS
+└── JavaScript
+
+Backend
+└── Node.js + Express.js
+
+Base de datos
+└── PostgreSQL
+
+Infraestructura
+└── Docker
+```
+
+<br><br>
+
+#### 3. Pensar la estructura de archivos
+
+<br>
+
+Finalmente, pensar cómo se traduce esta separación en carpetas y archivos.
+
+<br>
+
+Sigue sin ser necesario tener una idea completamente cerrada del proyecto.
+
+<br>
+
+La estructura de carpetas debería reflejar la arquitectura definida anteriormente, separando claramente frontend, backend, base de datos, configuración e infraestructura.
+
+<br>
+
+La consigna (+ instrucciones en clase) pedían:
+- 3 páginas HTML
+- 3 contenedores (Frontend, Backend, database)
+- Schemas.sql: archivo con la información sobre cómo crear las tablas para la base de datos
+- Readme
+- Uso de git y github
+- Uso de los .ignore
+
+<br>
+
+```txt
+proyecto/
+├── .git/                         
+│
+├── frontend/
+│   ├── Dockerfile                 # Imagen del Frontend
+│   ├── index.html                 
+│   ├── pagina2.html               
+│   ├── pagina3.html               
+│   ├── css/
+│   │   └── styles.css             
+│   └── js/
+│       └── main.js                
+│
+├── backend/
+│   ├── Dockerfile                 # Imagen del Backend
+│   └── src/                       
+│   
+├── database/                      
+│   ├── init.sql                   
+|   ├── schemas.sql
+│   └── seeds.sql                  
+│
+├── docker-compose.yml             # Levanta todo, define Postgres para database + persistencias
+├── .env                           
+├── .dockerignore                  
+├── .gitignore                     
+├── README.md                      
+└── LICENSE                        # Licencia del proyecto. No aplica en este caso.
+```
