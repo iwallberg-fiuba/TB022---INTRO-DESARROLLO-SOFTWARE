@@ -1,67 +1,144 @@
+<br>
 
-### Table of Contents
+Falta emprolijar
 
-
-
-### Requerimientos Previos
-
-1. Tener todo lo de git y github ya hecho y configurado
-2. Tener todo lo de docker ya creado
-3. Descargar e instalar Docker Desktop y DBeaver.
-
----
-
-Flujo de Desarrollo
-
-1. Abrir Docker Desktop y dejarlo minimizado (ya va a estar corriendo).
-2. Abrir el repositorio del proyecto en la IDE.
-3. Verificar en qué rama estás con  `git status` o `git branch`
-  - Si no estás en la tuya, `git switch nombre-rama-destino`
-4. Traer los cambios nuevos con `git pull`
-5. Parado en la carpeta raíz del proyecto, abrir la terminal del sistema operativo y levantar los contenedores:
-- Si es la primera vez: `docker compose up --build -d`
-- Para el resto de veces: `docker compose up -d`
-- Si modificaste Dockerfiles, docker-compose, o dependencias (package.json): `docker compose up --build -d`
+## Flujo Completo
 
 
-6. Abrir las herramientas necesarias según en dónde vas a programar (Frontend, Backend/API, BdDs):
-
-- Frontend: pegar http://localhost:8080 en el navegador
-
-- Backend/API: pegar http://localhost:3000 en el navegador
-
-- Bases de datos:
-  1. Abrir DBeaver y:
-  - Si no es la primera vez que te conectas: con doble click sobre la conexión guardada ya entras.
-  - Si es la primera vez que te conectas:
-    1. Crear nueva conexión (Dbeaver se conecta al contenedor PostgreSQL).
-    2. Completar datos (suele ser esta info):
+1. Abrir
 
 ```txt
+Abrir la IDE con el repositorio
+Abrir Docker App (dejarla minimizada)
+Abrir Terminal Git Bash ubicado en la carpeta del repositorio
+```
+
+2. Git y Github
+```txt
+Desde Git Bash ubicado:
+↓
+git status
+↓
+Si no estás en tu rama:
+git switch nombre-rama-destino
+↓
+git pull
+```
+
+2. Docker 
+
+```txt
+Desde la misma Git Bash
+↓
+¿Es la primera vez que levantas estos contenedores?,
+¿Modificaste archivos y/o dependencias como: Dockerfile, docker-compose, package.json?
+├── Si ambas respuestas son no: docker compose up -d
+└── Si alguna respuesta es sí: docker compose up --build -d
+```
+
+3. Abrir Herramientas Según Capa
+
+Frontend
+```txt
+Abrir tu navegador
+↓
+Ej. de URL: http://localhost:8080
+↓
+Desarrollar en tu IDE mientras ves los cambios en tu navegador.
+```
+Backend/API
+```txt
+Abrir tu navegador
+↓
+Ej. de URL: http://localhost:3000
+↓
+Desarrollar en tu IDE mientras ves los cambios en tu navegador.
+```
+
+
+Base de datos
+```txt
+Abrir DBeaver
+↓
+¿Es la primera conexión al contenedor de PostgreSQL?
+├── Si no: Abrir conexión guardada y listo. 
+└── Si sí: Crear nueva conexión → Completar datos.
+
+↓
+Desarrollar.
+```
+
+Ejemplo de Datos:
 Host: localhost
-Port: 5432
-Database: mi_app_db
+Port: 5432 
+Database: nombre_de_db
 User: postgres
 Password: postgres
-```
 
-7. Programar y hacer los cambios deseados en el código mientras ves los resultados actualizarse en tiempo real.
-8. Revisar los archivos que fueron modificados con `git status`
-9. Hacer commit
+4. Git y Github (cerrar)
 
-```shell
+<br>
+Recordar antes:
+- 1 commit por cambio relevante
+- Mensaje del commit: Prefijo + descripción del cambio hecho
+
+<br>
+
+| Prefijo     | Uso                        |
+| ----------- | -------------------------- |
+| `feat:`     | Nueva funcionalidad        |
+| `fix:`      | Corrección de errores      |
+| `docs:`     | Documentación              |
+| `refactor:` | Reorganización de código   |
+| `test:`     | Pruebas                    |
+| `style:`    | Formato, espacios, linting |
+| `chore:`    | Tareas de mantenimiento    |
+| `perf:`     | Mejoras de rendimiento     |
+
+<br><br>
+
+```txt
+Venis de modificar archivos
+↓
+Volves a tu Git Bash ubicado
+↓
+git status
+↓
 git add .
-git commit -m "mensaje"
+↓
+git commit -m "prefijo: descripción del cambio"
+↓
+git push
 ```
 
-10. Hacer Push con `git push`
+5. Apagar Docker y contenedores (no borra nada) `docker compose down`
 
-Nota: Si el trabajo de la rama ya está terminado y listo para incorporarse a main, crear un Pull Request en GitHub.
-Revisar Doc sobre Flujo de Git y Github.
+6. Si se desea hacer Pull Request...
 
-11. Apagar Docker y contenedores (no borra nada) `docker compose down`
+```
+Venís de un push
+↓
+Si la branch está lista para mergear:
+git switch main
+↓
+Github Repositorio
+↓
+Seleccionar "Pull Requests"
+↓
+Seleccionar "New Pull Request"
+↓
+Elegir base y compare branch
+↓
+Completar datos
+↓
+Seleccionar "Create Pull Request"
+↓
+Esperar la revisión de los demás junto con la Merge del PR
+```
 
+<br>
 
-12. Recordar seguir updateando el README del proyecto.
+7. Recordar seguir updateando el README del proyecto.
 
+<br><br>
 
