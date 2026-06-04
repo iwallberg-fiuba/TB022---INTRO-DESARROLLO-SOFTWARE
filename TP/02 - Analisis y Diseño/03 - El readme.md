@@ -8,13 +8,39 @@
 > [!NOTE]
 > Contestar hasta donde se pueda con el conocimiento que se tiene hasta ahora.
 
-<br><br>
+<br>
 
-#### -La Table of Contents del README-
+#### Tabla de Contenidos
 
 <br>
 
-#### 1. ¿Qué es?
+- [Nombre del Proyecto](#1--Nombre-del-Proyecto)
+- [Objetivo](#2--Objetivo)
+- [Stack](#3--Stack)
+- [Estructura](#4--Estructura)
+- [Instalación](#5--Instalación)
+- [Ejecución](#6--Ejecución)
+- [Configuración](#7--Configuración)
+- [Capturas](#8--Capturas-o-demo)
+- [APIs](#9--APIs)
+- [Autores](#10--Autores)
+
+<br>
+
+No aplica en este caso:
+- [Licencia](#11--Licencia)
+
+<br>
+
+---
+
+<br><br>
+
+#### 1. Nombre del Proyecto
+
+<br>
+
+¿Qué es?
 
 <br>
 
@@ -26,7 +52,15 @@ Breve descripción de qué hace el proyecto y cuál es su objetivo.
 
 <br><br>
 
-#### 2. ¿Por qué existe?
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
+
+#### 2. Objetivo
+
+<br>
+
+¿Por qué existe?
 
 <br>
 
@@ -39,7 +73,15 @@ Para quién está pensado.
 
 <br><br>
 
-#### 3. ¿Qué tecnologías usa? ¿Por qué?
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
+
+#### 3. Stack
+
+<br>
+
+¿Qué tecnologías usa? ¿Por qué?
 
 <br>
 
@@ -57,7 +99,15 @@ Para quién está pensado.
 
 <br><br>
 
-#### 4. ¿Cómo está organizado?
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
+
+#### 4. Estructura
+
+<br>
+
+¿Cómo está organizado?
 
 <br>
 
@@ -73,7 +123,15 @@ proyecto/
 
 <br><br>
 
-#### 5. ¿Cómo se instala?
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
+
+#### 5. Instalación
+
+<br>
+
+¿Cómo se instala?
 
 <br>
 
@@ -86,7 +144,15 @@ cd proyecto
 
 <br><br>
 
-#### 6. ¿Cómo se ejecuta?
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
+
+#### 6. Ejecución
+
+<br>
+
+¿Cómo se ejecuta?
 
 <br>
 
@@ -105,7 +171,15 @@ npm start
 
 <br><br>
 
-#### 7. Variables de entorno
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
+
+#### 7. Configuración
+
+<br>
+
+Variables de entorno
 
 <br>
 
@@ -124,6 +198,10 @@ Nunca poner contraseñas reales.
 
 <br><br>
 
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
+
 
 #### 8. Capturas o demo
 
@@ -136,6 +214,10 @@ Nunca poner contraseñas reales.
 ```
 
 <br><br>
+
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
 
 #### 9. APIs
 
@@ -151,6 +233,10 @@ DELETE /usuarios/:id
 
 <br><br>
 
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
+
 #### 10. Autores
 
 <br>
@@ -165,7 +251,20 @@ DELETE /usuarios/:id
 
 <br><br>
 
-#### 11. Licencia (opcional)
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
+
+#### 11. Licencia
+
+<br>
+
+No necesario.
 
 <br><br>
+
+[Volver a la Tabla de Contenidos](#Tabla-de-Contenidos)
+
+<br><br><br>
+
 
