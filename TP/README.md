@@ -1,10 +1,10 @@
 <br>
 
 `Pending`:
-- Emprolijar y corregir cosas de /02
-- Emprolijar /03
-- Completar los /03 pendientes y emprolijarlos cuando estén hechos
+- Emprolijar 03/ Inicializar el Proyecto
 - Hacer lo de /00 (cuando suban el material)
+- Hacer los /03 pendientes (cuando suban el material)
+- Emprolijar los 03/ (cuando estén hechos)
 - Completar este readme
 
 <br>
@@ -20,32 +20,47 @@
 Todo está ordenado numéricamente para facilitar el seguimiento y el orden de lectura, con excepción de la consigna del TP. <br>
 De todas formas, no dudes en volver a secciones anteriores cuando necesites repasar conceptos o despejar dudas.
 
-<br>
-<br>
+<br><br>
 
 ### Etapas del SDLC
+
+<br>
 
 1. Análisis de requerimientos
     - Funcionales: Definen **qué hace** el sistema. Suelen expresarse con verbos: **B**uscar, **R**egistrar, **E**nviar, **G**enerar, **A**ctualizar, **M**ostrar.
     - No funcionales: Definen **cómo debe funcionar** el sistema. Suelen expresarse con adjetivos: **S**eguro, **E**scalable, **M**antenible, **E**ficiente, **C**onfiable, **A**ccesible.
+
+<br>
+
 2. Diseño de Arquitectura
     - Recordar los requerimientos
     - Recordar la Consigna del TP
     - Verificar que todo esté bien pensado
+
+<br>
+
 3. Desarrollo
     - Tener un backup del backup...
+
+<br>
+
 4. Testing
     - Cumple requerimientos?
     - Cross-checking trabajo del resto
     - Github actions?
     - Que alguien que no sabe de tecnología lo pruebe
-5. Despliegue a Producción
-    - VPS (IaaS o Self-hosting?) o Vercel + Render + Neon (PaaS)?
-    - Verificar si hay que cambiar configs. de Docker por el despliegue a prod.
-6. Mantenimiento
 
 <br>
+
+6. Despliegue a Producción
+    - VPS (IaaS o Self-hosting?) o Vercel + Render + Neon (PaaS)?
+    - Verificar si hay que cambiar configs. de Docker por el despliegue a prod.
+
 <br>
+
+7. Mantenimiento
+
+<br><br>
 
 ### Temas según archivo
 
