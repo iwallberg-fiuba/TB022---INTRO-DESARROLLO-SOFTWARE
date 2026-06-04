@@ -1,3 +1,14 @@
+<br>
+
+Ver en la página de la materia:
+- [Link a la Consigna](https://www.intro-camejo.com.ar/trabajos-practicos)
+
+<br>
+
+---
+
+<br><br>
+
 ## Objetivo[](https://www.intro-camejo.com.ar/trabajos-practicos#objetivo "Enlace directo al Objetivo")
 
 Los alumnos deben demostrar la comprensión de los conceptos aprendidos en clase y la habilidad para aplicarlos en la resolución de problemas, junto con el desarrollo de una idea creativa y propia.
