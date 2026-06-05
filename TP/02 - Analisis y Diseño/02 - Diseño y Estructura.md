@@ -25,6 +25,7 @@
 - [schemas](#10--schemas)
 - [init](#11--init)
 - [seeds](#12--seeds)
+- [package](#13--package)
 
 
 <br><br>
@@ -76,6 +77,7 @@ Package management
 
 Packages
 ├── Express.js
+├── Node-Postgres (pg)
 └── nodemon
 
 Herramientas extra
@@ -163,6 +165,7 @@ Frontend
 Backend
 ├── Node.js
 ├── Express.js
+├── Node-Postgres (pg)
 ├── nodemon
 └── dotenv
 │
@@ -270,6 +273,7 @@ proyecto/
 │
 ├── backend/
 │   ├── Dockerfile                 # Imagen del Backend
+|   ├── package.json               # Paquetes
 │   └── src/                       
 │   
 ├── database/                      
@@ -535,6 +539,38 @@ VALUES
 ('Juan Pérez', 'juan@email.com'),
 ('María Gómez', 'maria@email.com'),
 ('Pedro López', 'pedro@email.com');
+```
+
+<br><br><br>
+
+### 13. package
+
+<br>
+
+Archivo que declara los paquetes a instalar y sus versiones. <br>
+Recordar revisar las versiones, estas son unas aleatorias de ejemplo.
+
+<br>
+
+```txt
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend del proyecto",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "express": "^5.0.0",
+    "pg": "^8.0.0"
+  },
+  "devDependencies": {     # acá va lo que es sólo para el desarollo, lo que no va a producción.
+    "nodemon": "^3.0.0"
+  }
+}
 ```
 
 <br><br><br>
