@@ -1,136 +1,148 @@
 
+<br>
 
-Pending.
+### Table of Contents
 
-### Niveles de Testing
+<br>
+
+[Teoría](#Teoría)
+- [Niveles de Testeo](#Niveles-de-Testeo)
+- [Los Tests](#Los-Tests)
+- [Orden y Capas](#Orden-y-Capas)
+
+<br>
+
+[Cómo Hacerlos](#Cómo-Hacerlos)
+
+
+
+
+<br>
+
+---
+
+<br>
+
+## Teoría
+
+<br>
+
+### Niveles de Testeo
+
+<br>
+
+| Nivel | Qué prueba |
+|---------|---------|
+| **1. Unit Testing** | La unidad más pequeña de código de forma aislada (función, método, clase o componente). |
+| **2. Integration Testing** | La comunicación e interacción entre múltiples módulos, servicios o capas. |
+| **3. System Testing** | El comportamiento del sistema completo como una única aplicación integrada, verificando que todos sus componentes funcionen correctamente en conjunto. |
+| **4. End-to-End (E2E) Testing** | Flujos reales de usuario atravesando todas las capas del sistema. |
+| **5. User Acceptance Testing (UAT)** | Que el sistema cumpla los requisitos funcionales y expectativas del usuario o cliente. |
+
+<br><br>
+
+>[!NOTE]
+>En este caso, System Testing no es necesario porque con E2E Testing es suficiente.
+
+<br><br><br><br>
+
+
+### Los Tests
+
+<br>
 
 ```txt
-Unit Testing
+Nivel 1 - Unit Testing
 ├─ Component Testing
-├─ API Testing
+├─ API Testing*
 ├─ Schema Testing
-└─ Data Validation Testing
+├─ Data Validation Testing
+└─ Migration Testing*
 
-Integration Testing
+Nivel 2 - Integration Testing
 ├─ Frontend ↔ Backend
 ├─ Backend ↔ DB
 └─ Servicio ↔ Servicio
 
-End-to-End Testing (E2E)
+(Nivel 3 - System Testing)
 
-User Acceptance Testing (UAT)
+Nivel 4 - End-to-End (E2E) Testing
+
+Nivel 5 - User Acceptance Testing (UAT)
+
+---
+
+* API Testing puede ser Nivel 1 si testeás un endpoint aislado con mocks, pero puede ser Nivel 2 si el endpoint realmente habla con servicios o la DB.
+* Migration Testing puede ser Nivel 1 si solo verificás que una migración corre, o puede ser Nivel 2 si además comprobás cómo interactúa con una base real y datos existentes.
 ```
 
-| Nivel                             | Qué prueba                                                                              |
-| --------------------------------- | --------------------------------------------------------------------------------------- |
-| **Unit Testing**                  | La unidad más pequeña de código de forma aislada (función, método, clase o componente). |
-| **Integration Testing**           | La comunicación e interacción entre múltiples módulos, servicios o capas.               |
-| **End-to-End (E2E) Testing**      | Flujos reales de usuario atravesando todas las capas del sistema.                       |
-| **User Acceptance Testing (UAT)** | Que el sistema cumpla los requisitos funcionales y expectativas del usuario o cliente.  |
+<br><br>
 
-Nota: System Testing (que viene después de Integration Testing) no es necesario en este caso porque con E2E Testing es suficiente.
+| Nombre                         | Qué prueba                                                        |
+| ------------------------------ | ----------------------------------------------------------------- |
+| **Component Testing**          | Un componente de interfaz de forma aislada.                       |
+| **API Testing**                | Endpoints, requests, responses, validaciones y códigos de estado. |
+| **Schema Testing**             | Tablas, columnas, relaciones, índices y estructura general.       |
+| **Data Validation Testing**    | Constraints, claves, tipos de datos y reglas de integridad.       |
+| **UI Testing**                 | Elementos visuales, navegación e interacción de la interfaz.      |
+| **Migration Testing**          | Scripts de creación, actualización y migración de esquemas.       |
 
 
+<br><br><br><br>
 
-Testings según capa
 
-El testing se realiza de forma progresiva, pero no siempre completamente secuencial: algunas pruebas pueden solaparse entre capas a medida que el sistema crece.
+### Orden y Capas
 
-```txt
-Frontend
-├─ Component Testing
-├─ UI Testing
-└─ E2E Testing
+<br>
 
-Backend
-├─ Unit Testing
-├─ API Testing
-└─ Integration Testing
+>[!NOTE]
+>El testing se realiza de forma progresiva, pero no siempre completamente secuencial: algunas pruebas pueden solaparse entre capas a medida que el sistema crece.
 
-Base de Datos
-├─ Schema Testing
-├─ Data Validation Testing
-└─ Migration Testing
+<br>
 
-Sistema Completo
-├─ E2E Testing
-└─ UAT
+```mermaid
+
+---
+config:
+  theme: redux-dark
+  layout: dagre
+---
+
+flowchart LR
+ subgraph Frontend["Frontend"]
+        FEU["Unit Testing"]
+        FEC["Component Testing"]
+        FEUI["UI Testing"]
+  end
+ subgraph Backend["Backend"]
+        BEU["Unit Testing"]
+        API["API Testing"]
+  end
+ subgraph DB["Base de Datos"]
+        DBU["Unit Testing"]
+        SCH["Schema Testing"]
+        VAL["Data Validation Testing"]
+        MIG["Migration Testing"]
+  end
+    FEU --> FEC & FEUI
+    BEU --> API
+    DBU --> SCH & VAL & MIG
+    Frontend --> INT["Integration Testing"]
+    Backend --> INT
+    DB --> INT
+    INT --> SYS["System Testing"]
+    SYS --> E2E["End-to-End (E2E) Testing"]
+    E2E --> UAT["User Acceptance Testing (UAT)"]
 ```
 
-| Tipo                        | Capa          | Nivel al que suele pertenecer | Qué prueba                                                        |
-| --------------------------- | ------------- | ----------------------------- | ----------------------------------------------------------------- |
-| **Component Testing**       | Frontend      | Unit Testing                  | Un componente de interfaz de forma aislada.                       |
-| **API Testing**             | Backend       | Unit / Integration Testing    | Endpoints, requests, responses, validaciones y códigos de estado. |
-| **Schema Testing**          | Base de Datos | Unit Testing                  | Tablas, columnas, relaciones, índices y estructura general.       |
-| **Data Validation Testing** | Base de Datos | Unit Testing                  | Constraints, claves, tipos de datos y reglas de integridad.       |
-| **UI Testing**              | Frontend      | Unit / System Testing         | Elementos visuales, navegación e interacción de la interfaz.      |
-| **Migration Testing**       | Base de Datos | Unit / Integration Testing    | Scripts de creación, actualización y migración de esquemas.       |
+<br><br>
 
+>[!NOTE]
+>Los tests de unidad se hacen durante todo el desarrollo. <br>
+>Los tests de integración aparecen cuando dos o más partes empiezan a comunicarse.  
+>Los tests E2E y UAT se hacen cuando el sistema ya tiene flujos completos funcionando.
 
-Los tests de unidad se hacen durante todo el desarrollo.  
-Los tests de integración aparecen cuando dos o más partes empiezan a comunicarse.  
-Los tests E2E y UAT se hacen cuando el sistema ya tiene flujos completos funcionando.
-
-
-## Frontend
-
-En el frontend, los tests se enfocan en validar componentes, pantallas e interacciones del usuario.
-
-1. **Unit Testing**  
-   Verifica funciones o lógica aislada del frontend.
-
-2. **Component Testing**  
-   Valida que cada componente se renderice y funcione correctamente.
-
-3. **UI Testing**  
-   Revisa comportamiento visual e interacción básica de la interfaz.
-
-4. **E2E Testing**  
-   Simula flujos completos de usuario conectando frontend, backend y base de datos.
-
-5. **UAT**  
-   Verifica que la interfaz y los flujos cumplan con lo esperado por el usuario final.
-
-## Backend
-
-En el backend, los tests se enfocan en validar lógica, rutas, servicios, controladores y conexión con la base de datos.
-
-1. **Unit Testing**  
-   Verifica funciones, métodos, servicios o módulos de forma aislada.
-
-2. **Integration Testing**  
-   Valida la interacción entre módulos, rutas, servicios y base de datos.
-
-3. **API Testing**  
-   Comprueba que los endpoints respondan correctamente.
-
-4. **System Testing**  
-   Evalúa el comportamiento del backend dentro del sistema completo.
-
-5. **E2E Testing**  
-   Simula flujos completos desde el frontend hasta la base de datos.
-
-6. **UAT**  
-   Confirma que el sistema cumple los requisitos funcionales definidos.
-
-## Base de Datos
-
-En la base de datos, los tests se enfocan en validar estructura, relaciones, restricciones y persistencia de datos.
-
-1. **Schema Testing**  
-   Verifica que las tablas, columnas, tipos de datos y relaciones estén correctamente definidas.
-
-2. **Data Validation Testing**  
-   Comprueba constraints, claves primarias, claves foráneas, `NOT NULL`, `UNIQUE`, etc.
-
-3. **Integration Testing**  
-   Valida que el backend pueda leer, insertar, actualizar y eliminar datos correctamente.
-
-4. **Migration / Seed Testing**  
-   Comprueba que los scripts de creación e inserción inicial funcionen bien.
-
-
-## Orden Recomendado
+<br>
 
 1. Unit Testing (Frontend y Backend)
 2. Schema / Data Validation / Migration Testing (DB)
@@ -139,6 +151,22 @@ En la base de datos, los tests se enfocan en validar estructura, relaciones, res
 5. Integration Testing (Frontend ↔ Backend)
 6. End-to-End Testing (E2E)
 7. User Acceptance Testing (UAT)
+
+
+<br><br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br>
+
+---
+
+<br><br>
+
+## Cómo Hacerlos
+
+<br>
+
 
 
 
