@@ -1,11 +1,11 @@
 <br>
 
 `Pending`:
-- Emprolijar 03/ Inicializar el Proyecto
-- Hacer lo de /00 (cuando suban el material)
-- Hacer los /03 pendientes (cuando suban el material)
+- Hacer hasta donde pueda /00 (falta que suban parte del material)
+- Hacer los /03 pendientes (falta que suban parte del material)
 - Emprolijar los 03/ (cuando estén hechos)
 - Completar este readme
+- Pedir revisión de esta parte del repo
 
 <br>
 
