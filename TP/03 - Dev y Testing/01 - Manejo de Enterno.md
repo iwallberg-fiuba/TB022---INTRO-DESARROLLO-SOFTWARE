@@ -1,19 +1,19 @@
 <br>
 
-Falta emprolijar
-
 ## Flujo Completo
 
+<br>
 
-1. Abrir
-
+### 1. Abrir
 ```txt
 Abrir la IDE con el repositorio
 Abrir Docker App (dejarla minimizada)
 Abrir Terminal Git Bash ubicado en la carpeta del repositorio
 ```
 
-2. Git y Github
+<br><br>
+
+### 2. Git y Github
 ```txt
 Desde Git Bash ubicado:
 ↓
@@ -25,8 +25,9 @@ git switch nombre-rama-destino
 git pull
 ```
 
-2. Docker 
+<br><br>
 
+### 3. Docker 
 ```txt
 Desde la misma Git Bash
 ↓
@@ -36,9 +37,13 @@ Desde la misma Git Bash
 └── Si alguna respuesta es sí: docker compose up --build -d
 ```
 
-3. Abrir Herramientas Según Capa
+<br><br>
 
-Frontend
+### 4. Abrir Herramientas Según Capa
+
+<br>
+
+A) Frontend
 ```txt
 Abrir tu navegador
 ↓
@@ -46,7 +51,10 @@ Ej. de URL: http://localhost:8080
 ↓
 Desarrollar en tu IDE mientras ves los cambios en tu navegador.
 ```
-Backend/API
+
+<br>
+
+B) Backend/API
 ```txt
 Abrir tu navegador
 ↓
@@ -55,8 +63,9 @@ Ej. de URL: http://localhost:3000
 Desarrollar en tu IDE mientras ves los cambios en tu navegador.
 ```
 
+<br>
 
-Base de datos
+C) Base de datos
 ```txt
 Abrir DBeaver
 ↓
@@ -68,17 +77,24 @@ Abrir DBeaver
 Desarrollar.
 ```
 
+<br>
+
 Ejemplo de Datos:
+```txt
 Host: localhost
 Port: 5432 
 Database: nombre_de_db
 User: postgres
 Password: postgres
+```
 
-4. Git y Github (cerrar)
+<br><br>
+
+### 5. Git y Github
 
 <br>
-Recordar antes:
+
+Recordar:
 - 1 commit por cambio relevante
 - Mensaje del commit: Prefijo + descripción del cambio hecho
 
@@ -95,7 +111,7 @@ Recordar antes:
 | `chore:`    | Tareas de mantenimiento    |
 | `perf:`     | Mejoras de rendimiento     |
 
-<br><br>
+<br>
 
 ```txt
 Venis de modificar archivos
@@ -111,9 +127,15 @@ git commit -m "prefijo: descripción del cambio"
 git push
 ```
 
-5. Apagar Docker y contenedores (no borra nada) `docker compose down`
+<br><br>
 
-6. Si se desea hacer Pull Request...
+### 6. Apagar Docker y contenedores (no borra nada) `docker compose down`
+
+<br><br>
+
+### 7. Si se desea hacer Pull Request...
+
+<br>
 
 ```
 Venís de un push
@@ -136,9 +158,9 @@ Seleccionar "Create Pull Request"
 Esperar la revisión de los demás junto con la Merge del PR
 ```
 
-<br>
-
-7. Recordar seguir updateando el README del proyecto.
-
 <br><br>
+
+### 8. Recordar seguir updateando el README del proyecto.
+
+<br><br><br>
 
