@@ -231,7 +231,7 @@ Cuanto más grande el runtime, más trabajo hace por vos.
 
 | Lenguaje   | Compilador         | Runtime             | Tamaño del Runtime |
 | ---------- | ------------------ | ------------------- | ------------------ |
-| JavaScript | V8 (JIT)           | Node.js / Navegador | Grande             |
+| **JavaScript** | V8 (JIT)           | **Node.js** / Navegador | Grande             |
 | Java       | javac              | JVM                 | Muy grande         |
 | C#         | csc (Roslyn)       | CLR                 | Muy grande         |
 | Python     | CPython            | CPython             | Grande             |
