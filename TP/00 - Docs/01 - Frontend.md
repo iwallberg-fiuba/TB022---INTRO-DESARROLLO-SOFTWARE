@@ -7,6 +7,13 @@
 
 [Tabla Selectores](#Tabla-Selectores)
 
+<br><br>
+
+>[!NOTE]
+>Leer atentamente los comments en los bloques de código.
+
+<br>
+
 [HTML](#HTML)
 
 [CSS](#CSS)
