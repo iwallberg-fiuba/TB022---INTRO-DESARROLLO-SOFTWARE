@@ -22,27 +22,6 @@
 <br>
 
 
----
-
-
-# Node.js
-
-- JavaScript nació como un lenguaje pensado para ejecutarse dentro del navegador. Ser parte del Frontend y nada más.
-- El navegador actuaba como runtime y proporcionaba herramientas para interactuar con páginas web (DOM, eventos, almacenamiento, etc.).
-- Por eso, originalmente, sin un navegador no era posible ejecutar código JavaScript.
-
-A algunos les gustó JavaScript y decidieron crear el runtime Node.js (construido sobre V8, el compilador de Google Chrome) para que JavaScript pudiera usarse fuera del navegador y así usarse oara desarrollar aplicaciones Backend.
-
-Gracias a Node.js, JavaScript puede:
-- Crear servidores web
-- Construir APIs REST
-- Leer y escribir archivos
-- Conectarse a bases de datos
-- Ejecutar scripts y automatizaciones
-- Conectarse a herramientas del sistema
-
-
-
 
 ## APIs
 
