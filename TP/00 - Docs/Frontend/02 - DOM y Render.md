@@ -9,17 +9,6 @@
 
 <br>
 
-[Eventos](#Eventos)
-- [Event Listeners](#Event-Listeners)
-- [Objecto Event](#Objeto-Event)
-- [preventDefault](#preventDefault)
-- [Propagation](#Propagation)
-- [stopPropagation](#stopPropagation)
-- [Delegación](#Delegación)
-- [Relación con el DOM](#Relación-con-el-DOM)
-
-<br>
-
 [Renderizado](#Renderizado)
 - [CSR](#CSR)
 - [SSR](#SSR)
