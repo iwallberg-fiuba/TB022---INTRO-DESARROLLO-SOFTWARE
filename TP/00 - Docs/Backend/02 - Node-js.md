@@ -1,6 +1,7 @@
 
-tema dependencies
-
+- dependencies
+- modulos imports, exports, requires
+- como usar los packages
 
 # Packages
 
