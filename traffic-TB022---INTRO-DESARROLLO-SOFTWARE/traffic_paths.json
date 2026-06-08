@@ -1,27 +1,27 @@
 [
   {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T2 2C25/T2 2C25 Parte 1.jpeg",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T2 2C25/T2 2C25 Parte 1.jpeg",
+    "count": 23,
+    "uniques": 4
+  },
+  {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 22,
+    "count": 19,
     "uniques": 17
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T2 2C25/T2 2C25 Parte 1.jpeg",
-    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T2 2C25/T2 2C25 Parte 1.jpeg",
-    "count": 22,
-    "uniques": 3
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial",
+    "title": "/tree/main/Parcial",
+    "count": 15,
+    "uniques": 12
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 2.jpeg",
     "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 2.jpeg",
     "count": 15,
     "uniques": 3
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial",
-    "title": "/tree/main/Parcial",
-    "count": 12,
-    "uniques": 11
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
@@ -48,15 +48,15 @@
     "uniques": 3
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Apuntes Clases (incompleto)/24-3.ipynb",
-    "title": "/blob/main/Apuntes Clases (incompleto)/24-3.ipynb",
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main",
+    "title": "/tree/main",
     "count": 7,
-    "uniques": 3
+    "uniques": 5
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/DOCS/BdDs-y-SQL.md",
-    "title": "/blob/main/Parcial/DOCS/BdDs-y-SQL.md",
-    "count": 6,
-    "uniques": 3
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "count": 7,
+    "uniques": 4
   }
 ]
