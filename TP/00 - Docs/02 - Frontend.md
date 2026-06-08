@@ -9,11 +9,10 @@
 [El DOM](#El-DOM)
 - [Ejemplo DOM](#Ejemplo-DOM)
 
-
-Eventos
-Renderizado
-CSR
-SSR
+- Eventos
+- Renderizado
+    - CSR
+    - SSR
 
 <br><br>
 
@@ -102,8 +101,13 @@ El navegador actualiza la pantalla
 ```
 
 
-<br><br><br>
+<br><br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
-<br><br>
+<br>
+
+---
+
+
+
