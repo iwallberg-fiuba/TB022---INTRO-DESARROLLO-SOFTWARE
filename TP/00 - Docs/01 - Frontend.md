@@ -29,11 +29,11 @@
 
 <br>
 
-[Tabla Guía](#Tabla-Guía)
+[Tabla Selectores](#Tabla-Selectores)
 
 <br>
 
-[El DOM - JS y HTML](#El-DOM---JS-y-HTML)
+[El DOM](#El-DOM)
 - [Ejemplo DOM](#Ejemplo-DOM)
 
 <br><br>
@@ -229,7 +229,7 @@ boton.addEventListener("click", () => {
 
 <br>
 
-## Tabla Guía
+## Tabla Selectores
 
 <br>
 
@@ -251,7 +251,7 @@ boton.addEventListener("click", () => {
 
 <br>
 
-## El DOM - JS y HTML
+## El DOM
 
 <br>
 
@@ -330,6 +330,7 @@ JavaScript busca y modifica elementos del DOM
 ↓
 El navegador actualiza la pantalla
 ```
+
 
 <br><br><br>
 
