@@ -4,7 +4,7 @@
 
 <br>
 
-[Trabajo en equipo con Git y Github](#Trabajo-en-equipo-con-Git-y-Github)
+[Colaborar usando Git y Github](#Colaborar-usando-Git-y-Github)
 
 <br>
 
@@ -21,13 +21,17 @@
  - [Merge de PR](#Merge-de-PR)
  - [Limpieza Posterior](#Limpieza-Posterior)
 
+`Pending...`
+- Issues
+- Merge Conflicts
+
 <br><br>
 
 ---
 
 <br><br>
 
-## Trabajo en equipo con Git y GitHub
+## Colaborar usando Git y GitHub
 
 <br>
 
