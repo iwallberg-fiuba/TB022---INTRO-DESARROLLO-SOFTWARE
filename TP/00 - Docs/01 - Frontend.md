@@ -5,9 +5,9 @@
 
 <br>
 
-[HTML](#HTML)
+[Tabla Selectores](#Tabla-Selectores)
 
-<br>
+[HTML](#HTML)
 
 [CSS](#CSS)
 
@@ -27,11 +27,29 @@
   - [Por ID en JS](#Por-ID-en-JS)
 - [Ejemplo](#Ejemplo)
 
+<br><br>
+
+---
+
 <br>
 
-[Tabla Selectores](#Tabla-Selectores)
+## Tabla Selectores
+
+<br>
+
+| Tipo | HTML | CSS | JavaScript |
+|-----------|-----------|-----------|-----------|
+| Clase (primer elemento) | `class="btn"` | `.btn` | `querySelector(".btn")` |
+| Clase (todos) | `class="btn"` | `.btn` | `querySelectorAll(".btn")` |
+| ID | `id="titulo-unico"` | `#titulo-unico` | `getElementById("titulo-unico")` |
+| Etiqueta | `<h3>` | `h3` | `querySelectorAll("h3")` |
+
 
 <br><br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br>
 
 ---
 
@@ -214,32 +232,12 @@ boton.addEventListener("click", () => {
 });
 ```
 
-<br><br>
-
-[Volver a Table of Contents](#Table-of-Contents)
-
-<br>
-
----
-
-<br>
-
-## Tabla Selectores
-
-<br>
-
-| Tipo | HTML | CSS | JavaScript |
-|-----------|-----------|-----------|-----------|
-| Clase (primer elemento) | `class="btn"` | `.btn` | `querySelector(".btn")` |
-| Clase (todos) | `class="btn"` | `.btn` | `querySelectorAll(".btn")` |
-| ID | `id="titulo-unico"` | `#titulo-unico` | `getElementById("titulo-unico")` |
-| Etiqueta | `<h3>` | `h3` | `querySelectorAll("h3")` |
-
-
 <br><br><br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
 <br><br>
+
+
 
 
