@@ -389,9 +389,22 @@ git branch -d feature/login
 
 <br>
 
-
-
-
+| Paso | Acción                                                                           |
+| ---- | -------------------------------------------------------------------------------- |
+| 1    | Se crea un Pull Request                                                          |
+| 2    | GitHub intenta combinar la rama origen con la rama destino                       |
+| 3    | GitHub verifica si existen conflictos                                            |
+| 4    | GitHub detecta que ambas ramas modificaron líneas incompatibles                  |
+| 5    | GitHub informa que no es posible realizar el merge hasta resolver los conflictos |
+| 6    | Se actualiza la rama local con los cambios más recientes de la rama destino      |
+| 7    | Se ejecuta `git status` para identificar los archivos con conflictos             |
+| 8    | Se editan manualmente los archivos y se resuelven los conflictos                 |
+| 9    | Se ejecuta `git add .`                                                           |
+| 10   | Se ejecuta `git commit -m "resolver conflictos"`                                 |
+| 11   | Se ejecuta `git push`                                                            |
+| 12   | GitHub vuelve a verificar el Pull Request                                        |
+| 13   | Si ya no existen conflictos, GitHub habilita la opción de realizar el merge      |
+| 14   | Se realiza manualmente el merge mediante el botón Merge Pull Request             |
 
 <br><br><br>
 
@@ -399,7 +412,7 @@ git branch -d feature/login
 
 <br>
 
-Es completar una especie de formulario que puede describir:
+Algún miembro puede completar un "formulario" que describe:
 
 <br>
 
@@ -411,7 +424,9 @@ Es completar una especie de formulario que puede describir:
 
 <br>
 
-Existen para registrar, organizar y discutir trabajos o tareas pendientes dentro de un repositorio.
+- Existen para registrar, organizar y discutir trabajos o tareas pendientes dentro de un repositorio.
+- Un Pull Request puede vincularse a un Issue mediante expresiones como `Fixes #12`, `Closes #12` o `Resolves #12` en la descripción del PR o en un commit.
+- Cuando el Pull Request se mergea en la rama destino, el Issue #12 se cierra automáticamente.
 
 <br>
 
@@ -460,17 +475,6 @@ Se cierra el Issue
 | `documentation`    | Documentación            |
 | `help wanted`      | Se necesita ayuda        |
 | `good first issue` | Ideal para principiantes |
-
-
-<br><br><br>
-
-#### Relación con Pull Requests
-
-<br>
-
-- Un PR puede cerrar automáticamente un Issue al poner `Fixes #12` o `Closes #12`.
-- Cuando el PR se mergea, el `Issue #12` se cierra automáticamente.
-
 
 <br><br><br>
 
