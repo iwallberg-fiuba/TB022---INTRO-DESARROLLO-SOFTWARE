@@ -25,7 +25,7 @@ endpoints
 
 ## APIs
 
-### Qué es una API
+### Definición
 
 Una API (Application Programming Interface) es un conjunto de reglas que permite que dos aplicaciones se comuniquen e intercambien información.
 
@@ -63,7 +63,7 @@ Cliente
 
 
 
-### Intercambio de información
+### Comunicación
 
 El cliente envía una petición (*request*) a través de la API.
 
@@ -109,23 +109,13 @@ Usuario
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## HTTP
 
+### Request
 
 ```txt
 Request HTTP
-├─ Método y Ruta (URL)
+├─ Método + Ruta (URL) + Versión HTTP
 ├─ Headers
 └─ Body
 ```
@@ -134,10 +124,32 @@ Ejemplo de cómo se ve:
 
 ```http
 POST /usuarios HTTP/1.1
-Host: ejemplo.com
+Content-Type: application/json
+Authorization: Bearer abc123
+
+{
+  "nombre": "Ana",
+  "edad": 25
+}
+```
+
+### Response
+
+```txt
+Response HTTP
+├─ Versión HTTP + Status Code + Status Message
+├─ Headers
+└─ Body
+```
+
+
+Ejemplo de cómo se ve:
+```http
+HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
+  "id": 5,
   "nombre": "Ana",
   "edad": 25
 }
@@ -166,7 +178,6 @@ Los métodos HTTP indican qué acción desea realizar el cliente sobre un recurs
 | Actualizar parcialmente un usuario  | `PATCH /usuarios/5`  |
 | Eliminar un usuario                 | `DELETE /usuarios/5` |
 
-En el ejemplo, es la parte de: `POST /usuarios HTTP/1.1`
 
 
 ### Headers
@@ -180,12 +191,6 @@ Los headers contienen información adicional sobre la solicitud o la respuesta.
 | Accept | Indica qué tipo de respuesta acepta el cliente. |
 | User-Agent | Identifica al cliente que realiza la petición. |
 
-En el ejemplo, es la parte de:
-
-```http
-Host: ejemplo.com
-Content-Type: application/json
-```
 
 ### Body
 
@@ -193,32 +198,14 @@ El body contiene los datos que se desean enviar.
 
 Se utiliza principalmente en métodos como POST, PUT o PATCH.
 
-En el ejemplo, es la parte de:
 
-```json
-{
-  "nombre": "Ana",
-  "edad": 25
-}
-```
+### Status Codes y Messages
+
+Los status codes indican el resultado de la solicitud. Cada Status Code tiene su Status Message.
+El ejemplo más famoso es Status code: `404` y mensaje `Not Found`
 
 
-
-
-### Status Codes
-
-Los status codes indican el resultado de la solicitud.
-
-Clasificación general:
-
-| Rango | Tipo |
-|---------|---------|
-| 1xx | Informativos |
-| 2xx | Éxito |
-| 3xx | Redirección |
-| 4xx | Error del cliente |
-| 5xx | Error del servidor |
-
+[Codes y Messages](https://www.w3schools.com/tools/tool_http_status.php)
 
 
 ### Flujo HTTP
