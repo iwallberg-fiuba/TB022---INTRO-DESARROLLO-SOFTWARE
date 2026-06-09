@@ -21,9 +21,11 @@
  - [Merge de PR](#Merge-de-PR)
  - [Limpieza Posterior](#Limpieza-Posterior)
 
-`Pending...`
-- Issues
-- Merge Conflicts
+<br>
+
+[Extra](#Extra)
+- [Merge Conflicts](#Merge-Conflicts)
+- [Issues](#Issues)
 
 <br><br>
 
@@ -370,6 +372,107 @@ git branch -d feature/login
 ```
 
 <br><br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br><br>
+
+---
+
+<br>
+
+## Extra
+
+<br><br>
+
+### Merge Conflicts
+
+<br>
+
+
+
+
+
+<br><br><br>
+
+### Issues
+
+<br>
+
+Es completar una especie de formulario que puede describir:
+
+<br>
+
+* Bugs (errores).
+* Nuevas funcionalidades.
+* Tareas pendientes.
+* Mejoras.
+* Preguntas o discusiones.
+
+<br>
+
+Existen para registrar, organizar y discutir trabajos o tareas pendientes dentro de un repositorio.
+
+<br>
+
+```txt
+Problema o idea
+↓
+Se crea un Issue
+↓
+Se discute
+↓
+Alguien trabaja en él
+↓
+Se hace un Pull Request
+↓
+Se mergea
+↓
+Se cierra el Issue
+```
+
+<br><br><br>
+
+#### Qué suele tener un Issue
+
+<br>
+
+| Campo       | Para qué sirve             |
+| ----------- | -------------------------- |
+| Título      | Resumen corto              |
+| Descripción | Explicación detallada      |
+| Etiquetas   | Categorías                 |
+| Assignees   | Personas responsables      |
+| Comments    | Discusión                  |
+| Milestone   | Versión o entrega asociada |
+
+<br><br><br>
+
+#### Etiquetas comunes
+
+<br>
+
+| Etiqueta           | Significado              |
+| ------------------ | ------------------------ |
+| `bug`              | Error                    |
+| `feature`          | Nueva funcionalidad      |
+| `enhancement`      | Mejora                   |
+| `documentation`    | Documentación            |
+| `help wanted`      | Se necesita ayuda        |
+| `good first issue` | Ideal para principiantes |
+
+
+<br><br><br>
+
+#### Relación con Pull Requests
+
+<br>
+
+- Un PR puede cerrar automáticamente un Issue al poner `Fixes #12` o `Closes #12`.
+- Cuando el PR se mergea, el `Issue #12` se cierra automáticamente.
+
+
+<br><br><br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
