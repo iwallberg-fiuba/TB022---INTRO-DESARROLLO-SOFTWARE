@@ -33,35 +33,6 @@ Actúa como intermediaria entre un cliente que realiza una solicitud y un servid
 
 La API es la "puerta de entrada" que utiliza el cliente para acceder a los recursos del servidor.
 
-### Cliente y servidor
-
-- **Cliente:** aplicación que solicita información o realiza una acción.
-- **Servidor:** aplicación que recibe la solicitud, la procesa y devuelve una respuesta.
-
-```txt
-Cliente
-    ↓ Solicitud
-Servidor
-    ↓ Respuesta
-Cliente
-````
-
-| Cliente                      | Ejemplo               |
-| ---------------------------- | --------------------- |
-| Navegador web                | Chrome, Firefox, Edge |
-| Aplicación móvil             | Instagram, WhatsApp   |
-| Aplicación de escritorio     | Discord, Spotify      |
-| Programa que consume una API | Postman, curl         |
-
-| API             | Función                                                                 |
-| --------------- | ----------------------------------------------------------------------- |
-| Google Maps API | Obtener mapas, rutas y ubicaciones.                                     |
-| OpenWeather API | Consultar información meteorológica.                                    |
-| GitHub API      | Acceder a repositorios, usuarios y commits.                             |
-| Spotify API     | Consultar artistas, álbumes y canciones.                                |
-| API propia      | Permitir que un frontend se comunique con el backend de una aplicación. |
-
-
 
 ### Comunicación
 
@@ -75,21 +46,19 @@ Un frances puede intentar hablar con un alemán, pero si no establecen un protoc
 
 Ahí entra HTTP. HTTP (HyperText Transfer Protocol) es el protocolo utilizado para intercambiar información entre clientes y servidores en la web. Define cómo se envían las solicitudes y cómo se reciben las respuestas.
 
+Entonces:
+ **Cliente:** aplicación que solicita información o realiza una acción.
+- **Servidor:** aplicación que recibe la solicitud, la procesa y devuelve una respuesta.
+- API
+- API vs Backend
+- HTTP
+- Request
+- Response
+
 En este caso, se usará:
 - Cliente = Navegador = Frontend = HTML, CSS y JS
 - Backend = Servidor = Node.js + Express.js
 - Protocolo = HTTP
-
-Por ejemplo:
-
-1. El usuario hace click en "Ver usuarios".
-2. El frontend / cliente envía una HTTP Request a la API.
-3. La API ejecuta lógica en el backend / servidor.
-4. El backend consulta PostgreSQL.
-5. PostgreSQL devuelve datos.
-6. El backend genera una HTTP Response.
-7. La API la envía al frontend / cliente.
-8. El frontend / cliente muestra los datos.
 
 ```txt
 Usuario
@@ -107,15 +76,28 @@ Frontend / Cliente
 Usuario
 ```
 
+Por ejemplo:
+1. El usuario hace click en "Ver usuarios".
+2. El frontend / cliente envía una HTTP Request a la API.
+3. La API ejecuta lógica en el backend / servidor.
+4. El backend consulta PostgreSQL.
+5. PostgreSQL devuelve datos.
+6. El backend genera una HTTP Response.
+7. La API la envía al frontend / cliente.
+8. El frontend / cliente muestra los datos.
 
 
-## HTTP
 
-### Request
+
+
+## HTTP Request
 
 ```txt
 Request HTTP
-├─ Método + Ruta (URL) + Versión HTTP
+├─ Request Line
+│  ├─ Método
+│  ├─ Ruta
+│  └─ Versión HTTP
 ├─ Headers
 └─ Body
 ```
@@ -133,11 +115,15 @@ Authorization: Bearer abc123
 }
 ```
 
-### Response
+
+## HTTP Response
 
 ```txt
 Response HTTP
-├─ Versión HTTP + Status Code + Status Message
+├─ Status Line
+│  ├─ Versión HTTP
+│  ├─ Status Code
+│  └─ Status Message
 ├─ Headers
 └─ Body
 ```
@@ -156,7 +142,7 @@ Content-Type: application/json
 ```
 
 
-### Método y Ruta
+### Método
 
 Los métodos HTTP indican qué acción desea realizar el cliente sobre un recurso.
 
@@ -169,16 +155,9 @@ Los métodos HTTP indican qué acción desea realizar el cliente sobre un recurs
 | DELETE | Eliminar información |
 
 
-| Acción                              | Método y ruta        |
-| ----------------------------------- | -------------------- |
-| Obtener todos los usuarios          | `GET /usuarios`      |
-| Obtener un usuario específico       | `GET /usuarios/5`    |
-| Crear un usuario                    | `POST /usuarios`     |
-| Actualizar completamente un usuario | `PUT /usuarios/5`    |
-| Actualizar parcialmente un usuario  | `PATCH /usuarios/5`  |
-| Eliminar un usuario                 | `DELETE /usuarios/5` |
+### Ruta
 
-
+REST API.
 
 ### Headers
 
@@ -199,7 +178,7 @@ El body contiene los datos que se desean enviar.
 Se utiliza principalmente en métodos como POST, PUT o PATCH.
 
 
-### Status Codes y Messages
+### Status
 
 Los status codes indican el resultado de la solicitud. Cada Status Code tiene su Status Message.
 El ejemplo más famoso es Status code: `404` y mensaje `Not Found`
