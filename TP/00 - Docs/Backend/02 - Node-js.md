@@ -5,7 +5,7 @@
 
 <br>
 
-`Pending`
+`Pending` <br>
 Del package `pg`:
 - Pool
 - Client
