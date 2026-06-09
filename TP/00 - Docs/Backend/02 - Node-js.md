@@ -11,9 +11,14 @@
 
 [Instalar Paquetes](#Instalar-Paquetes)
 
-[Usar Paquetes](#Usar-Paquetes)
-
 [Modules](#Modules)
+- [Module Systems](#Module-Systems)
+- [Importante](#Importante)
+
+[Usar Paquetes TP](#Usar-Paquetes-TP)
+- [pg y dotenv](#pg-y-dotenv)
+- [Express](#Express)
+- [nodemon](#nodemon)
 
 <br>
 
@@ -49,14 +54,15 @@
 
 [Volver a Table of Contents](#Table-of-Contents)
 
+<br><br>
+
+---
+
 <br>
 
-
-
-
-
-
 ## Paquetes TP
+
+<br><br>
 
 | Paquete | Función |
 |----------|----------|
@@ -70,13 +76,13 @@
 
 [Volver a Table of Contents](#Table-of-Contents)
 
+<br><br>
+
+---
+
 <br>
 
-
-
-
-
-## Instalar Paquetes
+## Instalar Paquetes TP
 
 <br>
 
@@ -90,7 +96,7 @@ npm install --save-dev nodemon
 - `--save-dev` (o `-D`) guarda las dependencias como `devDependencies` en `package.json`.
 - Se utiliza para herramientas de desarrollo que no son necesarias para ejecutar la aplicación en producción.
 
-<br>
+<br><br><br>
 
 Al instalar paquetes, npm crea o actualiza (si ya existe):
 
@@ -127,22 +133,11 @@ Sus módulos pueden importarse
 
 [Volver a Table of Contents](#Table-of-Contents)
 
-<br>
+<br><br>
 
-
-
-
-
-## Usar paquetes
-
-<br><br><br>
-
-[Volver a Table of Contents](#Table-of-Contents)
+---
 
 <br>
-
-
-
 
 ## Modules
 
@@ -151,34 +146,222 @@ Sus módulos pueden importarse
 Los módulos permiten dividir una aplicación en múltiples archivos reutilizables, evitando que todo el código quede en un único archivo.
 Cada archivo puede exportar funcionalidades para que otros archivos las utilicen.
 
+<br>
+
 ```txt
-Aplicación
+Backend/
 ├─ app.js
 ├─ database.js
 ├─ routes.js
 └─ utils.js
 ```
 
+<br><br><br>
+
 ### Module Systems
 
-Formas de importar y exportar código (paquetes o archivos). 
-- JavaScript trae ES Modules.
-- Node.js trae CommonJS.
+<br>
+
+Formas de importar y exportar código (paquetes y/o archivos). 
+- `JavaScript` trae `ES Modules`.
+- `Node.js` trae `CommonJS`.
+
+<br>
+
+| ES Modules (moderno) | CommonJS (tradicional de Node.js) |
+|----------|----------|
+| `import express from "express";` | `const express = require("express");` |
+| `export default app;` | `module.exports = app;` |
+
+<br>
+
+- Para importar paquetes, no hace falta poner la ruta. Node.js automáticamente la busca.
+- Para archivos propios, se debe poner la ruta `"./archivo.js;"`.
+
+<br><br><br>
+
+### Importante 
+
+<br>
+
+El paquete "dotenv" requiere añadir esto al ser importado:
+
+<br>
 
 ```js
-// ES Modules
-import express from "express";
-export default app;
+import dotenv from "dotenv";
+
+dotenv.config();
 ```
 
+<br><br><br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br><br>
+
+---
+
+<br>
+
+## Usar Paquetes TP
+
+<br>
+
+1. Instalar los paquetes
+2. Importar los paquetes en el código (si aplica)
+3. Usarlo
+
+<br><br><br>
+
+### pg y dotenv
+
+<br>
+
+- `pg` permite conectarse a PostgreSQL y ejecutar consultas SQL.
+- `dotenv` permite ocultar datos escritos en el archivo `.env` del repositorio.
+
+<br><br>
+
+Ejemplo sin `dotenv`:
+
+<br>
+
 ```js
-// CommonJS
-const express = require("express");
-module.exports = app;
+import pg from "pg";
+
+const { Client } = pg;
+
+const client = new Client({
+    host: "localhost",
+    user: "postgres",
+    password: "postgres",
+    database: "mi_db"
+});
 ```
 
 <br>
 
+Ejemplo CON `dotenv`:
+
+<br>
+
+```js
+import dotenv from "dotenv";
+import pg from "pg";
+
+dotenv.config();
+
+const { Client } = pg;
+
+const client = new Client({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+});
+```
+
+<br><br><br>
+
+### Express
+
+<br>
+
+Permite crear servidores web y APIs con mayor facilidad.
+
+<br>
+
+Ejemplo:
+
+<br>
+
+```js
+const app = express();
+
+app.get("/", (req, res) => {
+    res.send("Hola mundo");
+});
+
+app.listen(3000);
+```
+
+<br><br><br>
+
+### nodemon
+
+<br>
+
+La 1ra vez:
+1. ir a `package.json`
+
+<br>
+
+```json
+{
+  "name": "mi-app",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.0.0",
+    "dotenv": "^17.0.0",
+    "pg": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
+```
+
+<br>
+
+2. Añadir la sección `"scripts"` para que quede así:
+
+<br>
+
+```json
+{
+  "name": "mi-app",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^5.0.0",
+    "dotenv": "^17.0.0",
+    "pg": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
+```
+
+<br>
+
+3. Antes de desarrollar, SIEMPRE correr el comando:
+
+<br>
+
+```bash
+npm run dev
+```
+
+<br>
+
+Así, nodemon reiniciará automáticamente la aplicación cada vez que detecte cambios en los archivos, permitiéndote ver las actualizaciones en tiempo real.
+
+<br>
+
+4. Si estás en producción, corres:
+
+```bash
+npm run start
+```
+
+<br>
+
+Así, no se usará nodemon, ya que en producción no es necesario reiniciar automáticamente la aplicación cuando cambia el código.
 
 
 <br><br><br>
@@ -186,7 +369,6 @@ module.exports = app;
 [Volver a Table of Contents](#Table-of-Contents)
 
 <br>
-
 
 
 
