@@ -1,7 +1,16 @@
 
 
+Antes de ver status line, ver 
+- Methods
+- Ruta
+- REST API
+- Endpoints en profundidad
 
-## HTTP Estructuras
+
+---
+
+
+## HTTP Request
 
 ```txt
 Request HTTP
@@ -29,7 +38,7 @@ Authorization: Bearer abc123
 ```
 
 
-
+## HTTP Response
 
 ```txt
 Response HTTP
@@ -56,42 +65,21 @@ Content-Type: application/json
 
 ### Status Line
 
-Los métodos HTTP indican qué acción desea realizar el cliente sobre un recurso.
-
-| Método | Función |
-|----------|----------|
-| GET | Obtener información |
-| POST | Crear información |
-| PUT | Reemplazar información existente |
-| PATCH | Modificar parcialmente información existente |
-| DELETE | Eliminar información |
-
-
-Recordar que URL es todo el link y ruta es la parte final:
-
-```txt
-https://api.ejemplo.com/usuarios
-│       │              │
-│       │              └─ Ruta (path)
-│       └─ Dominio
-└─ Protocolo
-```
-
-Los endpoints son la combinación de método y ruta.
-
-| Acción | Método y ruta (=Endpoint) |
-|----------|----------|
-| Obtener todos los usuarios | `GET /usuarios` |
-| Obtener un usuario | `GET /usuarios/5` |
-| Crear un usuario | `POST /usuarios` |
-| Actualizar un usuario | `PATCH /usuarios/5` |
-| Eliminar un usuario | `DELETE /usuarios/5` |
 
 
 
 
 
-Headers
+#### Status Code - Solo de Response
+Los status codes indican el resultado de la solicitud. Cada Status Code tiene su Status Message.
+El ejemplo más famoso es Status code: `404` y mensaje `Not Found`
+
+
+[Codes y Messages](https://www.w3schools.com/tools/tool_http_status.php)
+
+
+
+### Headers
 Los headers contienen información adicional sobre la solicitud o la respuesta.
 
 | Header | Función |
@@ -103,22 +91,13 @@ Los headers contienen información adicional sobre la solicitud o la respuesta.
 
 
 
-Status
-Los status codes indican el resultado de la solicitud. Cada Status Code tiene su Status Message.
-El ejemplo más famoso es Status code: `404` y mensaje `Not Found`
-
-
-[Codes y Messages](https://www.w3schools.com/tools/tool_http_status.php)
-
 
 
 ### Body
 
-El body contiene los datos que se desean enviar.
+El body contiene los datos que se desean enviar en formato JSON generalmente.
 
 Se utiliza principalmente en métodos como POST, PUT o PATCH.
-
-
 
 
 ### Flujo HTTP
