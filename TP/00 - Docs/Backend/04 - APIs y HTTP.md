@@ -2,9 +2,66 @@
 
 Antes de ver status line, ver 
 - Methods
-- Ruta
 - REST API
+- Ruta
 - Endpoints en profundidad
+
+alpine
+---
+
+
+## REST APIs
+
+Una REST API es una forma de organizar una API HTTP alrededor de los recursos (= ENTIDADES DE TU APP), donde las URLs identifican recursos y los métodos HTTP indican las acciones sobre ellos.
+
+
+### HTTP Methods
+
+Esto existe independientemente de REST, REST sólo arma una convención sobre cómo usarlo en conjunto con los otros elementos HTTP.
+
+| Método   | Acción                   |
+| -------- | ------------------------ |
+| `GET`    | Obtener datos            |
+| `POST`   | Crear datos              |
+| `PUT`    | Reemplazar completamente |
+| `PATCH`  | Modificar parcialmente   |
+| `DELETE` | Eliminar                 |
+
+### Recursos
+
+- Recursos = entidades de tu app en la base de datos. 
+- REST propone que cada recurso tenga su RUTA
+
+Ejemplo:
+```
+Usuarios      → /usuarios
+Productos     → /productos
+Pedidos       → /pedidos
+Canciones     → /canciones
+```
+
+Entonces:
+- Acción = Método HTTP
+- Recurso = Entidades de la app
+- Cada recurso tendrá su propia ruta
+
+Al sumar Método HTTP + Ruta, obtenemos un Endpoint.
+
+Los Endpoints existen independientemente de REST, REST sólo arma una convención sobre cómo usarlo en conjunto con los otros elementos HTTP.
+
+Ejemplos:
+
+| Acción                              | Método y ruta (= Endpoint) |
+| ----------------------------------- | -------------------- |
+| Obtener todos los usuarios          | `GET /usuarios`      |
+| Obtener un usuario específico       | `GET /usuarios/5`    |
+| Crear un usuario                    | `POST /usuarios`     |
+| Actualizar completamente un usuario | `PUT /usuarios/5`    |
+| Actualizar parcialmente un usuario  | `PATCH /usuarios/5`  |
+| Eliminar un usuario                 | `DELETE /usuarios/5` |
+
+
+
 
 
 ---
