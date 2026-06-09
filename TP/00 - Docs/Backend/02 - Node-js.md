@@ -5,6 +5,14 @@
 
 <br>
 
+`Pending`
+Del package `pg`:
+- Pool
+- Client
+- Pool local y pool postgres -> usar variables de entorno
+
+<br>
+
 [Definiciones](#Definiciones)
 
 [Paquetes TP](#Paquetes-TP)
@@ -239,6 +247,11 @@ const client = new Client({
     database: "mi_db"
 });
 ```
+
+<br>
+
+* host puede ser "db", depende de Docker.
+* database va el nombre de tu database.
 
 <br>
 
