@@ -50,17 +50,25 @@ Abrir tu navegador
 Ej. de URL: http://localhost:8080
 ↓
 Desarrollar en tu IDE mientras ves los cambios en tu navegador.
+Recordar: 00 - Docs / Frontend
 ```
 
 <br>
 
 B) Backend/API
+
+```bash
+npm run dev
+```
+
 ```txt
 Abrir tu navegador
 ↓
 Ej. de URL: http://localhost:3000
 ↓
 Desarrollar en tu IDE mientras ves los cambios en tu navegador.
+Recordar: 00 - Docs / Backend y 00 - Docs / Frontend
+Ver: 03 - Dev y Testing / Backend
 ```
 
 <br>
@@ -75,11 +83,13 @@ Abrir DBeaver
 
 ↓
 Desarrollar.
+Recordar: 00 - Docs / Backend
+Ver: 03 - Dev y Testing / Base de Datos
 ```
 
 <br>
 
-Ejemplo de Datos:
+Ejemplo de datos:
 ```txt
 Host: localhost
 Port: 5432 
