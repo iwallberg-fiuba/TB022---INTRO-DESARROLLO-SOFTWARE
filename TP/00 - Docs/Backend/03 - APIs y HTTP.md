@@ -120,7 +120,8 @@ Usuario
 
 
 
-## HTTP Requests y Responses
+## HTTP
+
 
 ```txt
 Request HTTP
@@ -129,7 +130,7 @@ Request HTTP
 └─ Body
 ```
 
-Ejemplo:
+Ejemplo de cómo se ve:
 
 ```http
 POST /usuarios HTTP/1.1
@@ -137,15 +138,40 @@ Host: ejemplo.com
 Content-Type: application/json
 
 {
-  "nombre": "Ana"
+  "nombre": "Ana",
+  "edad": 25
 }
 ```
+
+
+### Método y Ruta
+
+Los métodos HTTP indican qué acción desea realizar el cliente sobre un recurso.
+
+| Método | Función |
+|----------|----------|
+| GET | Obtener información |
+| POST | Crear información |
+| PUT | Reemplazar información existente |
+| PATCH | Modificar parcialmente información existente |
+| DELETE | Eliminar información |
+
+
+| Acción                              | Método y ruta        |
+| ----------------------------------- | -------------------- |
+| Obtener todos los usuarios          | `GET /usuarios`      |
+| Obtener un usuario específico       | `GET /usuarios/5`    |
+| Crear un usuario                    | `POST /usuarios`     |
+| Actualizar completamente un usuario | `PUT /usuarios/5`    |
+| Actualizar parcialmente un usuario  | `PATCH /usuarios/5`  |
+| Eliminar un usuario                 | `DELETE /usuarios/5` |
+
+En el ejemplo, es la parte de: `POST /usuarios HTTP/1.1`
+
 
 ### Headers
 
 Los headers contienen información adicional sobre la solicitud o la respuesta.
-
-Ejemplos:
 
 | Header | Función |
 |----------|----------|
@@ -154,13 +180,20 @@ Ejemplos:
 | Accept | Indica qué tipo de respuesta acepta el cliente. |
 | User-Agent | Identifica al cliente que realiza la petición. |
 
+En el ejemplo, es la parte de:
+
+```http
+Host: ejemplo.com
+Content-Type: application/json
+```
+
 ### Body
 
 El body contiene los datos que se desean enviar.
 
 Se utiliza principalmente en métodos como POST, PUT o PATCH.
 
-Ejemplo:
+En el ejemplo, es la parte de:
 
 ```json
 {
@@ -168,6 +201,9 @@ Ejemplo:
   "edad": 25
 }
 ```
+
+
+
 
 ### Status Codes
 
@@ -182,35 +218,6 @@ Clasificación general:
 | 3xx | Redirección |
 | 4xx | Error del cliente |
 | 5xx | Error del servidor |
-
-
-
-
-
-## HTTP CRUD y Methods
-
-
-Los métodos HTTP indican qué acción desea realizar el cliente sobre un recurso.
-
-| Método | Función |
-|----------|----------|
-| GET | Obtener información |
-| POST | Crear información |
-| PUT | Reemplazar información existente |
-| PATCH | Modificar parcialmente información existente |
-| DELETE | Eliminar información |
-
-
-### Ejemplos
-
-| Acción                              | Método y ruta        |
-| ----------------------------------- | -------------------- |
-| Obtener todos los usuarios          | `GET /usuarios`      |
-| Obtener un usuario específico       | `GET /usuarios/5`    |
-| Crear un usuario                    | `POST /usuarios`     |
-| Actualizar completamente un usuario | `PUT /usuarios/5`    |
-| Actualizar parcialmente un usuario  | `PATCH /usuarios/5`  |
-| Eliminar un usuario                 | `DELETE /usuarios/5` |
 
 
 
