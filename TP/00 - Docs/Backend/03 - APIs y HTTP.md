@@ -53,6 +53,15 @@ Cliente
 | Aplicación de escritorio     | Discord, Spotify      |
 | Programa que consume una API | Postman, curl         |
 
+| API             | Función                                                                 |
+| --------------- | ----------------------------------------------------------------------- |
+| Google Maps API | Obtener mapas, rutas y ubicaciones.                                     |
+| OpenWeather API | Consultar información meteorológica.                                    |
+| GitHub API      | Acceder a repositorios, usuarios y commits.                             |
+| Spotify API     | Consultar artistas, álbumes y canciones.                                |
+| API propia      | Permitir que un frontend se comunique con el backend de una aplicación. |
+
+
 
 ### Intercambio de información
 
@@ -98,15 +107,8 @@ Frontend / Cliente
 Usuario
 ```
 
-### Ejemplos de APIs
 
-| API             | Función                                                                 |
-| --------------- | ----------------------------------------------------------------------- |
-| Google Maps API | Obtener mapas, rutas y ubicaciones.                                     |
-| OpenWeather API | Consultar información meteorológica.                                    |
-| GitHub API      | Acceder a repositorios, usuarios y commits.                             |
-| Spotify API     | Consultar artistas, álbumes y canciones.                                |
-| API propia      | Permitir que un frontend se comunique con el backend de una aplicación. |
+
 
 
 
@@ -120,16 +122,11 @@ Usuario
 
 ## HTTP Requests y Responses
 
-
-### Mensaje HTTP
-
-Un mensaje HTTP está compuesto por:
-
 ```txt
-Línea inicial
-Headers
-
-Body
+Request HTTP
+├─ Método y Ruta (URL)
+├─ Headers
+└─ Body
 ```
 
 Ejemplo:
