@@ -21,6 +21,6 @@
 
 <br>
 
-Ahora, leer la Consigna del TP.
+[Leer la Consigna](https://www.intro-camejo.com.ar/trabajos-practicos)
 
 <br><br>
