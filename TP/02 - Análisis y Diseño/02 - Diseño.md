@@ -60,7 +60,7 @@ proyecto/
 
 [La Clave](https://www.w3schools.com/tools/tool_dockerfile_generator.php)
 
-<br><br>
+<br>
 
 #### Frontend
 - nginx ("Engine X") y Alpine
