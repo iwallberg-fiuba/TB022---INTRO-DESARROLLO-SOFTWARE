@@ -214,17 +214,49 @@ GitHub intenta hacer el merge
 
 <br>
 
+Mensaje = Prefijo + Descripción de lo hecho
+Ejemplo: `feat: login agregado`
 
+<br>
 
-<br><br><br><br>
+| Prefijo     | Cuándo se pone                                                                       |
+| ----------- | ------------------------------------------------------------------------------------ |
+| `feat:`     | Nueva funcionalidad                                                                  |
+| `fix:`      | Corrección de un bug                                                                 |
+| `docs:`     | Cambios en documentación                                                             |
+| `style:`    | Cambios de formato (indentación, espacios, punto y coma, etc.) sin afectar la lógica |
+| `refactor:` | Reestructuración del código sin cambiar comportamiento                               |
+| `test:`     | Agregar o modificar tests                                                            |
+| `chore:`    | Tareas de mantenimiento, configuración o dependencias                                |
+| `perf:`     | Mejoras de rendimiento                                                               |
+| `build:`    | Cambios en compilación, empaquetado o dependencias de build                          |
+| `ci:`       | Cambios en integración o despliegue continuo (GitHub Actions, GitLab CI, etc.)       |
+| `revert:`   | Revertir un commit anterior                                                          |
+
+<br><br><br>
 
 ### Nombres Ramas
 
 <br>
 
+Nombre de una rama = Prefijo + Descripción de lo que se desarrollará en esa rama
+Ejemplo: `feature/login`
 
+<br>
 
-<br><br><br><br>
+| Prefijo       | Uso                                                  | Ejemplo                     |
+| ------------- | ---------------------------------------------------- | --------------------------- |
+| `feature/`    | Desarrollo de una nueva funcionalidad                | `feature/login`             |
+| `fix/`        | Corrección de un bug                                 | `fix/navbar-mobile`         |
+| `hotfix/`     | Corrección urgente en producción                     | `hotfix/security-patch`     |
+| `docs/`       | Cambios en documentación                             | `docs/readme`               |
+| `refactor/`   | Reorganización del código sin cambiar comportamiento | `refactor/auth-module`      |
+| `test/`       | Agregar o modificar tests                            | `test/user-endpoints`       |
+| `chore/`      | Tareas de mantenimiento o configuración              | `chore/update-dependencies` |
+| `release/`    | Preparación de una nueva versión                     | `release/v1.0.0`            |
+| `experiment/` | Pruebas o prototipos temporales                      | `experiment/new-ui`         |
+
+<br><br><br>
 
 ### Issues y Etiquetas
 
@@ -368,7 +400,7 @@ Create Pull Request
 
 <br><br><br><br>
 
-### Revisión
+#### Revisión
 
 <br>
 
