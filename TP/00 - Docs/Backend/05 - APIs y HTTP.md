@@ -1,13 +1,35 @@
 
 
+<br><br>
 
+### Table of Contents
 
+<br>
+
+[HTTP Estructuras](#HTTP-Estructuras)
+- [Request](#Request)
+- [Response](#Response)
+- [Status Line](#Status-Line)
+  - [Método y Ruta](#Método-y-Ruta)
+  - [Versión](#Versión)
+  - [Status Codes (Response)](#Status-Codes-Response)
+- [Header](#Header)
+- [Body](#Body)
+- [Flujo HTTP](#Flujo-HTTP)
+
+<br>
 
 ---
 
+<br>
+
 ## HTTP Estructuras
 
+<br><br>
+
 ### Request
+
+<br>
 
 ```txt
 Request HTTP
@@ -21,7 +43,11 @@ Request HTTP
 Endpoint = Método + Ruta
 ```
 
+<br>
+
 Ejemplo de cómo se ve:
+
+<br>
 
 ```http
 POST /usuarios HTTP/1.1
@@ -34,8 +60,12 @@ Authorization: Bearer abc123
 }
 ```
 
+<br><br><br>
 
-## Response
+
+### Response
+
+<br>
 
 ```txt
 Response HTTP
@@ -47,8 +77,12 @@ Response HTTP
 └─ Body
 ```
 
+<br>
 
 Ejemplo de cómo se ve:
+
+<br>
+
 ```http
 HTTP/1.1 201 Created
 Content-Type: application/json
@@ -60,11 +94,19 @@ Content-Type: application/json
 }
 ```
 
+<br><br><br><br>
+
 ### Status Line
+
+<br>
 
 #### Método y Ruta
 
+<br>
+
 Siguiendo REST, serían algo como:
+
+<br>
 
 | Acción                                        | Método y ruta (= Endpoint)  |
 | --------------------------------------------- | --------------------------- |
@@ -78,23 +120,36 @@ Siguiendo REST, serían algo como:
 | Actualizar parcialmente un usuario            | `PATCH /usuarios/{id}`      |
 | Eliminar un usuario                           | `DELETE /usuarios/{id}`     |
 
-
+<br><br><br><br>
 
 #### Versión
 
+<br>
+
 Express y Node suelen usar HTTP/1.1, es algo que manejan internamente.
 
+<br><br><br><br>
 
-#### Status Code - Solo de Response
+#### Status Codes (Response)
+
+<br>
+
 Los status codes indican el resultado de la solicitud. Cada Status Code tiene su Status Message.
 El ejemplo más famoso es Status code: `404` y mensaje `Not Found`
 
+<br>
 
 [Codes y Messages](https://www.w3schools.com/tools/tool_http_status.php)
 
+<br><br><br><br>
 
 ### Headers
+
+<br>
+
 Los headers contienen información adicional sobre la solicitud o la respuesta.
+
+<br>
 
 | Header | Función |
 |----------|----------|
@@ -103,14 +158,21 @@ Los headers contienen información adicional sobre la solicitud o la respuesta.
 | Accept | Indica qué tipo de respuesta acepta el cliente. |
 | User-Agent | Identifica al cliente que realiza la petición. |
 
+<br><br><br><br>
+
 ### Body
+
+<br>
 
 El body contiene los datos que se desean enviar en formato JSON generalmente.
 
 Se utiliza principalmente en métodos como POST, PUT o PATCH.
 
+<br><br><br><br>
 
 ### Flujo HTTP
+
+<br>
 
 ```txt
 Cliente
@@ -133,3 +195,10 @@ Cliente
 Servidor
     ↓ 204 No Content
 ```
+
+<br><br><br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br><br>
+
