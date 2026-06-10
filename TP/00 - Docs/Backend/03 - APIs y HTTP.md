@@ -113,7 +113,7 @@ Por ejemplo:
 7. La API la envía al frontend / cliente.
 8. El frontend / cliente muestra los datos.
 
-<br><br><br><br>
+<br><br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
