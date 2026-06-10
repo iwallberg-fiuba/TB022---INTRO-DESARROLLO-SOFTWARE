@@ -5,7 +5,7 @@ proyecto/
 ├── .git/                         
 │
 ├── Frontend/
-│   ├── Dockerfile                 # Imagen del Frontend
+│   ├── Dockerfile                 
 │   ├── index.html                 
 │   ├── pagina2.html               
 │   ├── pagina3.html               
@@ -15,8 +15,8 @@ proyecto/
 │       └── main.js                
 │
 ├── Backend/
-│   ├── Dockerfile                 # Imagen del Backend
-|   ├── package.json               # Paquetes
+│   ├── Dockerfile                 
+|   ├── package.json               
 │   └── src/                       
 │   
 ├── database/                      
@@ -24,7 +24,7 @@ proyecto/
 |   ├── schemas.sql
 │   └── seeds.sql                  
 │
-├── docker-compose.yml             # Levanta todo, define Postgres para database + persistencias
+├── docker-compose.yml             
 ├── .env                           
 ├── .dockerignore                  
 ├── .gitignore                     
@@ -51,6 +51,9 @@ proyecto/
 
 
 ### Construir docker-compose
+
+[LA Clave](https://selqio.com/tools/docker-compose-generator)
+
 
 ### Construir dockerignore
 
