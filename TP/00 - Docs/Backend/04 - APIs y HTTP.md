@@ -3,7 +3,15 @@
 
 ### Table of Contents
 
+<br>
 
+[REST APIs](#REST-APIs)
+- [Qué es de REST y qué no?](#Qué-es-de-REST-y-qué-no)
+- [HTTP Methods](#HTTP-Methods)
+- [Rutas](#Rutas)
+  - [Parámetros](#Parámetros)
+- [Recursos](#Recursos)
+- [Endpoints](#Endpoints)
 
 <br>
 
