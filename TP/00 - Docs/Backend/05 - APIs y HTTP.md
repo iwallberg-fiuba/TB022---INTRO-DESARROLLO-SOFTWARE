@@ -25,7 +25,7 @@
 
 ## HTTP Estructuras
 
-<br><br>
+<br>
 
 ### Request
 
@@ -60,7 +60,7 @@ Authorization: Bearer abc123
 }
 ```
 
-<br><br><br>
+<br><br><br><br>
 
 
 ### Response
