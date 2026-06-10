@@ -49,7 +49,7 @@ git push -u origin feature/login
 Crear Pull Request
 ```
 
-<br><br>
+<br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
@@ -83,7 +83,7 @@ git commit -m "mensaje"
 git push
 ```
 
-<br><br>
+<br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
@@ -118,7 +118,7 @@ Seleccionar "Create Pull Request"
 Esperar la revisión de los demás junto con la Merge del PR
 ```
 
-<br><br>
+<br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
@@ -177,7 +177,7 @@ GitHub intenta hacer el merge
     git status
 ```
 
-<br><br>
+<br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
