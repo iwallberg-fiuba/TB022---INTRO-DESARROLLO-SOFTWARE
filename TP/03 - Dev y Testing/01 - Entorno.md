@@ -168,9 +168,5 @@ Seleccionar "Create Pull Request"
 Esperar la revisión de los demás junto con la Merge del PR
 ```
 
-<br><br>
-
-### 8. Recordar seguir updateando el README del proyecto.
-
 <br><br><br>
 
