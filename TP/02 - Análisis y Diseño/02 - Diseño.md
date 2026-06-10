@@ -1,4 +1,11 @@
 
+`Pending.`
+
+
+```txt
+
+```
+
 
 ```txt
 proyecto/
@@ -49,17 +56,62 @@ proyecto/
 - Puerto Expuesto?
 - Working Directory?
 
+##### Ejemplo visto en Clase
+
+```txt
+FROM node:22
+
+WORKDIR /app
+
+COPY ./app /app
+
+RUN npm install
+
+CMD ["node", "app.js"]
+```
+
 
 ### Construir docker-compose
 
 [LA Clave](https://selqio.com/tools/docker-compose-generator)
+
+#### Ejemplo visto en Clase
+
+```yml
+services:
+  pokeapi:
+    build: . # Buildear el Dockerfile de esta carpeta (.)
+    image: backend # Ponele "backend" de nombre a la imagen
+    ports:
+      - "8000:8000"
+    environment:
+      DB_HOST: "db"
+      DB_PORT: "5432"
+      DB_USER: "backend_user"
+      DB_PASS: "password-super-secreta"
+      DB_NAME: "pokemon_db"
+
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: "backend_user"
+      POSTGRES_PASSWORD: "password-super-secreta"
+      POSTGRES_DB: "pokemon_db"
+    volumes:
+      - ./data:/var/lib/postgresql
+      - ./app/db/schemas.sql:/docker-entrypoint-initdb.d/schemas.sql:ro
+```
 
 
 ### Construir dockerignore
 
 [LA Clave](https://devtoollab.com/tools/dockerignore-generator)
 
+#### Ejemplo visto en Clase
 
+```txt
+app/node_modules/
+```
 
 ### Construir Package
 
@@ -68,6 +120,31 @@ proyecto/
 - Incluir Start, Test, Build, Dev
 - Incluir Type:Module
 - Entrypoint: app.js
+
+#### Ejemplo visto en Clase
+
+```json
+{
+  "name": "pokeapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "pg": "^8.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "type": "module"
+}
+```
+
 
 ### Construir env
 
@@ -79,6 +156,13 @@ proyecto/
 
 [LA Clave](https://www.w3schools.com/tools/tool_gitignore_generator.php)
 
+#### Ejemplo visto en Clase
+
+```txt
+node_modules/
+data/
+.env
+```
 
 ### Construir seeds
 
