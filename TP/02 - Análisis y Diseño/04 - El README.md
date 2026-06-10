@@ -10,25 +10,20 @@
 
 <br>
 
-#### Tabla de Contenidos
+### Tabla de Contenidos
 
 <br>
 
 - [Nombre del Proyecto](#1-Nombre-del-Proyecto)
-- [Objetivo](#2--Objetivo)
-- [Stack](#3--Stack)
-- [Estructura](#4--Estructura)
-- [Instalación](#5--Instalación)
-- [Ejecución](#6--Ejecución)
-- [Configuración](#7--Configuración)
-- [Capturas](#8--Capturas-o-demo)
-- [APIs](#9--APIs)
-- [Autores](#10--Autores)
-
-<br>
-
-No aplica en este caso:
-- [Licencia](#11--Licencia)
+- [Objetivo](#2-Objetivo)
+- [Stack](#3-Stack)
+- [Estructura](#4-Estructura)
+- [Instalación](#5-Instalación)
+- [Ejecución](#6-Ejecución)
+- [Configuración](#7-Configuración)
+- [Capturas](#8-Capturas-o-demo)
+- [APIs](#9-APIs)
+- [Autores](#10-Autores)
 
 <br>
 
