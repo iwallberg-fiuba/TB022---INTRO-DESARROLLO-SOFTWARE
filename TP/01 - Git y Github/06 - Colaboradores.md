@@ -8,7 +8,7 @@
 Flujos
 - [Crear Rama](#Crear-Rama)
 - [General](#General)
-- [Pull Request](#Pull-Request)
+- [Crear Pull Request](#Crear-Pull-Request)
 - [Post Pull Request](#Post-Pull-Request)
 
 <br>
@@ -89,7 +89,7 @@ git push
 
 <br><br><br><br>
 
-### Pull Request
+### Crear Pull Request
 
 <br>
 
@@ -109,13 +109,13 @@ Seleccionar "Pull Requests"
 ↓
 Seleccionar "New Pull Request"
 ↓
-Elegir base y compare branch
+Elegir "base" y "compare branch"
 ↓
 Completar datos
 ↓
 Seleccionar "Create Pull Request"
 ↓
-Esperar la revisión de los demás junto con la Merge del PR
+Esperar la revisión de los demás para lograr la Merge del PR
 ```
 
 <br>
@@ -182,5 +182,13 @@ GitHub intenta hacer el merge
 [Volver a Table of Contents](#Table-of-Contents)
 
 <br><br><br><br>
+
+---
+
+<br>
+
+### Entender
+
+
 
 
