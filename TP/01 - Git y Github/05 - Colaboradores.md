@@ -5,7 +5,7 @@
 
 <br>
 
-Flujos
+[Flujos](#Flujos)
 - [Crear Rama](#Crear-Rama)
 - [General](#General)
 - [Crear Pull Request](#Crear-Pull-Request)
@@ -13,7 +13,26 @@ Flujos
 
 <br>
 
+[Templates](#Templates)
+- [Commit Mensajes](#Commit-Mensajes)
+- [Nombres Ramas](#Nombres-Ramas)
+- [Issues y Etiquetas](#Issues-y-Etiquetas)
+
+<br>
+
+[Aprendizaje](#Aprendizaje)
+- [Trabajo en Grupo](#Trabajo-en-Grupo)
+- [Pull Requests](#Pull-Requests)
+    - [Revisión](#Revisión)
+- [Issues](#Issues)
+
+<br>
+
 ---
+
+<br><br>
+
+## Flujos
 
 <br><br>
 
@@ -181,16 +200,79 @@ GitHub intenta hacer el merge
 
 [Volver a Table of Contents](#Table-of-Contents)
 
-<br><br><br><br>
+<br><br><br>
 
 ---
 
 <br>
 
-## Entender
+## Templates
+
+<br><br>
+
+### Commit Mensajes
+
+<br>
 
 
-### Trabajar en grupo
+
+<br><br><br><br>
+
+### Nombres Ramas
+
+<br>
+
+
+
+<br><br><br><br>
+
+### Issues y Etiquetas
+
+<br>
+
+Campos que tiene:
+
+<br>
+
+| Campo       | Para qué sirve             |
+| ----------- | -------------------------- |
+| Título      | Resumen corto              |
+| Descripción | Explicación detallada      |
+| Etiquetas   | Categorías                 |
+| Assignees   | Personas responsables      |
+| Comments    | Discusión                  |
+| Milestone   | Versión o entrega asociada |
+
+<br><br>
+
+Etiquetas:
+
+<br>
+
+| Etiqueta           | Significado              |
+| ------------------ | ------------------------ |
+| `bug`              | Error                    |
+| `feature`          | Nueva funcionalidad      |
+| `enhancement`      | Mejora                   |
+| `documentation`    | Documentación            |
+| `help wanted`      | Se necesita ayuda        |
+| `good first issue` | Ideal para principiantes |
+
+<br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br><br><br>
+
+---
+
+<br>
+
+## Aprendizaje
+
+<br><br>
+
+### Trabajo en Grupo
 
 <br>
 
@@ -220,10 +302,9 @@ Sin embargo, aparecen nuevos conceptos y ciertas prácticas se vuelven más impo
 * Después de cada commit, hay que subir los cambios a GitHub mediante `git push`.
 * Las ramas se mergean mediante Pull Requests (PR).
 
-<br><br>
+<br><br><br><br>
 
-
-### Pull Request (PR)
+### Pull Requests
 
 <br>
 
@@ -285,9 +366,7 @@ Compare: feature/login
 Create Pull Request
 ```
 
-<br><br>
-
-<br>
+<br><br><br><br>
 
 ### Revisión
 
@@ -305,12 +384,7 @@ Pueden:
 * Aprobar el Pull Request.
 * Solicitar modificaciones.
 
-<br><br>
-
-
-
-
-
+<br><br><br><br>
 
 ### Issues
 
@@ -377,9 +451,10 @@ Se cierra el Issue
 | `help wanted`      | Se necesita ayuda        |
 | `good first issue` | Ideal para principiantes |
 
-<br><br><br>
+<br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
-<br><br>
+<br><br><br>
+
 
