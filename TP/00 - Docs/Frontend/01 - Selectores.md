@@ -5,14 +5,13 @@
 
 <br>
 
-[Tabla Selectores](#Tabla-Selectores)
-
-<br><br>
-
->[!NOTE]
->Leer atentamente los comments en los bloques de código.
+**Leer atentamente los comentarios en los bloques de código**
 
 <br>
+
+[Apunte Página TB022](https://www.intro-camejo.com.ar/docs/Material/Apuntes/apunte_html_cs)
+
+[Tabla Selectores](#Tabla-Selectores)
 
 [HTML](#HTML)
 
