@@ -65,7 +65,7 @@ HTTP es el protocolo utilizado para intercambiar información entre clientes y s
 
 ### Resumen
 
-<br><br>
+<br>
 
 Entonces:
 - **Cliente:** aplicación que solicita información o realiza una acción.
