@@ -5,23 +5,23 @@
 
 <br>
 
-- [Flujo Crear Rama](#Flujo-Crear-Rama)
-- [Flujo General](#Flujo-general)
-- [Flujo para Pull Request](#Flujo-para-Pull-Request)
-- [Flujo post PR Exitoso](#Flujo-post-PR-Exitoso)
-- [Flujo post PR Problema](#Flujo-post-PR-Problema)
+Flujos
+- [Crear Rama](#Crear-Rama)
+- [General](#General)
+- [Pull Request](#Pull-Request)
+- [Post Pull Request](#Post-Pull-Request)
 
 <br>
 
 ---
 
+<br><br>
+
+### Crear Rama
+
 <br>
 
-### Flujo Crear Rama
-
-<br>
-
-Cuando la rama en la que tenes que trabajar no existe todavía:
+Cuando la rama en la que se debe trabajar no existe todavía:
 
 <br>
 
@@ -51,11 +51,15 @@ Crear Pull Request
 
 <br><br>
 
-### Flujo General
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br><br><br><br>
+
+### General
 
 <br>
 
-Cuando la rama en la que tenes que trabajar ya existe:
+Cuando la rama en la que se debe trabajar ya existe:
 
 <br>
 
@@ -81,11 +85,15 @@ git push
 
 <br><br>
 
-### Flujo para Pull Request
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br><br><br><br>
+
+### Pull Request
 
 <br>
 
-Cuando consideras lista la rama:
+Cuando se considera lista la rama:
 
 <br>
 
@@ -112,71 +120,67 @@ Esperar la revisión de los demás junto con la Merge del PR
 
 <br><br>
 
-### Flujo post PR Exitoso
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br><br><br><br>
+
+### Post Pull Request
 
 <br>
-
-Siempre hacerlo después de un Pull Request que termina siendo aprobado (y por ende se transforma en Merge del PR).
-
-<br>
-
-```text
-Estás esperando que termine la revisión del Merge del PR
-↓
-Si aprobada, Github hace el Merge del PR y avisa "Pull Request merged successfully"
-↓
-Seleccionar "Delete branch"
-↓
-Volver al repo local
-↓
-git switch main
-↓
-git pull
-↓
-git branch -d feature/login
-↓
-git status
-```
-
-
-<br><br>
-
-### Flujo post PR Problema
-
-<br>
-
 
 ```txt
-Pull Request
+
+Se crea un Pull Request
 ↓
 GitHub intenta hacer el merge
 ↓
 ¿Hay conflictos?
-├─ No → Merge Pull Request
-└─ Sí
+├─ Sí (Merge Conflict)
+│   ↓
+│   GitHub bloquea el merge
+│   ↓
+│   git pull
+│   ↓
+│   Resolver conflictos manualmente
+│   ↓
+│   git add .
+│   ↓
+│   git commit
+│   ↓
+│   git push
+│   ↓
+│   GitHub verifica nuevamente
+│   ↓
+│   ¿Hay conflictos?
+│   ├─ Sí → repetir proceso
+│   └─ No
+│
+└─ No
     ↓
-    GitHub bloquea el merge
+    GH habilita el botón Merge Pull Request
+    ↓
+    GH muestra "Pull Request merged successfully"
+    ↓
+    GH muestra botón "Delete branch"
+    ↓
+    Apretarlo
+    ↓
+    Volver al repositorio local
+    (queda actualizarlo y borrar la rama local de la rama que fue mergeada)
+    ↓
+    git switch main
     ↓
     git pull
     ↓
-    Resolver conflictos manualmente
+    git branch -d nombre-rama-mergeada
     ↓
-    git add .
-    ↓
-    git commit
-    ↓
-    git push
-    ↓
-    GitHub verifica nuevamente
-    ↓
-    Se habilita Merge Pull Request
+    git status
 ```
-
 
 <br><br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
-<br><br>
+<br><br><br><br>
 
----
+
