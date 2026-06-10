@@ -1,25 +1,33 @@
 
-
+<br><br>
 
 ### Table of Contents
 
 
 
+<br>
 
 ---
 
+<br>
 
 ## REST APIs
+
+<br>
 
 Una REST API es una forma de organizar una API HTTP alrededor de los recursos (= ENTIDADES DE TU APP), donde las URLs identifican recursos y los métodos HTTP indican las acciones sobre ellos.
 Además, es stateless: cada request es independiente al resto.
 
+<br><br><br>
 
 ### Qué es de REST y qué no?
+
+<br>
 
 REST tiene más que ver con la forma en la que vemos y organizamos los elementos.
 Trae "Conceptos propios" pero que justamente hablan sobre cómo ordenar o no algo.
 
+<br>
 
 | Concepto                           | HTTP | REST                          |
 | ---------------------------------- | ---- | ----------------------------- |
@@ -37,11 +45,15 @@ Trae "Conceptos propios" pero que justamente hablan sobre cómo ordenar o no alg
 | Endpoints organizados por recursos | ❌    | ✅                             |
 | Stateless                          | ❌    | ✅                             |
 
-
+<br><br><br><br>
 
 ### HTTP Methods
 
+<br>
+
 Esto existe independientemente de REST, REST sólo arma una convención sobre cómo lo vemos y organizamos.
+
+<br>
 
 | Método   | Acción                   |
 | -------- | ------------------------ |
@@ -51,11 +63,15 @@ Esto existe independientemente de REST, REST sólo arma una convención sobre c�
 | `PATCH`  | Modificar parcialmente   |
 | `DELETE` | Eliminar                 |
 
+<br><br><br><br>
 
 ### Rutas
 
+<br>
+
 Esto existe independientemente de REST, REST sólo arma una convención sobre cómo lo vemos y organizamos.
 
+<br>
 
 ```txt
 https://api.ejemplo.com/usuarios  } esto es la URL
@@ -65,11 +81,15 @@ https://api.ejemplo.com/usuarios  } esto es la URL
 └─ Protocolo
 ```
 
+<br>
 
 #### Parámetros
 
+<br>
+
 Esto existe independientemente de REST, REST sólo arma una convención sobre cómo lo vemos y organizamos.
 
+<br>
 
 | Tipo              | Ejemplo                 | Uso                                   |
 | ----------------- | ----------------------- | ------------------------------------- |
@@ -79,13 +99,21 @@ Esto existe independientemente de REST, REST sólo arma una convención sobre c�
 | Query parameter   | `/usuarios?sort={columna}` | Ordenar resultados                    |
 
 
+<br><br><br><br>
 
 ### Recursos
+
+<br>
 
 - Recursos = entidades de tu app en la base de datos. 
 - REST propone que cada recurso tenga su RUTA
 
+<br>
+
 Ejemplo:
+
+<br>
+
 ```
 Usuarios      → /usuarios
 Productos     → /productos
@@ -93,20 +121,28 @@ Pedidos       → /pedidos
 Canciones     → /canciones
 ```
 
+<br>
+
 Entonces:
 - Acción = Método HTTP
 - Recurso = Entidades de la app
 - Cada recurso tendrá su propia ruta
 
+<br><br><br><br>
 
 ### Endpoints
+
+<br>
 
 Al sumar Método HTTP + Ruta, obtenemos un Endpoint.
 
 Esto existe independientemente de REST, REST sólo arma una convención sobre cómo lo vemos y organizamos.
 
+<br>
+
 Ejemplos:
 
+<br>
 
 | Acción                                        | Método y ruta (= Endpoint)  |
 | --------------------------------------------- | --------------------------- |
@@ -120,6 +156,8 @@ Ejemplos:
 | Actualizar parcialmente un usuario            | `PATCH /usuarios/{id}`      |
 | Eliminar un usuario                           | `DELETE /usuarios/{id}`     |
 
+<br><br><br><br>
 
+[Volver a Table of Contents](#Table-of-Contents)
 
-
+<br><br>
