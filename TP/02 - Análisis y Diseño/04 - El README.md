@@ -14,7 +14,7 @@
 
 <br>
 
-- [Nombre del Proyecto](#1--Nombre-del-Proyecto)
+- [Nombre del Proyecto](#1-Nombre-del-Proyecto)
 - [Objetivo](#2--Objetivo)
 - [Stack](#3--Stack)
 - [Estructura](#4--Estructura)
@@ -86,15 +86,19 @@ Para quién está pensado.
 <br>
 
 ```md
-## Stack
+Frontend
+├── HTML
+├── CSS
+└── JavaScript
 
-- HTML
-- CSS
-- JavaScript
-- Node.js
-- Express
-- PostgreSQL
-- Docker
+Backend
+└── Node.js + Express.js
+
+Base de datos
+└── PostgreSQL
+
+Infraestructura
+└── Docker
 ```
 
 <br><br>
