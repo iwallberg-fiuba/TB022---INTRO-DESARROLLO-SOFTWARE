@@ -11,7 +11,8 @@
 - [Flujo Crear Rama](#Flujo-Crear-Rama)
 - [Flujo General](#Flujo-general)
 - [Flujo para Pull Request](#Flujo-para-Pull-Request)
-- [Flujo post Pull Request](#Flujo-post-Pull-Request)
+- [Flujo post PR Exitoso](#Flujo-post-PR-Exitoso)
+- [Flujo post PR Exitoso](#Flujo-post-PR-Problema)
 
 <br>
 
@@ -168,7 +169,7 @@ Esperar la revisión de los demás junto con la Merge del PR
 
 <br><br>
 
-### Flujo post Pull Request
+### Flujo post PR Exitoso
 
 <br>
 
@@ -193,6 +194,41 @@ git branch -d feature/login
 ↓
 git status
 ```
+
+
+<br><br>
+
+### Flujo post PR Problema
+
+<br>
+
+
+```txt
+Pull Request
+↓
+GitHub intenta hacer el merge
+↓
+¿Hay conflictos?
+├─ No → Merge Pull Request
+└─ Sí
+    ↓
+    GitHub bloquea el merge
+    ↓
+    git pull
+    ↓
+    Resolver conflictos manualmente
+    ↓
+    git add .
+    ↓
+    git commit
+    ↓
+    git push
+    ↓
+    GitHub verifica nuevamente
+    ↓
+    Se habilita Merge Pull Request
+```
+
 
 <br><br>
 
