@@ -9,6 +9,7 @@
 - [Definición](#Definición)
 - [Comunicación](#Comunicación)
     - [HTTP](#HTTP)
+- [Resumen](#Resumen)
 
 <br>
 
@@ -50,7 +51,7 @@ Del mismo modo que dos personas necesitan acordar un idioma para comunicarse, lo
 
 Por ejemplo, un francés puede intentar hablar con un alemán, pero si no establecen un idioma común (por ejemplo, inglés) no podrán entenderse correctamente.
 
-<br><br><br><br>
+<br><br>
 
 #### HTTP
 
@@ -60,7 +61,11 @@ Siguiendo con la analogía, en la web ese "idioma" suele ser HTTP (HyperText Tra
 
 HTTP es el protocolo utilizado para intercambiar información entre clientes y servidores. Define las reglas que ambos deben seguir para comunicarse correctamente, incluyendo cómo se construyen las requests y responses, qué métodos pueden utilizarse (GET, POST, PUT, etc.) y cómo se representan los datos intercambiados.
 
-<br>
+<br><br><br><br>
+
+### Resumen
+
+<br><br>
 
 Entonces:
 - **Cliente:** aplicación que solicita información o realiza una acción.
@@ -71,14 +76,14 @@ Entonces:
 - **Request:** mensaje enviado por el cliente al servidor para solicitar una operación o información.
 - **Response:** mensaje enviado por el servidor al cliente con el resultado de procesar una request.
 
-<br>
+<br><br>
 
 En este caso, se usará:
 - Cliente = Navegador = Frontend = HTML, CSS y JS
 - Backend = Servidor = Node.js + Express.js
 - Protocolo = HTTP
 
-<br>
+<br><br>
 
 ```txt
 Usuario
@@ -96,7 +101,7 @@ Frontend / Cliente
 Usuario
 ```
 
-<br>
+<br><br>
 
 Por ejemplo:
 1. El usuario hace click en "Ver usuarios".
@@ -108,7 +113,7 @@ Por ejemplo:
 7. La API la envía al frontend / cliente.
 8. El frontend / cliente muestra los datos.
 
-<br><br><br>
+<br><br><br><br>
 
 [Volver a Table of Contents](#Table-of-Contents)
 
