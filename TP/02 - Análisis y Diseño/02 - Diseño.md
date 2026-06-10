@@ -2,41 +2,58 @@
 `Pending.`
 
 
-```txt
+<br>
 
-```
+Considerando el ejemplo visto en clase, se puede pensar una estructura algo así:
 
+<br>
 
 ```txt
 proyecto/
-├── .git/                         
 │
-├── Frontend/
-│   ├── Dockerfile                 
-│   ├── index.html                 
-│   ├── pagina2.html               
-│   ├── pagina3.html               
-│   ├── css/
-│   │   └── styles.css             
-│   └── js/
-│       └── main.js                
+├─ frontend/
+│  ├─ index.html
+│  ├─ pag2.html
+│  ├─ pag3.html
+│  │
+│  ├─ css/
+│  │  └─ styles.css
+│  │
+│  ├─ js/
+│  │  └─ main.js
+│  │
+│  ├─ assets/
+│  │  └─ images/
+│  │
+│  └─ Dockerfile
 │
-├── Backend/
-│   ├── Dockerfile                 
-|   ├── package.json               
-│   └── src/                       
-│   
-├── database/                      
-│   ├── init.sql                   
-|   ├── schemas.sql
-│   └── seeds.sql                  
+├─ backend/
+│  ├─ src/
+│  │  ├─ api/
+│  │  │  ├─ pokemons.js
+│  │  │  └─ tipos.js
+│  │  │
+│  │  ├─ db/
+│  │  │  ├─ pool.js
+│  │  │  ├─ pokemons.js
+│  │  │  └─ tipos.js
+│  │  │
+│  │  └─ app.js
+│  │
+│  ├─ package.json
+│  ├─ package-lock.json
+│  └─ Dockerfile
 │
-├── docker-compose.yml             
-├── .env                           
-├── .dockerignore                  
-├── .gitignore                     
-├── README.md                      
-└── LICENSE                        # Licencia del proyecto. No aplica en este caso.
+├─ database/
+│  ├─ schema.sql
+│  └─ seeds.sql
+│
+├─ docker-compose.yml
+├─ .gitignore
+├─ .dockerignore
+├─ .env
+├─ License
+└─ README.md
 ```
 
 
