@@ -1,10 +1,6 @@
+<br><br>
 
-`Pending.`
-
-
-<br>
-
-Considerando el ejemplo visto en clase, se puede pensar una estructura algo así:
+Considerando el ejemplo visto en clase, se puede pensar una estructura así:
 
 <br>
 
@@ -56,10 +52,15 @@ proyecto/
 └─ README.md
 ```
 
+<br><br><br>
 
 ### Construir Dockerfiles
 
-[LA Clave](https://www.w3schools.com/tools/tool_dockerfile_generator.php)
+<br>
+
+[La Clave](https://www.w3schools.com/tools/tool_dockerfile_generator.php)
+
+<br><br>
 
 #### Frontend
 - nginx ("Engine X") y Alpine
@@ -67,13 +68,19 @@ proyecto/
 - Puerto Expuesto?
 - Working Directory?
 
+<br><br>
+
 #### Backend
 - Node y Alpine
 - Comando?
 - Puerto Expuesto?
 - Working Directory?
 
+<br>
+
 ##### Ejemplo visto en Clase
+
+<br>
 
 ```txt
 FROM node:22
@@ -87,12 +94,19 @@ RUN npm install
 CMD ["node", "app.js"]
 ```
 
+<br><br><br>
 
 ### Construir docker-compose
 
-[LA Clave](https://selqio.com/tools/docker-compose-generator)
+<br>
+
+[La Clave](https://selqio.com/tools/docker-compose-generator)
+
+<br>
 
 #### Ejemplo visto en Clase
+
+<br>
 
 ```yml
 services:
@@ -119,26 +133,43 @@ services:
       - ./app/db/schemas.sql:/docker-entrypoint-initdb.d/schemas.sql:ro
 ```
 
+<br><br><br>
 
 ### Construir dockerignore
 
-[LA Clave](https://devtoollab.com/tools/dockerignore-generator)
+<br>
+
+[La Clave](https://devtoollab.com/tools/dockerignore-generator)
+
+<br>
 
 #### Ejemplo visto en Clase
+
+<br>
 
 ```txt
 app/node_modules/
 ```
 
+<br><br><br>
+
 ### Construir Package
 
-[LA Clave](https://www.w3schools.com/tools/tool_package_json.php)
+<br>
+
+[La Clave](https://www.w3schools.com/tools/tool_package_json.php)
+
+<br>
 
 - Incluir Start, Test, Build, Dev
 - Incluir Type:Module
 - Entrypoint: app.js
 
+<br>
+
 #### Ejemplo visto en Clase
+
+<br>
 
 ```json
 {
@@ -162,18 +193,29 @@ app/node_modules/
 }
 ```
 
+<br><br><br><br>
 
 ### Construir env
 
-[LA Clave](https://www.w3schools.com/tools/tool_env_generator.php)
+<br>
+
+[La Clave](https://www.w3schools.com/tools/tool_env_generator.php)
 
 - Sección "Build from scratch"
 
+<br><br><br>
+
 ### Construir gitignore
+
+<br>
 
 [LA Clave](https://www.w3schools.com/tools/tool_gitignore_generator.php)
 
+<br>
+
 #### Ejemplo visto en Clase
+
+<br>
 
 ```txt
 node_modules/
@@ -181,14 +223,29 @@ data/
 .env
 ```
 
+<br><br><br>
+
 ### Construir seeds
 
-[LA Clave](https://www.w3schools.com/tools/tool_data_generator.php)
+<br>
+
+[La Clave](https://www.w3schools.com/tools/tool_data_generator.php)
+
+<br><br><br>
 
 ### Construir README
 
-[LA Clave](https://www.w3schools.com/tools/tool_github_readme.php)
+<br>
+
+[La Clave](https://www.w3schools.com/tools/tool_github_readme.php)
+
+<br><br><br>
 
 ### Construir Licencia
 
-[LA Clave](https://www.w3schools.com/tools/tool_license_generator.php)
+<br>
+
+[La Clave](https://www.w3schools.com/tools/tool_license_generator.php)
+
+<br><br><br>
+
