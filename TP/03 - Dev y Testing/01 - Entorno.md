@@ -45,12 +45,11 @@ Desde la misma Git Bash
 
 A) Frontend
 ```txt
-Abrir tu navegador
+Abrir navegador
 ↓
 Ej. de URL: http://localhost:8080
 ↓
 Desarrollar en tu IDE mientras ves los cambios en tu navegador.
-Recordar: 00 - Docs / Frontend
 ```
 
 <br>
@@ -58,17 +57,20 @@ Recordar: 00 - Docs / Frontend
 B) Backend/API
 
 ```bash
-npm run dev
+¿Vas a ejecutar el backend por primera vez?,
+¿Borraste la carpeta node_modules?,
+¿Hiciste git pull y alguien agregó dependencias nuevas?,
+¿Cambió package.json o package-lock.json?
+├── Si todas las respuestas son no: npm run dev
+└── Si alguna respuesta es sí: npm install → npm run dev
 ```
 
 ```txt
-Abrir tu navegador
+Abrir navegador
 ↓
 Ej. de URL: http://localhost:3000
 ↓
 Desarrollar en tu IDE mientras ves los cambios en tu navegador.
-Recordar: 00 - Docs / Backend y 00 - Docs / Frontend
-Ver: 03 - Dev y Testing / Backend
 ```
 
 <br>
@@ -83,8 +85,6 @@ Abrir DBeaver
 
 ↓
 Desarrollar.
-Recordar: 00 - Docs / Backend
-Ver: 03 - Dev y Testing / Base de Datos
 ```
 
 <br>
@@ -139,34 +139,24 @@ git push
 
 <br><br>
 
-### 6. Apagar Docker y contenedores (no borra nada) `docker compose down`
-
-<br><br>
-
-### 7. Si se desea hacer Pull Request...
+### 6. Apagar Docker y contenedores (no borra nada)
 
 <br>
 
-```
-Venís de un push
-↓
-Si la branch está lista para mergear:
-git switch main
-↓
-Github Repositorio
-↓
-Seleccionar "Pull Requests"
-↓
-Seleccionar "New Pull Request"
-↓
-Elegir base y compare branch
-↓
-Completar datos
-↓
-Seleccionar "Create Pull Request"
-↓
-Esperar la revisión de los demás junto con la Merge del PR
+```shell
+docker compose down
 ```
 
+<br><br>
+
+### 7. Si se desea hacer...
+
+<br>
+
+Pull Request (PR para Merge) o Crear un Issue:
+- Ver `01 - Git y Github` → `05 - Colaboradores.md`
+
 <br><br><br>
+
+
 
