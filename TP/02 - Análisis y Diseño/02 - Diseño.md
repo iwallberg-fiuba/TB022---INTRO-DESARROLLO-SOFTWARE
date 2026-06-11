@@ -86,7 +86,7 @@ npm run dev
 ya queda todo perfectamente funcionando. 
 Para producción `npm start` (si ya hiciste npm install y está actualizado).
 
-<br><br>
+<br>
 
 #### Ejemplo visto en Clase
 
