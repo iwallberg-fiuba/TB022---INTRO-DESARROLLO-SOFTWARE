@@ -13,6 +13,16 @@
 <br>
 
 [Cómo Hacerlos *](#Cómo-Hacerlos)
+- [Unit Testing](#unit-testing)
+- [Component Testing](#component-testing)
+- [API Testing](#api-testing)
+- [Schema Testing](#schema-testing)
+- [Data Validation Testing](#data-validation-testing)
+- [Migration Testing](#migration-testing)
+- [Integration Testing](#integration-testing)
+- [System Testing](#system-testing)
+- [End to-End Testing](#end-to-end-testing)
+- [User Acceptance Testing](#user-acceptance-testing)
 
 <br>
 
@@ -201,7 +211,7 @@ Solo estoy verificando esa función. No participan otras funciones, APIs, bases 
 
 > ¿Esta pieza de código funciona correctamente?
 
-<br><br><br>
+<br><br><br><br>
 
 ### Component Testing
 
@@ -238,7 +248,7 @@ No necesito backend ni base de datos.
 > ¿Este componente funciona correctamente por sí solo?
 
 
-<br><br><br>
+<br><br><br><br>
 
 ### API Testing
 
@@ -289,7 +299,7 @@ No me importa la interfaz gráfica.
 > ¿Este endpoint responde correctamente?
 
 
-<br><br><br>
+<br><br><br><br>
 
 ### Schema Testing
 
@@ -325,7 +335,7 @@ fecha_creacion
 
 > ¿La base de datos tiene la estructura esperada?
 
-<br><br><br>
+<br><br><br><br>
 
 
 ### Data Validation Testing
@@ -361,7 +371,7 @@ titulo NOT NULL
 
 > ¿La base de datos impide datos inválidos?
 
-<br><br><br>
+<br><br><br><br>
 
 ### Migration Testing
 
@@ -387,7 +397,7 @@ y verifico que todas las tablas se creen correctamente.
 
 > ¿Puedo construir la base de datos desde cero sin errores?
 
-<br><br><br>
+<br><br><br><br>
 
 ### Integration Testing
 
@@ -417,7 +427,7 @@ Luego verifico que la tarea se haya guardado en la base de datos.
 
 > ¿Las distintas capas se comunican correctamente?
 
-<br><br><br>
+<br><br><br><br>
 
 ### System Testing
 
@@ -447,9 +457,9 @@ y verifico que la aplicación funcione correctamente.
 
 > ¿El sistema completo funciona?
 
-<br><br><br>
+<br><br><br><br>
 
-### End-to-End Testing (E2E)
+### End To End Testing
 
 <br>
 
@@ -481,9 +491,9 @@ Se recorren todas las capas del sistema.
 
 > ¿Un usuario puede completar una tarea real de principio a fin?
 
-<br><br><br>
+<br><br><br><br>
 
-### User Acceptance Testing (UAT)
+### User Acceptance Testing
 
 <br>
 
@@ -526,7 +536,11 @@ Flujo real de usuario
 Validación del cliente
 ```
 
-<br><br><br>
+<br><br>
+
+[Volver a Table of Contents](#Table-of-Contents)
+
+<br><br>
 
 
 
