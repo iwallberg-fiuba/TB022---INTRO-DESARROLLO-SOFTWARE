@@ -8,14 +8,15 @@
 ```txt
 Abrir la IDE con el repositorio
 Abrir Docker App (dejarla minimizada)
-Abrir Terminal Git Bash ubicado en la carpeta del repositorio
+Abrir Terminal Bash ubicado en la carpeta del repositorio
+Git Bash puede causar problemas al instalar dependencias: usar WSL, dualboot o VM.
 ```
 
 <br><br>
 
 ### 2. Git y Github
 ```txt
-Desde Git Bash ubicado:
+Desde Bash ubicado:
 ↓
 git status
 ↓
@@ -29,7 +30,7 @@ git pull
 
 ### 3. Docker 
 ```txt
-Desde la misma Git Bash
+Desde mismo Bash
 ↓
 ¿Es la primera vez que levantas estos contenedores?,
 ¿Modificaste archivos y/o dependencias como: Dockerfile, docker-compose, package.json?
@@ -126,7 +127,7 @@ Recordar:
 ```txt
 Venis de modificar archivos
 ↓
-Volves a tu Git Bash ubicado
+Volves a Bash ubicado
 ↓
 git status
 ↓
