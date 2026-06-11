@@ -1,5 +1,10 @@
 <br><br>
 
+`Pending.`
+- tema nginx (engine x): qué es, para qué sirve
+- tema de los puertos y el env: cómo saber a que file apuntan los dockerfile, docker-compose y el package json
+
+
 Considerando el ejemplo visto en clase, se puede pensar una estructura así:
 
 <br>
@@ -238,6 +243,24 @@ app/node_modules/
 <br>
 
 [La Clave](https://www.w3schools.com/tools/tool_gitignore_generator.php)
+
+Qué no se sube al repo github?
+- Credenciales, claves privadas, secretos, variables de entorno (ubicadas en `.env` + cosas como `.env.*`).
+- Datos reales o sensibles de la base de datos (en este caso no hay porque usamos seeds)
+- Carpeta `node_modules` y archivos temporales, logs y cachés.
+
+<br>
+
+Que sí se puede subir?
+- `package.json`
+- `package-lock.json`
+- `.gitignore`
+- `.dockerignore`
+- `docker-compose.yml`
+- `Dockerfile`
+- Scripts SQL de inicialización (`init.sql`, `seeds.sql`)
+- Código fuente
+- README
 
 <br>
 
