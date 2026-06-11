@@ -5,14 +5,6 @@
 
 <br>
 
-`Pending` <br>
-Del package `pg`:
-- Pool
-- Client
-- Pool local y pool postgres -> usar variables de entorno
-
-<br>
-
 [Definiciones](#Definiciones)
 
 [Paquetes TP](#Paquetes-TP)
@@ -21,9 +13,13 @@ Del package `pg`:
 - [Module Systems](#Module-Systems)
 - [Importante](#Importante)
 
-[Usar Paquetes TP](#Usar-Paquetes-TP)
+[Usar Paquetes *](#Usar-Paquetes)
 - [pg y dotenv](#pg-y-dotenv)
 - [Express](#Express)
+
+<br>
+
+`* Muy simplificado para ver ejemplos. Idea más desarrollada archivos después.`
 
 <br>
 
@@ -153,9 +149,12 @@ dotenv.config();
 
 <br>
 
-## Usar Paquetes TP
+## Usar Paquetes
 
 <br>
+
+>[!NOTE]
+>Muy simplificado para ver ejemplos. Idea más desarrollada archivos después.
 
 1. Instalar los paquetes
 2. Importar los paquetes en el código (si aplica)
