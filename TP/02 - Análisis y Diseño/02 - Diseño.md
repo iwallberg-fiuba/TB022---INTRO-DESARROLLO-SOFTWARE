@@ -157,15 +157,34 @@ app/node_modules/
 
 <br>
 
-[La Clave](https://www.w3schools.com/tools/tool_package_json.php)
+[La Clave](https://terrific.tools/code/package-json-generator)
 
 <br>
 
-- Incluir Start, Test, Build, Dev
+- Incluir Start (para produccion), Dev (desarrollo)
+- Dev dependencies: nodemon
+- dependencies: dotenv, express, pg
+- Scripts
+  - "dev": nodemon directorioapp
+  - "start": node directorioapp
 - Incluir Type:Module
-- Entrypoint: app.js
+- Entrypoint: index.js
 
 <br>
+
+Entonces al hacer: 
+
+```shell
+npm install
+npm run dev
+```
+
+<br>
+
+ya queda todo perfectamente funcionando. 
+Para producción `npm start` (si ya hiciste npm install y está actualizado).
+
+<br><br>
 
 #### Ejemplo visto en Clase
 
