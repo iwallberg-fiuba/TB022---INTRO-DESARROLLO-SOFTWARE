@@ -13,11 +13,10 @@
 <br>
 
 [Cómo Hacerlos *](#Cómo-Hacerlos)
-- `Pending.`
 
 <br>
 
-`* Los ejemplos son orientativos; incluir todos los casos posibles haría el documento demasiado extenso`
+`* Los ejemplos son orientativos; incluir todos los casos sería imposible.`
 
 <br>
 
@@ -164,20 +163,11 @@ flowchart LR
 
 ## Cómo Hacerlos
 
+<br><br>
+
+### Unit Testing
+
 <br>
-
-
-
-
-
-
-
-
-
-
-
-
-Unit Testing
 
 Se prueba una única pieza de código de forma aislada.
 
@@ -185,27 +175,37 @@ Se prueba una única pieza de código de forma aislada.
 
 Tengo una función que calcula el precio final de una compra.
 
+<br>
+
 ```js
 calcularTotal(1000, 3)
 ```
 
+<br>
+
 Espero:
+
+<br>
 
 ```text
 3000
 ```
 
+<br>
+
 Solo estoy verificando esa función. No participan otras funciones, APIs, bases de datos ni interfaces.
+
+<br>
 
 **Pregunta que responde:**
 
 > ¿Esta pieza de código funciona correctamente?
 
+<br><br><br>
 
+### Component Testing
 
-
-
-Component Testing
+<br>
 
 Se prueba un componente visual aislado del resto de la aplicación.
 
@@ -213,9 +213,13 @@ Se prueba un componente visual aislado del resto de la aplicación.
 
 Tengo un componente:
 
+<br>
+
 ```text
 [ Crear tarea ]
 ```
+
+<br>
 
 Verifico que:
 
@@ -223,27 +227,38 @@ Verifico que:
 * Muestre el texto esperado.
 * Ejecute la acción correcta al hacer click.
 
+<br>
+
 No necesito backend ni base de datos.
+
+<br>
 
 **Pregunta que responde:**
 
 > ¿Este componente funciona correctamente por sí solo?
 
 
+<br><br><br>
 
+### API Testing
 
-
-API Testing
+<br>
 
 Se prueba un endpoint del backend.
 
 **Ejemplo:**
 
+<br>
+
 ```http
 POST /tasks
 ```
 
+<br>
+
 Envío:
+
+<br>
 
 ```json
 {
@@ -251,26 +266,34 @@ Envío:
 }
 ```
 
+<br>
+
 Espero:
+
+<br>
 
 ```http
 201 Created
 ```
 
+<br>
+
 y una respuesta válida.
 
 No me importa la interfaz gráfica.
+
+<br>
 
 **Pregunta que responde:**
 
 > ¿Este endpoint responde correctamente?
 
 
+<br><br><br>
 
+### Schema Testing
 
-
-
-Schema Testing
+<br>
 
 Se prueba la estructura de la base de datos.
 
@@ -278,11 +301,17 @@ Se prueba la estructura de la base de datos.
 
 Verifico que exista:
 
+<br>
+
 ```sql
 tasks
 ```
 
+<br>
+
 y que tenga:
+
+<br>
 
 ```sql
 id
@@ -290,16 +319,18 @@ titulo
 fecha_creacion
 ```
 
+<br>
+
 **Pregunta que responde:**
 
 > ¿La base de datos tiene la estructura esperada?
 
+<br><br><br>
 
 
+### Data Validation Testing
 
-
-
-Data Validation Testing
+<br>
 
 Se prueban las reglas de integridad de los datos.
 
@@ -307,27 +338,34 @@ Se prueban las reglas de integridad de los datos.
 
 Intento guardar:
 
+<br>
+
 ```sql
 INSERT INTO tasks(titulo)
 VALUES(NULL);
 ```
 
+<br>
+
 Espero un error porque:
+
+<br>
 
 ```sql
 titulo NOT NULL
 ```
 
+<br>
+
 **Pregunta que responde:**
 
 > ¿La base de datos impide datos inválidos?
 
+<br><br><br>
 
+### Migration Testing
 
-
-
-
-Migration Testing
+<br>
 
 Se prueban los scripts que crean o modifican la base de datos.
 
@@ -335,9 +373,13 @@ Se prueban los scripts que crean o modifican la base de datos.
 
 Ejecuto:
 
+<br>
+
 ```sql
 init.sql
 ```
+
+<br>
 
 y verifico que todas las tablas se creen correctamente.
 
@@ -345,17 +387,17 @@ y verifico que todas las tablas se creen correctamente.
 
 > ¿Puedo construir la base de datos desde cero sin errores?
 
+<br><br><br>
 
+### Integration Testing
 
-
-
-
- 
-Integration Testing
+<br>
 
 Se prueba la comunicación entre distintas partes del sistema.
 
 **Ejemplo:**
+
+<br>
 
 ```text
 Backend
@@ -363,19 +405,23 @@ Backend
 PostgreSQL
 ```
 
+<br>
+
 Creo una tarea usando el backend.
 
 Luego verifico que la tarea se haya guardado en la base de datos.
+
+<br>
 
 **Pregunta que responde:**
 
 > ¿Las distintas capas se comunican correctamente?
 
+<br><br><br>
 
+### System Testing
 
-
-
-System Testing
+<br>
 
 Se prueba la aplicación completa funcionando como un sistema integrado.
 
@@ -383,28 +429,35 @@ Se prueba la aplicación completa funcionando como un sistema integrado.
 
 Levanto:
 
+<br>
+
 ```text
 Frontend
 Backend
 Base de Datos
 ```
 
+<br>
+
 y verifico que la aplicación funcione correctamente.
+
+<br>
 
 **Pregunta que responde:**
 
 > ¿El sistema completo funciona?
 
+<br><br><br>
 
+### End-to-End Testing (E2E)
 
-
-
-
-End-to-End Testing (E2E)
+<br>
 
 Se simula el comportamiento real de un usuario.
 
 **Ejemplo:**
+
+<br>
 
 ```text
 Abrir la aplicación
@@ -418,16 +471,21 @@ Editar tarea
 Eliminar tarea
 ```
 
+<br>
+
 Se recorren todas las capas del sistema.
+
+<br>
 
 **Pregunta que responde:**
 
 > ¿Un usuario puede completar una tarea real de principio a fin?
 
+<br><br><br>
 
+### User Acceptance Testing (UAT)
 
-
-User Acceptance Testing (UAT)
+<br>
 
 Se valida que el producto cumpla los requisitos del usuario o cliente.
 
@@ -440,15 +498,17 @@ La consigna pide:
 * Editar tareas
 * Eliminar tareas
 
+<br>
+
 El usuario o docente prueba esas funcionalidades.
+
+<br>
 
 **Pregunta que responde:**
 
 > ¿El producto cumple lo que se pidió?
 
-
-
-
+<br>
 
 ```text
 Función
@@ -465,6 +525,8 @@ Flujo real de usuario
 ↓
 Validación del cliente
 ```
+
+<br><br><br>
 
 
 
