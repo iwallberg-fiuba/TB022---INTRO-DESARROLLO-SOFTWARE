@@ -54,6 +54,84 @@ proyecto/
 
 <br><br><br>
 
+
+### Construir Package
+
+<br>
+
+[La Clave](https://terrific.tools/code/package-json-generator)
+
+<br>
+
+- Incluir Start (para produccion), Dev (desarrollo)
+- Dev dependencies: nodemon
+- dependencies: dotenv, express, pg
+- Scripts
+  - "dev": nodemon directorioapp
+  - "start": node directorioapp
+- Incluir Type:Module
+- Entrypoint: index.js
+
+<br>
+
+Entonces al hacer: 
+
+```shell
+npm install
+npm run dev
+```
+
+<br>
+
+ya queda todo perfectamente funcionando. 
+Para producción `npm start` (si ya hiciste npm install y está actualizado).
+
+<br><br>
+
+#### Ejemplo visto en Clase
+
+<br>
+
+```json
+{
+  "name": "pokeapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "pg": "^8.21.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "type": "module"
+}
+```
+
+<br><br><br>
+
+### Construir env
+
+<br>
+
+[La Clave](https://www.w3schools.com/tools/tool_env_generator.php)
+
+- Sección "Build from scratch"
+- Tener esto abierto mientras se crean los Dockerfiles y docker-compose
+- Tambien reabrir el archivo al desarrollar en pool.js o al intentar conectar con dbeaver 
+
+<br>
+
+
+
+<br><br><br>
+
 ### Construir Dockerfiles
 
 <br>
@@ -153,82 +231,13 @@ app/node_modules/
 
 <br><br><br>
 
-### Construir Package
 
-<br>
-
-[La Clave](https://terrific.tools/code/package-json-generator)
-
-<br>
-
-- Incluir Start (para produccion), Dev (desarrollo)
-- Dev dependencies: nodemon
-- dependencies: dotenv, express, pg
-- Scripts
-  - "dev": nodemon directorioapp
-  - "start": node directorioapp
-- Incluir Type:Module
-- Entrypoint: index.js
-
-<br>
-
-Entonces al hacer: 
-
-```shell
-npm install
-npm run dev
-```
-
-<br>
-
-ya queda todo perfectamente funcionando. 
-Para producción `npm start` (si ya hiciste npm install y está actualizado).
-
-<br><br>
-
-#### Ejemplo visto en Clase
-
-<br>
-
-```json
-{
-  "name": "pokeapi",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^5.2.1",
-    "pg": "^8.21.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14"
-  },
-  "type": "module"
-}
-```
-
-<br><br><br><br>
-
-### Construir env
-
-<br>
-
-[La Clave](https://www.w3schools.com/tools/tool_env_generator.php)
-
-- Sección "Build from scratch"
-
-<br><br><br>
 
 ### Construir gitignore
 
 <br>
 
-[LA Clave](https://www.w3schools.com/tools/tool_gitignore_generator.php)
+[La Clave](https://www.w3schools.com/tools/tool_gitignore_generator.php)
 
 <br>
 
