@@ -26,7 +26,10 @@ Express
 
 
 
-
+Videos Explicativos:
+* Ignorar el tema del renderizado por ahora
+- [Opción 1](https://www.youtube.com/watch?v=SccSCuHhOw0)
+- [Opción 2]()
 
 
 
