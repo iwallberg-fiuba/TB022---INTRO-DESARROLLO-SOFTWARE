@@ -1,6 +1,7 @@
 <br><br>
 
 `Pending.`
+- tema make file
 - tema nginx (engine x): qué es, para qué sirve
 - tema de los puertos y el env: cómo saber a que file apuntan los dockerfile, docker-compose y el package json
 
