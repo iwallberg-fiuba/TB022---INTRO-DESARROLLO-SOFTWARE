@@ -1,5 +1,20 @@
 
-
+```txt
+Express
+├─ Crear servidor HTTP
+├─ Definir rutas
+├─ Obtener datos de la request (req)
+│   ├─ req.params
+│   ├─ req.query
+│   ├─ req.body
+│   └─ req.headers
+├─ Ejecutar lógica
+│   ├─ Validar datos
+│   ├─ Hacer cálculos
+│   ├─ Consultar PostgreSQL
+│   └─ Llamar APIs
+└─ Enviar responses (res)
+```
 
 ---
 
@@ -8,18 +23,6 @@
 - Express.js es un paquete del tipo "Framework" para Node.js
 - La ventaje principal que trae express es reducir la cantidad de código, pero manteniendo las mismas lógicas de Node.js
 - Node.js hace todo lo que Express.js puede hacer, pero express lo hace en menos líneas de código y más fáciles de leer.
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
