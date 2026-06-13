@@ -1,5 +1,12 @@
 <br>
 
+`Pending.`
+- Completar si falta algo
+- Poner aca también tema ramas
+- Poner aca también tema PR
+- Poner aca también tema issues
+- Emprolijar
+
 ## Flujo Completo
 
 <br>
