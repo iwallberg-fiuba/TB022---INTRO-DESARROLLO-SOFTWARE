@@ -2,6 +2,7 @@
 
 `Pending.`
 - tema make file
+- emprolijar
 
 
 Considerando el ejemplo visto en clase, se puede pensar una estructura así:
@@ -48,7 +49,9 @@ proyecto/
 │
 │
 ├─ data/
-|  └─ Archivos reales de PostgreSQL (generados automáticamente)
+|  | (carpeta local generada automáticamente por postgres)
+|  └─ Archivos reales de PostgreSQL
+|   
 |
 ├─ docker-compose.yml
 ├─ .gitignore
