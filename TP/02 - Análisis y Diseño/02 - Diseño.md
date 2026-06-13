@@ -2,8 +2,6 @@
 
 `Pending.`
 - tema make file
-- tema nginx (engine x): qué es, para qué sirve
-- tema de los puertos y el env: cómo saber a que file apuntan los dockerfile, docker-compose y el package json
 
 
 Considerando el ejemplo visto en clase, se puede pensar una estructura así:
@@ -38,6 +36,8 @@ proyecto/
 │  │  ├─ db/
 │  │  │  ├─ pool.js
 │  │  │  ├─ pokemons.js
+│  |  |  ├─ schema.sql (contiene init)
+│  |  |  ├─ seeds.sql
 │  │  │  └─ tipos.js
 │  │  │
 │  │  └─ app.js
@@ -46,10 +46,10 @@ proyecto/
 │  ├─ package-lock.json
 │  └─ Dockerfile
 │
-├─ database/
-│  ├─ schema.sql
-│  └─ seeds.sql
 │
+├─ data/
+|  └─ Archivos reales de PostgreSQL (generados automáticamente)
+|
 ├─ docker-compose.yml
 ├─ .gitignore
 ├─ .dockerignore
@@ -73,10 +73,10 @@ proyecto/
 - Dev dependencies: nodemon
 - dependencies: dotenv, express, pg
 - Scripts
-  - "dev": nodemon directorioapp
-  - "start": node directorioapp
+  - "dev": "nodemon src/app.js"
+  - "start": "node src/app.js"
 - Incluir Type:Module
-- Entrypoint: index.js
+- Entrypoint: index.js? no sé por qué puso ese
 
 <br>
 
@@ -129,7 +129,7 @@ Para producción `npm start` (si ya hiciste npm install y está actualizado).
 [La Clave](https://www.w3schools.com/tools/tool_env_generator.php)
 
 - Sección "Build from scratch"
-- Tener esto abierto mientras se crean los Dockerfiles y docker-compose
+- Tener esto abierto mientras se crea el archivo docker-compose
 - Tambien reabrir el archivo al desarrollar en pool.js o al intentar conectar con dbeaver 
 
 <br>
@@ -194,7 +194,7 @@ FROM node:22
 
 WORKDIR /app
 
-COPY ..
+COPY . .
 
 RUN npm install
 
@@ -244,7 +244,68 @@ backend/
 
 [La Clave](https://selqio.com/tools/docker-compose-generator)
 
-- Tener el archivo .env abierto
+<br>
+
+#### Cómo lo haría yo
+
+```yml
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "${FRONTEND_PORT}:80"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - "${BACKEND_PORT}:3000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:18
+    ports:
+      - "${DB_PORT}:5432"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./backend/src/db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./backend/src/db/seeds.sql:/docker-entrypoint-initdb.d/02-seeds.sql:ro
+```
+
+<br>
+
+con dotenv quedando:
+
+<br>
+
+```txt
+# frontend puerto
+FRONTEND_PORT=80
+
+
+# backend puerto
+BACKEND_PORT=3000
+
+
+# backend con db envs
+DB_HOST: db
+DB_PORT: 5432
+DB_USER: postgres
+DB_PASSWORD: postgres
+DB_NAME: mi_app_db
+
+
+# database con postgresql envs
+POSTGRES_USER: postgres
+POSTGRES_PASSWORD: postgres
+POSTGRES_DB: mi_app_db
+```
 
 <br>
 
