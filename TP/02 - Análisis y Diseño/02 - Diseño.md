@@ -142,23 +142,66 @@ Para producción `npm start` (si ya hiciste npm install y está actualizado).
 
 <br>
 
-[La Clave](https://www.w3schools.com/tools/tool_dockerfile_generator.php)
+#### Frontend
 
 <br>
 
-#### Frontend
-- nginx ("Engine X") y Alpine
-- Comando?
-- Puerto Expuesto?
-- Working Directory?
+- Imagen base: nginx ("Engine X")
+- El `/usr/share/nginx/html` de `COPY . /usr/share/nginx/html` es un path de ejemplo.
+
+<br>
+
+```txt
+FROM nginx:latest
+
+COPY . /usr/share/nginx/html
+
+EXPOSE 80
+```
 
 <br><br>
 
 #### Backend
-- Node y Alpine
-- Comando?
-- Puerto Expuesto?
-- Working Directory?
+
+<br>
+
+Usar: [La Clave](https://www.w3schools.com/tools/tool_dockerfile_generator.php)
+
+<br>
+
+- Imagen base: node:22
+- Working Directory: carpeta de trabajo dentro del contenedor donde se copiará el backend. Por convención suele utilizarse /app.
+- Instalar dependencias: npm install
+- Puerto expuesto: 3000 o dejar vacío
+- Comando de inicio:
+
+```txt
+Comandos de inicio:
+├─ Opción 1: `CMD ["node", "app.js"]`
+| (o node index.js según el archivo principal)
+|
+└─ Opción 2: `CMD ["npm", "run", "dev"]`
+```
+
+<br>
+
+#### Cómo lo dejaría yo
+
+<br>
+
+```txt
+FROM node:22
+
+WORKDIR /app
+
+COPY ..
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
+```
 
 <br>
 
@@ -178,6 +221,21 @@ RUN npm install
 CMD ["node", "app.js"]
 ```
 
+<br>
+
+- El copy está diferente porque el profesor usó esta estructura:
+
+<br>
+
+```txt
+backend/
+├─ Dockerfile
+└─ app/
+   ├─ package.json
+   ├─ index.js
+   └─ ...
+```
+
 <br><br><br>
 
 ### Construir docker-compose
@@ -185,6 +243,8 @@ CMD ["node", "app.js"]
 <br>
 
 [La Clave](https://selqio.com/tools/docker-compose-generator)
+
+- Tener el archivo .env abierto
 
 <br>
 
