@@ -1,18 +1,13 @@
 [
   {
     "referrer": "fede.dm",
-    "count": 54,
+    "count": 78,
     "uniques": 10
   },
   {
     "referrer": "github.com",
     "count": 19,
     "uniques": 2
-  },
-  {
-    "referrer": "chatgpt.com",
-    "count": 8,
-    "uniques": 1
   },
   {
     "referrer": "Google",
