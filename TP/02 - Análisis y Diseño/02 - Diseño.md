@@ -54,6 +54,7 @@ proyecto/
 |   
 |
 ├─ docker-compose.yml
+├─ Makefile
 ├─ .gitignore
 ├─ .dockerignore
 ├─ .env
@@ -74,7 +75,7 @@ proyecto/
 
 - Incluir Start (para produccion), Dev (desarrollo)
 - Dev dependencies: nodemon
-- dependencies: dotenv, express, pg
+- dependencies: dotenv, express, pg, cors
 - Scripts
   - "dev": "nodemon src/app.js"
   - "start": "node src/app.js"
@@ -257,8 +258,6 @@ services:
     build: ./frontend
     ports:
       - "${FRONTEND_PORT}:80"
-    depends_on:
-      - backend
 
   backend:
     build: ./backend
@@ -425,3 +424,16 @@ data/
 
 <br><br><br>
 
+### Construir Makefile
+
+Ejemplo visto en clase:
+
+```makefile
+run-front:
+	cd frontend && npx http-server -p 8080 --cors
+
+run-back:
+	cd backend && docker compose up -d
+
+run: run-back run-front
+```
