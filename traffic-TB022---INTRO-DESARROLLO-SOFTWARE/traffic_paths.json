@@ -8,7 +8,7 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP",
     "title": "/tree/main/TP",
-    "count": 6,
+    "count": 7,
     "uniques": 5
   },
   {
@@ -24,20 +24,14 @@
     "uniques": 3
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Ej. Integrador BASH",
-    "title": "/tree/main/Parcial/Ej. Integrador BASH",
-    "count": 4,
-    "uniques": 3
-  },
-  {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/02 - Análisis y Diseño",
     "title": "/tree/main/TP/02 - Análisis y Diseño",
     "count": 4,
     "uniques": 3
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/00 - Docs",
-    "title": "/tree/main/TP/00 - Docs",
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/.github/workflows",
+    "title": "/tree/main/.github/workflows",
     "count": 3,
     "uniques": 3
   },
@@ -54,8 +48,14 @@
     "uniques": 3
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Ej. Integrador BASH/Solucion_Profesor.ipynb",
-    "title": "/blob/main/Parcial/Ej. Integrador BASH/Solucion_Profesor.ipynb",
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/01 - Git y Github/01 - Configs.md",
+    "title": "/blob/main/TP/01 - Git y Github/01 - Configs.md",
+    "count": 3,
+    "uniques": 2
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/02 - Análisis y Diseño/01 - Idea y Análisis.md",
+    "title": "/blob/main/TP/02 - Análisis y Diseño/01 - Idea y Análisis.md",
     "count": 3,
     "uniques": 2
   }
