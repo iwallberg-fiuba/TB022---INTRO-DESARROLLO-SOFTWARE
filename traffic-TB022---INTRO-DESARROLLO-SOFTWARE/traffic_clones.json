@@ -223,14 +223,14 @@
       "uniques": 67
     },
     {
-      "timestamp": "2026-06-13T00:00:00Z",
-      "count": 117,
-      "uniques": 50
-    },
-    {
       "timestamp": "2026-06-14T00:00:00Z",
       "count": 77,
       "uniques": 22
+    },
+    {
+      "timestamp": "2026-06-13T00:00:00Z",
+      "count": 117,
+      "uniques": 50
     },
     {
       "timestamp": "2026-06-15T00:00:00Z",
