@@ -1,12 +1,12 @@
 [
   {
-    "referrer": "fede.dm",
-    "count": 41,
-    "uniques": 7
-  },
-  {
     "referrer": "github.com",
     "count": 22,
     "uniques": 2
+  },
+  {
+    "referrer": "fede.dm",
+    "count": 17,
+    "uniques": 6
   }
 ]
