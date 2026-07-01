@@ -2,20 +2,14 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 9,
-    "uniques": 7
+    "count": 8,
+    "uniques": 8
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP",
     "title": "/tree/main/TP",
-    "count": 7,
-    "uniques": 5
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/Consigna TP.md",
-    "title": "/blob/main/TP/Consigna TP.md",
-    "count": 4,
-    "uniques": 3
+    "count": 5,
+    "uniques": 4
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/Clases Backend",
@@ -26,7 +20,13 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/02 - Análisis y Diseño/01 - Idea y Análisis.md",
     "title": "/blob/main/TP/02 - Análisis y Diseño/01 - Idea y Análisis.md",
-    "count": 3,
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/Consigna TP.md",
+    "title": "/blob/main/TP/Consigna TP.md",
+    "count": 2,
     "uniques": 2
   },
   {
@@ -42,12 +42,6 @@
     "uniques": 2
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/02 - Análisis y Diseño",
-    "title": "/tree/main/TP/02 - Análisis y Diseño",
-    "count": 2,
-    "uniques": 2
-  },
-  {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/03 - Dev y Testing",
     "title": "/tree/main/TP/03 - Dev y Testing",
     "count": 2,
@@ -56,6 +50,12 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/.github/workflows/traffic-to-badge.yml",
     "title": "/blob/main/.github/workflows/traffic-to-badge.yml",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/DOCS/BdDs-y-SQL.md",
+    "title": "/blob/main/Parcial/DOCS/BdDs-y-SQL.md",
     "count": 1,
     "uniques": 1
   }
