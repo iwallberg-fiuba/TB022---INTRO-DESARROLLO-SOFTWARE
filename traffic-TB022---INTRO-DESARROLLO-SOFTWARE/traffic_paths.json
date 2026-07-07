@@ -42,12 +42,6 @@
     "uniques": 1
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/pulls",
-    "title": "/pulls",
-    "count": 1,
-    "uniques": 1
-  },
-  {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial",
     "title": "/tree/main/Parcial",
     "count": 1,
@@ -56,6 +50,12 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/DOCS",
     "title": "/tree/main/Parcial/DOCS",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/02 - Análisis y Diseño",
+    "title": "/tree/main/TP/02 - Análisis y Diseño",
     "count": 1,
     "uniques": 1
   }
