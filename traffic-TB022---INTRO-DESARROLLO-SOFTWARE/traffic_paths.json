@@ -2,38 +2,14 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 6,
-    "uniques": 6
+    "count": 5,
+    "uniques": 5
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP",
     "title": "/tree/main/TP",
-    "count": 4,
-    "uniques": 3
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/02 - Análisis y Diseño",
-    "title": "/tree/main/TP/02 - Análisis y Diseño",
-    "count": 2,
+    "count": 3,
     "uniques": 2
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/03 - Dev y Testing",
-    "title": "/tree/main/TP/03 - Dev y Testing",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/Clases Backend",
-    "title": "/tree/main/TP/Clases Backend",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/02 - Análisis y Diseño/01 - Idea y Análisis.md",
-    "title": "/blob/main/TP/02 - Análisis y Diseño/01 - Idea y Análisis.md",
-    "count": 1,
-    "uniques": 1
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/02 - Análisis y Diseño/02 - Diseño.md",
@@ -56,6 +32,30 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/Clases Backend/app/db/seeds.sql",
     "title": "/blob/main/TP/Clases Backend/app/db/seeds.sql",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/02 - Análisis y Diseño",
+    "title": "/tree/main/TP/02 - Análisis y Diseño",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/03 - Dev y Testing",
+    "title": "/tree/main/TP/03 - Dev y Testing",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/Clases Backend",
+    "title": "/tree/main/TP/Clases Backend",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/Clases Backend/app/db",
+    "title": "/tree/main/TP/Clases Backend/app/db",
     "count": 1,
     "uniques": 1
   }
