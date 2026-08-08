@@ -2,24 +2,42 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 24,
-    "uniques": 14
+    "count": 31,
+    "uniques": 19
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP",
     "title": "/tree/main/TP",
-    "count": 7,
-    "uniques": 6
+    "count": 9,
+    "uniques": 8
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial",
     "title": "/tree/main/Parcial",
-    "count": 5,
-    "uniques": 5
+    "count": 6,
+    "uniques": 6
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "count": 3,
+    "uniques": 3
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/Consigna TP.md",
     "title": "/blob/main/TP/Consigna TP.md",
+    "count": 3,
+    "uniques": 3
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores",
+    "title": "/tree/main/Parcial/Parciales Anteriores",
+    "count": 3,
+    "uniques": 3
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores/Parcial T1 2C25",
+    "title": "/tree/main/Parcial/Parciales Anteriores/Parcial T1 2C25",
     "count": 3,
     "uniques": 3
   },
@@ -30,33 +48,15 @@
     "uniques": 2
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
-    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/Solucion T1 2C25.ipynb",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/Solucion T1 2C25.ipynb",
     "count": 2,
     "uniques": 2
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 2.jpeg",
-    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 2.jpeg",
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
     "count": 2,
     "uniques": 2
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores",
-    "title": "/tree/main/Parcial/Parciales Anteriores",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores/Parcial T1 2C25",
-    "title": "/tree/main/Parcial/Parciales Anteriores/Parcial T1 2C25",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/Clases Backend/app/api/pokemons.js",
-    "title": "/blob/main/TP/Clases Backend/app/api/pokemons.js",
-    "count": 2,
-    "uniques": 1
   }
 ]
