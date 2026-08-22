@@ -2,54 +2,24 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 13,
-    "uniques": 10
+    "count": 6,
+    "uniques": 6
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP",
     "title": "/tree/main/TP",
-    "count": 5,
-    "uniques": 4
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial",
-    "title": "/tree/main/Parcial",
     "count": 3,
     "uniques": 3
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/Solucion T1 2C25.ipynb",
-    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/Solucion T1 2C25.ipynb",
-    "count": 3,
-    "uniques": 2
-  },
-  {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/.github/workflows",
     "title": "/tree/main/.github/workflows",
-    "count": 3,
-    "uniques": 2
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
-    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
     "count": 2,
     "uniques": 2
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
-    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores",
-    "title": "/tree/main/Parcial/Parciales Anteriores",
-    "count": 2,
-    "uniques": 2
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores/Parcial T1 2C25",
-    "title": "/tree/main/Parcial/Parciales Anteriores/Parcial T1 2C25",
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial",
+    "title": "/tree/main/Parcial",
     "count": 2,
     "uniques": 2
   },
@@ -58,5 +28,35 @@
     "title": "/tree/main/TP/00 - Docs (en proceso)",
     "count": 2,
     "uniques": 2
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/Solucion T1 2C25.ipynb",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/Solucion T1 2C25.ipynb",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/.github/workflows/traffic-to-badge.yml",
+    "title": "/blob/main/.github/workflows/traffic-to-badge.yml",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/GUIAS/GUIA1 - Bash.ipynb",
+    "title": "/blob/main/Parcial/GUIAS/GUIA1 - Bash.ipynb",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
+    "count": 1,
+    "uniques": 1
   }
 ]
