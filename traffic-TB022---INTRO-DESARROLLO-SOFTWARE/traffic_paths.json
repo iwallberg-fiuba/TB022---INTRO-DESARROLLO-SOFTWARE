@@ -2,8 +2,8 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 36,
-    "uniques": 26
+    "count": 38,
+    "uniques": 27
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial",
@@ -42,21 +42,21 @@
     "uniques": 6
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/GUIAS/GUIA1 - Bash.ipynb",
-    "title": "/blob/main/Parcial/GUIAS/GUIA1 - Bash.ipynb",
-    "count": 8,
-    "uniques": 4
-  },
-  {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/GUIAS/GUIA2 - Regex.ipynb",
     "title": "/blob/main/Parcial/GUIAS/GUIA2 - Regex.ipynb",
-    "count": 8,
+    "count": 9,
     "uniques": 4
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 1.jpeg",
     "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 1.jpeg",
-    "count": 8,
+    "count": 9,
     "uniques": 3
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/GUIAS/GUIA1 - Bash.ipynb",
+    "title": "/blob/main/Parcial/GUIAS/GUIA1 - Bash.ipynb",
+    "count": 8,
+    "uniques": 4
   }
 ]
