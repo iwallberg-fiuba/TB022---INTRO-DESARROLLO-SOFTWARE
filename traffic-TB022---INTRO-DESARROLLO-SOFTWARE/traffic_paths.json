@@ -2,32 +2,20 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 33,
-    "uniques": 25
+    "count": 25,
+    "uniques": 20
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial",
     "title": "/tree/main/Parcial",
-    "count": 21,
-    "uniques": 16
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores",
-    "title": "/tree/main/Parcial/Parciales Anteriores",
-    "count": 14,
-    "uniques": 10
+    "count": 11,
+    "uniques": 11
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
     "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
-    "count": 13,
-    "uniques": 7
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/GUIAS/GUIA2 - Regex.ipynb",
-    "title": "/blob/main/Parcial/GUIAS/GUIA2 - Regex.ipynb",
-    "count": 9,
-    "uniques": 4
+    "count": 10,
+    "uniques": 5
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 1.jpeg",
@@ -42,21 +30,33 @@
     "uniques": 4
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/GUIAS",
-    "title": "/tree/main/Parcial/GUIAS",
-    "count": 7,
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/GUIAS/GUIA2 - Regex.ipynb",
+    "title": "/blob/main/Parcial/GUIAS/GUIA2 - Regex.ipynb",
+    "count": 8,
+    "uniques": 3
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores",
+    "title": "/tree/main/Parcial/Parciales Anteriores",
+    "count": 6,
     "uniques": 6
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores/Parcial T1 2C25",
-    "title": "/tree/main/Parcial/Parciales Anteriores/Parcial T1 2C25",
-    "count": 7,
-    "uniques": 6
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
+    "count": 6,
+    "uniques": 4
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP",
-    "title": "/tree/main/TP",
-    "count": 7,
-    "uniques": 6
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Ej. Integrador BASH",
+    "title": "/tree/main/Parcial/Ej. Integrador BASH",
+    "count": 4,
+    "uniques": 4
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Ej. Integrador BASH/Material para el ejercicio",
+    "title": "/tree/main/Parcial/Ej. Integrador BASH/Material para el ejercicio",
+    "count": 4,
+    "uniques": 4
   }
 ]
