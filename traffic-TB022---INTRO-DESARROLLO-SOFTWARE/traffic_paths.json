@@ -2,20 +2,14 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 24,
-    "uniques": 21
+    "count": 20,
+    "uniques": 18
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial",
     "title": "/tree/main/Parcial",
-    "count": 10,
-    "uniques": 10
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores",
-    "title": "/tree/main/Parcial/Parciales Anteriores",
-    "count": 7,
-    "uniques": 7
+    "count": 8,
+    "uniques": 8
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores/Modelo Parcial",
@@ -30,33 +24,39 @@
     "uniques": 4
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/GUIAS/GUIA1 - Bash.ipynb",
-    "title": "/blob/main/Parcial/GUIAS/GUIA1 - Bash.ipynb",
-    "count": 7,
-    "uniques": 3
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/GUIAS/GUIA2 - Regex.ipynb",
-    "title": "/blob/main/Parcial/GUIAS/GUIA2 - Regex.ipynb",
-    "count": 7,
-    "uniques": 2
-  },
-  {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 1.jpeg",
     "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 1.jpeg",
     "count": 7,
     "uniques": 2
   },
   {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores",
+    "title": "/tree/main/Parcial/Parciales Anteriores",
+    "count": 6,
+    "uniques": 6
+  },
+  {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
     "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 2.jpeg",
-    "count": 5,
+    "count": 6,
     "uniques": 4
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/DOCS",
-    "title": "/tree/main/Parcial/DOCS",
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/DOCS/git-y-github.md",
+    "title": "/blob/main/Parcial/DOCS/git-y-github.md",
     "count": 4,
-    "uniques": 4
+    "uniques": 3
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Modelo Parcial/Solucion-Modelo.ipynb",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Modelo Parcial/Solucion-Modelo.ipynb",
+    "count": 4,
+    "uniques": 2
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Modelo Parcial/Modelo-Parcial.pdf",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Modelo Parcial/Modelo-Parcial.pdf",
+    "count": 3,
+    "uniques": 3
   }
 ]
