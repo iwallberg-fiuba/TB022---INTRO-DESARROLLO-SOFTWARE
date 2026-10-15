@@ -2,8 +2,8 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 13,
-    "uniques": 8
+    "count": 11,
+    "uniques": 7
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/Consigna TP.md",
@@ -30,6 +30,12 @@
     "uniques": 4
   },
   {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "count": 4,
+    "uniques": 3
+  },
+  {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial/Parciales Anteriores",
     "title": "/tree/main/Parcial/Parciales Anteriores",
     "count": 4,
@@ -52,11 +58,5 @@
     "title": "/tree/main/TP",
     "count": 4,
     "uniques": 2
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T2 2C25/Solucion T2 2C25.ipynb",
-    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T2 2C25/Solucion T2 2C25.ipynb",
-    "count": 4,
-    "uniques": 1
   }
 ]
