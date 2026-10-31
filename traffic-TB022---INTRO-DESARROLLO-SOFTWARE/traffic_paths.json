@@ -2,14 +2,8 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 4,
-    "uniques": 4
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/discussions",
-    "title": "/discussions",
-    "count": 2,
-    "uniques": 2
+    "count": 5,
+    "uniques": 5
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP",
@@ -36,8 +30,20 @@
     "uniques": 1
   },
   {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/discussions",
+    "title": "/discussions",
+    "count": 1,
+    "uniques": 1
+  },
+  {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/issues",
     "title": "/issues",
+    "count": 1,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/pulls",
+    "title": "/pulls",
     "count": 1,
     "uniques": 1
   },
