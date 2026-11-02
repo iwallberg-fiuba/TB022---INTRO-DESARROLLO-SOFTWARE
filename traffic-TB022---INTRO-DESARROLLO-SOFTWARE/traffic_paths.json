@@ -2,54 +2,60 @@
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE",
     "title": "Overview",
-    "count": 5,
-    "uniques": 5
+    "count": 7,
+    "uniques": 7
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP",
     "title": "/tree/main/TP",
-    "count": 2,
+    "count": 4,
+    "uniques": 4
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/Parcial",
+    "title": "/tree/main/Parcial",
+    "count": 3,
     "uniques": 2
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 1.jpeg",
     "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 1.jpeg",
-    "count": 1,
+    "count": 2,
+    "uniques": 2
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 2.jpeg",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T3 2C25/T3 2C25 Parte 2.jpeg",
+    "count": 2,
     "uniques": 1
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/03 - Dev y Testing/00 - Testings.md",
     "title": "/blob/main/TP/03 - Dev y Testing/00 - Testings.md",
-    "count": 1,
+    "count": 2,
     "uniques": 1
   },
   {
     "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/TP/03 - Dev y Testing/01 - Entorno.md",
     "title": "/blob/main/TP/03 - Dev y Testing/01 - Entorno.md",
+    "count": 2,
+    "uniques": 1
+  },
+  {
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/GUIAS/GUIA1 - Bash.ipynb",
+    "title": "/blob/main/Parcial/GUIAS/GUIA1 - Bash.ipynb",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/discussions",
-    "title": "/discussions",
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/GUIAS/GUIA2 - Regex.ipynb",
+    "title": "/blob/main/Parcial/GUIAS/GUIA2 - Regex.ipynb",
     "count": 1,
     "uniques": 1
   },
   {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/issues",
-    "title": "/issues",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/pulls",
-    "title": "/pulls",
-    "count": 1,
-    "uniques": 1
-  },
-  {
-    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/tree/main/TP/02 - Análisis y Diseño",
-    "title": "/tree/main/TP/02 - Análisis y Diseño",
+    "path": "/iwallberg-fiuba/TB022---INTRO-DESARROLLO-SOFTWARE/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
+    "title": "/blob/main/Parcial/Parciales Anteriores/Parcial T1 2C25/T1 2C25 Parte 1.jpeg",
     "count": 1,
     "uniques": 1
   }
